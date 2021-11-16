@@ -1,0 +1,72 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<div class="card shadow" id="myDiv">
+	<div class="card-header">
+		<h2 class="mb-0"> نمایش استعلام بدهی قبض </h2>
+		<div class="card-body">
+			@* <form method="POST" action="/Admin/Gabz/Pardakht"> *@
+			<form method="POST" action="/Admin/PayGabz/result">
+				<input class="d-none" asp-for="amount" value="@ViewBag.Amount" >
+				<input class="d-none" asp-for="bill_id" value="@ViewBag.BillId">
+				<input class="d-none" asp-for="pay_id" value="@ViewBag.PayId">
+				<input class="d-none" asp-for="Titel"  value="@ViewBag.Title">
+				<div class="row">
+					<div class="table-responsive">
+						<div class="form-group justify-content-center ">
+
+							@if (ViewBag.Msg != null)
+							{
+		   						<div class="text-center">
+									<p class="alert alert-danger">@ViewBag.Msg</p>
+		   						</div>
+							}
+							else
+							{
+								<table class="table table-hover">
+									<thead class="bg-primary ">
+									 <tr>
+									  <th> شناسه قبض:</th>
+									  <th> شناسه پرداخت: </th>
+									  <th>مبلغ :</th>
+									 </tr>
+									</thead>
+									<tbody class="bg-white">
+									 <tr>
+									  <th> @ViewBag.BillId  </th>
+									  <th> @ViewBag.PayId  </th>
+									  <th> @ViewBag.Amount  ریال </th>
+									 </tr>
+									</tbody>
+								</table>
+							}
+	  </div>
+	 </div>
+	</div>
+	<div class="d-flex justify-content-end ">
+					 <button type="submit" class="btn btn-success mt-1 mb-1" style="width: min-content;"> پرداخت
+						</button>
+	@* <a href="https://bill.bpm.bankmellat.ir/bpgwchannel/" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+	 پرداخت
+	</a> *@
+	 <a onclick="print();" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> چاپ
+	 </a>
+	 <a href="~/Admin/Gabz_Charge/Estelam" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+	  بازگشت
+	 </a>
+	</div>
+   </form>
+  </div>
+ </div>
+</div>
+
+<script>
+ function print() {
+  var printContents = document.getElementById('myDiv').innerHTML;
+  var originalContents = document.body.innerHTML;
+
+  document.body.innerHTML = printContents;
+
+  window.print();
+
+  document.body.innerHTML = originalContents;
+ }
+</script>

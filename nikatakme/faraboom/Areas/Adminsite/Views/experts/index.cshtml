@@ -1,0 +1,272 @@
+<!-- Basic Select2 start -->
+@model ViewModels.AdminViewModel.Experts.Vm_Experts
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+<link rel="stylesheet" type="text/css" href="~/adminsite/app-assets/vendors/css/editors/quill/katex.min.css">
+<link rel="stylesheet" type="text/css" href="~/adminsite/app-assets/vendors/css/editors/quill/monokai-sublime.min.css">
+<link rel="stylesheet" type="text/css" href="~/adminsite/app-assets/vendors/css/editors/quill/quill.snow.css">
+<link rel="stylesheet" type="text/css" href="~/adminsite/app-assets/vendors/css/editors/quill/quill.bubble.css">
+
+<style>
+  #map {
+    height: 300px;
+    width: 100%;
+  }
+</style>
+<!-- Input Style start -->
+@if (ViewBag.er != null)
+{
+<p class="alert alert-success">@ViewBag.er</p>
+}
+
+<form action="/adminsite/experts/add" method="POST" enctype="multipart/form-data">
+<section class="basic-select2">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> ثبت کارشناس جدید </h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 mb-2">
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="basicInput">انتخاب زبان </label>
+                  <select class="select2 form-control" asp-for="Language">
+                    <option value="fa">فارسی</option>
+                    <option value="en">انگلیسی</option>
+                    <option value="tr">ترکی</option>
+                    <option value="ar">عربی</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput">نام و نام خانوادگی </label>
+                  <input required type="text" class="form-control" asp-for="NameEx"
+                    placeholder="نام و نام خانوادگی کارشناس  را وارد کنید">
+                </fieldset>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group">
+                  <div class="col-sm-6 col-12">
+                    <label for="file" class="btn btn-default">انتخاب تصویر </label>
+                    <input required asp-for="img" type="file" accept="image/*" onchange="preview_image(event)">
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group ">
+                  <img id="output_image" height=100px width=100px style="border-radius: 30px;">
+                </fieldset>
+              </div>
+
+              <div class="col-sm-12 col-12">
+                <div id="map"></div>
+              </div>
+
+                <div class="col-sm-6 col-12">
+                                <fieldset class="form-group">
+                                    <button type="button"
+                                        class="btn mb-1 btn-outline-primary btn-icon btn-md btn-block mt-1 " > 
+                                        برای ثبت آدرس بعد از انتخاب موقعیت روی لوکیشن کلیک کنید
+                                        </button>
+                                </fieldset>
+                            </div>
+
+                              <div class="col-lg-6 col-sm-6 col-12">
+                                <label for="squareText"> طول و عرض جغرافیایی </label>
+                                <fieldset class="form-group position-relative has-icon-left input-divider-left">
+                                    <input asp-for="LocationEx" type="text" class="form-control"  placeholder="طول و عرض جغرافیایی   " required>
+                                    <div class="form-control-position">
+                                        <i class="feather icon-smartphone"></i>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group">
+                  <label for="squareText"> آدرس </label>
+                  <input required type="text" asp-for="address" class="form-control square"
+                    placeholder=" آدرس  را وارد نمایید ">
+                </fieldset>
+              </div>
+
+              
+              <div class="col-lg-6 col-sm-6 col-12">
+                <label for="squareText"> شماره تلفن همراه </label>
+                <fieldset class="form-group position-relative has-icon-left input-divider-left">
+                  <input required asp-for="TelEx" type="text" class="form-control" id="iconLeft3"
+                    placeholder=" شماره تلفن همراه  را وارد نمایید">
+                  <div class="form-control-position">
+                    <i class="feather icon-smartphone"></i>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="col-lg-6 col-sm-6 col-12">
+                <label for="squareText"> شماره تلفن ثابت </label>
+                <fieldset class="form-group position-relative has-icon-left input-divider-left">
+                  <input required asp-for="OfficeTelEx" type="text" class="form-control" id="iconLeft3"
+                    placeholder=" شماره تلفن ثابت  را وارد نمایید">
+                  <div class="form-control-position">
+                    <i class="feather icon-phone"></i>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="col-sm-12 col-12">
+                <section class="full-editor">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card">
+                        <div class="card-header">
+                          <h4 class="card-title">توضیحات کامل</h4>
+                        </div>
+                        <div class="card-content collapse show">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div id="full-wrapper">
+                                  <div id="full-container">
+                                    <input type="hidden" id="jdr" asp-for="AboutEx" />
+
+                                    <div class="editor" id="description">
+                                      @* @Html.Raw(Model.FullTextBlo) *@
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <p id="mss" class="alert alert-success" style="display: none;">متن با موفقیت ارسال شد.</p>
+                  <p id="mss_danger" class="alert alert-danger" style="display: none;">متنی برای ارسال وجو ندارد.</p>
+
+                  <a onclick="sabt()" class="btn btn-info mr-1 mb-1" style="color: white;">ارسال متن </a>
+                </section>
+              </div>
+
+              <div class="col-sm-12 col-12">
+                <fieldset style="text-align: center;" class="form-group mt-4">
+                  <button type="submit" class="btn btn-success mr-1 mb-1">ذخیره</button>
+                  <button type="button" class="btn btn-danger mr-1 mb-1">لغو</button>
+                </fieldset>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Basic Select2 end -->
+</form>
+<!-- Basic Inputs end -->
+<script>
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output_image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+
+!-- Basic editor end -->
+
+<script src="~/adminsite/app-assets/vendors/js/vendors.min.js"></script>
+
+<script src="~/adminsite/app-assets/vendors/js/editors/quill/quill.min.js"></script>
+
+<script src="~/adminsite/app-assets/js/scripts/editors/editor-quill.min.js"></script>
+<script>
+  function sabt() {
+
+    if (document.getElementById("description").innerText != '') {
+      document.getElementById('jdr').value = document.getElementById("description").innerHTML;
+      $('#mss').css("display", "block");
+
+    }
+    else
+      $('#mss_danger').css("display", "block");
+
+
+  }
+</script>
+
+
+
+  <script>
+         // Creating map options
+         var mapOptions = {
+            center: [38.5484252,44.9866539],
+            zoom: 12
+         }
+         // Creating a map object
+         var map = new L.map('map', mapOptions);
+
+         // Creating a Layer object
+         var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+         // Adding layer to the map
+         map.addLayer(layer);
+
+         // Creating a Marker
+         var markerOptions = {
+            title: "MyLocation",
+            clickable: true,
+            draggable: true
+         }
+         // Creating a marker
+         var marker = L.marker([38.551278,44.970346], markerOptions);
+
+         // Adding marker to the map
+         marker.addTo(map);
+
+
+         map.on('click', function(marker){
+    // Place marker
+    
+
+    // Ajax query to save the values:
+    var data = {
+        lat: marker.latlng.lat,
+        lng: marker.latlng.lng
+    }
+    document.getElementById('LocationEx').value=data.lat+","+data.lng
+ 
+    
+});
+
+
+function loc(marker)
+{
+     var data = {
+        lat: marker.latlng.lat,
+        lng: marker.latlng.lng
+    }
+ alert("hjgghjgh");
+}
+      </script>
+      
+    <script>
+     
+
+
+    </script>

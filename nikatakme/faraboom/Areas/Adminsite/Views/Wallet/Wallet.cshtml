@@ -1,0 +1,31 @@
+@model ViewModels.AdminViewModel.Wallet.Vm_Pay
+<section id="data-list-view" class="data-list-view-header">
+    <div class="col-6 text-center"> 
+        <p class="alert alert-primary col-8 m-1">
+           شارژ کیف پول :
+        </p> 
+    </div>
+    @if ( ViewBag.msg != null )
+    {
+        <div class="col-4 text-center"> 
+            <p class="alert alert-success mt-5 col-8 m-1">
+                شارژ کیف پول با موفقیت انجام شد .  
+            </p> 
+        </div>
+    }
+    <form action="/Adminsite/Wallet/AddWallet" method="post" autocomplete="off">
+        <div class="form-group" style="margin-top: 50px;">
+            <div class="col-4">
+                <h3 for="UserName"> کد نمایندگی را وارد نمایید : </h3>
+                <input type="text" class="form-control" placeholder=" کد نمایندگی : " asp-for="UserName">
+            </div>
+            <div class="col-4 mt-3">
+                <h3 for="Pay"> مبلغ مورد نظر را به تومان وارد نمایید : </h3>
+                <input type="text" class="form-control" placeholder=" مبلغ : " asp-for="Pay">
+            </div>
+            <div class="m-4">
+                <button type="submit" class="btn btn-success"> ثبت </button>
+            </div>
+        </div>
+    </form>
+ </section>

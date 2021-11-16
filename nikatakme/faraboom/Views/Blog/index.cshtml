@@ -1,0 +1,104 @@
+
+    <section class="container mt-3 grad-bg px-md-2 pt-3 pb-4 rad25 brlb">
+        <h5 class="IRANSansWeb_Medium text-center bt-color text-white pb-3">محبوب ترین ها</h5>
+
+        <div id="owl-secondevent" class="owl-carousel owl-theme text-right ">
+            @foreach (var item in ViewBag.blogimg)
+            {
+                <div class="mx-2">
+                  <a href="/blog/details/@item.Id">
+                    <img  src="~/fileupload/@item.ImageMainBlo" class="img-fluid rad25 bigpic ">
+                    <div class="blogdiv">
+                        <h6 class="IRANSansWeb_Medium text-white text-shadow">@item.TitleBLo</h6>
+                    </div>
+
+                    </a>
+
+                  </div>
+            }
+            
+            
+        </div>
+
+    </section>
+    <div class="mx-auto text-center">
+        <img  src="~/site/Images\foot.png">
+
+    </div>
+
+    
+    <section class="container mt-5">
+        <div id="category" class="row">
+            <div class="col-md-3">
+                <div class="mb-2 box p-3">
+                    <h6 class="IRANSansWeb_Medium bt-color  bg-light py-2 px-3 mb-3 rad25">آخرین اخبار</h6>
+                    <ul class="prof">
+                        @foreach (var item in ViewBag.blogimg)
+                        {
+                             <li>
+                            <a href="/blog/details/@item.Id">
+                                <i class="far fa-file-alt text-info ml-1"></i>
+                                @item.TitleBLo
+                            </a>
+                        </li>
+                        }
+                        
+                    </ul>
+                </div>
+                <div class="my-2 box p-3">
+                    <h6 class="IRANSansWeb_Medium bt-color  bg-light py-2 px-3 rad25">دسته بندی ها</h6>
+                    <ul class="prof">
+                        
+                               @foreach (var item in menu.cat)
+                                {
+                                if (item.FatherIdCat==-2)
+                                {
+                                        @foreach (var item1 in menu.cat)
+                                        {
+                                        if (item1.FatherIdCat == item.Id)
+                                        {
+                                        
+                                        <li>
+                             <a href="/blog/index/@item1.Id">
+                                <i class="far fa-folder ml-1 text-info"></i>
+                               @item1.NameCat
+                             </a>
+                             </li>
+                                        }
+
+                                        }
+                                  }
+                                }
+                    </ul>
+                </div>
+            </div>
+            <div id="article" class="col-md-9">
+                <div class="row">
+                    @foreach (var item in ViewBag.blog)
+                    {
+                          <div class="col-md-4">
+                        <div class="card p-3">
+                            <a href="/blog/details/@item.Id" class="relative">
+                                <img  src="~/fileupload/@item.ImageMainBlo" class="mb-3 img-fluid rad12">
+                                <div class="d-flex flex-column covernews ">
+                                    <div class="d-flex flex-row justify-content-between px-3 text-white IRANSansWeb_Medium ">
+                                        <span class="bottom_p"><i class="fas fa-clock ml-1"></i>نیکاتک</span>
+                                        <span><i class="fas fa-eye ml-1"></i></span>
+                                        <span><i class="fas fa-comment ml-1"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <p>
+                                @item.TitleBLo
+                            </p>
+                            <a href="/blog/details/@item.Id" class="text-danger IRANSansWeb_Medium text-center mb-3">مشاهده خبر »</a>
+                        </div>
+
+                    </div>
+                    }
+                </div>
+               
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,77 @@
+<div class="card shadow" id="myDiv">
+    <div class="card-header">
+        <h2 class="mb-0"> برداشتی های کیف پول </h2>
+        <div class="card-body">
+            <div class="row">
+                <div class="table-responsive">
+                    <div class="form-group justify-content-center ">
+                        <p style="direction: ltr; display:none ;" id="Phone">@ViewBag.result</p>
+                        <div style="text-align: center;">
+                            <p class="alert alert-light" style="font-weight: bold;"> جمع کل مبلغ برداشت : &nbsp;
+                                <span id="pay" style="font-size: large;" > @ViewBag.Sum </span> 
+                                    &nbsp; تومان</p>
+                        </div>
+                        <table class="table table-hover">
+                            <thead class="bg-primary ">
+                                <tr>
+                                    <th> ردیف : </th>
+                                    <th> نوع تراکنش :</th>
+                                    <th> عنوان تراکنش : </th>
+                                    <th> شناسه قبض :</th>
+                                    <th> شناسه پرداخت : </th>
+                                    <th>مبلغ :</th>
+                                    <th> تاریخ : </th>
+                                    <th>جزئیات</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                @if (ViewBag.Tarakonesh != null)
+                                {
+                                    int i = 1;
+                                    @foreach (var item in ViewBag.Tarakonesh)
+                                    {
+                                        <tr>
+                                            <th>@i</th>
+                                            <th>@item.Type_Request</th>
+                                            <th>@item.Titel_Request</th>
+                                            <th>@item.Bill_Id</th>
+                                            <th>@item.Pay_Id</th>
+                                            <th >@item.Amount</th>
+                                            <th>@item.Date1</th>
+                                            <th><a class="btn btn-outline-danger btn-sm" href="~/Admin/Wallet/Detail/@item.Id"
+									role="button">جزئیات</a>
+									</th>
+                                        </tr>
+                                        i++;
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end">
+                </button>
+                <a onclick="print();" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> چاپ
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function print() {
+        var printContents = document.getElementById('myDiv').innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>
+
+ <script>
+ document.getElementById("pay").innerText = document.getElementById("pay").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+</script>

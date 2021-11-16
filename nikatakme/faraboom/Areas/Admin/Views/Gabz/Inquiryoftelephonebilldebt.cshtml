@@ -1,0 +1,29 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> استعلام بدهی قبض تلفن </h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-6">
+				<form action="/Admin/Gabz/EstelamGabz" method="POST">
+					<div class="form-group">
+						<h2 class="mb-0"> شماره تلفن ثابت:</h2>
+						<input type="number" asp-for="parameter" class="form-control" placeholder=" شماره تلفن ثابت " required>
+						<h2 class="mb-0 mt-3"> نوع قبض :</h2>
+						<select class="form-control bg-darken-1 rounded" asp-for="type">
+							<option ></option>
+							<option value="Tel"> پایان دوره </option>
+							<option value="TelNow"> میان دوره </option>
+						</select>
+					</div>
+					<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+					</button>
+					<a href="~/Admin/Gabz_Charge/Estelam" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+						بازگشت
+					</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

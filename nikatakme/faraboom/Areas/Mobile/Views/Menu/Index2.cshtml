@@ -1,0 +1,695 @@
+
+@{
+    Layout = null;
+}
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title style="!important">تکنولوژی هوشمند نیکا</title>
+
+    <!-- manifest meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="~/mobile/img/favicon180.png" sizes="180x180">
+    <link rel="icon" href="~/mobile/img/favicon16.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="~/mobile/img/favicon16.png" sizes="16x16" type="image/png">
+
+    <link rel="apple-touch-icon" href="~/mobile/img/favicon180.png" sizes="180x180">
+    <link rel="icon" href="~/mobile/img/favicon16.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="~/mobile/img/favicon16.png" sizes="16x16" type="image/png">
+    <!-- Material icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+ 	<link rel="stylesheet" href="~/mobile/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/mobile/css/site.css" />
+
+
+
+    <link href="~/mobile/vendor/swiper/css/swiper.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="~/mobile/css/style.css" rel="stylesheet">
+    <style>
+        @@font-face {
+            font-family: "yekan";
+            src: url(./Fonts/Yekan.woff)format('woff');
+        }
+
+        p {
+            font-family: "yekan" !important;
+        }
+    </style>
+</head>
+
+
+<body class="body-scroll d-flex flex-column h-100 menu-overlay"
+    style="direction: rtl;text-align: right font-family: font !important" data-page="homepage">
+
+    <!-- screen loader -->
+    <div class="container-fluid h-100 loader-display">
+        <div class="row h-100">
+            <div class="align-self-center col">
+                <div class="logo-loading">
+                    <div class="icon icon-100 mb-4 rounded-circle">
+                        <img src="/img/fev.png" alt="" class="w-100">
+                    </div>
+                    <h4 class="text-default"> نیکاتک</h4>
+                    <p class="text-secondary">تکنولوژی هوشمند نیکا</p>
+                    <div class="loader-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- menu main -->
+    <div class="main-menu">
+        <div class="row mb-4 no-gutters">
+            <div class="col-auto"><button class="btn btn-link btn-40 btn-close text-white"><span
+                        class="material-icons">chevron_right</span></button></div>
+            <div class="col-auto">
+                <div class="avatar avatar-40 rounded-circle position-relative">
+                    <figure class="background">
+                        <img src="/img/user.jpg" alt="">
+                    </figure>
+                </div>
+            </div>
+            <div class="col pl-3 text-left align-self-center">
+                @* <h6 class="mb-1"> محمد حافظ نیا</h6>
+                <p style="font-size: 17px ;" class="small text-default-secondary"> 09336192158</p> *@
+                <h6 class="mb-1"> اپلکیشن نیکاتک</h6>
+            </div>
+        </div>
+        <div class="menu-container">
+            <div class="row mb-4">
+                <div class="col">
+                    <p class="mb-1 font-weight-normal" style="font-size: 15px;">
+                        @HttpContextAccessor.HttpContext.Session.GetString("name")
+                    </p>
+                    <p style="font-size: 15px ;" class="text-default-secondary" id="curency">
+						@HttpContextAccessor.HttpContext.Session.GetInt32("sum") &nbsp; تومان
+                    </p>
+                    <script>
+					    document.getElementById("curency").innerText = document.getElementById("curency").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+					</script>
+                </div>
+
+                @{
+                   if ( (@HttpContextAccessor.HttpContext.Session.GetString("photo")) != null)
+                   {
+                        var img = @HttpContextAccessor.HttpContext.Session.GetString("photo");
+                        <div class="col-auto">
+                            <img src="~/fileupload/@img" class="rounded-circle" width="60" height="60" alt="">
+                        </div>
+                   }
+                }
+
+            </div>
+
+            <ul class="nav nav-pills flex-column " style="font-size: 15px;">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/mobile/menu/index" style="font-size: 15px;">
+                        <div>
+                            <span style="font-size: 15px ;font-weight: bold"
+                                class="material-icons icon">account_balance</span>
+                            خانه
+                        </div>
+                        <span class="arrow material-icons">chevron_left</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link" href="/mobile/wallet/Index" style="font-size: 15px ;">
+                        <div>
+                            <span style="font-size:15px ;font-weight: bold"
+                                class="material-icons icon">insert_chart</span>
+                            کیف پول
+                        </div>
+                        <span class="arrow material-icons">chevron_left</span>
+                    </a>
+                    
+                @* <a href="/mobile/wallet/Index" class="">
+                    <div class="col-auto">
+                        <i class="material-icons">account_balance_wallet</i>
+                        <p style="font-size: 10px; font-weight: bold;"> کیف پول</p>
+                    </div>
+                </a> *@
+                    
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mobile/menu/davat" style="font-size: 15px ;">
+                        <div>
+                            <span style="font-size: 15px ;font-weight: bold"
+                                class="material-icons icon">perm_contact_calendar</span>
+                            دعوت از دوستان
+                        </div>
+                        <span class="arrow material-icons">chevron_left</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mobile/menu/jashnvareh" style="font-size: 15px ;">
+                        <div>
+                            <span style="font-size: 15px ;font-weight: bold" class="material-icons icon">
+                                card_giftcard</span>
+                            امتیاز و جوایز نیکاتک
+                        </div>
+                        <span style="font-size: 18px ;font-weight: bold"
+                            class="arrow material-icons">chevron_left</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mobile/wallet/Tarakonesh" style="font-size: 15px ;">
+                        <div>
+                            <span style="font-size: 15px ;" class="material-icons icon">shopping_bag</span>
+                            سوابق تراکنش ها
+                        </div>
+                        <span class="arrow material-icons">chevron_left</span>
+                    </a>
+                </li>
+                @* <li class="nav-item">
+                    <a class="nav-link" href="/mobile/home/setting" style="font-size: 15px ;">
+                        <div>
+                            <span style="font-size:15px ;font-weight: bold" class="material-icons icon">settings</span>
+                            تنظیمات
+                        </div>
+                        <span class="arrow material-icons">chevron_left</span>
+                    </a>
+                </li> *@
+                <li class="nav-item">
+                    <a class="nav-link" href="/mobile/menu/faq" style="font-size: 15px ;">
+                        <div>
+                            <span style="font-size: 15 px ;" class="material-icons icon">layers</span>
+                            سوالات متداول
+                        </div>
+                        <span class="arrow material-icons">chevron_left</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mobile/menu/aboutus" style="font-size:15px;">
+                        <div>
+                            <span class="material-icons icon">widgets</span>
+                            درباره نیکاتک
+                        </div>
+                        <span class="arrow material-icons">chevron_left</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="text-center">
+                <a href="/mobile/menu/exit" class="btn btn-outline-danger text-white rounded my-3 mx-auto"
+                    style="font-size: 15px;">خروج از سیستم</a>
+            </div>
+        </div>
+    </div>
+    <div class="backdrop"></div>
+
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0 main has-footer">
+        <!-- Fixed navbar -->
+        <header class="header">
+            <div class="row">
+                <div class="col-auto px-0">
+                    <button class="menu-btn btn btn-40 btn-link" type="button">
+                        <span class="material-icons">menu</span>
+                    </button>
+                </div>
+                <div class="text-right col align-self-left">
+
+                        <div class="mb-1"  style=" height: 35px; ">
+                            <img src="~/mobile/img/50.png" class="mt-1" alt="" height="40px">
+                        </div>
+                    @* <a class="navbar-brand" href="#">
+                        <h5 class="mb-0" style="font-family: yekan; font-size: 30px; font-family: inherit
+                         ;font-weight:bolder;"> نیکاتک</h5>
+                    </a> *@
+                </div>
+
+                 
+                <div class="ml-auto col-auto pl-0">
+
+
+                    <button type="button" class="btn btn-link  colorsettings">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-question-circle ml-3 mt-1" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                        </svg>
+                        </button>
+                    @* <a href="notification.html" class="menu-btn btn btn-40 btn-link">
+                        <span class="material-icons">notifications_none</span>
+                        <span class="counter"></span>
+                    </a>
+                    <a href="/home/profile" class="avatar avatar-30 shadow-sm rounded-circle ml-2">
+                        <figure class="m-0 background">
+                            <img src="/img/user1.png" alt="">
+                        </figure>
+                    </a> *@
+                </div> 
+            </div>
+        </header>
+
+        @* <div class="container mt-3 mb-4 text-center">
+            <h2 class="text-white">1050.00 تومان</h2>
+            <p class="text-white mb-4">موجودی کل</p>
+            </div> *@
+
+        <div class="main-container">
+            <div class="container mb-4 text-center">
+                <div class="card bg-default-secondary shadow-default">
+                    <div class="card-body">
+                        <!-- Swiper -->
+                        <div class="swiper-container addsendcarousel text-center">
+                                <div class="mb-1"  style=" height: 35px; ">
+                                    <img src="~/mobile/img/50.png" class="mt-1" alt="" height="40px">
+                                </div>
+                                <br>
+                                <br>
+                                <a href="/mobile/menu/EditProfile" class="swiper-slide text-white">
+                                    <div class="rounded-pill mb-1 bg-default-light text-default">
+                                    <p style="font-size: 18px "><small>  @HttpContextAccessor.HttpContext.Session.GetInt32("sum") &nbsp; تومان  </small></p>
+                                        </div>
+                                </a> 
+                                <br>
+                                
+                            <div class="swiper-wrapper mb-4 justify-content-center">
+
+                                <a href="/mobile/wallet/varizi" class="swiper-slide text-white">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/wallet-app.png" style="width: 35px; height: 35px;"/></div>
+                                    <p style="font-size: 15px "><small> واریزی ها </small></p>
+                                </a> 
+
+                                <a href="/mobile/wallet/Tarakonesh" class="swiper-slide text-white">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/payment-history.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 15px;"><small> تراکنش ها</small></p>
+                                </a>
+                                @* <a href="#" class="swiper-slide text-white">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/bank-cards.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 15px;"><small> کارت ها </small></p>
+                                </a> *@
+                                <a href="/mobile/menu/davat" class="swiper-slide text-white">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/share.png" style="width: 35px; height: 35px;"/></div>
+                                    <p style="font-size: 15px "><small>دعوت </small></p>
+                                </a>
+                                <a href="/mobile/menu/EditProfile" class="swiper-slide text-white">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/edit-property.png" style="width: 35px; height: 35px;"/></div>
+                                    <p style="font-size: 15px "><small> ویرایش  </small></p>
+                                </a> 
+                                
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     <div class="card">
+            <div class="container mb-4  ">
+                <div class="card">
+                    <div class="card-body text-center ">
+                        <div class="row justify-content-equal no-gutters">
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/gabz/Waterbilldebtinquiry">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/bill.png"style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> قبض آب
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/gabz/Inquiryofelectricitybilldebt">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/bill.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> قبض برق
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/gabz/Inquiryofgasbilldebt">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/bill.png"style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> قبض گاز
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/gabz/Inquiryoftelephonebilldebt">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/bill.png"style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small>  قبض تلفن ثابت
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/gabz/Inquiryofmobilephonebilldebt">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/bill.png"style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small>قبض  تلفن همراه
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/Client_Credential/EstelamCarBill">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                       <img src="https://img.icons8.com/nolan/64/hail-damage.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> خلافی خودرو
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/Client_Credential/EstelamNegativePoint">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                       <img src="https://img.icons8.com/nolan/64/test-partial-passed.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> نمره منفی 
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/charge/parametrs">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                       <img src="https://img.icons8.com/nolan/64/sim-card.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> شارژ
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/internet/selectoperator">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                       <img src="https://img.icons8.com/nolan/64/internet-explorer.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> بسته اینترنتی
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/Makanmehvar/Index">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/region-code.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> مکان محور
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/omomi/Tatbigh">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/50/id-verified.png"style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> سامانه شاهکار
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/SmsHoviyat/index">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/security-pass.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small>  احزار هویت
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/Tavanam/index">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/contract-job.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small>  اعتبار سنجی
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/Client_Credential/InputCardNumber">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/bank-card-missing.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> استعلام شماره کارت
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/Client_Credential/CartToShaba">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/card-exchange.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> تبدیل کارت به شبا
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/Client_Credential/EstelamShaba">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/receipt.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> استعلام شبا
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/SmsTashilat/index">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/receipt.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> استعلام تسهیلات
+                                        </small></p>
+                                </a>
+                            </div>
+
+                            <div class="col-4 col-md-2 mb-3">
+                                <a href="/mobile/SmsCheck/index">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="https://img.icons8.com/nolan/64/heck-for-payment.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 17px ;font-weight: bold" class="text-secondary"><small> استعلام چک
+                                        </small></p>
+                                </a>
+                            </div>
+                            
+                        </div>
+
+                        <div class="row justify-content-equal no-gutters">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+    </div> 
+
+    </main>
+
+    <!-- footer-->
+    <div class="footer">
+        <div class="row no-gutters justify-content-center">
+            @* <div class="col-auto">
+                <a href="index.html" class="active">
+                <i class="material-icons">home</i>
+                <p>خانه </p>
+                </a>
+                </div> *@
+            @* <div class="col-auto">
+                <a href="#" class="">
+                    <i class="material-icons">insert_chart_outline</i>
+                    <p style="font-size: 10px; font-weight: bold;">کارت های بانکی </p>
+                </a>
+            </div> *@
+            <div class="col-auto">
+                <a href="/mobile/wallet/Index" class="">
+                    <i class="material-icons">account_balance_wallet</i>
+                    <p style="font-size: 10px; font-weight: bold;"> کیف پول</p>
+                </a>
+            </div>
+            <div class="col-auto">
+                <a href="/mobile/menu/jashnvareh" class="">
+                    <i class="material-icons">shopping_bag</i>
+                    <p style="font-size: 10px; font-weight: bold;"> جشنواره های نیکاتک</p>
+                </a>
+            </div>
+            <div class="col-auto">
+                <a href="/mobile/menu/profile" class="">
+                    <i class="material-icons">account_circle</i>
+                    <p style="font-weight: bold;"> پروفایل</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- color settings style switcher -->
+    <div class="color-picker">
+        <div class="row">
+            <div class="col text-left">
+                <div class="selectoption">
+                    <input type="checkbox" id="darklayout" name="darkmode">
+                    <label for="darklayout"> تیره</label>
+                </div>
+                <div class="selectoption mb-0">
+                    <input type="checkbox" id="rtllayout" name="layoutrtl">
+                    <label for="rtllayout">RTL</label>
+                </div>
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-link text-secondary btn-round colorsettings2"><span
+                        class="material-icons">close</span></button>
+            </div>
+        </div>
+
+        <hr class="mt-2">
+        <div class="colorselect">
+            <input type="radio" id="templatecolor1" name="sidebarcolorselect">
+            <label for="templatecolor1" class="bg-dark-blue" data-title="dark-blue"></label>
+        </div>
+        <div class="colorselect">
+            <input type="radio" id="templatecolor2" name="sidebarcolorselect">
+            <label for="templatecolor2" class="bg-dark-purple" data-title="dark-purple"></label>
+        </div>
+        <div class="colorselect">
+            <input type="radio" id="templatecolor4" name="sidebarcolorselect">
+            <label for="templatecolor4" class="bg-dark-gray" data-title="dark-gray"></label>
+        </div>
+        <div class="colorselect">
+            <input type="radio" id="templatecolor6" name="sidebarcolorselect">
+            <label for="templatecolor6" class="bg-dark-brown" data-title="dark-brown"></label>
+        </div>
+        <div class="colorselect">
+            <input type="radio" id="templatecolor3" name="sidebarcolorselect">
+            <label for="templatecolor3" class="bg-maroon" data-title="maroon"></label>
+        </div>
+        <div class="colorselect">
+            <input type="radio" id="templatecolor5" name="sidebarcolorselect">
+            <label for="templatecolor5" class="bg-dark-pink" data-title="dark-pink"></label>
+        </div>
+        <div class="colorselect">
+            <input type="radio" id="templatecolor8" name="sidebarcolorselect">
+            <label for="templatecolor8" class="bg-red" data-title="red"></label>
+        </div>
+        <div class="colorselect">
+            <input type="radio" id="templatecolor13" name="sidebarcolorselect">
+            <label for="templatecolor13" class="bg-amber" data-title="amber"></label>
+        </div>
+        <div class="colorselect">
+            <input type="radio" id="templatecolor7" name="sidebarcolorselect">
+            <label for="templatecolor7" class="bg-dark-green" data-title="dark-green"></label>
+        </div>
+        <div class="colorselect">
+            <input type="radio" id="templatecolor11" name="sidebarcolorselect">
+            <label for="templatecolor11" class="bg-teal" data-title="teal"></label>
+        </div>
+        <div class="colorselect">
+            <input type="radio" id="templatecolor12" name="sidebarcolorselect">
+            <label for="templatecolor12" class="bg-skyblue" data-title="skyblue"></label>
+        </div>
+        <div class="colorselect">
+            <input type="radio" id="templatecolor10" name="sidebarcolorselect">
+            <label for="templatecolor10" class="bg-blue" data-title="blue"></label>
+        </div>
+        <div class="colorselect">
+            <input type="radio" id="templatecolor9" name="sidebarcolorselect">
+            <label for="templatecolor9" class="bg-purple" data-title="purple"></label>
+        </div>
+        <div class="colorselect">
+            <input type="radio" id="templatecolor14" name="sidebarcolorselect">
+            <label for="templatecolor14" class="bg-gray" data-title="gray"></label>
+        </div>
+    </div>
+
+
+
+
+    <!-- Required jquery and libraries -->
+    <script src="~/mobile/js/jquery-3.3.1.min.js"></script>
+    <script src="~/mobile/js/popper.min.js"></script>
+    <script src="~/mobile/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- cookie js -->
+    <script src="~/mobile/js/jquery.cookie.js"></script>
+
+    <!-- Swiper slider  js-->
+    <script src="~/mobile/vendor/swiper/js/swiper.min.js"></script>
+
+    <!-- Customized jquery file  -->
+    <script src="~/mobile/js/main.js"></script>
+    <script src="~/mobile/js/color-scheme-demo.js"></script>
+
+    <!-- PWA app service registration and works -->
+    <script src="~/mobile/js/pwa-services.js"></script>
+
+    <!-- page level custom script -->
+    <script src="~/mobile/js/app.js"></script>
+
+    <script src="~/mobile/js/jquery-3.3.1.min.js"></script>
+    <script src="~/mobile/js/popper.min.js"></script>
+    <script src="~/mobile/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- cookie js -->
+    <script src="~/mobile/js/jquery.cookie.js"></script>
+
+    <!-- Swiper slider  js-->
+    <script src="~/mobile/vendor/swiper/js/swiper.min.js"></script>
+
+    <!-- Customized jquery file  -->
+    <script src="~/mobile/js/main.js"></script>
+    <script src="~/mobile/js/color-scheme-demo.js"></script>
+
+
+    <!-- page level custom script -->
+    <script src="~/mobile/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> خدمات بیمه بدنه </h2>
+    </div>
+    <div class="card-body">
+        <form action="" method="POST">
+            <div class="row ">
+                <div class="col-12 col-xl-6 col-lg-6">
+                    <div class="form-group col-12">
+                        <h2 class="mb-0"> نوع وسیله نقلیه : </h2>
+                        <select type="number" class="form-control mt-1">
+                            <option value=""> </option>
+                            <option value=" سواری"> سواری</option>
+                            <option value=" تاکسی درون شهری"> تاکسی درون شهری</option>
+                            <option value="تاکسی برون شهری">تاکسی برون شهری</option>
+                            <option value="وانت">وانت</option>
+                            <option value="کامیون">کامیون</option>
+                            <option value="کامیونت">کامیونت</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-12">
+                        <h2 class="mb-0"> مدل : </h2>
+                        <input type="text" class="form-control" placeholder="مدل خودرو خود را وارد کنید:">
+                    </div>
+                    <div class="form-group col-12">
+                        <h2 class="mb-0"> شرکت بیمه قبلی : </h2>
+                        <input type="text" class="form-control" placeholder="نام شرکت بیمه قبلی را وارد کنید:">
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6 col-lg-6">
+                    <div class="form-group col-12">
+                        <h2 class="mb-0"> برند : </h2>
+                        <input type="text" class="form-control"
+                            placeholder=" برند خودرو خود را وارد کنید:">
+                    </div>
+                    <div class="form-group col-12">
+                        <h2 class="mb-0"> سال ساخت : </h2>
+                        <input type="text" class="form-control" placeholder="سال ساخت خودرو خود را وارد کنید:">
+                    </div>
+                    <div class="form-group form-check form-check-inline col-12 mt-4">
+                        <h2 class="mb-0">آیا خودرو شما بیمه بدنه دارد؟ </h2>
+                        <div class="">
+                            <input class="form-check-input m-1" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">بله
+                       
+                            <input class="form-check-input m-1" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">خیر
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+                </button>
+                <a href="~/Admin/Bimeh/index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                    بازگشت
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

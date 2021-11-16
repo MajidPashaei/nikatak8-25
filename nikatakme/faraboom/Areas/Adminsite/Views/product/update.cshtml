@@ -1,0 +1,329 @@
+@model ViewModels.AdminViewModel.Product.Vm_Product
+ @if (ViewBag.er != null)
+{
+    <p class="alert alert-success">@ViewBag.er</p>
+}
+    <link rel="stylesheet" type="text/css" href="..\..\..\app-assets\vendors\css\editors\quill\katex.min.css">
+    <link rel="stylesheet" type="text/css" href="..\..\..\app-assets\vendors\css\editors\quill\monokai-sublime.min.css">
+    <link rel="stylesheet" type="text/css" href="..\..\..\app-assets\vendors\css\editors\quill\quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="..\..\..\app-assets\vendors\css\editors\quill\quill.bubble.css">
+    <!-- END: Vendor CSS-->
+
+
+<!-- Basic Select2 start -->
+<form action="/adminsite/Product/updatepro" method="POST" enctype="multipart/form-data">
+  <section class="basic-select2">
+
+
+
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> ویرایش محصول  </h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 mb-2">
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="basicInput">انتخاب زبان </label>
+                  <select class="select2 form-control" asp-for="Language">
+                    <option value="fa">فارسی</option>
+                    <option value="en">انگلیسی</option>
+                    <option value="tr">ترکی</option>
+                    <option value="ar">عربی</option>
+                  </select>
+                </div>
+              </div>
+
+
+             <input style="display: none;" asp-for="@Model.Id">
+              <div class="col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="basicInput">انتخاب دسته بندی </label>
+                  <select class="select2 form-control" asp-for="CategoryIdPro" asp-items="@ViewBag.list">
+                   
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput">عنوان محصول </label>
+                  <input required type="text" class="form-control" asp-for="TitleProductPro"  placeholder="عنوان محصول را وارد کنید">
+                </fieldset>
+              </div>
+
+
+              
+
+
+              <div class="col-sm-3 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput"> قیمت </label>
+                  <input type="Number" class="form-control" asp-for="PricePro"  placeholder="قیمت را وارد کنید">
+                </fieldset>
+              </div>
+              <div class="col-sm-3 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput"> درصد تخفیف </label>
+                  <input type="text" class="form-control"  placeholder="درصد تخفیف را وارد کنید" asp-for="OfferPro">
+                </fieldset>
+              </div>
+
+
+              <div class="col-sm-3 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput"> برند </label>
+                  <input required type="text" class="form-control" asp-for="BrandPro"  placeholder="برند را وارد کنید">
+                </fieldset>
+              </div>
+              <div class="col-sm-3 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput"> سایز</label>
+                  <input type="text" class="form-control" asp-for="SizePro" placeholder=" سایز را وارد کنید">
+                </fieldset>
+              </div>
+                  <div class="col-sm-3 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput"> تعداد در بسته </label>
+                  <input type="text" class="form-control" asp-for="TotalPro"  placeholder="تعداد در بسته را وارد کنید">
+                </fieldset>
+              </div>
+              <div class="col-sm-3 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput"> جنس</label>
+                  <input type="text" class="form-control" asp-for="MaterialPro"  placeholder=" جنس را وارد کنید">
+                </fieldset>
+              </div>
+
+
+
+
+
+
+
+
+
+
+<div class="col-sm-3 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput"> نوع خودرو ها</label>
+                  <input type="text" class="form-control"  asp-for="TypeCarPro" placeholder=" نوع خودرو ها  را وارد کنید">
+                </fieldset>
+              </div>
+
+
+
+              <div class="col-sm-3 col-12">
+                <fieldset class="form-group">
+                  <div class="col-sm-6 col-12">
+                    <label for="file" class="btn btn-default"> تصویر </label>
+                    <input  type="file" asp-for="mainimg" accept="image/*" onchange="preview_image(event)">
+                  </div>
+                </fieldset>
+              </div>
+
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group text-center">
+					@if (@Model.ImageMainPro != null)
+					{
+						 <img id="output_image" src="~/fileupload/@Model.ImageMainPro" height=200px width=200px style="border-radius: 20px;">
+					}else
+					{
+						  <img id="output_image" src="~/app-assets/images/ico/default.jpg" height=200px width=200px style="border-radius: 20px;">
+						
+					}
+                
+                </fieldset>
+              </div>
+
+
+              <div class="col-sm-12 col-12">
+               <section class="full-editor">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-header">
+                            <h4 class="card-title">توضیحات کامل</h4>
+                          </div>
+                          <div class="card-content collapse show">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <div id="full-wrapper">
+                                    <div id="full-container">
+                                      <input type="hidden" id="jdr" asp-for="DescreptionPro" />
+                                        <a onclick="show();"  class="btn btn-info mr-1 mb-1" style="color: white;"> نمایش متن قبلی  </a>
+                     <a onclick="noshow();"  class="btn btn-info mr-1 mb-1" style="color: white;"> مخفی کردن متن قبلی  </a>
+                      <div id="dec" class="display-field" style="display: none;" >
+                       @if (Model.DescreptionPro  == null)
+                       {
+                           <p class="alert alert-danger">متنی ثبت نشده است </p>
+                       }else{
+                          @Html.Raw(Model.DescreptionPro)
+                       }
+                        
+                      </div>
+                                      <div class="editor" id="description" style="padding-right: 20px;">
+                                        @* @Html.Raw(Model.FullTextBlo) *@
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+<p id="mss" class="alert alert-success" style="display: none;">متن با موفقیت ارسال شد.</p>
+<p id="mss_danger" class="alert alert-danger" style="display: none;">متنی برای ارسال وجو ندارد.</p>
+
+<a onclick="sabt()" class="btn btn-info mr-1 mb-1" style="color: white;">ارسال متن </a>
+</section>
+              </div>
+
+
+
+
+
+
+<div class="card">
+            <div class="card-header">
+              <h4>آخرین تصاویر</h4>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                  
+	  @foreach (var item in ViewBag.img)
+	  {
+		
+
+			 
+		       <div class="col-md-3 col-6 user-latest-img">
+                  <img src="~/fileupload/@item"   class="img-fluid mb-1 rounded-sm" alt="avtar img holder">
+                </div>
+                
+		
+	  } 
+
+                
+              </div>
+            </div>
+          </div>
+
+
+
+	  
+              
+  <div class="col-sm-12 col-12">
+	  
+	  
+<div class="grid-x grid-padding-x">
+  <div class="small-10 small-offset-1 medium-8 medium-offset-2 cell">
+   <form action="upload_file.php" id="img-upload-form" method="post" enctype="multipart/form-data">
+      <p>
+        <label for="upload_imgs" class="btn btn-outline-primary">   انتخاب عکس ها اضافی</label>
+        <input class="show-for-sr" type="file" asp-for="upload_imgs"  multiple/>
+      </p>
+      <div class="quote-imgs-thumbs quote-imgs-thumbs--hidden" id="img_preview" aria-live="polite"></div>
+      @* <p>
+        <input class="btn btn-primary  " type="submit" name="submit" value=" بارگزاری تصاویر"/>
+      </p> *@
+    </form>
+  </div>
+</div>
+  </div>
+
+
+
+              <div class="col-sm-12 col-12">
+                <fieldset style="text-align: center;" class="form-group mt-4">
+                  <button type="submit" class="btn btn-success mr-1 mb-1">ذخیره</button>
+                  <button type="button" class="btn btn-danger mr-1 mb-1">لغو</button>
+                </fieldset>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.4-rc1/css/foundation.css'>
+      <link rel="stylesheet" href="./style.css">
+      <link rel="stylesheet" type="text/css" href="/Css-Js-UpMultiImg/style.css">
+
+      <!-- partial:index.partial.html -->
+
+
+      <script src="/Css-Js-UpMultiImg/script.js"></script>
+  </section>
+  <!-- Basic Select2 end -->
+
+</form>
+
+
+    <script src="..\..\..\app-assets\vendors\js\vendors.min.js"></script>
+   
+    <script src="..\..\..\app-assets\vendors\js\editors\quill\quill.min.js"></script>
+
+    <script src="..\..\..\app-assets\js\scripts\editors\editor-quill.min.js"></script>
+<script>
+     function  sabt()
+    
+     {
+     
+      if(document.getElementById("description").innerText != '')
+      {
+        document.getElementById('jdr').value = document.getElementById("description").innerHTML;
+        $('#mss').css("display", "block");
+         
+      }
+       else
+        $('#mss_danger').css("display", "block");
+          
+      
+     }
+
+
+	   function  show()
+    
+     {
+      
+     
+         $('#dec').css("display", "block"); 
+      
+     }
+
+
+
+      function  noshow()
+    
+     {
+      
+     
+         $('#dec').css("display", "none"); 
+      
+     }
+</script>
+
+</section>
+<!-- Basic Inputs end -->
+<script>
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output_image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>

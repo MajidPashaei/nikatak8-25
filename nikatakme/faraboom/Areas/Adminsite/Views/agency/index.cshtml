@@ -1,0 +1,436 @@
+@model ViewModels.AdminViewModel.inforep.Vm_inforep;
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+
+<link rel="stylesheet" type="text/css" href="~/adminsite/app-assets/vendors/css/editors/quill/katex.min.css">
+<link rel="stylesheet" type="text/css" href="~/adminsite/app-assets/vendors/css/editors/quill/monokai-sublime.min.css">
+<link rel="stylesheet" type="text/css" href="~/adminsite/app-assets/vendors/css/editors/quill/quill.snow.css">
+<link rel="stylesheet" type="text/css" href="~/adminsite/app-assets/vendors/css/editors/quill/quill.bubble.css">
+
+<style>
+  #map {
+    height: 300px;
+    width: 100%;
+  }
+</style>
+<!-- Input Style start -->
+@if (ViewBag.er != null)
+{
+<p class="alert alert-success">@ViewBag.er</p>
+}
+
+<form action="/adminsite/agency/add" method="POST" enctype="multipart/form-data">
+<!-- Basic Select2 start -->
+<section class="basic-select2">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> ثبت نمایندگی جدید </h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <div class="row" style="padding: 15px;">
+              <div class="col-12 mb-2">
+              </div>
+
+
+
+ <input type="text" asp-for="State" style="display: none;">
+     	<div class="col-sm-4 col-12">
+        
+                                <div class="form-group">
+                                    <select id="ostan"  style="width: 100%;"  onchange="Func(this.value)" class="form-control">
+                              	 
+                                        <option value=""></option>
+                                        <option value="آذرشهر ,اسکو ,اهر ,بستان‌آباد ,بناب ,تبریز ,جلفا ,چاراویماق ,سراب ,شبستر ,عجب‌شیر ,کلیبر ,مراغه ,مرند ,ملکان ,میانه ,ورزقان ,هریس ,هشترود">آذربایجان شرقی</option>
+                                        <option value="  ارومیه ,اشنویه ,بوکان ,پیرانشهر ,تکاب ,چالدران ,خوی ,سردشت ,سلماس ,شاهین‌دژ ,ماکو ,مهاباد ,میاندوآب ,نقده,شوط,چایپاره,پلدشت">آذربایجان غربی</option>
+                                        <option value="  اردبیل ,بیله‌سوار ,پارس‌آباد ,خلخال ,کوثر ,گِرمی ,مِشگین‌شهر ,نَمین ,نیر">اردبیل</option>
+                                        <option value="  آران و بیدگل ,اردستان ,اصفهان ,برخوار و میمه ,تیران و کرون ,چادگان ,خمینی‌شهر ,خوانسار ,سمیرم ,شهرضا ,سمیرم سفلی ,فریدن ,فریدون‌شهر ,فلاورجان ,کاشان ,گلپایگان ,لنجان ,مبارکه ,نائین ,نجف‌آباد ,نطنز">اصفهان</option>
+                                        <option value="  آبدانان ,ایلام ,ایوان ,دره‌شهر ,دهلران ,شیروان و چرداول ,مهران">ایلام</option>
+                                        <option value="  بوشهر ,تنگستان ,جم ,دشتستان ,دشتی,دیر ,دیلم ,کنگان ,گناوه">بوشهر</option>
+                                        <option value="  سلام‌شهر ,پاکدشت ,تهران ,دماوند ,رباط‌کریم ,ری ,ساوجبلاغ ,شمیرانات ,شهریار ,فیروزکوه ,کرج ,نظرآباد ,ورامین">تهران</option>
+                                        <option value="  ردل ,بروجن ,شهرکرد ,فارسان ,کوهرنگ ,لردگان">چهارمحال و بختیاری</option>
+                                        <option value="  یرجند ,درمیان ,سرایان ,سربیشه ,فردوس ,قائنات,نهبندان">خراسان جنوبی</option>
+                                        <option value="  ردسکن ,تایباد ,تربت جام ,تربت حیدریه ,چناران ,خلیل‌آباد ,خواف ,درگز ,رشتخوار ,سبزوار ,سرخس ,فریمان ,قوچان ,کاشمر ,کلات ,گناباد ,مشهد ,مه ولات ,نیشابور">خراسان رضوی</option>
+                                        <option value="  سفراین ,بجنورد ,جاجرم ,شیروان ,فاروج ,مانه و سملقان">خراسان شمالی</option>
+                                        <option value="  بادان ,امیدیه ,اندیمشک ,اهواز ,ایذه ,باغ‌ملک ,بندر ماهشهر ,بهبهان ,خرمشهر ,دزفول ,دشت آزادگان ,رامشیر ,رامهرمز ,شادگان ,شوش ,شوشتر ,گتوند ,لالی ,مسجد سلیمان,هندیجان ">خوزستان</option>
+                                        <option value="  بهر ,ایجرود ,خدابنده ,خرمدره ,زنجان ,طارم ,ماه‌نشان">زنجان</option>
+                                        <option value="  دامغان ,سمنان ,شاهرود ,گرمسار ,مهدی‌شهر">سمنان</option>
+                                        <option value="  ایرانشهر ,چابهار ,خاش ,دلگان ,زابل ,زاهدان ,زهک ,سراوان ,سرباز ,کنارک ,نیک‌شهر">سیستان و بلوچستان</option>
+                                        <option value="  آباده ,ارسنجان ,استهبان ,اقلید ,بوانات ,پاسارگاد ,جهرم ,خرم‌بید ,خنج ,داراب ,زرین‌دشت ,سپیدان ,شیراز ,فراشبند ,فسا ,فیروزآباد ,قیر و کارزین ,کازرون ,لارستان ,لامِرد ,مرودشت ,ممسنی ,مهر ,گراش,نی‌ریز">فارس</option>
+                                        <option value="  آبیک ,البرز ,بوئین‌زهرا ,تاکستان ,قزوین">قزوین</option>
+                                        <option value="  قم">قم</option>
+                                        <option value="  بانه ,بیجار ,دیواندره ,سروآباد ,سقز ,سنندج ,قروه ,کامیاران ,مریوان">کردستان</option>
+                                        <option value="  بافت ,بردسیر ,بم ,جیرفت ,راور ,رفسنجان ,رودبار جنوب ,زرند ,سیرجان ,شهر بابک ,عنبرآباد ,قلعه گنج ,کرمان ,کوهبنان ,کهنوج ,منوجان">کرمان</option>
+                                        <option value="  اسلام‌آباد غرب ,پاوه ,ثلاث باباجانی ,جوانرود ,دالاهو ,روانسر ,سرپل ذهاب ,سنقر ,صحنه ,قصر شیرین ,کرمانشاه ,کنگاور ,گیلان غرب ,هرسین">کرمانشاه</option>
+                                        <option value="  بویراحمد ,بهمئی ,دنا ,کهگیلویه ,گچساران">کهگیلویه و بویراحمد</option>
+                                        <option value="  آزادشهر ,آق‌قلا ,بندر گز ,ترکمن ,رامیان ,علی‌آباد ,کردکوی ,کلاله ,گرگان ,گنبد کاووس ,مراوه‌تپه ,مینودشت">گلستان</option>
+                                        <option value="  آستارا ,آستانه اشرفیه ,اَملَش ,بندر انزلی ,رشت ,رضوانشهر ,رودبار ,رودسر ,سیاهکل ,شَفت ,صومعه‌سرا ,طوالش ,فومَن ,لاهیجان ,لنگرود ,ماسال">گیلان</option>
+                                        <option value="  ازنا ,الیگودرز ,بروجرد ,پل‌دختر ,خرم‌آباد ,دورود ,دلفان ,سلسله ,کوهدشت">لرستان</option>
+                                        <option value="  آمل ,بابل ,بابلسر ,بهشهر ,تنکابن ,جویبار ,چالوس ,رامسر ,ساری ,سوادکوه ,قائم‌شهر ,گلوگاه ,محمودآباد ,نکا ,نور ,نوشهر">مازندران</option>
+                                        <option value="  آشتیان ,اراک ,تفرش ,خمین ,دلیجان ,زرندیه ,ساوه ,شازند ,کمیجان ,محلات">مرکزی</option>
+                                        <option value="  ابوموسی ,بستک ,بندر عباس ,بندر لنگه ,جاسک ,حاجی‌آباد ,شهرستان خمیر ,رودان  ,قشم ,گاوبندی ,میناب">هرمزگان</option>
+                                        <option value="  اسدآباد ,بهار ,تویسرکان ,رزن ,کبودرآهنگ ,ملایر ,نهاوند ,همدان">همدان</option>
+                                        <option value="  ابرکوه ,اردکان ,بافق ,تفت ,خاتم ,صدوق ,طبس ,مهریز ,مِیبُد ,یزد">یزد</option>
+                                    </select>
+	
+                                </div>
+						</div>
+
+			<div  class="col-sm-4 col-12" required>
+			<select  style="width: 100%;" asp-for="City" class="form-control"> </select>
+     
+		
+			</div>
+
+
+   	<div class="col-lg-4">
+			 <input required asp-for="part" class="form-control "
+			  placeholder="بخش " type="text">
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             <div class="col-sm-6 col-12">
+               <div class="alert alert-success">
+                  <input type="checkbox" asp-for="codshow" >
+                 <label for="vehicle1">عدم نمایش فیلد</label>
+                </div>
+                <fieldset class="form-group">
+                  <label for="basicInput">کد نمایندگی</label>
+                  <input type="text" class="form-control" asp-for="cod" required placeholder="کد نمایندگی">
+                </fieldset>
+              </div>
+
+           
+              
+              <div class="col-sm-3 col-12">
+
+                <div class="alert alert-success">
+                  <input type="checkbox" asp-for="Clerkshow" >
+                 <label for="vehicle1">عدم نمایش فیلد</label>
+                </div>
+                <fieldset class="form-group">
+                  <label for="basicInput"> متصدی نمایندگی </label>
+                  <input type="text" class="form-control" asp-for="Clerk" required placeholder="متصدی نمایندگی را وارد کنید">
+                </fieldset>
+              </div>
+
+              <div class="col-lg-3 col-sm-6 col-12">
+                <div class="alert alert-success">
+                  <input type="checkbox" asp-for="Phoneshow">
+                 <label for="vehicle1">عدم نمایش فیلد</label>
+                </div>
+                <label for="squareText"> شماره تلفن همراه </label>
+                <fieldset class="form-group position-relative has-icon-left input-divider-left">
+                  <input type="text" class="form-control" asp-for="Phone" required placeholder=" شماره تلفن همراه را وارد نمایید">
+                  <div class="form-control-position">
+                    <i class="feather icon-smartphone"></i>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="col-lg-3 col-sm-6 col-12">
+                <div class="alert alert-success">
+                  <input type="checkbox" asp-for="PhoneHomeshow">
+                 <label for="vehicle1">عدم نمایش فیلد</label>
+                </div>
+                <label for="squareText"> شماره تلفن ثابت </label>
+                <fieldset class="form-group position-relative has-icon-left input-divider-left">
+                  <input type="text" class="form-control" asp-for="PhoneHome" required placeholder=" شماره تلفن ثابت را وارد نمایید">
+                  <div class="form-control-position">
+                    <i class="feather icon-phone"></i>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <div class="alert alert-success">
+                  <input type="checkbox" asp-for="photosshow">
+                 <label for="vehicle1">عدم نمایش فیلد</label>
+                </div>
+                <fieldset class="form-group">
+                  <div class="col-sm-6 col-12">
+                    <label for="file" class="btn btn-default">انتخاب تصویر </label>
+                    <input asp-for="poto" required type="file" accept="image/*" onchange="preview_image(event)">
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group ">
+                  <img id="output_image" height=100px width=100px>
+                </fieldset>
+              </div>
+<div class="col-sm-12 col-12">
+                <div id="map"></div>
+              </div>
+
+
+          
+                            <div class="col-sm-6 col-12">
+                                <fieldset class="form-group">
+                                    <button type="button"
+                                        class="btn mb-1 btn-outline-primary btn-icon btn-md btn-block mt-1 " > 
+                                        برای ثبت آدرس بعد از انتخاب موقعیت روی لوکیشن کلیک کنید
+                                        </button>
+                                </fieldset>
+                            </div>
+
+                              <div class="col-lg-6 col-sm-6 col-12">
+
+                                <label for="squareText"> طول و عرض جغرافیایی </label>
+                                <fieldset class="form-group position-relative has-icon-left input-divider-left">
+                                    <input asp-for="Locationaddress" type="text" class="form-control"  placeholder="طول و عرض جغرافیایی   " required>
+                                    <div class="form-control-position">
+                                        <i class="feather icon-smartphone"></i>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+
+
+
+
+
+
+              <div class="col-sm-6 col-12">
+                <div class="alert alert-success">
+                  <input type="checkbox"  asp-for="Addressshow">
+                 <label for="vehicle1">عدم نمایش فیلد</label>
+                </div>
+                <fieldset class="form-group">
+                  <label for="squareText"> آدرس </label>
+                  <input required type="text" asp-for="Address" class="form-control square" placeholder=" آدرس  را وارد نمایید ">
+                </fieldset>
+              </div>
+
+
+                    <div class="col-sm-6 col-12">
+                      <div class="alert alert-success">
+                  <input type="checkbox" asp-for="Postalcodeshow" >
+                 <label for="vehicle1">عدم نمایش فیلد</label>
+                </div>
+                <fieldset class="form-group">
+                  <label for="squareText"> کد پستی </label>
+                  <input type="text" asp-for="Postalcode" class="form-control square" required placeholder="کد پستی ">
+                </fieldset>
+              </div>
+
+           
+                          <div class="col-sm-12 col-12">
+               <section class="full-editor">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-header">
+                            <h4 class="card-title">توضیحات کامل</h4>
+                          </div>
+                          <div class="card-content collapse show">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <div id="full-wrapper">
+                                    <div id="full-container">
+                                      <input type="hidden"  id="jdr" asp-for="Description" />
+
+                                      <div class="editor" id="description">
+                                        @* @Html.Raw(Model.FullTextBlo) *@
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+<p id="mss" class="alert alert-success" style="display: none;">متن با موفقیت ارسال شد.</p>
+<p id="mss_danger" class="alert alert-danger" style="display: none;">متنی برای ارسال وجو ندارد.</p>
+
+<a onclick="sabt()" class="btn btn-info mr-1 mb-1" style="color: white;">ارسال متن </a>
+</section>
+              </div>
+
+
+              <div class="col-sm-12 col-12">
+                <fieldset style="text-align: center;" class="form-group mt-4">
+                  <button type="submit" class="btn btn-success mr-1 mb-1">ذخیره</button>
+                  <button type="button" class="btn btn-danger mr-1 mb-1">لغو</button>
+                </fieldset>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Basic Select2 end -->
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Basic Inputs end -->
+<script>
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output_image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+<script src="~/adminsite/app-assets/vendors/js/vendors.min.js"></script>
+
+<script src="~/adminsite/app-assets/vendors/js/editors/quill/quill.min.js"></script>
+
+<script src="~/adminsite/app-assets/js/scripts/editors/editor-quill.min.js"></script>
+
+<script src="..\..\..\app-assets\vendors\js\vendors.min.js"></script>
+
+<script src="..\..\..\app-assets\vendors\js\editors\quill\quill.min.js"></script>
+
+<script src="..\..\..\app-assets\js\scripts\editors\editor-quill.min.js"></script>
+<script>
+  function sabt() {
+
+    if (document.getElementById("description").innerText != '') {
+      document.getElementById('jdr').value = document.getElementById("description").innerHTML;
+      $('#mss').css("display", "block");
+
+    }
+    else
+      $('#mss_danger').css("display", "block");
+
+
+  }
+</script>
+
+
+ 
+   
+
+
+     <script> 
+ function Func(Shahrestanha) {
+  
+
+//////ostan
+         var vSkill = document.getElementById('ostan');
+
+       var vSkillText = vSkill.options[vSkill.selectedIndex].innerHTML;
+
+       document.getElementById('State').value=vSkillText;
+//////////
+
+       var _Shahrestan = document.getElementById("City");
+       _Shahrestan.options.length = 0;
+       if(Shahrestanha != "") {
+          var arr = Shahrestanha.split(",");
+          for(i = 0; i < arr.length; i++) {
+              if(arr[i] != "") {
+                 _Shahrestan.options[_Shahrestan.options.length]=new Option(arr[i],arr[i]);
+              }
+          }
+       }
+   }
+
+
+</script>
+
+
+<script>
+         // Creating map options
+         var mapOptions = {
+            center: [38.5484252,44.9866539],
+            zoom: 12
+         }
+         // Creating a map object
+         var map = new L.map('map', mapOptions);
+
+         // Creating a Layer object
+         var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+         // Adding layer to the map
+         map.addLayer(layer);
+
+         // Creating a Marker
+         var markerOptions = {
+            title: "MyLocation",
+            clickable: true,
+            draggable: true
+         }
+         // Creating a marker
+         var marker = L.marker([38.551278,44.970346], markerOptions);
+
+         // Adding marker to the map
+         marker.addTo(map);
+
+
+         map.on('click', function(marker){
+    // Place marker
+    
+
+    // Ajax query to save the values:
+    var data = {
+        lat: marker.latlng.lat,
+        lng: marker.latlng.lng
+    }
+    document.getElementById('Locationaddress').value=data.lat+","+data.lng
+ 
+    
+});
+
+
+function loc(marker)
+{
+     var data = {
+        lat: marker.latlng.lat,
+        lng: marker.latlng.lng
+    }
+ alert("hjgghjgh");
+}
+      </script>
+      
+    <script>
+
+
+

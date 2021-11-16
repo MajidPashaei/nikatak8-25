@@ -1,0 +1,46 @@
+@model ViewModels.AdminViewModel.Admin.Vm_info
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class=" text-center alert alert-warning"> واریزی های حساب من </h2>
+        <hr>
+        <h2 class="col-12 text-center  alert alert-info"> مجموع تراکنش ها : @ViewBag.Sum </h2>
+        @* <a href="#" style="float: left;" class="col-2 text-center alert alert-dark p-1">درخواست تسویه</a> *@
+        
+		<hr>
+		<section id="data-list-view" class="data-list-view-header">
+			<div class="table-responsive">
+				<table class="table data-list-view">
+					 <thead class="bg-primary ">
+                                <tr>
+                                    <th> ردیف : </th>
+                                    <th>مبلغ :</th>
+                                    <th> تاریخ : </th>
+                                    <th>جزئیات</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                @if (ViewBag.list2 != null)
+                                {
+                                    int i = 1;
+                                    @foreach (var item in ViewBag.list2)
+                                    {
+                                        <tr>
+                                            <th>@i</th>
+                                            <th>@item.Pay</th>
+                                            <th>@item.DateTime</th>
+                                            <th><a class="btn btn-outline-danger btn-sm" href="~/Admin/Wallet/Detail/@item.RequestId"
+									role="button">جزئیات</a>
+									</th>
+                                        </tr>
+                                        i++;
+                                    }
+                                }
+                            </tbody>
+				</table>
+			</div>
+		</section>
+	</div>
+</div>
+<script>
+	document.getElementById("pay").innerText = document.getElementById("pay").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+</script>

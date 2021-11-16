@@ -1,0 +1,138 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no">
+    <meta name="description" content="سوها- Multipurpose Ecommerce Mobile HTML Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#100DD1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>تکنولوژی هوشمند نیکا</title>
+    <!-- manifest meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="~/mobile/img/favicon180.png" sizes="180x180">
+    <link rel="icon" href="~/mobile/img/favicon16.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="~/mobile/img/favicon16.png" sizes="16x16" type="image/png">
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="~/mobile2/style.css">
+    <!-- icons-->
+  
+    <script src="https://kit.fontawesome.com/749ecdaf5b.js" crossorigin="anonymous"></script>
+    <!-- Web App Manifest-->
+    <link rel="manifest" href="~/mobile2/manifest.json">
+  </head>
+
+  <body>
+    <!-- Preloader-->
+    <div class="preloader" id="preloader">
+      <div class="spinner-grow text-secondary" role="status">
+        <div class="sr-only">بارگذاری...</div>
+      </div>
+    </div>
+    <!-- Header Area-->
+    <div class="header-area" id="headerArea">
+      <div class="container h-100 d-flex align-items-center justify-content-between">
+        <!-- Navbar Toggler-->
+        <div class="suha-navbar-toggler d-flex flex-wrap" id="suhaNavbarToggler"><span></span><span></span><span></span></div>
+        <!-- Back Button-->
+        <div class=""><a href="/mobile/menu/index" class="text-secondary ml-5" style="font-size: 15px;">نیکاتک</a></div>
+        <!-- Logo Wrapper-->
+        <div class="logo-wrapper"><a href="#"><img src="~/mobile2/img/core-img/fev.png" width="80" alt="تکنولوؤی هوشمند نیکاتک"></a></div>
+      </div>
+    </div>
+    <!-- Sidenav Black Overlay-->
+    <div class="sidenav-black-overlay"></div>
+    <!-- Side Nav Wrapper-->
+    <div class="suha-sidenav-wrapper" id="sidenavWrapper">
+      <!-- Sidenav Profile-->
+      <div class="sidenav-profile">
+         @{
+            if ( (@HttpContextAccessor.HttpContext.Session.GetString("photo")) != null)
+            {
+                 var img = @HttpContextAccessor.HttpContext.Session.GetString("photo");
+                 <div class="user-profile">
+                     <img src="~/fileupload/@img" alt="">
+                 </div>
+            }
+         }
+        <div class="user-info">
+          <h6 class="user-name mb-0">@HttpContextAccessor.HttpContext.Session.GetString("name")</h6>
+            <p class="available-balance m-1">موجودی کیف پول شما : 
+              <br>
+              <span class="m-1"><span class="counter mt-1" id="curency">@HttpContextAccessor.HttpContext.Session.GetInt32("sum")</span></span><span> تومان</span>
+            </p>
+        </div>
+            <script>
+			    document.getElementById("curency").innerText = document.getElementById("curency").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			</script>
+      </div>
+      <!-- Sidenav Nav-->
+      <ul class="sidenav-nav pl-0">
+        <li><a href="/Mobile/Menu/profile"><i class="lni lni-user"></i>پروفایل من</a></li>
+        <li><a href="https://nikatak.ir/blog/index"><i class="lni lni-alarm lni-tada-effect"></i>اطلاعیه ها </a></li>
+
+          <!-- Night Mode View Card-->
+        @* <li>
+            <div class="single-settings d-flex align-items-center justify-content-between">
+          <a class="mt-0">
+              <i class="lni lni-night m-1"></i>
+                <span>حالت شب</span> 
+                <div class="toggle-button-cover">
+                  <div class="button r">
+                    <input class="checkbox" id="darkSwitch" type="checkbox">
+                    <div class="knobs"></div>
+                    <div class="layer"></div>
+                </div>
+          </a>
+            </div>
+        </li> *@
+
+        <li><a href="/Mobile/home/page"><i class="lni lni-empty-file"></i>تمام صفحات</a></li>
+        <li><a href="/mobile/home/setting"><i class="lni lni-cog"></i>تنظیمات</a></li>
+        <li><a href="/mobile/menu/exit"><i class="lni lni-power-switch"></i>خروج از سیستم</a></li>
+      </ul>
+    </div>
+
+    @RenderBody()
+    
+    <!-- Internet Connection Status-->
+    <div class="internet-connection-status" id="internetStatus"></div>
+    <!-- Footer Nav-->
+    <div class="footer-nav-area" id="footerNav">
+      <div class="container h-100 px-0">
+        <div class="suha-footer-nav h-100">
+          <ul class="h-100 d-flex align-items-center justify-content-between pl-0">
+            <li class="active"><a href="/mobile/menu/index"><i class="lni lni-home"></i>خانه</a></li>
+            <li><a href="/mobile/wallet/index"><i class="fas fa-wallet"></i>کیف پول</a></li>
+            <li><a href="/mobile/wallet/varizi"><i class="far fa-credit-card"></i>واریزی ها</a></li>
+            <li><a href="/mobile/wallet/Tarakonesh"><i class="far fa-money-bill-alt"></i>برداشتی ها</a></li>
+            <li><a href="/mobile/home/setting"><i class="lni lni-cog"></i>تنظیمات</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- All JavaScript Files-->
+    <script src="~/mobile2/js/jquery.min.js"></script>
+    <script src="~/mobile2/js/bootstrap.bundle.min.js"></script>
+    <script src="~/mobile2/js/waypoints.min.js"></script>
+    <script src="~/mobile2/js/jquery.easing.min.js"></script>
+    <script src="~/mobile2/js/owl.carousel.min.js"></script>
+    <script src="~/mobile2/js/jquery.counterup.min.js"></script>
+    <script src="~/mobile2/js/jquery.countdown.min.js"></script>
+    <script src="~/mobile2/js/default/jquery.passwordstrength.js"></script>
+    <script src="~/mobile2/js/wow.min.js"></script>
+    <script src="~/mobile2/js/jarallax.min.js"></script>
+    <script src="~/mobile2/js/jarallax-video.min.js"></script>
+    <script src="~/mobile2/js/default/dark-mode-switch.js"></script>
+    <script src="~/mobile2/js/default/active.js"></script>
+    <script src="~/mobile2/js/pwa.js"></script>
+
+    
+</body>
+</html>

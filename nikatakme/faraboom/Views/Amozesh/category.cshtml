@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+
+	<!-- form Uploads -->
+	<link href="~/admin/assets/plugins/fileuploads/css/dropify.css" rel="stylesheet" type="text/css">
+	<!-- Favicon -->
+	<link href="~/admin/assets/img/brand/favicon.png" rel="icon" type="image/png">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
+
+	<!-- Icons -->
+	<link href="~/admin/assets/css/icons.css" rel="stylesheet">
+
+	<!--Bootstrap.min css-->
+	<link rel="stylesheet" href="~/admin/assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="~/admin/assets/css/bootstrap-rtl.min.css">
+
+	<!-- Ansta CSS -->
+	<link href="~/admin/assets/css/dashboard.css" rel="stylesheet" type="text/css">
+	<link href="~/admin/assets/css/hover.css" rel="stylesheet" type="text/css">
+	<script src="~/admin/assets/js/Date.js"></script>
+	<!-- Tabs CSS -->
+	<link href="~/admin/assets/plugins/tabs/style.css" rel="stylesheet" type="text/css">
+
+	<!-- jvectormap CSS -->
+	<link href="~/admin/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
+
+	<!-- Custom scroll bar css-->
+	<link href="~/admin/assets/plugins/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet">
+
+
+	<!-- Sidemenu Css -->
+	<link href="~/admin/assets/plugins/toggle-sidebar/css/darksiderbar-sidemenu.css" rel="stylesheet">
+	<!--Select2 css-->
+	<link rel="stylesheet" href="~/admin/assets/plugins/select2/select2.css">
+
+
+	<style>
+		.zoom {
+
+			transition: transform .4s;
+			/* Animation */
+
+			margin: 0 auto;
+		}
+
+		.zoom:hover {
+			transform: scale(1.3);
+			/* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+		}
+	</style>
+
+
+</head>
+
+
+
+<body class="app sidebar-mini rtl ">
+
+	<div class="container-fluid">
+		<div class="container-fluid">
+
+
+			<div class="row ">
+							@foreach (var item in ViewBag.Amozesh)
+    {
+				<div class="col-lg-4  col-sm-12">
+					<div class="friend-card card shadow">
+						<img src="~/adminsite/app-assets/images/icons/playicon.png" alt="profile-cover" class="img-center"
+							style="width: 31%;">
+						<div class="card-info mt-2">
+							<div class="friend-info">
+								<a href="/Amozesh/details/@item.Id" class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+									آموزش</a>
+								<h3 class=" mb-0"><a href="#" class="profile-link">@item.TitleTeaser</a></h3>
+							
+							</div>
+						</div>
+					</div>
+				</div>
+	}
+
+
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Core -->
+	<script src="~/admin/assets/plugins/jquery/dist/jquery.min.js"></script>
+	<script src="~/admin/assets/js/popper.js"></script>
+	<script src="~/admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Echarts JS -->
+	<script src="~/admin/assets/plugins/chart-echarts/echarts.js"></script>
+
+	<!-- Fullside-menu Js-->
+	<script src="~/admin/assets/plugins/toggle-sidebar/js/sidemenu.js"></script>
+
+	<!-- Custom scroll bar Js-->
+	<script src="~/admin/assets/plugins/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<!-- peitychart -->
+	<script src="~/admin/assets/plugins/peitychart/jquery.peity.min.js"></script>
+	<script src="~/admin/assets/plugins/peitychart/peitychart.init.js"></script>
+
+	<!-- Vector Plugin -->
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/gdp-data.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-uk-mill-en.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-au-mill.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-ca-lcc.js"></script>
+	<script src="~/admin/assets/js/dashboard2map.js"></script>
+
+	<!-- Ansta JS -->
+	<script src="~/admin/assets/js/custom.js"></script>
+	<script src="~/admin/assets/js/dashboard-sales.js"></script>
+	<!-- Optional JS -->
+	<script src="~/admin/assets/plugins/chart.js/dist/Chart.min.js"></script>
+	<script src="~/admin/assets/plugins/chart.js/dist/Chart.extension.js"></script>
+
+	<!-- Data tables -->
+	<script src="~/admin/assets/plugins/datatable/jquery.dataTables.min.js"></script>
+	<script src="~/admin/assets/plugins/datatable/dataTables.bootstrap4.min.js"></script>
+
+	<!-- Form wizard js -->
+	<script src="~/admin/assets/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
+	<script src="~/admin/assets/js/wizard.js"></script>
+	<!-- file uploads js -->
+	<script src="~/admin/assets/plugins/fileuploads/js/dropify.min.js"></script>
+	<!-- Ansta Scripts -->
+	<!-- Core -->
+	<script src="~/admin/assets/plugins/jquery/dist/jquery.min.js"></script>
+	<script src="~/admin/assets/js/popper.js"></script>
+	<script src="~/admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Echarts JS -->
+	<script src="~/admin/assets/plugins/chart-echarts/echarts.js"></script>
+
+	<!-- Fullside-menu Js-->
+	<script src="~/admin/assets/plugins/toggle-sidebar/js/sidemenu.js"></script>
+
+	<!-- Custom scroll bar Js-->
+	<script src="~/admin/assets/plugins/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<!-- peitychart -->
+	<script src="~/admin/assets/plugins/peitychart/jquery.peity.min.js"></script>
+	<script src="~/admin/assets/plugins/peitychart/peitychart.init.js"></script>
+
+	<!-- Vector Plugin -->
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/gdp-data.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-uk-mill-en.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-au-mill.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-ca-lcc.js"></script>
+	<script src="~/admin/assets/js/dashboard2map.js"></script>
+
+	<!-- Ansta JS -->
+	<script src="~/admin/assets/js/custom.js"></script>
+	<script src="~/admin/assets/js/dashboard-sales.js"></script>
+	<!-- Optional JS -->
+	<script src="~/admin/assets/plugins/chart.js/dist/Chart.min.js"></script>
+	<script src="~/admin/assets/plugins/chart.js/dist/Chart.extension.js"></script>
+
+	<!-- Data tables -->
+	<script src="~/admin/assets/plugins/datatable/jquery.dataTables.min.js"></script>
+	<script src="~/admin/assets/plugins/datatable/dataTables.bootstrap4.min.js"></script>
+
+	<!-- Form wizard js -->
+	<script src="~/admin/assets/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
+	<script src="~/admin/assets/js/wizard.js"></script>
+	<!-- file uploads js -->
+	<script src="~/admin/assets/plugins/fileuploads/js/dropify.min.js"></script>
+	<script>
+		$('.dropify').dropify({
+			messages: {
+				'default': 'فایل خود را کشیده و اینجا رها کنید یا برای انتخاب فایل کلیک کنید',
+				'replace': 'فایل خود را کشیده و اینجا رها کنید یا برای تغییر فایل کلیک کنید',
+				'remove': 'حذف',
+				'error': 'اوپس،خطایی رخ داده است'
+			},
+			error: {
+				'fileSize': 'فایل انتخابی شما بزرگتر از محدودیت حجم تعیین شده است'
+			}
+		});
+	</script>
+
+</body>
+
+</html>

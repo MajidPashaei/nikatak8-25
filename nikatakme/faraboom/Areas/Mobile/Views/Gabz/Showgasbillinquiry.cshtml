@@ -1,0 +1,329 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<style>
+	@@font-face {
+		font-family: "font";
+		src: url('./css/Fonts/IRANSansWeb(FaNum) Medium.ttf')
+	}
+
+	label {
+		font-family: 'yekan';
+		text-align: right;
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	p {
+		font-family: "yekan" !important;
+		font-weight: lighter;
+		margin-top: 5px;
+		font-size: medium;
+	}
+
+	h6 {
+		font-family: 'font';
+		font-weight: 900;
+	}
+
+
+	@@font-face {
+		font-family: "yekan";
+		src: url(./Fonts/Yekan.woff)format('woff');
+	}
+
+	h5 {
+		text-align: right;
+		font-family: "yekan";
+	}
+</style>
+<div class="card shadow" id="myDiv">
+	<div class="card-header">
+		<h4 class="mb-0"> نمایش استعلام قبض گاز</h4>
+	</div>
+	<div class="card-body">
+
+		<form method="POST" action="/Mobile/PayGabz/result">
+			<div class="row">
+				<div class="table-responsive">
+					<div class="form-group justify-content-center ">
+						<p style="direction: ltr; display: none;" id="Gaz">@ViewBag.result</p>
+						@if (ViewBag.Msg != null)
+						{
+							<div class="text-center">
+								<p class="alert alert-danger">@ViewBag.Msg</p>
+							</div>
+						}
+						<input class="d-none" asp-for="amount">
+						<input class="d-none" asp-for="bill_id2">
+						<input class="d-none" asp-for="pay_id2">
+						<input class="d-none" asp-for="Titel" value="گاز">
+
+
+						<div class="col-xl-12 col-lg-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="basic-form">
+										<div class="form-group">
+											<div class="col-12 row">
+
+												<div class="col-6">
+													<label class="text-label">
+														شناسه قبض:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="bill_id">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														شناسه پرداخت:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="pay_id">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														مبلغ :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="amount2">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														تاریخ :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="date">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														نام مالک :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="owner_name">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														نوع مصرف :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="use_type">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														شماره اشتراک :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="subscription_number">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														شهر:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="city">
+													</p>
+												</div>
+
+												<div class="col-7">
+													<label class="text-label">
+														شماره پرونده :
+													</label>
+												</div>
+												<div class="col-5">
+													<p id="file_number">
+													</p>
+												</div>
+
+												<div class="col-7">
+													<label class="text-label">
+														بدهی دیگر :
+													</label>
+												</div>
+												<div class="col-5">
+													<p id="other_debt">
+													</p>
+												</div>
+
+												<div class="col-7">
+													<label class="text-label">
+														بدهی باقیمانده :
+													</label>
+												</div>
+												<div class="col-5">
+													<p id="remaining_debt">
+													</p>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-end ">
+								<button type="submit" class="btn btn-success col-12 mt-1 mb-1"
+									style="width: min-content;">
+									پرداخت
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+		</form>
+	</div>
+</div>
+
+<script>
+
+	debugger
+	var str = document.getElementById('Gaz').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+	var res = str.split(",");
+
+	var bill_id = res[1].split(":");
+	document.getElementById('bill_id2').value = "" + bill_id[1];
+	var bill_id = res[1].split(":");
+	document.getElementById('bill_id').innerText = "" + bill_id[1];
+
+	var pay_id = res[2].split(":");
+	document.getElementById('pay_id2').value = "" + pay_id[1];
+	var pay_id = res[2].split(":");
+	document.getElementById('pay_id').innerText = "" + pay_id[1];
+
+	var amount = res[3].split(":");
+	document.getElementById('amount').value = "" + amount[1];
+	var amount = res[3].split(":");
+	document.getElementById('amount2').innerText = "" + amount[1];
+
+	var date = res[4].split(":");
+	var timestamp = parseInt(date[1]);
+	let mydate = new Date(timestamp);
+	let mypersiandate = mydate.toLocaleDateString('fa-IR');
+	document.getElementById('date').innerText = "" + mypersiandate;
+
+	var owner_name = res[5].split(":");
+	document.getElementById('owner_name').innerText = "" + owner_name[1];
+
+	var province = res[6].split(":");
+	document.getElementById('use_type').innerText = "" + province[1];
+
+	var province = res[7].split(":");
+	document.getElementById('subscription_number').innerText = "" + province[1];
+
+	var province = res[8].split(":");
+	document.getElementById('address_code').innerText = "" + province[1];
+
+	var province = res[9].split(":");
+	document.getElementById('city').innerText = "" + province[1];
+
+	var province = res[10].split(":");
+	document.getElementById('area_code').innerText = "" + province[1];
+
+	var province = res[11].split(":");
+	document.getElementById('meter_serial').innerText = "" + province[1];
+
+	var province = res[12].split(":");
+	document.getElementById('file_number').innerText = "" + province[1];
+
+	var province = res[13].split(":");
+	document.getElementById('unit_count').innerText = "" + province[1];
+
+	var province = res[14].split(":");
+	document.getElementById('group').innerText = "" + province[1];
+
+	var province = res[15].split(":");
+	document.getElementById('capacity').innerText = "" + province[1];
+
+	var previous_reading_date = res[16].split(":");
+	var timestamp2 = parseInt(previous_reading_date[1]);
+	let mydate2 = new Date(timestamp2);
+	let mypersiandate2 = mydate2.toLocaleDateString('fa-IR');
+	document.getElementById('previous_reading_date').innerText = "" + mypersiandate2;
+
+	var current_reading_date = res[17].split(":");
+	var timestamp3 = parseInt(current_reading_date[1]);
+	let mydate3 = new Date(timestamp3);
+	let mypersiandate3 = mydate3.toLocaleDateString('fa-IR');
+	document.getElementById('current_reading_date').innerText = "" + mypersiandate3;
+
+	var province = res[18].split(":");
+	document.getElementById('previous_counter_digit').innerText = "" + province[1];
+
+	var province = res[19].split(":");
+	document.getElementById('current_counter_digit').innerText = "" + province[1];
+
+	var province = res[20].split(":");
+	document.getElementById('counter_activity').innerText = "" + province[1];
+
+	var province = res[21].split(":");
+	document.getElementById('standard_consumption').innerText = "" + province[1];
+
+	var province = res[22].split(":");
+	document.getElementById('gas_consumption_amount').innerText = "" + province[1];
+
+	var province = res[23].split(":");
+	document.getElementById('subscription').innerText = "" + province[1];
+
+	var province = res[24].split(":");
+	document.getElementById('tax').innerText = "" + province[1];
+
+	var province = res[25].split(":");
+	document.getElementById('insurance').innerText = "" + province[1];
+
+	var province = res[26].split(":");
+	document.getElementById('other_debt').innerText = "" + province[1];
+
+	var province = res[27].split(":");
+	document.getElementById('remaining_debt').innerText = "" + province[1];
+
+	var province = res[28].split(":");
+	document.getElementById('remaining_previous_invoice').innerText = "" + province[1];
+
+	var province = res[29].split(":");
+	document.getElementById('debt_count').innerText = "" + province[1];
+
+	var province = res[30].split(":");
+	document.getElementById('serial_number').innerText = "" + province[1];
+
+	var province = res[31].split(":");
+	document.getElementById('remaining_amount1000_rial').innerText = "" + province[1];
+
+	var province = res[32].split(":");
+	document.getElementById('deduction_amount1000_rial').innerText = "" + province[1];
+
+	var province = res[33].split(":");
+	document.getElementById('village_gas_tax').innerText = "" + province[1];
+
+</script>
+
+<script>
+	function print() {
+		var printContents = document.getElementById('myDiv').innerHTML;
+		var originalContents = document.body.innerHTML;
+
+		document.body.innerHTML = printContents;
+
+		window.print();
+
+		document.body.innerHTML = originalContents;
+	}
+</script>

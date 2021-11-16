@@ -1,0 +1,25 @@
+@model ViewModels.AdminViewModel.Sepordeh.Vm_Sepordeh;
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0">پرداخت صورت حساب پرونده اعتباری</h2>
+    </div>
+    <form method="POST" action="Admin/Sepordeh/ShowPardakhtEtebari">
+        <div class="card-body col-md-12">
+            <h2 class="mb-0 mt-1"> شماره مشتری خود :</h2>
+            <input type="text" class="form-control" asp-for="customer_number"
+                placeholder=" شماره مشتری خود را وارد کنید">
+            <h2 class="mb-0  mt-1"> شماره پرونده اعتباری :</h2>
+            <input type="text" class="form-control" asp-for="dossier_number"
+                placeholder=" شماره پرونده اعتباری خود را وارد کنید">
+            <h2 class="mb-0  mt-1"> مبلغ :</h2>
+            <input type="text" class="form-control" asp-for="amount"
+                placeholder=" مبلغ مورد نظر خود را وارد کنید">
+            <h2 class="mb-0  mt-1"> شماره سپرده اعتباری :</h2>
+            <input type="text" class="form-control" asp-for="deposit_number"
+                placeholder=" شماره سپرده اعتباری خود را وارد کنید">
+            <button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;">دریافت
+                اطلاعات
+            </button>
+        </div>
+    </form>
+</div>

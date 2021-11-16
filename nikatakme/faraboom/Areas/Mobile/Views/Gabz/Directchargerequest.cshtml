@@ -1,0 +1,62 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0">درخواست شارژ مستقیم</h2>
+	</div>
+	<div class="card-body">
+		<form action="/Admin/Gabz/ShwoDirectchargerequest" method="POST">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<h2 class="mb-0"> شماره همراه :</h2>
+						<input type="text" class="form-control" asp-for="mobile_number" placeholder=" شماره همراه ">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<h2 class="mb-0"> مبلغ : </h2>
+						<select type="number" class="form-control mt-1" asp-for="amount">
+							<option value=" 2000"> 2000</option>
+							<option value=" 5000"> 5000</option>
+							<option value="10000">10000</option>
+							<option value="20000">20000</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			@* <div class="col-md-6">
+
+   	<div class="form-group">
+   	<h2 class="mb-0"> شماره کارت : </h2>
+   	<input type="text" class="form-control" asp-for="pan" placeholder="شماره کارت">
+   	</div>
+
+   	<div class="form-group">
+   	<h2 class="mb-0"> نوع رمز کارت : </h2>
+   	<input type="text" class="form-control" name="input" placeholder=" نوع رمز کارت ">
+   	</div>
+   	<div class="form-group">
+   	<h2 class="mb-0"> رمز کارت : </h2>
+   	<input type="text" class="form-control" asp-for="pin" placeholder=" رمز کارت ">
+   	</div>
+
+   	<div class="form-group">
+   	<h2 class="mb-0"> کد cvv2 کارت : </h2>
+   	<input type="text" class="form-control" asp-for="cvv2" placeholder=" کد cvv2 کارت ">
+   	</div>
+
+   	<div class="form-group">
+   	<h2 class="mb-0"> تاریخ انقضای کارت : </h2>
+   	<input type="text" class="form-control" asp-for="exp_date" placeholder=" تاریخ انقضای کارت ">
+   	</div>
+   	</div> *@
+			<div>
+				<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> درخواست شارژ
+				</button>
+				<a href="~/Admin/Gabz_Charge/Estelam" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+					بازگشت
+				</a>
+			</div>
+		</form>
+	</div>
+</div>

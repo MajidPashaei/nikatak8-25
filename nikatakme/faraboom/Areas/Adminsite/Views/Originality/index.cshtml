@@ -1,0 +1,145 @@
+@model DataLayer.AdminEntities.Originality.Tb_Originality
+<!-- Basic Select2 start -->
+<section class="basic-select2">
+    @if (ViewBag.er != null)
+{
+    <p class="alert alert-success">@ViewBag.er</p>
+}
+  <form action="/adminsite/originality/add" method="post">
+  <div class="row">
+     <h4 class="card-title"> اصالت کالا </h4>
+    <div class="col-12">
+      <div class="card">
+        <div class="card-content">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 mb-2">
+              </div>
+
+             
+
+
+      <div class="col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="basicInput">انتخاب زبان </label>
+                  <select class="select2 form-control" asp-for="Language">
+                    <option value="fa">فارسی</option>
+                    <option value="en">انگلیسی</option>
+                    <option value="ar">ترکی</option>
+                    <option value="tr">عربی</option>
+                  </select>
+                </div>
+              </div>
+
+
+
+              <div class="col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="basicInput"> نام کالا </label>
+                  <select class="select2 form-control" asp-items="@ViewBag.list" asp-for="IdProductOri">
+                    
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput"> کد کالا  </label>
+                  <input type="text" class="form-control" required  asp-for="NumberProductOri"    placeholder=" کد کالا را وارد کنید">
+                </fieldset>
+              </div>
+                 <div class="col-sm-6 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput"> کد هولوگرام  </label>
+                  <input type="text" class="form-control" required asp-for="HologramCodeOri"   placeholder=" کد هولوگرام را وارد کنید">
+                </fieldset>
+              </div>
+
+
+
+              <div class="col-sm-12 col-12">
+                <fieldset style="text-align: left;"
+                  class="form-group position-relative has-icon-left input-divider-left mt-4">
+                  <button type="submit" class="btn btn-success mr-1 mb-1">ثبت</button>
+                  <button type="button" class="btn btn-danger mr-1 mb-1">لغو</button>
+                </fieldset>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </form>
+</section>
+<!-- Basic Select2 end -->
+
+
+<!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+  <!-- DataTable starts -->
+  <div class="table-responsive">
+    <table class="table data-list-view">
+      <thead>
+        <tr>
+          <th></th>
+          <th>ردیف</th>
+          <th>نام کالا </th>
+          <th>کد کالا   </th>
+         <th>   کد هولوگرام</th>
+          <th> زبان</th>
+          <th> عملیات</th>
+        </tr>
+      </thead>
+      <tbody>
+
+@if (ViewBag.listp != null)
+{
+  int i=1;
+  foreach (var item in ViewBag.listp)
+  {
+          <tr>
+          <td></td>
+          <td class="product-category">@i </td>
+          <td class="product-name">@item.nameproduct</td>
+
+          <td class="product-category">@item.NumberProductOri </td>
+          <td class="product-category">@item.HologramCodeOri </td>
+           <td class="product-category">@item.Language </td>
+
+          <td class="product-action">
+            <div class="col-lg-3 col-md-3 mb-1">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                @* <button type="button" class="btn btn-primary btn-sm">چپ</button> *@
+                <a href="/adminsite/originality/del/@item.Id" class="btn btn-danger btn-sm" onclick="return confirm('آیا از حذف رکورد مورد نظر مطمئن هستید؟')">حذف</a>
+                
+              </div>
+            </div>
+          </td>
+        </tr>
+        i++;
+  }
+    
+}
+
+       
+
+
+     
+
+
+
+
+      </tbody>
+    </table>
+  </div>
+  <!-- DataTable ends -->
+
+  <!-- add new sidebar starts -->
+
+  <!-- add new sidebar ends -->
+</section>
+<!-- Data list view end -->

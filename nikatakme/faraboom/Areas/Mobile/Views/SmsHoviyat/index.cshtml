@@ -1,0 +1,59 @@
+@model Admin.Models.vm_Sms;
+
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+
+    <div class="checkout-wrapper-area py-3">
+      <div class="credit-card-info-wrapper">
+		<p class="alert alert-warning">شماره موبایل باید به اسم صاحب کارت ملی باشد.</p>
+        <div class="pay-credit-card-form">
+            <form action="/mobile/SmsHoviyat/SendSms" method="POST" autocomplete="off">
+
+            <div class="mb-3">
+              <label class="mb-2" for="NationalCode"> کدملی را وارد کنید : </label>
+              <input class="form-control" type="number" placeholder="کدملی :" required asp-for="NationalCode">
+            </div>
+
+            <div class="mb-3">
+              <label class="mb-2" for="Phone">شماره تلفن همراه را وارد کنید : </label>
+              <input class="form-control" type="number" placeholder="شماره تفلن همراه :" required asp-for="Phone">
+            </div>
+
+            <div class="mb-3">
+              <label class="mb-2" for="FullName">نام و نام خانوادگی را وارد کنید : </label>
+              <input class="form-control" type="text" placeholder="نام و نام خانوادگی :" required asp-for="FullName">
+            </div>
+
+            <div class="mb-3">
+              <label class="mb-2" for="FullName">نام را وارد کنید : </label>
+              <input class="form-control" type="text" placeholder="نام :" required asp-for="Name">
+            </div>
+
+            <div class="mb-3">
+              <label class="mb-2" for="Family">نام خانوادگی را وارد کنید : </label>
+              <input class="form-control" type="text" placeholder="نام خانوادگی :" required asp-for="Family">
+            </div>
+
+            <div class="mb-3">
+              <label class="mb-2" for="FatherName">نام پدر را وارد کنید : </label>
+              <input class="form-control" type="text" placeholder="نام پدر :" required asp-for="FatherName">
+            </div>
+
+            <div class="mb-3">
+              <label class="mb-2" for="BirthDate">تاریخ تولد را وارد کنید : </label>
+              <input class="form-control" type="text" placeholder="تاریخ تولد : (برای مثال 1378/10/01) " required asp-for="BirthDate">
+            </div>
+
+            <div class="mb-3">
+              <label class="mb-2" for="BirthDate">جنسیت را وارد کنید : </label>
+              <input class="form-control" type="text" placeholder="جنسیت : مرد / زن " required asp-for="Gender">
+            </div>
+
+            <button class="btn btn-warning btn-lg w-100 mt-3" type="submit">استعلام</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

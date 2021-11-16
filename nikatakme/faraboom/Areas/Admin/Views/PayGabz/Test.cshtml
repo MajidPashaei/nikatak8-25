@@ -1,0 +1,15 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+
+<form method="POST" action="/Admin/PayGabz/result">
+	مبلغ
+	<input asp-for="amount">
+	شناسه قبض
+	<input asp-for="bill_id2">
+	شناسه پرداخت
+	<input asp-for="pay_id2">
+	نوع قبض ؟
+	<input asp-for="Titel">
+
+    <button type="submit"> پرداخت </button>
+
+</form>

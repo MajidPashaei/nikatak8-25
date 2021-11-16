@@ -1,0 +1,192 @@
+@model ViewModels.AdminViewModel.User.Vm_User;
+
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>نیکاتک</title>
+    <!-- External CSS -->
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/bootstrap-rtl.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/fonts.css">
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="~/login/login-one/images/fev.png">
+
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="~/login/login-one/css/login-one.css">
+
+</head>
+<body>
+<style>
+  
+</style>
+<!-- Loader -->
+
+<Form method="POST" action="/Login/AddReg"  enctype="multipart/form-data">
+<!-- Login page -->
+<div class="login_wrapper">
+    
+    <div class="container">
+       
+         @* <div id="d" class="alert alert-success text-center" style="font-size:14px">  فرصت ثبت نام</div>  *@
+        <div class="col-md-12 pad-0" style="opacity: 90%;">
+            <div class="row login-box-12">
+                <div class="col-lg-2 col-md-12 col-sm-12 px-0">
+                    <div class="login_left">
+                        <a href="#" class="logo_text">
+                            @* <span>JL</span> جاست لاگ *@
+                            <img src="~/login/login-one/images/Nikatek.png" alt="Simply Easy Learning"> 
+                        </a>
+                        @* <p>تکنولوژی هوشمند نیکاتک</p> *@
+                        
+                        @* <ul class="social-list clearfix">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="   #"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul> *@
+                    </div>
+                </div>
+                  @* <div class="col-lg-10 col-sm-12 mt-5">
+                      <p class="alert alert-warning mt-5" style="font-size: medium;" >
+                         زمان ثبت نام به اتمام رسیده است 
+                      </p>
+
+                     </div> *@
+                     
+
+                <div class="col-lg-5 col-sm-12 ">
+                    <div class="login-inner-form">
+                        <div class="details">
+                            @if (ViewBag.msg  != null)
+					{
+					<p class="alert alert-danger text-center">@ViewBag.msg</p>
+					}
+                    
+                            <p><span>حساب کاربری خود را</span> ایجاد کنید</p>
+                                <div class="form-group">
+                                    <input   type="text"  asp-for="n" class="input-text" placeholder="نام " required>
+                                </div>
+                                <div class="form-group">
+                                    <input  type="text"  asp-for="f" class="input-text" placeholder=" نام خانوادگی" required>
+                                </div>
+                                 <div class="form-group">
+                                    <input  type="text" asp-for="CodeMeli" class="input-text" placeholder=" کدملی " required>
+                                </div>
+                                  <div class="form-group">
+                                    <input  type="text"  asp-for="PhoneUs" class="input-text" placeholder="شماره تماس همراه" required minlength="11" maxlength="11"  >
+                                </div>
+                                <div class="form-group">
+                                    <input  type="text"  asp-for="UserNameUs" class="input-text" placeholder="نام کاربری به انگلیسی" required>
+                                </div>
+                                <div class="form-group">
+                                    <input  type="password" asp-for="PasswordUs" class="input-text" placeholder="رمزعبور" required>
+                                </div>
+                                <div class="form-group">
+                                    <input  type="password" asp-for="RePasswordUs" class="input-text" placeholder=" تکرار رمزعبور" required>
+                                </div>
+                                
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-5 col-sm-12 ">
+                    <div class="login-inner-form">
+                        <div class="details">
+                          
+                    
+                           
+                                <div class="form-group">
+                                    <input  type="email"  asp-for="EmailUS" class="input-text" placeholder="ایمیل" required>
+                                </div>
+                                 <div class="form-group">
+                                    <input  type="text"   asp-for="AddressUs" class="input-text" placeholder=" آدرس " required>
+                                </div>
+
+
+                                 <div class="form-group">
+                                 <p> آپلود کارت ملی  </p>
+                                    <input  type="file" asp-for="NameFile" accept="image/x-png,image/jpg" placeholder=" آپلود کارت ملی   " required>
+                                </div>
+
+                                 <div class="form-group">
+                                
+                                   <img src="/login/GetCaptchaImage" alt="">
+                                   <input  type="text" asp-for="Captcha"  placeholder=" کد امنیتی   " required>
+                                </div>
+
+
+                                <div class="checkbox clearfix">
+                                    <div class="form-check checkbox-input">
+                                        <input  class="form-check-input" type="checkbox" value="" id="termServices" required>
+                                        <label class="form-check-label" for="termServices">
+                                            با تمامی شرایط و قوانین موافقم
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" href="#"  class="btn-md btn-theme btn-block">ثبت نام</button>
+                                </div>
+                            <p>حساب کاربری دارید؟<a href="/login/login"> از اینجا وارد شوید</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /. Login page -->
+</Form>
+
+<!-- External JS libraries -->
+<script src="~/login/assets/js/jquery-2.2.0.min.js"></script>
+<script src="~/login/assets/js/popper.min.js"></script>
+<script src="~/login/assets/js/bootstrap.min.js"></script>
+<!-- Custom JS Script -->
+
+
+<script type="text/javascript">
+    $(window).load(function() {
+        // Animate loader off screen
+        $(".loader").fadeOut("slow");;
+    });
+</script>
+
+</body>
+</html>
+
+
+
+<script type="text/javascript">
+function d()
+{  
+ var sta="2021/01/15 00:00:00 ";
+ var currentTime = new Date();
+ var startDate = new Date(sta)
+ 
+ var dif=startDate-currentTime;
+ var s=1000;
+ var m=1000*60;
+ var h=1000*60*60;
+ var d=1000*60*60*24;
+ 
+ var days=Math.floor(dif/d);
+ dif-=days*d;
+ if (dif<=0)dif=0;
+ 
+ var hours=Math.floor(dif/h);
+ dif-=hours*h;
+ if (dif<=0)dif=0;
+ 
+ var minutes=Math.floor(dif/m);
+ dif-=minutes*m;
+ if (dif<=0)dif=0;
+ 
+ var seconds=Math.floor(dif/s);
+ document.getElementById('d').innerHTML="    مانده روز:&nbsp;&nbsp;"+days+"&nbsp;&nbsp;  مانده  ساعت:&nbsp;&nbsp;"+hours+"  &nbsp;&nbsp; مانده دقیقه:&nbsp;&nbsp;"+minutes+"  &nbsp;&nbsp;  مانده ثانیه:&nbsp;&nbsp;"+seconds;
+}
+setInterval("d()",1000);
+</script> 

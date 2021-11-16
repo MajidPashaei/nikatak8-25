@@ -1,0 +1,497 @@
+d:\Web Programming\HampadGit\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+d:\Web Programming\HampadGit\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+d:\Web Programming\HampadGit\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+d:\Web Programming\HampadGit\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\Web Programming\HampadGit\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\Web Programming\HampadGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+d:\Web Programming\HampadGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+d:\Web Programming\HampadGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+d:\Web Programming\HampadGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+d:\Web Programming\HampadGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+d:\Web Programming\HampadGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+d:\Web Programming\HampadGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+g:\.Net Core\hampadco\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+g:\.Net Core\hampadco\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+g:\.Net Core\hampadco\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+g:\.Net Core\hampadco\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+g:\.Net Core\hampadco\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+g:\.Net Core\hampadco\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+g:\.Net Core\hampadco\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+g:\.Net Core\hampadco\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+g:\.Net Core\hampadco\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+g:\.Net Core\hampadco\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+g:\.Net Core\hampadco\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+g:\.Net Core\hampadco\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\Neati\Desktop\7StarGit\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\Neati\Desktop\7StarGit\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\Neati\Desktop\7StarGit\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\Neati\Desktop\7StarGit\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\7StarGit\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\7StarGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\7StarGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\7StarGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\Neati\Desktop\7StarGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\7StarGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\7StarGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\7StarGit\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\Neati\Desktop\SevenStar\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\Neati\Desktop\SevenStar\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\Neati\Desktop\SevenStar\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\Neati\Desktop\SevenStar\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\SevenStar\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\SevenStar\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\SevenStar\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\SevenStar\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\Neati\Desktop\SevenStar\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\SevenStar\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\SevenStar\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\SevenStar\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\Neati\Desktop\SevenStar9909\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\Neati\Desktop\SevenStar9909\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\Neati\Desktop\SevenStar9909\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\Neati\Desktop\SevenStar9909\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\SevenStar9909\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\SevenStar9909\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\SevenStar9909\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\SevenStar9909\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\Neati\Desktop\SevenStar9909\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\SevenStar9909\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\SevenStar9909\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\SevenStar9909\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+C:\Users\123\Desktop\nika\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\123\Desktop\nika\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+C:\Users\123\Desktop\nika\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+C:\Users\123\Desktop\nika\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\123\Desktop\nika\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\123\Desktop\nika\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+C:\Users\123\Desktop\nika\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\123\Desktop\nika\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\123\Desktop\nika\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\123\Desktop\nika\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\123\Desktop\nika\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\123\Desktop\nika\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+<<<<<<< HEAD
+c:\Users\Neati\Desktop\nikatak\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\Neati\Desktop\nikatak\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\Neati\Desktop\nikatak\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\Neati\Desktop\nikatak\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\nikatak\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\Neati\Desktop\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+=======
+c:\Users\123\Desktop\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\123\Desktop\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\123\Desktop\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\123\Desktop\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\123\Desktop\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\123\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\123\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\123\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\123\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\123\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\123\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\123\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+>>>>>>> 6647465521f956dd6405e1e76b1c62e85dc00306
+D:\project\nikatak\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+D:\project\nikatak\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+D:\project\nikatak\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+D:\project\nikatak\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+D:\project\nikatak\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+D:\project\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+D:\project\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+D:\project\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+D:\project\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+D:\project\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+D:\project\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+D:\project\nikatak\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+F:\Farabom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+F:\Farabom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+F:\Farabom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+F:\Farabom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+F:\Farabom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+F:\Farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+F:\Farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+F:\Farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+F:\Farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+F:\Farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+F:\Farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+F:\Farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\123\Desktop\farabom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\123\Desktop\farabom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\123\Desktop\farabom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\123\Desktop\farabom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\123\Desktop\farabom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\123\Desktop\farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\123\Desktop\farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\123\Desktop\farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\123\Desktop\farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\123\Desktop\farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\123\Desktop\farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\123\Desktop\farabom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+>>>>>>> 7c58a28aba78ba9f3df35aa71aac8611a26c0192
+C:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+C:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+e:\Nikatak\nikatak\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+e:\Nikatak\nikatak\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+e:\Nikatak\nikatak\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+e:\Nikatak\nikatak\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+e:\Nikatak\nikatak\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+e:\Nikatak\nikatak\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+e:\Nikatak\nikatak\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+e:\Nikatak\nikatak\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+e:\Nikatak\nikatak\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+e:\Nikatak\nikatak\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+e:\Nikatak\nikatak\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+e:\Nikatak\nikatak\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+>>>>>>> 0cf8c55ac21cda1d6482c59043c4778119e62370
+d:\project\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+d:\project\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+d:\project\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+d:\project\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\project\Faraboom\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\project\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+d:\project\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+d:\project\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+d:\project\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+d:\project\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+d:\project\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+d:\project\Faraboom\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\123\nikatak-clon\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\123\nikatak-clon\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\123\nikatak-clon\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\123\nikatak-clon\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\123\nikatak-clon\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\123\nikatak-clon\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\123\nikatak-clon\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\123\nikatak-clon\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\123\nikatak-clon\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\123\nikatak-clon\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\123\nikatak-clon\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\123\nikatak-clon\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+>>>>>>> 56d156c24d01a76f73b5391aa0a6f29701afb934
+>>>>>>> 1e84fb3caaca56501139f3590fcd52a70b26fa26
+d:\project\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+d:\project\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+d:\project\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+d:\project\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\project\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\project\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+d:\project\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+d:\project\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+d:\project\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+d:\project\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+d:\project\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+d:\project\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+C:\Users\Neati\Desktop\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\Neati\Desktop\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+C:\Users\Neati\Desktop\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+C:\Users\Neati\Desktop\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Neati\Desktop\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Neati\Desktop\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+C:\Users\Neati\Desktop\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\Neati\Desktop\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\Neati\Desktop\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Neati\Desktop\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Neati\Desktop\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Neati\Desktop\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+d:\project\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+d:\project\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+d:\project\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+d:\project\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\project\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\project\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+d:\project\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+d:\project\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+d:\project\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+d:\project\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+d:\project\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+d:\project\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\Neati\Desktop\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\Neati\Desktop\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\Neati\Desktop\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\Neati\Desktop\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\Neati\Desktop\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\ms\Desktop\Nikatak 2021\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\ms\Desktop\Nikatak 2021\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\ms\Desktop\Nikatak 2021\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\ms\Desktop\Nikatak 2021\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\ms\Desktop\Nikatak 2021\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\ms\Desktop\Nikatak 2021\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\ms\Desktop\Nikatak 2021\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\ms\Desktop\Nikatak 2021\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\ms\Desktop\Nikatak 2021\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\ms\Desktop\Nikatak 2021\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\ms\Desktop\Nikatak 2021\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+e:\nikatak0220\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+e:\nikatak0220\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+e:\nikatak0220\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+e:\nikatak0220\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+e:\nikatak0220\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+e:\nikatak0220\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+e:\nikatak0220\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+e:\nikatak0220\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+e:\nikatak0220\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+e:\nikatak0220\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+e:\nikatak0220\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+e:\nikatak0220\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\ms\Desktop\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\ms\Desktop\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\ms\Desktop\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\ms\Desktop\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\ms\Desktop\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\ms\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\ms\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\ms\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\ms\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\ms\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\ms\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\ms\Desktop\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+d:\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+d:\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+d:\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+d:\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+d:\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+d:\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+d:\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+d:\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+d:\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+d:\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\ms\Desktop\nikatak_git\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\ms\Desktop\nikatak_git\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\ms\Desktop\nikatak_git\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\ms\Desktop\nikatak_git\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\ms\Desktop\nikatak_git\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\ms\Desktop\nikatak_git\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\ms\Desktop\nikatak_git\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\ms\Desktop\nikatak_git\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\ms\Desktop\nikatak_git\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\ms\Desktop\nikatak_git\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\ms\Desktop\nikatak_git\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\ms\Desktop\nikatak_git\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\MS\Desktop\nika4-15\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\MS\Desktop\nika4-15\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\MS\Desktop\nika4-15\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\MS\Desktop\nika4-15\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\MS\Desktop\nika4-15\Nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\MS\Desktop\nika4-15\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\MS\Desktop\nika4-15\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\MS\Desktop\nika4-15\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\MS\Desktop\nika4-15\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\MS\Desktop\nika4-15\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\MS\Desktop\nika4-15\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\MS\Desktop\nika4-15\Nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+E:\dwn\Nikatak-master\Nikatak-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+E:\dwn\Nikatak-master\Nikatak-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+E:\dwn\Nikatak-master\Nikatak-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+E:\dwn\Nikatak-master\Nikatak-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+E:\dwn\Nikatak-master\Nikatak-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+E:\dwn\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+E:\dwn\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+E:\dwn\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+E:\dwn\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+E:\dwn\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+E:\dwn\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+E:\dwn\Nikatak-master\Nikatak-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+d:\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+d:\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+d:\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+d:\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+d:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+d:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+d:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+d:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+d:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+d:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+H:\pr\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+H:\pr\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+H:\pr\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+H:\pr\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+H:\pr\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+H:\pr\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+H:\pr\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+H:\pr\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+H:\pr\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+H:\pr\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+H:\pr\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+H:\pr\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+f:\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+f:\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+f:\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+f:\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+f:\nikatakme\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+f:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+f:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+f:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+f:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+f:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+f:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+f:\nikatakme\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+e:\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+e:\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+e:\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+e:\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+e:\nikatak\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+e:\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+e:\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+e:\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+e:\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+e:\nikatak\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+>>>>>>> b32c0300b497074b5b3cdce2df63b9334d16ee54

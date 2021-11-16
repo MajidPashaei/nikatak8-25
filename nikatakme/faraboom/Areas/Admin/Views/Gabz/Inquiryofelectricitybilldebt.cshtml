@@ -1,0 +1,25 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> استعلام بدهی قبض برق </h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<form action="/Admin/Gabz/EstelamGabz" method="POST">
+				<div class="col-md-6">
+					<div class="form-group">
+						<h2 class="mb-0"> شناسه قبض برق:</h2>
+						<input type="number" asp-for="parameter" class="form-control" placeholder=" شناسه قبض برق"
+							required style="width: 450px;">
+                        <input asp-for="type" value="Electricity" class="d-none">
+					</div>
+					<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+					</button>
+					<a href="~/Admin/Gabz_Charge/Estelam" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+						بازگشت
+					</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

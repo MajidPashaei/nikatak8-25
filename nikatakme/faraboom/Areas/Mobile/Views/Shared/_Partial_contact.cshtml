@@ -1,0 +1,57 @@
+
+
+	
+	@model ViewModels.AdminViewModel.Admin.Vm_info
+
+	<div class="tab-pane fade" id="tab2">
+
+		<div class="row">
+			<div class="col-12">
+				<div class="form-group clearfix">
+
+					<div class="row mt-1">
+
+						<div class="col-lg-3">
+							<input required  class="form-control required" placeholder="همراه " type="text" asp-for="Phone">
+						</div>
+						<div class="col-lg-3">
+							<input required class="form-control required" placeholder="	تلفن ثابت منزل با کد" type="text"
+								asp-for="PhoneHome">
+						</div>
+						<div class="col-lg-3">
+							<input required class="form-control required" placeholder="	تلفن ثابت محل نمایندگی با کد" type="text"
+								asp-for="PhonelocationN">
+						</div>
+						<div class="col-lg-3">
+							<input required class="form-control required" placeholder="تلفن نمایندگی نیکا تک" type="text"
+								asp-for="PhoneNikatak ">
+						</div>
+					</div>
+					<div class="row mt-1">
+
+						<div class="col-lg-3">
+							<input required class="form-control required" placeholder="	استان " type="text" asp-for="State">
+						</div>
+
+						<div class="col-lg-3">
+							<input required class="form-control required" placeholder="شهر" type="text" asp-for="City">
+						</div>
+						<div class="col-lg-3">
+							<input required class="form-control required" placeholder="	کدپستی" type="text" asp-for="Postalcode">
+						</div>
+						<div class="col-lg-3">
+							<input required class="form-control required" placeholder="	ادرس منزل" type="text"
+								asp-for="homeaddress">
+						</div>
+					</div>
+					<div class="row mt-1">
+						<div class="col-lg-3">
+							<input required class="form-control required" placeholder="ادرس محل فعالیت" type="text"
+								asp-for="Locationaddress">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-success mr-1 mb-1"> ثبت اطلاعات</button>
+	</div>

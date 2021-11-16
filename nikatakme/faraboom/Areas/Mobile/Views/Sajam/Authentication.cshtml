@@ -1,0 +1,40 @@
+@model ViewModels.AdminViewModel.sajam.Vm_Ehraz;
+@{
+    Layout = "_Layout4" ;
+}
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> احراز هویت سجام </h2>
+	</div>
+	<form action="/Admin/Sajam/ShowAuthentication" method="POST">
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-6">
+					@* <div class="form-group">
+	 	<h2 class="mb-0"> نام کاربری :</h2>
+	 	<input type="text" class="form-control" asp-for="username" placeholder=" نام کاربری " >
+	 	</div>
+	 	<div class="col-md-6">
+	 	<div class="form-group">
+	 	<h2 class="mb-0"> رمز عبور :</h2>
+	 	<input type="text" class="form-control" asp-for="password" placeholder=" رمز عبور " >
+	 	</div> *@
+					<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> دریافت لینک
+						احراز هویت
+					</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<script>
+
+	debugger
+	var str = document.getElementById('tok').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+	var res = str.split(",");
+
+	var bill_id = res[1].split(":");
+	document.getElementById('token').value = bill_id[1];
+
+</script>

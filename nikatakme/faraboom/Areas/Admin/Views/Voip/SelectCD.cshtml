@@ -1,0 +1,80 @@
+@{
+    Layout = "_Layout4" ;
+}
+@model ViewModels.AdminViewModel.Voip.Vm_VoipNumber
+<Form method="POST" action="/Admin/Voip/AddDC" enctype="multipart/form-data" autocomplete="off">
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> ثبت داخلی و کانال کاربر </h2>
+	</div>
+	<div class="card-body">
+        <div class=" row">
+            <div class="col-12 text-center">
+                <p class="alert alert-warning">
+                    این بخش درحال بروز رسانی است . 
+                </p>
+            </div>
+			<div class="form-group col-4">
+				<h3 class="mb-0 mt-3"> تعداد کانال مورد نظر را انتخاب کنید :</h3>
+				<center>
+                    <select asp-for="ChannelNum" class="form-control" style="width: 100%;" required disabled>
+                        <option value=""> </option>
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        <option value="6"> 6 </option>
+                        <option value="7"> 7 </option>
+                        <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                        <option value="10"> 10 </option>
+                        <option value="11"> 11</option>
+                        <option value="12"> 12 </option>
+                        <option value="13"> 13 </option>
+                        <option value="14"> 14 </option>
+                        <option value="15"> 15 </option>
+                        <option value="16"> 16 </option>
+                        <option value="17"> 17 </option>
+                        <option value="18"> 18 </option>
+                        <option value="19"> 19 </option>
+                        <option value="20"> 20 </option>
+                    </select>
+				</center>
+				<h3 class="mb-0 mt-3"> تعداد داخلی مورد نظر را انتخاب کنید :</h3>
+				<center>
+                    <select asp-for="InternalNum" class="form-control" style="width: 100%;" required disabled>
+                        <option value=""> </option>
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        <option value="6"> 6 </option>
+                        <option value="7"> 7 </option>
+                        <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                        <option value="10"> 10 </option>
+                        <option value="11"> 11</option>
+                        <option value="12"> 12 </option>
+                        <option value="13"> 13 </option>
+                        <option value="14"> 14 </option>
+                        <option value="15"> 15 </option>
+                        <option value="16"> 16 </option>
+                        <option value="17"> 17 </option>
+                        <option value="18"> 18 </option>
+                        <option value="19"> 19 </option>
+                        <option value="20"> 20 </option>
+                    </select>
+				</center>
+            </div>
+		</div>
+        <div class="row ml-5">
+            <button type="button" class="btn btn-success btn-lg mt-1 mb-1"> ثبت </button>
+			<a href="/Admin/Voip/Index" class="btn btn-success btn-lg mt-1 mb-1" style="width: min-content;">
+				بازگشت
+			</a>
+        </div>
+	</div>
+</div>
+</Form>

@@ -1,0 +1,32 @@
+{
+  "name": "suha",
+  "short_name": "suha",
+  "lang": "en-US",
+  "start_url": "https://suha.takstok.com/intro.html",
+  "display": "standalone",
+  "background_color": "#eee",
+  "theme_color": "#eee",
+  "description": "Suha - Ecommerce Mobile HTML Template",
+  "categories": ["mobile", "shop", "ecommerce"],
+  "icons": [{
+    "src": "img/icons/icon-72x72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "img/icons/icon-96x96.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  },  {
+    "src": "img/icons/icon-152x152.png",
+    "sizes": "152x152",
+    "type": "image/png"
+  }, {
+    "src": "img/icons/icon-167x167.png",
+    "sizes": "167x167",
+    "type": "image/png"
+  }, {
+    "src": "img/icons/icon-180x180.png",
+    "sizes": "180x180",
+    "type": "image/png"
+  }]
+}

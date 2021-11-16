@@ -1,0 +1,80 @@
+ @model ViewModels.AdminViewModel.inforep.Vm_inforep;
+  
+  
+  <section class="container-fluid mt-3">
+        <div class="container p-md-5 box p-4">
+           
+            <div class="alert alert-primary row ">
+                <div class=" col-3">
+                    <p class="alert alert-primary text-center">فیلتر نمایندگان </p>
+
+                </div>
+
+
+
+
+
+     
+
+		
+               
+
+
+        
+                
+            </div>
+            <h5 class="mb-4 bt-color IRANSansWeb_Medium" style="text-align: center;">   معرفی نمایندگان  </h5>
+            
+            
+<p style="text-align: center;display:none" >در حال بروزرسانی ...</p>
+            <div class="row" >
+        @if (ViewBag.A!= null)
+                     {
+     foreach (var item in ViewBag.A)
+                    {
+                             <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <img src="~/fileupload/@item.photos" alt="" style="width: 260px; height: 230px; border-radius: 30px;">
+                        <div class="data">
+                            <h6 class="IRANSansWeb_Medium">@item.State</h6>
+                            <span>@item.City</span>
+                             <br>
+                             <span> کدنمایندگی: @item.cod </span>
+                            <hr>
+                            @* <p class="text-center">راه های ارتباطی با مدیر کل</p> *@
+                            <a href="/agancy/details/@item.Id"><i class="fab fa-2x fa-whatsapp rounded text-success"></i>مشاهده اطلاعات کامل </a>
+                            @* <a href="/agancy/details/@item.Id"><i class="fab fa-2x fa-telegram rounded text-info"></i></a> *@
+                        </div>
+                    </div>
+                </div>
+                    }
+                    }    
+            </div>
+       
+         </div>
+    </section>
+
+
+
+
+
+ <script> 
+ function Func(Shahrestanha) {
+  
+
+
+
+       var _Shahrestan = document.getElementById("City");
+       _Shahrestan.options.length = 0;
+       if(Shahrestanha != "") {
+          var arr = Shahrestanha.split(",");
+          for(i = 0; i < arr.length; i++) {
+              if(arr[i] != "") {
+                 _Shahrestan.options[_Shahrestan.options.length]=new Option(arr[i],arr[i]);
+              }
+          }
+       }
+   }
+
+
+</script>

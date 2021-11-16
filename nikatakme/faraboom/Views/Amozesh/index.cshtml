@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+
+	<!-- form Uploads -->
+	<link href="~/admin/assets/plugins/fileuploads/css/dropify.css" rel="stylesheet" type="text/css">
+	<!-- Favicon -->
+	<link href="~/admin/assets/img/brand/favicon.png" rel="icon" type="image/png">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
+
+	<!-- Icons -->
+	<link href="~/admin/assets/css/icons.css" rel="stylesheet">
+
+	<!--Bootstrap.min css-->
+	<link rel="stylesheet" href="~/admin/assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="~/admin/assets/css/bootstrap-rtl.min.css">
+
+	<!-- Ansta CSS -->
+	<link href="~/admin/assets/css/dashboard.css" rel="stylesheet" type="text/css">
+	<link href="~/admin/assets/css/hover.css" rel="stylesheet" type="text/css">
+	<script src="~/admin/assets/js/Date.js"></script>
+	<!-- Tabs CSS -->
+	<link href="~/admin/assets/plugins/tabs/style.css" rel="stylesheet" type="text/css">
+
+	<!-- jvectormap CSS -->
+	<link href="~/admin/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
+
+	<!-- Custom scroll bar css-->
+	<link href="~/admin/assets/plugins/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet">
+
+
+	<!-- Sidemenu Css -->
+	<link href="~/admin/assets/plugins/toggle-sidebar/css/darksiderbar-sidemenu.css" rel="stylesheet">
+	<!--Select2 css-->
+	<link rel="stylesheet" href="~/admin/assets/plugins/select2/select2.css">
+
+
+	<style>
+		.zoom {
+
+			transition: transform .4s;
+			/* Animation */
+
+			margin: 0 auto;
+		}
+
+		.zoom:hover {
+			transform: scale(1.3);
+			/* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+		}
+	</style>
+
+
+</head>
+
+
+
+<body class="app sidebar-mini rtl ">
+
+	<div class="container-fluid">
+		<div class="container-fluid">
+
+@if (User.Identity.IsAuthenticated)
+{
+	
+
+			<div class="row ">
+
+				<div class="col-lg-4 col-sm-12">
+					<div class="friend-card card shadow">
+						<img src="~/admin/assets/img/img_bg/8233.jpg" alt="profile-cover" class="img-center"
+							style="width: 50%;">
+						<div class="card-info mt-2">
+							<div class="friend-info mt-2">
+								<a href="/Amozesh/category?type=gabz"
+									class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+									آموزش</a>
+								<h3 class="m-2 mb-0"><a href="/Amozesh/category?type=gabz" class="profile-link"> خدمات بانکی و
+										قبوض</a></h3>
+								<p class="m-2 text-sm mb-0"> خدمات بانکی و قبوض </p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-sm-12">
+					<div class="friend-card card shadow">
+						<img src="~/admin/assets/img/img_bg/4412.jpg" alt="profile-cover" class="img-center"
+							style="width: 36%;">
+						<div class="card-info ">
+							<div class="friend-info ">
+								<a href="/Amozesh/category?type=bime" class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+									آموزش</a>
+								<h3 class="m-2 mb-0"><a href="/Amozesh/category?type=bime" class="profile-link"> بیمه </a></h3>
+								<p class="m-2 text-sm mb-0">خدمات بیمه </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="col-lg-4  col-sm-12">
+					<div class="friend-card card shadow">
+						<img src="~/admin/assets/img/img_bg/20946003.jpg" alt="profile-cover" class="img-center"
+							style="width: 50%;">
+						<div class="card-info mt-2">
+							<div class="friend-info">
+								<a href="/Amozesh/category?type=post"
+									class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+									آموزش</a>
+								<h3 class="m-2 mb-0"><a href="/Amozesh/category?type=post" class="profile-link"> پست </a></h3>
+								<p class="m-2 text-sm mb-0">خدمات پستی </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4  col-sm-12">
+					<div class="friend-card card shadow">
+						<img src="~/admin/assets/img/img_bg/20944036.jpg" alt="profile-cover" class="img-center"
+							style="width: 40%;">
+						<div class="card-info mt-2">
+							<div class="friend-info mt-1">
+								<a href="/Amozesh/category?type=omomi" class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+									آموزش</a>
+								<h3 class="m-2 mb-0"><a href="/Amozesh/category?type=omomi" class="profile-link"> عمومی </a></h3>
+								<p class="m-2 text-sm mb-0">خدمات عمومی </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4  col-sm-12">
+					<div class="friend-card card shadow">
+						<img src="~/admin/assets/img/img_bg/images.png" alt="profile-cover" class="img-center"
+							style="width: 55%;">
+						<div class="card-info mt-2">
+							<div class="friend-info">
+								<a href="/Amozesh/category?type=voip"
+									class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+									آموزش</a>
+								<h3 class="m-2 mb-0"><a href="/Amozesh/category?type=voip" class="profile-link"> تلفن اینترنتی
+										(voip) </a></h3>
+								<p class="m-2 text-sm mb-0"> خدمات تلفن اینترنتی (voip) </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4  col-sm-12">
+					<div class="friend-card card shadow">
+						<img src="~/admin/assets/img/img_bg/20945319.jpg" alt="profile-cover" class="img-center"
+							style="width: 40%;">
+						<div class="card-info mt-2">
+							<div class="friend-info">
+								<a href="/Amozesh/category?type=charge"
+									class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+									آموزش</a>
+								<h3 class="m-2 mb-0"><a href="/Amozesh/category?type=charge" class="profile-link">شارژ و
+										اینترنتی</a></h3>
+								<p class="m-2 text-sm mb-0">خدمات شارژ و اینترنتی </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-lg-4  col-sm-12">
+					<div class="friend-card card shadow">
+						<img src="~/admin/assets/img/img_bg/Wavy_Bus-17_Single-07.jpg" alt="profile-cover"
+							style="width: 31%;" class=" img-center ">
+						<div class="card-info mt-2">
+							<div class="friend-info">
+								<a href="/Amozesh/category?type=crm" class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+									آموزش</a>
+								<h3 class="m-2 mb-0"><a href="/Amozesh/category?type=crm" class="profile-link"> CRM </a></h3>
+								<p class="m-2 text-sm mb-0">خدمات CRM</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4  col-sm-12">
+					<div class="friend-card card shadow">
+						<img src="~/admin/assets/img/img_bg/66149.jpg" alt="profile-cover" class="img-center"
+							style="width: 43%;">
+						<div class="card-info mt-2">
+							<div class="friend-info">
+								<a href="/Amozesh/category?type=sms" class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+									آموزش</a>
+								<h3 class="m-2 mb-0"><a href="/Amozesh/category?type=sms" class="profile-link">پنل SMS </a></h3>
+								<p class="m-2 text-sm mb-0">خدمات پنل SMS </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4  col-sm-12">
+					<div class="friend-card card shadow">
+						<img src="~/admin/assets/img/img_bg/Wavy_Bus-23_Single-05.jpg" alt="profile-cover"
+							class="img-center" style="width: 31%;">
+						<div class="card-info mt-2">
+							<div class="friend-info">
+								<a href="/Amozesh/category?type=sajam" class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+									آموزش</a>
+								<h3 class="-m2 mb-0"><a href="/Amozesh/category?type=sajam" class="profile-link">سجام</a></h3>
+								<p class="m-2 text-sm mb-0">خدمات سجام </p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4  col-sm-12">
+					<div class="friend-card card shadow">
+						<img src="~/admin/assets/img/img_bg/20944140.jpg" alt="profile-cover" class="img-center"
+							style="width: 47%;">
+						<div class="card-info mt-2">
+							<div class="friend-info">
+								<a href="/Amozesh/category?type=pos" class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+									آموزش</a>
+								<h3 class="m-2 mb-0"><a href="/Amozesh/category?type=pos" class="profile-link">POS</a></h3>
+								<p class="m-2 text-sm mb-0"> سرویس فروش دستگاه POS (کارتخوان) </p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4  col-sm-12">
+					<div class="friend-card card shadow">
+						<img src="~/admin/assets/img/img_bg/10109.jpg" alt="profile-cover" class="img-center"
+							style="width: 50%;">
+						<div class="card-info mt-2">
+							<div class="friend-info">
+								<a href="/Amozesh/category?type=gps" class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+									آموزش</a>
+								<h3 class="m-2 mb-0"><a href="/Amozesh/category?type=gps" class="profile-link">GPS</a></h3>
+								<p class="m-2 text-sm mb-0"> سرویس فروش دستگاه GPS (ردیاب)</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4  col-sm-12">
+					<div class="friend-card card shadow">
+						<img src="~/admin/assets/img/img_bg/20946027.jpg" alt="profile-cover" class="img-center"
+							style="width: 31%;">
+						<div class="card-info mt-2">
+							<div class="friend-info">
+								<a href="/Amozesh/category?type=emdad" class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+									آموزش</a>
+								<h3 class="m-2 mb-0"><a href="/Amozesh/category?type=emdad" class="profile-link">امدادخودرو</a></h3>
+								<p class="m-2 text-sm mb-0">خدمات امدادخودرو </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+}
+else
+{
+<div class="row mt-5 mb-5 justify-content-center"> 
+	<p class="mt-5 mb-5 alert alert-danger">
+		            برای دیدن آموزش ها وارد پنل کاربری خود شوید .             
+	</p>
+</div>
+}
+
+		</div>
+	</div>
+
+	<!-- Core -->
+	<script src="~/admin/assets/plugins/jquery/dist/jquery.min.js"></script>
+	<script src="~/admin/assets/js/popper.js"></script>
+	<script src="~/admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Echarts JS -->
+	<script src="~/admin/assets/plugins/chart-echarts/echarts.js"></script>
+
+	<!-- Fullside-menu Js-->
+	<script src="~/admin/assets/plugins/toggle-sidebar/js/sidemenu.js"></script>
+
+	<!-- Custom scroll bar Js-->
+	<script src="~/admin/assets/plugins/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<!-- peitychart -->
+	<script src="~/admin/assets/plugins/peitychart/jquery.peity.min.js"></script>
+	<script src="~/admin/assets/plugins/peitychart/peitychart.init.js"></script>
+
+	<!-- Vector Plugin -->
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/gdp-data.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-uk-mill-en.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-au-mill.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-ca-lcc.js"></script>
+	<script src="~/admin/assets/js/dashboard2map.js"></script>
+
+	<!-- Ansta JS -->
+	<script src="~/admin/assets/js/custom.js"></script>
+	<script src="~/admin/assets/js/dashboard-sales.js"></script>
+	<!-- Optional JS -->
+	<script src="~/admin/assets/plugins/chart.js/dist/Chart.min.js"></script>
+	<script src="~/admin/assets/plugins/chart.js/dist/Chart.extension.js"></script>
+
+	<!-- Data tables -->
+	<script src="~/admin/assets/plugins/datatable/jquery.dataTables.min.js"></script>
+	<script src="~/admin/assets/plugins/datatable/dataTables.bootstrap4.min.js"></script>
+
+	<!-- Form wizard js -->
+	<script src="~/admin/assets/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
+	<script src="~/admin/assets/js/wizard.js"></script>
+	<!-- file uploads js -->
+	<script src="~/admin/assets/plugins/fileuploads/js/dropify.min.js"></script>
+	<!-- Ansta Scripts -->
+	<!-- Core -->
+	<script src="~/admin/assets/plugins/jquery/dist/jquery.min.js"></script>
+	<script src="~/admin/assets/js/popper.js"></script>
+	<script src="~/admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Echarts JS -->
+	<script src="~/admin/assets/plugins/chart-echarts/echarts.js"></script>
+
+	<!-- Fullside-menu Js-->
+	<script src="~/admin/assets/plugins/toggle-sidebar/js/sidemenu.js"></script>
+
+	<!-- Custom scroll bar Js-->
+	<script src="~/admin/assets/plugins/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<!-- peitychart -->
+	<script src="~/admin/assets/plugins/peitychart/jquery.peity.min.js"></script>
+	<script src="~/admin/assets/plugins/peitychart/peitychart.init.js"></script>
+
+	<!-- Vector Plugin -->
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/gdp-data.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-uk-mill-en.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-au-mill.js"></script>
+	<script src="~/admin/assets/plugins/jvectormap/jquery-jvectormap-ca-lcc.js"></script>
+	<script src="~/admin/assets/js/dashboard2map.js"></script>
+
+	<!-- Ansta JS -->
+	<script src="~/admin/assets/js/custom.js"></script>
+	<script src="~/admin/assets/js/dashboard-sales.js"></script>
+	<!-- Optional JS -->
+	<script src="~/admin/assets/plugins/chart.js/dist/Chart.min.js"></script>
+	<script src="~/admin/assets/plugins/chart.js/dist/Chart.extension.js"></script>
+
+	<!-- Data tables -->
+	<script src="~/admin/assets/plugins/datatable/jquery.dataTables.min.js"></script>
+	<script src="~/admin/assets/plugins/datatable/dataTables.bootstrap4.min.js"></script>
+
+	<!-- Form wizard js -->
+	<script src="~/admin/assets/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
+	<script src="~/admin/assets/js/wizard.js"></script>
+	<!-- file uploads js -->
+	<script src="~/admin/assets/plugins/fileuploads/js/dropify.min.js"></script>
+	<script>
+		$('.dropify').dropify({
+			messages: {
+				'default': 'فایل خود را کشیده و اینجا رها کنید یا برای انتخاب فایل کلیک کنید',
+				'replace': 'فایل خود را کشیده و اینجا رها کنید یا برای تغییر فایل کلیک کنید',
+				'remove': 'حذف',
+				'error': 'اوپس،خطایی رخ داده است'
+			},
+			error: {
+				'fileSize': 'فایل انتخابی شما بزرگتر از محدودیت حجم تعیین شده است'
+			}
+		});
+	</script>
+
+</body>
+
+</html>

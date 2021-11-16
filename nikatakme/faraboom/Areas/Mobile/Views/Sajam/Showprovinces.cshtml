@@ -1,0 +1,25 @@
+
+@{
+    Layout = "_Layout4" ;
+}
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0">
+        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <p id="S_P">@ViewBag.result</p>
+
+        <a href="~/Admin/Sajam/Index" class="btn btn-success mt-3 mb-1" style="width: min-content;">
+            بازگشت
+        </a>
+    </div>
+</div>
+
+<script>
+    debugger
+
+    var str = document.getElementById('S_P').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+    var res = str.split(",");
+
+</script>

@@ -1,0 +1,65 @@
+<div class="card shadow" id="myDiv">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش  بسته های اینترنتی  </h2>
+    </div>
+    <div class="card-body">
+            <div class="card-body">
+                @if (ViewBag.msg == null)
+                {
+                    <div class="row">
+                        <div class="table-responsive">
+				            <div class="form-group justify-content-center ">
+				            	<table class="table table-hover">
+                            <thead class="bg-primary ">
+                                <tr>
+                                    <th>ردیف</th>
+                                    <th>عنوان</th>
+                                    <th>مدت زمان بسته</th>
+                                    <th>مبلغ اسمی</th>
+                                    <th> مبلغ با ارزش افزوده</th>
+                                    <th>حجم</th>
+                                    <th>خرید</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                @{
+                                    if (ViewBag.package != null)
+                                    {
+                                        int i=1;
+                                        foreach (var item in ViewBag.package)
+                                        {
+                                            <tr>
+                                                <td>@i</td>
+                                                <td>@item.Title</td>
+                                                <td>@item.Expiry</td>
+                                                <td>@item.OrgAmount</td>
+                                                <td>@item.AffAmount</td>
+                                                <td>@item.Trafic</td>
+                                                <td>
+                                                     <a href="/admin/internet/BuyShatel?ChargeType=@item.ChType&AffAmount=@item.AffAmount&Title=@item.Title&OrgAmount=@item.OrgAmount" class="btn btn-primary btn-sm" > خرید </a>
+                                                </td>
+                                            </tr>
+                                            i++;
+                                        }
+                                    }
+                                }
+                            </tbody>
+				            	</table>
+				            </div>
+                        </div>
+                    </div>
+                }
+                @if (ViewBag.msg != null)
+                {
+                    <p class="alert alert-danger text-center">@ViewBag.msg</p>
+                }
+                <div class="d-flex justify-content-end ">
+                    <a href="/admin/internet/selectoperator" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                        بازگشت
+                    </a>
+                </div>
+            </div>
+        
+        
+    </div>
+</div>

@@ -1,0 +1,404 @@
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@* 
+    <div class="menu-container">
+            <div class="row mb-4">
+ 
+
+                }
+
+            </div>
+
+            <ul class="nav nav-pills flex-column " style="font-size: 15px;">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/mobile/menu/index" style="font-size: 15px;">
+                        <div>
+                            <span style="font-size: 15px ;font-weight: bold"
+                                class="material-icons icon">account_balance</span>
+                            خانه
+                        </div>
+                        <span class="arrow material-icons">chevron_left</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link" href="/mobile/wallet/Index" style="font-size: 15px ;">
+                        <div>
+                            <span style="font-size:15px ;font-weight: bold"
+                                class="material-icons icon">insert_chart</span>
+                            کیف پول
+                        </div>
+                        <span class="arrow material-icons">chevron_left</span>
+                    </a>
+                    
+                    
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mobile/menu/davat" style="font-size: 15px ;">
+                        <div>
+                            <span style="font-size: 15px ;font-weight: bold"
+                                class="material-icons icon">perm_contact_calendar</span>
+                            دعوت از دوستان
+                        </div>
+                        <span class="arrow material-icons">chevron_left</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mobile/menu/jashnvareh" style="font-size: 15px ;">
+                        <div>
+                            <span style="font-size: 15px ;font-weight: bold" class="material-icons icon">
+                                card_giftcard</span>
+                            امتیاز و جوایز نیکاتک
+                        </div>
+                        <span style="font-size: 18px ;font-weight: bold"
+                            class="arrow material-icons">chevron_left</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mobile/wallet/Tarakonesh" style="font-size: 15px ;">
+                        <div>
+                            <span style="font-size: 15px ;" class="material-icons icon">shopping_bag</span>
+                            سوابق تراکنش ها
+                        </div>
+                        <span class="arrow material-icons">chevron_left</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/mobile/menu/faq" style="font-size: 15px ;">
+                        <div>
+                            <span style="font-size: 15 px ;" class="material-icons icon">layers</span>
+                            سوالات متداول
+                        </div>
+                        <span class="arrow material-icons">chevron_left</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mobile/menu/aboutus" style="font-size:15px;">
+                        <div>
+                            <span class="material-icons icon">widgets</span>
+                            درباره نیکاتک
+                        </div>
+                        <span class="arrow material-icons">chevron_left</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="text-center">
+                <a href="/mobile/menu/exit" class="btn btn-outline-danger text-white rounded my-3 mx-auto"
+                    style="font-size: 15px;">خروج از سیستم</a>
+            </div>
+        </div>
+    </div>
+    <div class="backdrop"></div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+    <!-- Begin page content -->
+    <main class="flex-shrink-0 main has-footer">
+        <!-- Fixed navbar -->
+        <header class="header">
+            <div class="row">
+                <div class="col-auto px-0">
+                    <button class="menu-btn btn btn-40 btn-link" type="button">
+                        <span class="material-icons">menu</span>
+                    </button>
+                </div>
+                <div class="text-right col align-self-left">
+
+                        <div class="mb-1"  style=" height: 35px; ">
+                            <img src="~/mobile2/~/mobile/img/50.png" class="mt-1" alt="" height="40px">
+                        </div>
+      
+                </div>
+
+                 
+                <div class="ml-auto col-auto pl-0">
+
+
+                    <button type="button" class="btn btn-link  colorsettings">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-question-circle ml-3 mt-1" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                        </svg>
+                        </button>
+         
+                </div> 
+            </div>
+        </header>
+
+
+        <div class="main-container">
+            <div class="container mb-4 text-center">
+                <div class="card bg-default-secondary shadow-default">
+                    <div class="card-body">
+                        <!-- Swiper -->
+                        <div class="swiper-container addsendcarousel text-center">
+                                <div class="mb-1"  style=" height: 35px; ">
+                                    <img src="~/mobile2/~/mobile/img/50.png" class="mt-1" alt="" height="40px">
+                                </div>
+                                <br>
+                                <br>
+                                <a href="/mobile/menu/EditProfile" class="swiper-slide text-white">
+                                    <div class="rounded-pill mb-1 bg-default-light text-default">
+                                    <p style="font-size: 18px "><small>  @HttpContextAccessor.HttpContext.Session.GetInt32("sum") &nbsp; تومان  </small></p>
+                                        </div>
+                                </a> 
+                                <br>
+                                
+                            <div class="swiper-wrapper mb-4 justify-content-center">
+
+                                <a href="/mobile/wallet/varizi" class="swiper-slide text-white">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="~/mobile2/https://img.icons8.com/nolan/64/wallet-app.png" style="width: 35px; height: 35px;"/></div>
+                                    <p style="font-size: 15px "><small> واریزی ها </small></p>
+                                </a> 
+
+                                <a href="/mobile/wallet/Tarakonesh" class="swiper-slide text-white">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="~/mobile2/https://img.icons8.com/nolan/64/payment-history.png" style="width: 35px; height: 35px;"/>
+                                    </div>
+                                    <p style="font-size: 15px;"><small> تراکنش ها</small></p>
+                                </a>
+          
+                                <a href="/mobile/menu/davat" class="swiper-slide text-white">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="~/mobile2/https://img.icons8.com/nolan/64/share.png" style="width: 35px; height: 35px;"/></div>
+                                    <p style="font-size: 15px "><small>دعوت </small></p>
+                                </a>
+                                <a href="/mobile/menu/EditProfile" class="swiper-slide text-white">
+                                    <div class="icon icon-50 rounded-circle mb-1 bg-default-light text-default">
+                                        <img src="~/mobile2/https://img.icons8.com/nolan/64/edit-property.png" style="width: 35px; height: 35px;"/></div>
+                                    <p style="font-size: 15px "><small> ویرایش  </small></p>
+                                </a> 
+                                
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*@
+<style>
+    span
+    {
+      font-weight: normal;
+    }
+    .imgtop
+    {
+      width: 100px !important;
+      height: 100% !important;
+    }
+
+</style>
+    <!-- Header Area-->
+    <div class="page-content-wrapper">
+
+      @*
+        <div>
+          <div>
+              <i class="status online"></i></div>
+              *@
+
+
+      <!-- Live Chat Intro-->
+      <div class="live-chat-intro">
+        @* <p>مکالمه را شروع کنید</p> *@
+        @{
+            if ( (@HttpContextAccessor.HttpContext.Session.GetString("photo") ) != null)
+            {
+                var img = @HttpContextAccessor.HttpContext.Session.GetString("photo");
+                <img src="~/fileupload/@img" class="imgtop" alt="" >
+            }
+         }
+        <p class="mb-0">@HttpContextAccessor.HttpContext.Session.GetString("name")
+            <i class="status online mb-1"></i>
+        </p>
+        <div>
+          <p>
+            موجودی کیف پول : @HttpContextAccessor.HttpContext.Session.GetInt32("sum")  تومان 
+          </p>
+        </div>
+        <!-- Use this code for "Offline" Status-->
+        <!-- .status.offline We’ll be back soon-->
+      </div>
+
+      <!-- Product Catagories-->
+      <div class="product-catagories-wrapper py-3">
+        <div class="container">
+          <div class="section-heading">
+           
+          </div>
+          <div class="product-catagory-wrap">
+            <div class="row g-3">
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/gabz/Waterbilldebtinquiry">
+                    <i class="fas fa-file-invoice"></i>
+                  <span>قبض آب</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/gabz/Inquiryofelectricitybilldebt">
+                    <i class="fas fa-file-invoice"></i>
+                  <span>قبض برق</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/gabz/Inquiryofgasbilldebt">
+                    <i class="fas fa-file-invoice"></i>
+                  <span>قبض گاز</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/gabz/Inquiryoftelephonebilldebt">
+                    <i class="fas fa-file-invoice"></i>
+                  <span>قبض تلفن ثابت</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/gabz/Inquiryofmobilephonebilldebt">
+                    <i class="fas fa-file-invoice"></i>
+                  <span>قبض  تلفن همراه</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/Client_Credential/EstelamNegativePoint">
+                    <i class="fas fa-file-invoice"></i>
+                  <span>نمره منفی</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/Client_Credential/EstelamCarBill">
+                    <i class="fas fa-car-crash"></i>
+                  <span>خلافی<br>خودرو</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/charge/parametrs">
+                    <i class="fas fa-sim-card"></i>
+                  <span>شارژ</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/internet/selectoperator">
+                    <i class="fas fa-wifi"></i>
+                  <span>بسته اینترنتی</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/Makanmehvar/Index">
+                    <i class="fas fa-map-marker-alt"></i>
+                  <span>مکان<br>محور</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/omomi/Tatbigh">
+                    <i class="fas fa-id-card"></i>
+                  <span>سامانه<br>شاهکار</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/SmsHoviyat/index">
+                    <i class="fas fa-user-check"></i>     
+                  <span>احزار<br>هویت</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/Tavanam/Factor">
+                    <i class="fas fa-user-tag"></i>
+                  <span>اعتبار<br>سنجی</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a href="/mobile/Client_Credential/InputCardNumber">
+                    <i class="fas fa-money-check"></i>
+                  <span>استعلام<br>کارت</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-warning" href="/mobile/Client_Credential/CartToShaba">
+                    <i class="fas fa-credit-card"></i>
+                  <span>تبدیل کارت به شبا</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-success" href="/mobile/Client_Credential/EstelamShaba">
+                    <i class="fas fa-digital-tachograph"></i>
+                  <span>استعلام<br>شبا</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="/mobile/SmsTashilat/index">
+                    <i class="fas fa-university"></i>
+                  <span>استعلام تسهیلات</span></a></div>
+                </div>
+              </div>
+              <!-- Single Catagory Card-->
+              <div class="col-4">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-info" href="/mobile/SmsCheck/index">
+                    <i class="fas fa-file-signature"></i>
+                  <span>استعلام<br>چک</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Night Mode View Card-->
+      <div class="night-mode-view-card pb-3">
+        <div class="container">
+          <div class="card settings-card">
+            <div class="card-body">
+              <div class="single-settings d-flex align-items-center justify-content-between">
+                <div class="title"><i class="lni lni-night"></i><span>حالت شب</span></div>
+                <div class="data-content">
+                  <div class="toggle-button-cover">
+                    <div class="button r">
+                      <input class="checkbox" id="darkSwitch" type="checkbox">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

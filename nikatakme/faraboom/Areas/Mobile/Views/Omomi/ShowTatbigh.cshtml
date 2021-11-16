@@ -1,0 +1,53 @@
+
+
+<br>
+<br>
+@if (ViewBag.Msg != null)
+{
+	<div class="text-center">
+		<h5 class="alert alert-danger">@ViewBag.Msg</h5>
+	</div>
+}
+<div class="page-content-wrapper">
+  <div class="container">
+    <!-- Checkout Wrapper-->
+    <div class="checkout-wrapper-area py-3">
+      <!-- Billing Address-->
+      <div class="billing-information-card mb-3">
+        <div class="card billing-information-title-card bg-primary">
+          <div class="card-body">
+            <h6 class="text-center mb-0 text-white">تطبیق کدملی و شماره تلفن همراه</h6>
+            <p class="d-none" id="Tatbigh">@ViewBag.result</p>
+          </div>
+        </div>
+        <div class="card user-data-card">
+          <div class="card-body text-center"> 
+                <br><br>                         
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+                <p id="msg1" class="alert alert-success d-none" >شماره تماس متعلق به کد ملی وارد شده است</p>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+                <p id="msg2" class="alert alert-danger d-none" >کد ملی متعلق به شماره تماس وارد شده نیست</p>
+            </div>
+          </div>
+                <br><br>
+        </div>
+      </div>
+	</div>
+  </div>
+</div>
+
+<script>
+    var str = document.getElementById('Tatbigh').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+    var res = str.split(",");
+
+    var match = res[1].split(":");
+    @* document.getElementById('match').innerText = "" + match[1]; *@
+
+    if (match[1] == "true") {
+        document.getElementById('msg1').style.display = "block";
+    }
+    if (match[1] == "false") {
+        document.getElementById('msg2').style.display = "block"
+    }
+</script>

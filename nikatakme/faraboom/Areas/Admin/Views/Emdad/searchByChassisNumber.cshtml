@@ -1,0 +1,27 @@
+@model ViewModels.AdminViewModel.Emdad.Vm_Emdad;
+
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-1">استعلام اشتراک ایران خودرو</h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-6">
+				<form action="/admin/emdad/searchByChassisNumberResult" method="POST">
+					<div class="form-group">
+						<h2 class="mb-0"> شماره شاسی :</h2>
+						<input type="text" class="form-control" placeholder="شماره شاسی" required
+							asp-for="chassisNumber">
+					</div>
+					<div>
+						<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+						</button>
+						<a href="/admin/emdad/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+							بازگشت
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

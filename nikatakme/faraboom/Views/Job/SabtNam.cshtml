@@ -1,0 +1,208 @@
+@{ Layout = null ; }
+@model ViewModels.AdminViewModel.Job.Vm_JobUser
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>نیکاتک</title>
+    <!-- External CSS -->
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/bootstrap-rtl.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/fonts.css">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="~/login/login-one/images/fev.png">
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="~/login/login-one/css/login-one.css">
+</head>
+<body>
+<!-- Loader -->
+<Form method="POST" action="/Job/Add"  enctype="multipart/form-data" autocomplete="off">
+<!-- Login page -->
+<div class="login_wrapper">
+    <div class="container">
+        <div class="col-md-12 pad-0" style="opacity: 90%;">
+            <di class="row login-box-12">
+                <div class="col-lg-2 col-md-12 col-sm-12 px-0">
+                    <div class="login_left">
+                        <a href="#" class="logo_text">
+                            <img src="~/login/login-one/images/Nikatek.png" alt="Simply Easy Learning"> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-12 ">
+                    <div class="login-inner-form">
+                        <div class="details">
+                            <div class="form-group">
+                                <input type="text" asp-for="Name" class="input-text" placeholder="نام: " required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" asp-for="Family" class="input-text" placeholder=" نام خانوادگی:" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" asp-for="CodeMeli" class="input-text" placeholder=" کدملی: " required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" asp-for="tavalood" class="input-text" placeholder="تاریخ تولد را بصورت  1378/01/01  وارد کنید" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" asp-for="FatherName" class="input-text" placeholder="نام پدر: " required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" asp-for="Telphone" class="input-text" placeholder="شماره تماس ثابت:" required minlength="11" maxlength="11"  >
+                            </div>
+                             <div class="form-group">
+                                <input type="text" asp-for="Mobile" class="input-text" placeholder="شماره تلفن همراه: " required minlength="11" maxlength="11"  >
+                            </div>
+                            <div class="form-group">
+                                <input type="text" asp-for="Address" class="input-text" placeholder="  آدرس: " required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" asp-for="Post" class="input-text" placeholder="  کدپستی: " required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" asp-for="Email" class="input-text" placeholder="ایمیل:" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" asp-for="Rand" class="input-text" placeholder=" کد پیگیری: " required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-12 ">
+                    <div class="login-inner-form">
+                        <div class="details">
+                            <div class="form-group text-right">
+                                <label class="" for="Tahsilat">مقطع تحصیلی:</label>
+                                <select asp-for="Tahsilat" style="width: 100%;" required>
+                                    <option value=""></option>
+                                    <option value="دیپلم">دیپلم</option>
+                                    <option value="کارشناسی">کارشناسی</option>
+                                    <option value="کارشناسی ارشد">کارشناسی ارشد</option>
+                                    <option value="دکتری">دکتری</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" asp-for="Reshte" class="input-text" placeholder="  رشته تحصیلی: " required>
+                            </div>
+                            <input type="text" asp-for="Ostan" style="display: none;">
+                            <div class="form-group text-right" >
+                                <label class="" for="Tahsilat">استان:</label>
+                                <select id="os" style="width: 100%;" onchange="Func(this.value)" required>
+                                    <option value=""></option>
+                                    <option value="آذرشهر ,اسکو ,اهر ,بستان‌آباد ,بناب ,تبریز ,جلفا ,چاراویماق ,سراب ,شبستر ,عجب‌شیر ,کلیبر ,مراغه ,مرند ,ملکان ,میانه ,ورزقان ,هریس ,هشترود">آذربایجان شرقی</option>
+                                    <option value="  ارومیه ,اشنویه ,بوکان ,پیرانشهر ,تکاب ,چالدران ,خوی ,سردشت ,سلماس ,شاهین‌دژ ,ماکو ,مهاباد ,میاندوآب ,نقده,شوط,چایپاره,پلدشت">آذربایجان غربی</option>
+                                    <option value="	کرج ,فردیس ,کمال‌شهر ,	نظرآباد ,محمدشهر, 	ماهدشت ,مشکین‌دشت ,	هشتگرد ,	چهارباغ , 	شهر جدید هشتگرد,اشتهارد ,	گرمدره ,گلسار ,	کوهسار ,	تنکمان ,	طالقان ,	آسارا,"> البرز</option>
+                                    <option value="  اردبیل ,بیله‌سوار ,پارس‌آباد ,خلخال ,کوثر ,گِرمی ,مِشگین‌شهر ,نَمین ,نیر">اردبیل</option>
+                                    <option value="  آران و بیدگل ,اردستان ,اصفهان ,برخوار و میمه ,تیران و کرون ,چادگان ,خمینی‌شهر ,خوانسار ,سمیرم ,شهرضا ,سمیرم سفلی ,فریدن ,فریدون‌شهر ,فلاورجان ,کاشان ,گلپایگان ,لنجان ,مبارکه ,نائین ,نجف‌آباد ,نطنز">اصفهان</option>
+                                    <option value="  آبدانان ,ایلام ,ایوان ,دره‌شهر ,دهلران ,شیروان و چرداول ,مهران">ایلام</option>
+                                    <option value="  بوشهر ,تنگستان ,جم ,دشتستان ,دشتی,دیر ,دیلم ,کنگان ,گناوه">بوشهر</option>
+                                    <option value="  اسلام شهر ,پاکدشت ,تهران ,دماوند ,رباط‌کریم ,ری ,ساوجبلاغ ,شمیرانات ,شهریار ,فیروزکوه ,کرج ,نظرآباد ,ورامین">تهران</option>
+                                    <option value="  ردل ,بروجن ,شهرکرد ,فارسان ,کوهرنگ ,لردگان">چهارمحال و بختیاری</option>
+                                    <option value="  یرجند ,درمیان ,سرایان ,سربیشه ,فردوس ,قائنات,نهبندان">خراسان جنوبی</option>
+                                    <option value="  ردسکن ,تایباد ,تربت جام ,تربت حیدریه ,چناران ,خلیل‌آباد ,خواف ,درگز ,رشتخوار ,سبزوار ,سرخس ,فریمان ,قوچان ,کاشمر ,کلات ,گناباد ,مشهد ,مه ولات ,نیشابور">خراسان رضوی</option>
+                                    <option value="  سفراین ,بجنورد ,جاجرم ,شیروان ,فاروج ,مانه و سملقان">خراسان شمالی</option>
+                                    <option value="  آبادان ,امیدیه ,اندیمشک ,اهواز ,ایذه ,باغ‌ملک ,بندر ماهشهر ,بهبهان ,خرمشهر ,دزفول ,دشت آزادگان ,رامشیر ,رامهرمز ,شادگان ,شوش ,شوشتر ,گتوند ,کارون ,لالی ,مسجد سلیمان,هندیجان ">خوزستان</option>
+                                    <option value="  بهر ,ایجرود ,خدابنده ,خرمدره ,زنجان ,طارم ,ماه‌نشان">زنجان</option>
+                                    <option value="  دامغان ,سمنان ,شاهرود ,گرمسار ,مهدی‌شهر">سمنان</option>
+                                    <option value="  ایرانشهر ,چابهار ,خاش ,دلگان ,زابل ,زاهدان ,زهک ,سراوان ,سرباز ,کنارک ,نیک‌شهر">سیستان و بلوچستان</option>
+                                    <option value="  آباده ,ارسنجان ,استهبان ,اقلید ,بوانات ,پاسارگاد ,جهرم ,خرم‌بید ,خنج ,داراب ,زرین‌دشت ,سپیدان ,شیراز ,فراشبند ,فسا ,فیروزآباد ,قیر و کارزین ,کازرون ,لارستان ,لامِرد ,مرودشت ,ممسنی ,مهر,گراش ,نی‌ریز">فارس</option>
+                                    <option value="  آبیک ,البرز ,بوئین‌زهرا ,تاکستان ,قزوین">قزوین</option>
+                                    <option value="  قم">قم</option>
+                                    <option value="  بانه ,بیجار ,دیواندره ,سروآباد ,سقز ,سنندج ,قروه ,کامیاران ,مریوان">کردستان</option>
+                                    <option value="  بافت ,بردسیر ,بم ,جیرفت ,راور ,رفسنجان ,رودبار جنوب ,زرند ,سیرجان ,شهر بابک ,عنبرآباد ,قلعه گنج ,کرمان ,کوهبنان ,کهنوج ,منوجان">کرمان</option>
+                                    <option value="  اسلام‌آباد غرب ,پاوه ,ثلاث باباجانی ,جوانرود ,دالاهو ,روانسر ,سرپل ذهاب ,سنقر ,صحنه ,قصر شیرین ,کرمانشاه ,کنگاور ,گیلان غرب ,هرسین">کرمانشاه</option>
+                                    <option value="  بویراحمد ,بهمئی ,دنا ,کهگیلویه ,گچساران">کهگیلویه و بویراحمد</option>
+                                    <option value="  آزادشهر ,آق‌قلا ,بندر گز ,ترکمن ,رامیان ,علی‌آباد ,کردکوی ,کلاله ,گرگان ,گنبد کاووس ,مراوه‌تپه ,مینودشت">گلستان</option>
+                                    <option value="  آستارا ,آستانه اشرفیه ,اَملَش ,بندر انزلی ,رشت ,رضوانشهر ,رودبار ,رودسر ,سیاهکل ,شَفت ,صومعه‌سرا ,طوالش ,فومَن ,لاهیجان ,لنگرود ,ماسال">گیلان</option>
+                                    <option value="  ازنا ,الیگودرز ,بروجرد ,پل‌دختر ,خرم‌آباد ,دورود ,دلفان ,سلسله ,کوهدشت">لرستان</option>
+                                    <option value="  آمل ,بابل ,بابلسر ,بهشهر ,تنکابن ,جویبار ,چالوس ,رامسر ,ساری ,سوادکوه ,قائم‌شهر ,گلوگاه ,محمودآباد ,نکا ,نور ,نوشهر">مازندران</option>
+                                    <option value="  آشتیان ,اراک ,تفرش ,خمین ,دلیجان ,زرندیه ,ساوه ,شازند ,کمیجان ,محلات">مرکزی</option>
+                                    <option value="  ابوموسی ,بستک ,بندر عباس ,بندر لنگه ,جاسک ,حاجی‌آباد ,شهرستان خمیر ,رودان  ,قشم ,گاوبندی ,میناب">هرمزگان</option>
+                                    <option value="  اسدآباد ,بهار ,تویسرکان ,رزن ,کبودرآهنگ ,ملایر ,نهاوند ,همدان">همدان</option>
+                                    <option value="  ابرکوه ,اردکان ,بافق ,تفت ,خاتم ,صدوق ,طبس ,مهریز ,مِیبُد ,یزد">یزد</option>
+                                </select>
+                            </div>
+			                <div class="form-group text-right" >
+                                <label class="" for="Tahsilat">شهرستان:</label>
+                                <select style="width: 100%;" asp-for="City" required> </select>   
+                            </div> 
+                            <div class="form-group">
+                                <p> آپلود کارت ملی  </p>
+                                <input type="file" asp-for="img_cartmeli" accept="image/x-png,image/jpg" placeholder=" آپلود کارت ملی " required>
+                            </div>
+                            <div class="form-group">
+                             <p> آپلود صفحه اول شناسنامه   </p>
+                                <input type="file" asp-for="img_shenasname" accept="image/x-png,image/jpg" placeholder=" آپلود صفحه اول شناسنامه " >
+                            </div>
+                            <div class="form-group">
+                             <p> آپلود مدرک تحصیلی  </p>
+                                <input type="file" asp-for="img_madraktahsili" accept="image/x-png,image/jpg" placeholder=" آپلود مدرک تحصیلی   " required>
+                            </div>
+                            @* <div class="form-group">
+                             <p> آپلود کارت پایان خدمت   </p>
+                                <input type="file" asp-for="img_payankh" accept="image/x-png,image/jpg" placeholder=" آپلود پایان خدمت " >
+                            </div> *@
+                            <div class="form-group">
+                                <p> آپلود عکس پرسنلی  </p>
+                                <input type="file" asp-for="img_payankh" accept="image/x-png,image/jpg" placeholder=" آپلود عکس پرسنلی " required>
+                            </div>
+                            @* <div class="form-group">
+                               <img src="/loginNew/GetCaptchaImage" alt="">
+                                <input type="text" asp-for="Serial" placeholder=" کد امنیتی   " required> 
+                            </div>*@
+                            @* <div class="checkbox clearfix">
+                                <div class="form-check checkbox-input">
+                                    <input class="form-check-input" type="checkbox" value="" id="termServices" required>
+                                    <label class="form-check-label m-3" for="termServices">
+                                        با تمامی شرایط و قوانین موافقم
+                                    </label>
+                            </div> *@
+                            <div class="form-group">
+                                <button type="submit" href="#"  class="btn-md btn-theme btn-block">ثبت نام</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</Form>
+<!-- External JS libraries -->
+<script src="~/login/assets/js/jquery-2.2.0.min.js"></script>
+<script src="~/login/assets/js/popper.min.js"></script>
+<script src="~/login/assets/js/bootstrap.min.js"></script>
+<!-- Custom JS Script -->
+
+<script> 
+    function Func(Shahrestanha) 
+    {
+        var vSkill = document.getElementById('os');
+        var vSkillText = vSkill.options[vSkill.selectedIndex].innerHTML;
+        document.getElementById('Ostan').value=vSkillText;
+        var _Shahrestan = document.getElementById("City");
+        _Shahrestan.options.length = 0;
+        if(Shahrestanha != "")
+        {
+            var arr = Shahrestanha.split(",");
+            for(i = 0; i < arr.length; i++)
+            {
+                if(arr[i] != "")
+                {
+                    _Shahrestan.options[_Shahrestan.options.length]=new Option(arr[i],arr[i]);
+                }
+            }
+        }
+    }
+</script>
+<!-- Custom JS Script -->
+<script type="text/javascript">
+    $(window).load(function() {
+        // Animate loader off screen
+        $(".loader").fadeOut("slow");;
+    });
+</script>
+</body>
+</html>

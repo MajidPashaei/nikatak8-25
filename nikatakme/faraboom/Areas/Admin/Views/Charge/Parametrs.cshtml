@@ -1,0 +1,58 @@
+@model ViewModels.AdminViewModel.Charge.Vm_Charge;
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> درخواست خرید شارژ </h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-12">
+				<form action="/Admin/Charge/DoSharge" method="POST">
+					<div class="form-group col-3">
+						<h2 class="mb-1">   شماره موبایل :</h2>
+						<input type="number" class="form-control" placeholder="شماره موبایل" required asp-for="CellNumber">
+					</div>
+                    <div class="form-group col-3">
+                      <label for="exampleFormControlSelect1"> انتخاب نوع اپراتور</label>
+                      <p class="text-danger" style="font-size: 12px;"> درصورت ترابرد آخرین اپراتور ترابرد شده را انتخاب نمایید.</p>
+                      <select class="form-control" asp-for="OperatorId">
+                        <option value="2">ایرانسل</option>
+                        <option value="3">رایتل</option>
+                        <option value="1">همراه اول</option>
+                        <option value="5">شاتل</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-3">
+                      <label for="exampleFormControlSelect1"> انتخاب مبلغ شارژ </label>
+                      <select class="form-control" asp-for="TotalAmount">
+                        <option value="20000"> 2 هزار تومان </option>
+                        <option value="50000"> 5 هزار تومان </option>
+                        <option value="100000"> 10 هزار تومان </option>
+                        <option value="200000"> 20 هزار تومان </option>
+                        <option value="300000"> 30 هزار تومان </option>
+                        <option value="400000"> 40 هزار تومان </option>
+                        <option value="500000"> 50 هزار تومان </option>
+                        <option value="1000000"> 100 هزار تومان </option>
+                      </select>
+                    </div>
+					          <div class="form-group col-3">
+                      <label for="exampleFormControlSelect1"> انتخاب نوع شارژ </label>
+                      <select class="form-control" asp-for="ChargeType">
+                        <option value="0"> شارژ معمولی </option>
+                        <option value="1"> شارژ شگفت انگیز ایرانسل </option>
+                        <option value="2"> شارژ جوانان همراه اول یا شورانگیز رایتل</option>
+                        <option value="3"> شارژ بانوان همراه اول </option>
+                      </select>
+                    </div>
+					<div>
+						<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;">
+							خرید
+						</button>
+						<a href="#" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+							بازگشت
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

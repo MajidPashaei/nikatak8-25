@@ -1,0 +1,38 @@
+@model ViewModels.AdminViewModel.Tavanam.Vm_Tavanam;
+
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> گزارش پیشرفته اعتبار سنجی</h2>
+	</div>
+	<form action="/Admin/Tavanam/ShowAdvancedReport" method="POST">
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="aletr alert-warning p-2 mb-3" style="height: 40px;border-radius: 5px;">
+						<p>این قسمت در حال بروز رسانی است.</p>
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0"> شناسه فاکتور :</h2>
+						<input type="text" class="form-control " asp-for="factor_id"
+							placeholder=" شناسه  فاکتور خود را وارد کنید   : " disabled required>
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0"> کد مجوز  :</h2>
+						<input type="text" class="form-control" asp-for="otp" placeholder=" کد مجوز خود را وارد کنید : "
+							disabled required>
+					</div>
+					
+                <br>
+                <br>
+                <br>
+                <br>
+					<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+					</button>
+					<a href="~/Admin/Tavanam/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+						بازگشت
+					</a>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

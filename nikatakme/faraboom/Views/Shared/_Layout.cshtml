@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>وبسایت نیکاتک</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="fa">
+    <meta name="document-type" content="Public">
+    <meta name="document-rating" content="General">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Ofoghata">
+
+    <link href="~/Site/Css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Site/Css/bootstrap-rtl.min.css" rel="stylesheet">
+    <link href="~/Site/Css/animate.css" rel="stylesheet">
+    <link href="~/Site/Css/Style.css" rel="stylesheet">
+    <link href="~/Site/Css/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/Site/Css/sina-nav.min.css" rel="stylesheet">
+    <script src="~/site/Js/jquery-2.0.0.min.js"></script>
+    <script src="~/site/Js/bootstrap.min.js"></script>
+
+    <script src="~/site/Js/owl.carousel.js"></script>
+    <script src="~/site/Js/custom.js"></script>
+    <script src="~/site/Js/sina-nav.min.js"></script>
+    <script src="~/admin/assets/js/Date.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6MLWFR92GH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6MLWFR92GH');
+</script>
+
+    <!--<link href="~/Site/Css/all.min.css" rel="stylesheet" />
+    <script src="~/site/Js/all.min.js"></script>-->
+
+
+
+
+    <link href="~/Site/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+    <script src="~/site/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+    @* <!BEGIN RAYCHAT CODE-->
+        <script
+            type="text/javascript">!function () { function t() { var t = document.createElement("script"); t.type = "text/javascript", t.async = !0, localStorage.getItem("rayToken") ? t.src = "https://app.raychat.io/scripts/js/" + o + "?rid=" + localStorage.getItem("rayToken") + "&href=" + window.location.href : t.src = "https://app.raychat.io/scripts/js/" + o + "?href=" + window.location.href; var e = document.getElementsByTagName("script")[0]; e.parentNode.insertBefore(t, e) } var e = document, a = window, o = "6e0aa69c-a215-4507-a271-034e56fd80a2"; "complete" == e.readyState ? t() : a.attachEvent ? a.attachEvent("onload", t) : a.addEventListener("load", t, !1) }();</script>
+        <!END RAYCHAT CODE--> *@
+
+            <!--[if lt IE 9]>
+    <script src="~/site/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="~/site/https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="home">
+    @*
+        <div id="fixed-social">
+        <div>
+        <a href="/#" class="fixed-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div>
+        <a href="/#" class="fixed-instagrem" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div>
+        <a href="/#" class="fixed-facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div>
+        <a href="/#" class="fixed-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div>
+        <a href="/#" class="fixed-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+
+        </div> *@
+<div style=" position: fixed;z-index:1000;right:0;bottom:10px;">
+    <a href="https://api.whatsapp.com/send?phone=+989220648677&text=&source=&data=" target="blank">
+    <img src="~/site/images/watsap.png" alt="" style="with:80px;height: 60px;">
+    </a>
+</div>
+    <section id="tophead" class="container-fluid p-2 grad-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-5 d-lg-block d-none">
+                    <a href="/#"><img src="~/site/Images/logo2.png" class="img-fluid"></a>
+                </div>
+
+                <div class="col-lg-3 col-6 mr-auto">
+                    <div class="d-flex flex-column">
+                        <span class="text-white">
+                            <span>
+                                <script>document.write("<div style=' text-align:right;font-size:13px;'> " + "امروز" + ":" + week[d] + " " + day + " " + months[month - 1] + " " + year + "</div>");</script>
+                            </span>
+
+                        </span>
+                        <form class="d-sm-block d-none">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="جستجو ..">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-success" type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-1 col-6  text-left">
+                    <img src="~/site/Images/flag.png" class="pt-sm-4 flag">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <header class="nav-container">
+        <nav class="sina-nav mobile-sidebar navbar-fixed" data-top="60">
+            <div class="container">
+                <div class="extension-nav">
+                    <ul class="pt-2 pr-1">
+                        <li class="row">
+                            @if (User.Identity.Name == "سعید عطایی")
+                            {
+                                <a id="loginbtn" href="/adminsite/home/index" class="btn btn-link p-1 ml-2">
+                                    <img src="~/site/Images/Svg/user.svg">ورود به پنل
+                                </a>
+                            }
+                            else if (User.Identity.Name == "admin")
+                            {
+                                <a id="loginbtn" href="/admin/menu/index" class="btn btn-link p-1 ml-2">
+                                    <img src="~/site/Images/Svg/user.svg">ورود به پنل
+                                </a>
+                            }
+                                   else if (User.Identity.Name == "Persenel")
+                            {
+                                <a id="loginbtn" href="/Persenel/Persenel" class="btn btn-link p-1 ml-2">
+                                    <img src="~/site/Images/Svg/user.svg">ورود به پنل
+                                </a>
+                            }
+                            else
+                            {
+                                <a id="loginbtn" href="/home/MapLogin" class="btn btn-link p-1 ml-2">
+                                    <img src="~/site/Images/Svg/user.svg">ورود نمایندگان
+                                </a>
+                                <a id="loginbtn" href="/Kasabeyar/" class="btn btn-link p-1 mr-2">
+                                    <img src="~/site/Images/Svg/user.svg"> سامانه کسبه یار
+                                </a>
+                            }
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="sina-nav-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="sina-brand pl-4 d-lg-none d-block" href="~/Site/Index.html">
+                        <img src="~/site/Images/logo.png" class="img-fluid">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="sina-menu sina-menu-center pl-1">
+                        <li><a href="/Home/Index">صفحه اصلی</a></li>
+                        <!--<li class="dropdown menu-item-has-mega-menu">
+                            <a href="/#" class="dropdown-toggle" data-toggle="dropdown">برگه ها<i class="fa  fa-chevron-down pr-2"></i></a>
+                            <div class="mega-menu dropdown-menu">
+                                <ul class="mega-menu-row" role="menu">
+                                    <li class="mega-menu-col col-md-3">
+                                        <ul class="sub-menu">
+                                            <li><a href="~/Site/Faq.html">سوالات متداول</a></li>
+                                            <li><a href="~/Site/Ourteam.html">معرفی مدیران</a></li>
+                                            <li><a href="~/Site/Gallery.html">گـالری تصاویر</a></li>
+                                            <li><a href="~/Site/Blog.html">اخبارها و رویدادها</a></li>
+                                            <li><a href="~/Site/Blogdetails.html">جزئیات اخبار</a></li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li class="mega-menu-col col-md-3">
+                                        <ul class="sub-menu">
+                                            <li><a href="~/Site/Component.html">المان ها</a></li>
+                                            <li><a href="~/Site/Features.html">ویژگی ها</a></li>
+                                            <li><a href="~/Site/Price.html">تعرفه خدمات</a></li>
+                                            <li><a href="~/Site/AboutUs.html">دربـاره ما</a></li>
+                                            <li><a href="~/Site/ContactUs.html">ارتباط با ما</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="mega-menu-col col-md-3">
+                                        <ul class="sub-menu">
+                                            <li><a href="~/Site/Guide.html">راهنمای استفاده</a></li>
+                                            <li><a href="~/Site/Register.html">عضویت در سایت</a></li>
+                                            <li><a href="~/Site/Login.html">ورود به سایت</a></li>
+                                            <li><a href="~/Site/Service.html">جزئیات خدمات</a></li>
+                                            <li><a href="~/Site/Blank.html">صفحه خالی</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-menu-col col-md-3">
+                                        <ul class="sub-menu">
+                                            <li><a href="~/Site/404.html">‌صفحه ۴۰۴</a></li>
+                                            <li><a href="~/Site/Waiting.html">لطفا منتظر بمانید</a></li>
+                                            <li><a href="~/Site/Success.html">ثبت موفق</a></li>
+                                            <li><a href="~/Site/UnSuccess.html">ثبت ناموفق</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>-->
+                        @* <li><a href="/expert/index">معرفی مدیران </a></li> 
+                         <li><a href="/Agancy/index">معرفی نمایندگان </a></li> *@
+                        @* <li><a href="/Gallery/details">گالری تصاویر</a></li>
+                        <li><a href="/Teaser/Index">گالری فیلم</a></li> *@
+                        <li><a href="/home/moarefi">معرفی</a></li>
+                        <li><a href="/home/mozaeieh">مزایده و مناقصه</a></li>
+                        <li><a href="/gallery/gallery">گـالری</a></li>
+                        <li><a href="/blog/index">اخبار و رویدادها</a></li>
+                        <li><a href="/Amozesh/index">آموزش ها</a></li>
+
+                       @*  <li class="dropdown">
+                            <a href="/#" class="dropdown-toggle" data-toggle="dropdown">برگه ها<i class="fa
+                                fa-chevron-down pr-2"></i></a>
+                                <ul class="dropdown-menu">
+                                <li><a href="~/Site/Blogdetails.html">جزئیات اخبار</a></li>
+                                <li><a href="~/Site/Component.html">المان ها</a></li>
+                                <li><a href="~/Site/Features.html">ویژگی ها</a></li>
+                                <li><a href="~/Site/Guide.html">راهنمای استفاده</a></li>
+                                <li><a href="~/Site/Price.html">جدول تعرفه</a></li>
+                                <li><a href="~/Site/404.html">صفحه 404</a></li>
+
+                                </ul> 
+                        </li>*@
+                        @* <li class="dropdown">
+                            <a href="/#" class="dropdown-toggle" data-toggle="dropdown">سایر برگه ها<i class="fa
+                            fa-chevron-down pr-2"></i></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="~/Site/Service.html">خدمات</a></li>
+                            <li><a href="~/Site/Success.html">ثبت موفق</a></li>
+                            <li><a href="~/Site/UnSuccess.html">ثبت ناموفق</a></li>
+                            <li><a href="~/Site/Waiting.html">صفحه انتظار</a></li>
+                            <li><a href="~/Site/Blank.html">صفحه خالی</a></li>
+
+                            <!--<li class="dropdown">
+                            <a href="/#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-chevron-left
+                            float-left"></i>زیر منو</a>
+                            <ul class="dropdown-menu drop">
+                            <li><a href="/#">زیر منو 1</a></li>
+                            <li><a href="/#">زیر منو 2</a></li>
+                            <li><a href="/#">زیر منو 3</a></li>
+                            </ul>
+                            </li>-->
+                            </ul>
+                        </li> *@
+                 
+                     <li><a href="/LoginNew/RegisterAgency"> درخواست نمایندگی</a></li>
+                     <li><a href="/Job/Index" >  آزمون استخدامی بانکداری</a></li>
+                    <li><a href="/Contact/">ارتباط با ما</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+
+    @RenderBody()
+
+    <footer class="rel-footer mt-5">
+        <div id="footer-content">
+            <div class="container">
+                <div class="row pt-4 mx-2">
+                    <div class="col-lg-2 col-sm-6 py-3 order-lg-1 order-1">
+                        <h5 class="IRANSansWeb_Medium"> لینک های سریع : </h5>
+                        <ul>
+                            <li>
+                                <a href="/expert/index" target="_blank" title=""> معرفی مدیران</a>
+                            </li>
+                            <li>
+                                <a href="/blog/index" target="_blank" title="">اخبار و رویدادها</a>
+                            </li>
+                            <li>
+                                <a href="/blog/index" target="_blank" title="">جزئیات اخبار </a>
+                            </li>
+                            <li>
+                                <a href="/Gallery/details" target="_blank" title=""> گالری تصاویر</a>
+                            </li>
+                            <li>
+                                <a href="/#" target="_blank" title="">ویژگی ها </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 py-3 order-lg-2  order-3">
+                        <h5 class="IRANSansWeb_Medium">پیوندها : </h5>
+                        <ul>
+                            <li>
+                                <a href="/Amozesh/index" target="_blank" title="">آموزش ها</a>
+                            </li>
+                            <li>
+                                <a href="/Agancy/index" target="_blank" title="">نمایندگان </a>
+                            </li>
+                            <li>
+                                <a href="/home/MapLogin" target="_blank" title="">ورود</a>
+                            </li>
+                            <li>
+                                <a href="/Job/Index" target="_blank" title="">  آزمون استخدامی بانکداری</a>
+                            </li>
+                            <li>
+                                <a href="/expert/index" target="_blank" title=""> معرفی مدیران</a>
+                            </li>
+
+                            <li>
+                                <a href="/home/AboutUs" target="_blank" title="">درباره ما</a>
+                            </li>
+                            <li>
+                                <a href="/home/ContactUs" target="_blank" title="">ارتباط با ما </a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 col-sm-6 pr-lg-4 py-3 IRANSansWeb_FaNum  order-lg-3  order-2">
+                                  @if (ViewBag.address != null)
+                                {
+                                @foreach (var item in ViewBag.address)
+                                {
+                    <div class="col-md-7 pr-md-4">
+                            <li>
+                                <ul>
+                                    <a href="" class="row " style="text-align: center;"> </a>
+                                </ul>
+                            </li>
+                        
+
+                        <p><span class="IRANSansWeb_Medium  text-lightgreen"><i class="fas fa-2x fa-map-marker-alt ml-2"></i>آدرس اول :</span>   @item.FirstAddress  </p>
+                                                          @if (@item.SecondAddress != null)
+                                                            {
+                                                             <p><span class="IRANSansWeb_Medium  text-lightgreen"><i class="fas fa-2x fa-map-marker-alt ml-2"></i>آدرس دوم :</span>  @item.SecondAddress </p>
+                                                            }
+                        <p><span class="IRANSansWeb_Medium  text-lightgreen"><i class="fas fa-2x fa-phone pl-2"></i>  شماره تماس همراه : : </span>@item.Tel1Ad</p>
+                        @if (@item.Tel2Ad != null)
+                                                                    {
+                                                                     <p><span class="IRANSansWeb_Medium  text-lightgreen"><i class="fas fa-2x fa-phone pl-2"></i> شماره تماس  همراه : : </span>@item.Tel2Ad</p>
+                                                                    }
+
+                                                        
+                        <p><span class="IRANSansWeb_Medium  text-lightgreen"><i class="fas fa-2x fa-phone pl-2"></i>  شماره تماس ثابت اول : : </span>@item.Officetel1Ad</p>
+                        @if (@item.Officetel2Ad != null)
+                                                                    {
+                                                                     <p><span class="IRANSansWeb_Medium  text-lightgreen"><i class="fas fa-2x fa-phone pl-2"></i> شماره تماس  ثابت دوم : : </span>@item.Officetel2Ad</p>
+                                                                    }
+
+                        <input type="text" value="@item.LocationAd" id="location" style="display:none;">
+
+                        <div class="col-sm-12 col-12">
+                               <div id="map"></div>
+                            </div>
+                    </div>
+                   }
+
+                    }
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-sm-4 py-3 order-lg-4 order-4">
+                        <h5 class="IRANSansWeb_Medium">مجوزها : </h5>
+                        <div class="d-flex flex-column">
+                            <a referrerpolicy="origin" target="_blank"
+                                href="https://trustseal.enamad.ir/?id=174915&Code=j2ROA2wwZLyduASWvqfH"><img
+                                    referrerpolicy="origin" src="~/Site/Images/logoenemad.png" alt=""
+                                    style="cursor:pointer" id="j2ROA2wwZLyduASWvqfH"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div id="footer-copyright">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="https://www.instagram.com/nikatak_com"><img class="mr-1 ml-1" style="width: 30px; height: 30px;" src="~/Site/Images/SocialNetwork/Instagram.png" alt=""></a>
+                        <a href="https://www.twitter.com/ir_nikatak">  <img class="mr-1 ml-1" style="width: 30px; height: 30px;" src="~/Site/Images/SocialNetwork/twitter.png" alt=""></a>
+
+                        <a href=""></a>
+                        <a href=""></a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="footer-copyright">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-white ">
+                            کلیه حقوق محفوظ می باشد .
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+    <script src="~/site/Js/sina-nav.min.js"></script>
+
+</body>
+
+</html>

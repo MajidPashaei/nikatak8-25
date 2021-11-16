@@ -1,0 +1,28 @@
+﻿@model faraboom.Models.CheckOutRedirectInfoModel
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>*@
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>در حال اتصال ...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../Styles/Payment/payment.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            //alert("Hello, world!");
+            $("#frm1").submit();
+            });
+    </script>
+
+</head>
+<body>
+<form action="https://bpm.shaparak.ir/pgwchannel/startpay.mellat" method="post" target="_self" name="frm1" id="frm1">
+    <input type="hidden" id="RefId" name="RefId" value=@Model.RefId />
+    <input type="hidden" id="mobileNo" name="MobileNo" value=@Model.MobileNo />
+</form>
+
+</body>
+</html>

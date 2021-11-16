@@ -1,0 +1,93 @@
+@{
+    Layout = "_Layout4" ;
+}
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0">
+             ثبت شماره تلفن کاربر
+        </h2>
+	</div>
+    <div class="card-body">
+		<div class="row">
+            @if ( ViewBag.ok != null )
+            {
+			    <div class="table-responsive">
+			    	<div class="form-group justify-content-center">
+                        <p class="alert alert-warning">
+                            قیمت خرید تلفن های اینترنتی 
+                            <span>
+                                @ViewBag.type
+                            </span>  
+                            ،
+                            <span id="price">
+                                @ViewBag.price
+                            </span>  
+                            تومان 
+                            می باشد . 
+                        </p>  
+                        <script>
+			                document.getElementById("price").innerText = document.getElementById("price").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			            </script> 
+                    </div>
+                </div>
+                <div class="container row">
+		            <div class="m-2">
+                          شماره انتخابی   
+                        <span style="border-bottom: 1px black dashed;" class="text-primary m-1">
+                              @ViewBag.num  
+                        </span>
+                                قابلیت انتخاب دارد 
+                                ،
+                                 در صورت تمایل برای خرید بر روی دکمه ی   
+                        <a href="/Admin/Voip/PishFactor?numid=@ViewBag.numid&userid=@ViewBag.userid" class="btn btn-success m-1">
+                                ثبت  
+                        </a>
+                          کلیک کنید .  
+                    </div>
+		        </div>
+            }
+            @if ( ViewBag.msgr != null )
+            {
+			    <div class="table-responsive">
+			    	<div class="form-group justify-content-center text-center">
+                        <h2 class="alert alert-warning">
+                            شماره اینترنتی
+                            <span class="text-dark text-lg m-1">
+                                @ViewBag.msgr 
+                            </span>
+                            رزرو شده است .
+                        </h2>
+                    </div>
+                </div>
+                <div class="container">
+		            <div class="m-2 row justify-content-center">
+                        <a href="/Admin/Voip/Sabt" class="btn btn-success m-1">
+                              بازگشت  
+                        </a>
+                    </div>
+		        </div>
+            }
+            @if ( ViewBag.msgn != null )
+            {
+			    <div class="table-responsive">
+			    	<div class="form-group justify-content-center text-center">
+                        <h2 class="alert alert-warning">
+                            شماره اینترنتی
+                            <span class="text-dark text-lg m-1">
+                                @ViewBag.msgn 
+                            </span>
+                            وجود ندارد .
+                        </h2>
+                    </div>
+                </div>
+                <div class="container">
+		            <div class="m-2 row justify-content-center">
+                        <a href="/Admin/Voip/Sabt" class="btn btn-success m-1">
+                              بازگشت  
+                        </a>
+                    </div>
+		        </div>
+            }
+        </div>
+    </div>
+</div>

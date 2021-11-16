@@ -1,0 +1,96 @@
+@using faraboom.Models;
+
+<!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+  @if (ViewBag.er != null)
+  {
+    <p class="alert alert-success">@ViewBag.er</p>
+  }
+  <!-- DataTable starts -->
+  <div class="table-responsive">
+    <table class="table data-list-view">
+      <thead>
+        <tr>
+          <th></th>
+          <th>ردیف</th>
+          <th>نام </th>
+          <th> نام خانوادگی</th>
+          <th> کد ملی </th>
+          <th> کد معرف : </th>
+          <th> ایمیل </th>
+          <th> تلفن ثابت</th>
+          <th> تلفن همراه :</th>
+          <th>استان</th>
+          <th>شهر</th>
+          <th>کد پستی </th>
+          <th>تاریخ ثبت نام</th>
+          <th>عکس کارت ملی</th>
+          <th>عکس شناسنامه</th>
+          <th>عکس مدرک تحصیلی</th>
+          <th> عکس پایان خدمت</th>
+          <th>جرییات</th>
+        </tr>
+      </thead>
+      <tbody>
+        @if (ViewBag.list != null)
+        {
+          int i = 1;
+          foreach (var item in ViewBag.list)
+          {
+            <tr>
+              <td></td>
+              <td class="product-category"> @i</td>
+              <td class="product-category"> @item.Nameper</td>
+              <td class="product-name">@item.Familyper</td>
+              <td class="product-category">@item.NationalCode </td>
+              <td class="product-category">@item.code </td>
+              <td class="product-category">@item.Email </td>
+              <td class="product-category">@item.PhoneHome </td>
+              <td class="product-category">@item.Phone </td>
+              <td class="product-category">@item.State</td>
+              <td class="product-category">@item.City</td>
+              <td class="product-category">@item.Postalcode</td>
+              <td class="product-category">@item.DateRegister</td>
+              <td class="product-category">
+                <a href="/fileupload/@item.Nationalcard" target="blank">مشاهده</a>
+              </td>
+              <td class="product-category">
+                <a href="/fileupload/@item.Certificate" target="blank">مشاهده</a>
+              </td>
+              <td class="product-category">
+                <a href="/fileupload/@item.Degreeeducation" target="blank">مشاهده</a>
+              </td>
+              <td class="product-category">
+                <a href="/fileupload/@item.Document" target="blank">مشاهده</a>
+              </td>
+              <td class="product-action">
+                <div class="mb-1">
+                  <div class="btn-group " role="group" aria-label="Basic example">
+
+                    @* <a href="/adminsite/usersNew/del/@item.Id" class="btn btn-success btn-sm"
+                     onclick="return confirm('آیا از تایید رکورد مورد نظر مطمئن هستید؟')">تایید</a> *@
+                      <a  class="btn btn-success btn-sm"
+                    >تایید</a>
+
+                    <a  class="btn btn-info btn-sm">
+                    احراز هویت</a>
+                    <a h class="btn btn-warning btn-sm"
+                    >عدم  تایید</a>
+                    @* <button type="button" class="btn btn-success btn-sm">ارسال</button>
+                      <button type="button" class="btn btn-warning btn-sm"> منتظراقدام</button> *@
+                  </div>
+                </div>
+              </td>
+            </tr>
+            i++;
+          }
+        }
+      </tbody>
+    </table>
+  </div>
+<!-- DataTable ends -->
+<!-- add new sidebar starts -->
+<!-- add new sidebar ends -->
+</section>
+<!-- Data list view end -->
+

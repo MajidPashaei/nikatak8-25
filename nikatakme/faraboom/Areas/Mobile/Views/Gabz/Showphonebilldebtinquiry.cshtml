@@ -1,0 +1,148 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<style>
+	@@font-face {
+		font-family: "font";
+		src: url('./css/Fonts/IRANSansWeb(FaNum) Medium.ttf')
+	}
+
+	label {
+		font-family: 'yekan';
+		text-align: right;
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	p {
+		font-family: "yekan" !important;
+		font-weight: lighter;
+		margin-top: 5px;
+		font-size: medium;
+	}
+
+	h6 {
+		font-family: 'font';
+		font-weight: 900;
+	}
+
+
+	@@font-face {
+		font-family: "yekan";
+		src: url(./Fonts/Yekan.woff)format('woff');
+	}
+
+	h5 {
+		text-align: right;
+		font-family: "yekan";
+	}
+</style>
+<div class="card shadow" id="myDiv">
+	<div class="card-header">
+		<h4 class="mb-0"> نمایش استعلام بدهی قبض تلفن</h4>
+	</div>
+	<div class="card-body">
+
+		<form method="POST" action="/Mobile/PayGabz/result">
+			<div class="row">
+				<div class="table-responsive">
+					<div class="form-group justify-content-center ">
+						<p style="direction: ltr; display: none;" id="Phone">@ViewBag.result</p>
+						@if (ViewBag.Msg != null)
+						{
+							<div class="text-center">
+								<p class="alert alert-danger">@ViewBag.Msg</p>
+							</div>
+						}
+						<input class="d-none" asp-for="amount">
+						<input class="d-none" asp-for="bill_id2">
+						<input class="d-none" asp-for="pay_id2">
+						<input class="d-none" asp-for="Titel" value="تلفن ثابت">
+
+						<div class="col-xl-12 col-lg-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="basic-form">
+										<div class="form-group">
+											<div class="col-12 row">
+
+												<div class="col-6">
+													<label class="text-label">
+														شناسه قبض:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="bill_id">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														شناسه پرداخت:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="pay_id">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														مبلغ :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="amount2">
+													</p>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-end ">
+								<button type="submit" class="btn btn-success col-12 mt-1 mb-1"
+									style="width: min-content;">
+									پرداخت
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+		</form>
+	</div>
+</div>
+
+<script>
+
+	debugger
+	var str = document.getElementById('Phone').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+	var res = str.split(",");
+
+	var bill_id = res[1].split(":");
+	document.getElementById('bill_id2').value = "" + bill_id[1];
+	var bill_id = res[1].split(":");
+	document.getElementById('bill_id').innerText = "" + bill_id[1];
+
+	var pay_id = res[2].split(":");
+	document.getElementById('pay_id2').value = "" + pay_id[1];
+	var pay_id = res[2].split(":");
+	document.getElementById('pay_id').innerText = "" + pay_id[1];
+
+	var amount = res[3].split(":");
+	document.getElementById('amount').value = "" + amount[1];
+	var amount = res[3].split(":");
+	document.getElementById('amount2').innerText = "" + amount[1];
+</script>
+
+<script>
+	function print() {
+		var printContents = document.getElementById('myDiv').innerHTML;
+		var originalContents = document.body.innerHTML;
+
+		document.body.innerHTML = printContents;
+
+		window.print();
+
+		document.body.innerHTML = originalContents;
+	}
+</script>

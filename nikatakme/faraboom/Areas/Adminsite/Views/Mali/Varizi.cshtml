@@ -1,0 +1,80 @@
+<section id="data-list-view" class="data-list-view-header">
+    <div class="col-6 text-center"> 
+        <p class="alert alert-primary text-light col-8 m-1">
+            <span class="m-1">
+                کد نمایندگی :
+                <span>
+                    @ViewBag.name
+                </span>
+            </span>
+            <span class="m-1">
+                نام و نام خانوادگی :
+                <span>
+                    @ViewBag.username
+                </span>
+            </span>
+        </p> 
+        <p class="alert alert-primary col-8 m-1">
+            مجموع واریزی ها :
+            <span class="m-2" id="sum">
+                @ViewBag.total  تومان
+            </span>
+            <script>
+                document.getElementById("sum").innerText=document.getElementById("sum").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            </script>
+        </p> 
+    </div>
+    <div class="table-responsive">
+        <table class="table data-list-view">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th> ردیف : </th>
+                    <th> عنوان و نوع : </th>
+                    <th> مبلغ : </th>
+                    <th> تاریخ : </th>
+                    <th> وضعیت : </th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (ViewBag.list != null)
+                {
+                    int i=1;
+                    foreach (var item in ViewBag.list)
+                    {
+                        <tr>
+                            <td></td>
+                            <td class="product-category"> @i </td>
+                            <td class="product-category col-2">@item.Type_Request   @item.Titel_Request</td>
+                            <td class="product-category" id="@item.Id"> @item.Pay  تومان </td>
+                                <script>
+                                    document.getElementById("@item.Id").innerText=document.getElementById("@item.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                            <td class="product-category"> @item.DateTime </td>
+                            @if( item.status == true )
+                            {
+                                <td class="product-category">
+                                    <a href="#" class="btn btn-success">
+                                        موفق
+                                    </a>
+                                    <a href="/adminsite/mali/DetailVarizi?id=@item.Id&reqid=@item.RequestId" class="btn btn-danger">
+                                       جزییات
+                                    </a>
+                                </td>
+                            }
+                            else
+                            {
+                                <td class="product-category">
+                                    <p class="btn btn-danger">
+                                        ناموفق
+                                    </p>
+                                </td>
+                            }
+                        </tr>
+                        i++;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</section>

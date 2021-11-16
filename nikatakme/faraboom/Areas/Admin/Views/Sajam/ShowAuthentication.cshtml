@@ -1,0 +1,31 @@
+
+@{
+    Layout = "_Layout4" ;
+}
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0">     
+        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <p class="d-none" id="S_A">@ViewBag.result</p>
+
+        <p id="access_token"></p>
+        <p id="expires_in"></p>
+
+    </div>
+</div>
+
+<script>
+	debugger
+
+	var str = document.getElementById('S_A').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+	var res = str.split(",");
+
+	var access_token = res[1].split(":");
+	document.getElementById('access_token').innerText = "" + access_token[1];
+
+	var expires_in = res[2].split(":");
+	document.getElementById('expires_in').innerText = "" + expires_in[1]+ expires_in[2]+ expires_in[3];
+
+</script>

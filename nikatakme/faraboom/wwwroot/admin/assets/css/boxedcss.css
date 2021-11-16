@@ -1,0 +1,39 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    max-width: 1170px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 0px 0px, rgba(0, 0, 0, 0.3) 0px 5px 25px 0px;
+    position: relative;
+    background-color: #f4f6fb;
+    margin: 0px auto;
+}
+
+body {
+    font-family: "iransans", 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+    color: #081340;
+    background-color: #d4d8df;
+}
+
+.fixed-header {
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+    max-width: 1170px;
+}
+
+.fixed-header.visible-title {
+    top: 0;
+}
+
+.fixed-header.visible-title.horizontal-main {
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .5) !important;
+}

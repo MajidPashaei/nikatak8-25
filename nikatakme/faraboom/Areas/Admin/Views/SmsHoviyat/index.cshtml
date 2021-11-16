@@ -1,0 +1,62 @@
+@model Admin.Models.vm_Sms;
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-1">استعلام تسهیلات</h2>
+        <p class="alert alert-warning">شماره موبایل باید به اسم صاحب شماره کارت ملی باشد.</p>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-6">
+				<form action="/admin/SmsHoviyat/SendSms" method="POST">
+					<div class="form-group">
+						<h2 class="mb-0"> شماره موبایل :</h2>
+						<input type="number" class="form-control" placeholder="بصورت 0921*****40" required
+							asp-for="Phone">
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0"> شماره کارت ملی :</h2>
+						<input type="number" class="form-control" placeholder="بصورت 1720****16" required
+							asp-for="NationalCode">
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0">  نام و نام خانوادگی :</h2>
+						<input type="text" class="form-control" placeholder="علی سعادت" required
+							asp-for="FullName">
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0">   نام :</h2>
+						<input type="text" class="form-control" placeholder="علی" required
+							asp-for="Name">
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0">   نام خانوادگی :</h2>
+						<input type="text" class="form-control" placeholder="سعادت" required
+							asp-for="Family">
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0">   نام پدر :</h2>
+						<input type="text" class="form-control" placeholder="قربانعلی" required
+							asp-for="FatherName">
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0">   تاریخ تولد :</h2>
+						<input type="text" class="form-control" placeholder="yyyy/mm/dd" required
+							asp-for="BirthDate">
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0">   جنسیت :</h2>
+						<input type="text" class="form-control" placeholder="مرد" required
+							asp-for="Gender">
+					</div>
+					<div>
+						<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+						</button>
+						<a href="/admin/Enteghal/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+							بازگشت
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

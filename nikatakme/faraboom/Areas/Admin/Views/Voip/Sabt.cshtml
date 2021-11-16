@@ -1,0 +1,57 @@
+@{
+    Layout = "_Layout4" ;
+}
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0">
+            ثبت شماره تلفن کاربر
+        </h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="table-responsive">
+				<div class="form-group justify-content-center">
+					<table class="table table-hover">
+						<thead class="bg-primary">
+							<tr>
+								<th> ردیف : </th>
+								<th> نام و نام خانوادگی : </th>
+								<th> کدملی : </th>
+								<th> آدرس : </th>
+								<th> شماره همراه : </th>
+								<th> وضعیت :</th>
+							</tr>
+						</thead>
+						<tbody class="bg-white">
+                                @if ( ViewBag.user != null )
+                                {
+                                    int i = 1 ;
+                                    foreach ( var item in ViewBag.user )
+                                    {
+										<tr>
+								    	    <th> @i </th>
+								    	    <th> @item.NameFamily </th>
+								    	    <th> @item.CM_Code </th>
+								    	    <th> @item.Address </th>
+								    	    <th> @item.Mobile </th>
+								    	    <th>
+                                    	        <a href="/Admin/Voip/SabtNumber/@item.Id" class="btn btn-danger btn-sm">
+                                    	            ثبت شماره
+                                    	        </a>
+                                    	    </th>
+										</tr>
+                                    	i++;
+                                    }
+                                }
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex justify-content-end ">
+			<a href="/Admin/Voip/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+				بازگشت
+			</a>
+		</div>
+	</div>
+</div>

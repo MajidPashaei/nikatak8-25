@@ -1,0 +1,60 @@
+<div class="card shadow" id="myDiv">
+	<div class="card-header">
+		<h2 class="mb-0"> درخواست شارژ مستقیم</h2>
+		<div class="card-body">
+			<div class="row">
+				<div class="table-responsive">
+					<div class="form-group justify-content-center ">
+						<p style="direction: ltr; display: ;" id="Charge">@ViewBag.result</p>
+						@* <table class="table table-hover">
+							<thead class="bg-primary ">
+								<tr>
+									<th> شناسه قبض:</th>
+									<th> شناسه پرداخت: </th>
+									<th>مبلغ :</th>
+								</tr>
+							</thead>
+							<tbody class="bg-white">
+								<tr>
+									<th id="bill_id"> </th>
+									<th id="pay_id"> </th>
+									<th id="amount"> </th>
+								</tr>
+							</tbody>
+						</table> *@
+					</div>
+				</div>
+			</div>
+			@* <div class="d-flex justify-content-end ">
+				<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> پرداخت
+				</button>
+				<a onclick="print();" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> چاپ
+				</a>
+			</div> *@
+		</div>
+	</div>
+</div>
+
+<script>
+
+	debugger
+	var str = document.getElementById('Charge').innerText.replace("{", "").replace(' \" ', '').replace("}", "");
+	var res = str.split(",");
+
+	var bill_id = res[1].split(":");
+	document.getElementById('bill_id').innerText = "" + bill_id[1];
+
+</script>
+
+@* <script>
+	function print() {
+		var printContents = document.getElementById('myDiv').innerHTML;
+		var originalContents = document.body.innerHTML;
+
+		document.body.innerHTML = printContents;
+
+		window.print();
+
+		document.body.innerHTML = originalContents;
+	}
+</script> *@

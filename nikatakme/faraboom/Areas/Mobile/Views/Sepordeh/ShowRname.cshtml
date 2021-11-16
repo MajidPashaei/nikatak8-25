@@ -1,0 +1,17 @@
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0">نمایش نام صاحب سپرده        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <p>@ViewBag.result</p>
+        @if (ViewBag.Msg != null)
+        {
+            <div class="text-center">
+                <p class="alert alert-danger">@ViewBag.Msg</p>
+            </div>
+        }
+        <a href="~/Admin/Sepordeh/Index" class="btn btn-success mt-3 mb-1" style="width: min-content;">
+            بازگشت
+        </a>
+    </div>
+</div>

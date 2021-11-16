@@ -1,0 +1,15 @@
+@model ViewModels.AdminViewModel.Omomi.Vm_Omomi;
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> استعلام تراکنش
+        </h2>
+    </div>
+    <form action="/Admin/Omomi/ShowTarakonesh">
+        <div class="card-body col-md-12 text-center">
+            <input type="text" class="form-control" asp-for="tarakonesh" placeholder="    شناسه پیگیری را وارد کنید     ">
+            <button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;">
+                استعلام
+            </button>
+        </div>
+    </form>
+</div>

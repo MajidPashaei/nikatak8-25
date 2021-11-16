@@ -1,0 +1,40 @@
+@model ViewModels.AdminViewModel.Emdad.Vm_Emdad;
+
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-1">استعلام لیست اشتراک ایران خودرو</h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-6">
+				<form action="/admin/emdad/serviceCardResult" method="POST">
+					<div class="form-group">
+						<h2 class="mb-0"> کیلومتر :</h2>
+						<input type="number" class="form-control" placeholder="کیلومتر" required
+							asp-for="kilometer">
+					</div>
+						<input type="number" class="form-control" value="" hidden placeholder="کد تخفیف" 
+							asp-for="offCode">
+                    <div class="form-group">
+                        <select class="form-control form-control-sm" asp-for="realOrLegal">
+                            <option value="1"> حقیقی </option>
+                            <option value="2"> حقوقی </option>
+                        </select>
+                    </div>
+                    <input hidden type="text" value="@ViewBag.ChassisNumber" asp-for="chassisNumber">
+                    <input hidden type="text" value="@ViewBag.year" asp-for="buildYear">
+                    <input hidden type="text" value="@ViewBag.state" asp-for="subscriptionStatus">
+                    <input hidden type="text" value="0" asp-for="carPackageId">
+
+					<div>
+						<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+						</button>
+						<a href="/admin/emdad/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+							بازگشت
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

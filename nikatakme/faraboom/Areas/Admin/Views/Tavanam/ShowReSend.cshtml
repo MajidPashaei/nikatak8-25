@@ -1,0 +1,34 @@
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش مجدد رمز یکبار مصرف اعتبار سنجی
+        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <p style="display: none;" id="S_RS">@ViewBag.result</p>
+        <p id="msg1" class="alert alert-success" style="display: none;"> کد مجوز به شماره همراه وورودی ارسال شد.</p>
+        <p id="msg2" class="alert alert-danger" style="display: none;"> <i>خطا در داده های وورودی</i> شماره فاکتور یا
+            شناسه پرداخت اشتباه است. </p>
+        <div class="d-flex justify-content-center ">
+            <a href="~/Admin/Tavanam/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                بازگشت
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    debugger
+    var str = document.getElementById('S_RS').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+    var res = str.split(",");
+
+    var match = res[1].split(":");
+    @* document.getElementById('match').innerText = "" + match[1]; *@
+
+    if (match[1] == "true") {
+        document.getElementById('msg1').style.display = "block";
+    }
+    if (match[1] == "false") {
+        document.getElementById('msg2').style.display = "block"
+    }
+</script>

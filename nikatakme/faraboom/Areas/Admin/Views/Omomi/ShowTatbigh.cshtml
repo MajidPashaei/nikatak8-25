@@ -1,0 +1,36 @@
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> تطبیق کدملی و شماره تلفن همراه
+        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <p class="d-none" id="Tatbigh">@ViewBag.result</p>
+        @if (ViewBag.Msg != null)
+        {
+            <div class="text-center">
+                <p class="alert alert-danger">@ViewBag.Msg</p>
+            </div>
+        } 
+        <p id="msg1" class="alert alert-success" style="display: none;">شماره تماس متعلق به کد ملی وارد شده است</p>
+        <p id="msg2" class="alert alert-danger" style="display: none;">کد ملی متعلق به شماره تماس وارد شده نیست</p>
+        <a href="~/Admin/Omomi/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+            بازگشت
+        </a>
+    </div>
+</div>
+
+<script>
+    debugger
+    var str = document.getElementById('Tatbigh').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+    var res = str.split(",");
+
+    var match = res[1].split(":");
+    @* document.getElementById('match').innerText = "" + match[1]; *@
+
+    if (match[1] == "true") {
+        document.getElementById('msg1').style.display = "block";
+    }
+    if (match[1] == "false") {
+        document.getElementById('msg2').style.display = "block"
+    }
+</script>

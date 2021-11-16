@@ -1,0 +1,59 @@
+<section id="data-list-view" class="data-list-view-header">
+    <div class="col-6 text-center"> 
+        <p class="alert alert-primary col-8 m-1">
+                شماره تلفن های اینترنتی ثبت شده 
+        </p> 
+    </div>
+    <div class="table-responsive">
+        <table class="table data-list-view">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="text-center"> ردیف : </th>
+                    <th class="text-center"> شماره : </th>
+                    <th class="text-center"> استان : </th>
+                    <th class="text-center"> نوع شماره : </th>
+                    <th class="text-center"> قیمت : </th>
+                    <th class="text-center"> وضعیت : </th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (ViewBag.num != null)
+                {
+                    int i=1;
+                    foreach (var item in ViewBag.num)
+                    {
+                        <tr>
+                            <td></td>
+                            <td class="text-center product-category"> @i </td>
+                            <td class="text-center product-name"> @item.Number </td>
+                            <td class="text-center product-category col-2"> @item.Ostan </td>
+                            <td class="text-center product-category col-2"> @item.Type </td>
+                            <td class="text-center product-category" id="@item.Id"> @item.Price   تومان </td>
+                                <script>
+                                    document.getElementById("@item.Id").innerText=document.getElementById("@item.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                            @if ( item.Rezerve == "0" )
+                            {
+                                <td class="text-center product-category">
+                                   <a href="" class="btn btn-success">
+                                               آزاد   
+                                   </a>
+                                </td>
+                            }
+                            else
+                            {
+                                <td class="text-center product-category">
+                                   <a href="" class="btn btn-danger">
+                                           رزرو شده   
+                                   </a>
+                                </td>
+                            }
+                        </tr>
+                        i++;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+ </section>

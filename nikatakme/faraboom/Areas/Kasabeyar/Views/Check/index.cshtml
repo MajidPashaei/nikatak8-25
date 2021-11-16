@@ -1,0 +1,33 @@
+@model Admin.Models.vm_Sms;
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-1">استعلام چک برگشتی</h2>
+        <p class="alert alert-warning">شماره موبایل باید به اسم صاحب شماره کارت ملی باشد.</p>
+		@if (ViewBag.msg != null)
+		{
+			<p class="alert alert-danger">@ViewBag.msg</p>
+		}
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-6">
+				<form action="/Kasabeyar/Check/SendSms" method="POST">
+					<div class="form-group">
+						<h2 class="mb-0"> شماره موبایل :</h2>
+						<input type="number" class="form-control" placeholder="بصورت 0921*****40" required
+							asp-for="Phone">
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0"> شماره کارت ملی :</h2>
+						<input type="number" class="form-control" placeholder="بصورت 1720****16" required
+							asp-for="NationalCode">
+					</div>
+					<div>
+						<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

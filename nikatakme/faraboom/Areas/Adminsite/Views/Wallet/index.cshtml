@@ -1,0 +1,167 @@
+@* @model ViewModels.AdminViewModel.Admin.Vm_info
+
+
+
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0 text-center alert alert-light"> شارژ به کیف پول</h2>
+		<hr>
+		<div class="card-body">
+			<div class="row">
+				<div class="table-responsive">
+					<div class="form-group justify-content-center ">
+
+						<div class="row ">
+
+							<div class="col-6">
+								<input type="number"   id="pay25"    class="form-control " placeholder="لطفا مبلغ شارژ را وارد کنید" req>
+
+							</div>
+							<div class="col-6">
+								<button onclick="sendpay();" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> پرداخت
+								</button>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+				<div class="row">
+			<div class="table-responsive">
+				<div class="form-group justify-content-center ">
+					<p style="direction: ltr; display: none;" id="Water">@ViewBag.result</p>
+					<table class="table table-hover">
+						<thead class="bg-primary">
+							<tr>
+								<th>  </th>
+								<th> ردیف: </th>
+								<th> مبلغ پرداخت: </th>
+								<th>تاریخ پرداخت : </th>
+								<th> مبلغ برداشت :</th>
+								<th> تاریخ برداشت :</th>
+								
+								<th> وضعیت :</th>
+								
+							</tr>
+						</thead>
+						<tbody class="bg-white">
+							@if (ViewBag.list2!=null)
+							{
+								int i=1;
+								@foreach (var item in ViewBag.list2)
+								{
+									
+								
+								
+							
+							<tr>
+								
+								<td ></td>
+								<td >@i </td>
+								<td >@item.Pay</td>
+								
+								<td>@item.Paytime </td>
+								<td >@item.Harvest  </td>
+								<td >@item.havesttime  </td>
+								<td >@item.status </td>
+							</tr>
+							i++;
+							}
+							}
+						</tbody>
+					
+					</table>
+				</div>
+			</div>
+		</div>
+
+		</div>
+	</div>
+
+	     <script>
+            function sendpay()
+            {
+             
+             if(document.getElementById('pay25').value != "")
+             {
+                window.location.href="/Admin/pay/index/"+document.getElementById('pay25').value;
+             }
+             
+            }
+          </script>
+	 *@
+
+	 
+
+    <!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+   @if (ViewBag.er != null)
+{
+<p class="alert alert-success">@ViewBag.er</p>
+}
+  <!-- DataTable starts -->
+  <div class="table-responsive">
+    <table class="table data-list-view">
+      <thead>
+			<tr>
+				<th>  </th>
+				<th> ردیف: </th>
+				<th> نام و نام خانوادگی </th>
+				<th> مبلغ پرداخت: </th>
+				<th> مبلغ برداشت: </th>
+				<th>تاریخ  : </th>
+			</tr>
+        </thead>
+        <tbody>
+	    @if (ViewBag.list2!=null)
+		{
+		int i=1;
+		@foreach (var item in ViewBag.list2)
+		{
+			<tr>
+				<td ></td>
+				<td >@i </td>
+				<td >@item.UserName</td>
+				<td >@item.Pay</td>
+				<td >@item.Harvest</td>
+				<td>@item.DateTime </td>
+			</tr>
+		i++;
+		}
+		}
+     	</tbody>
+	  @* <tbody class="bg-white">
+							@if (ViewBag.list2!=null)
+							{
+								int i=1;
+								@foreach (var item in ViewBag.list2)
+								{
+									<tr>
+										<td>@i</td>
+										<td >@item.Pay</td>
+										<td>@item.Harvest</td>
+										<td>@item.DateTime</td>
+										@if (@item.RequestId==0)
+										{
+											<td>واریز مستقیم</td>
+										}
+										else
+										{
+											<td> استعلام . پرداخت </td>
+										}
+										<th><a class="btn btn-outline-danger btn-sm" href="~/Admin/Wallet/Detail/@item.RequestId" role="button" >جزئیات</a></th>
+									</tr>
+									i++;
+								}
+							}
+						</tbody> *@
+    </table>
+  </div>
+  <!-- DataTable ends -->
+
+  <!-- add new sidebar starts -->
+ 
+  <!-- add new sidebar ends -->
+</section>
+<!-- Data list view end -->

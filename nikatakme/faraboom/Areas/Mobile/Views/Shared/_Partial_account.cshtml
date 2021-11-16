@@ -1,0 +1,61 @@
+	
+
+@model ViewModels.AdminViewModel.Admin.Vm_info
+    <div class="tab-pane fade" id="tab3">
+								<div class="row">
+									<div class="col-12">
+										<div class="form-group clearfix">
+
+											<div class="row mt-1">
+
+												<div class="col-lg-3">
+													<input  required class="form-control required" placeholder="نام بانک "
+														type="text"  asp-for="Bankname">
+												</div>
+												<div class="col-lg-3">
+													<input    required  class="form-control required" placeholder="کد بانک"
+														type="text" asp-for="Bankcode">
+												</div>
+												<div class="col-lg-3">
+													<input   required class="form-control required" placeholder="نام شعبه"
+														type="text" asp-for="Branchname">
+												</div>
+												<div class="col-lg-3">
+													<input  required class="form-control required"
+														placeholder="	نوع حساب(سپرده – جاری )" type="text" asp-for="Accounttype">
+												</div>
+											</div>
+											<div class="row mt-1">
+
+												<div class="col-lg-3">
+													<input required class="form-control required"
+														placeholder="	شماره کارت عابر بانک  " type="text" asp-for="cardnumber">
+												</div>
+												<div class="col-lg-3">
+													<input required class="form-control required" placeholder="	شماره شبا"
+														type="text" asp-for="Shabanumber">
+												</div>
+												<div class="col-lg-3">
+													<input required class="form-control required" placeholder="		شماره حساب"
+														type="text" asp-for="accountnumber">
+												</div>
+												<div class="col-lg-3">
+													<input required class="form-control required" placeholder="		نام دارنده حساب"
+														type="text" asp-for="AccountName">
+												</div>
+											</div>
+											<div class="row mt-1">
+												<div class="col-lg-3">
+													<input required class="form-control required text-center "
+														placeholder="کد پستی" type="text" asp-for="PostalcodeBank">
+												</div>
+												<div class="col-lg-3">
+													<input required class="form-control required" placeholder="ادرس محل فعالیت"
+														type="text" asp-for="Address">
+												</div>
+												<button type="button" class="btn btn-relief-info mr-1 mb-1 waves-effect waves-light">ثبت اطلاعات</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>

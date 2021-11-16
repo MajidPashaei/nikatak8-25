@@ -1,0 +1,46 @@
+@model ViewModels.AdminViewModel.User.Vm_User;
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> تغییر رمز عبور </h2>
+    </div>
+    <div class="text-center">
+        @if (ViewBag.msg != null)
+        {
+            <p class="alert alert-danger">
+                @ViewBag.msg
+            </p>
+        }
+        @if (ViewBag.msg1 != null)
+        {
+            <p class="alert alert-success">
+                @ViewBag.msg1
+            </p>
+        }
+    </div>
+    <form method="post" action="/Admin/ChangePass/Change">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <h2 class="mb-0"> رمز قبلی شما</h2>
+                        <input type="password" class="form-control" asp-for="n" placeholder=" رمزعبور  " required>
+
+                        <div class="form-group">
+                            <h2 class="mb-0"> رمز جدید </h2>
+                            <input type="password" class="form-control" asp-for="PasswordUs"
+                                placeholder=" رمز عبور جدید خود را وارد کنید  " required>
+                        </div>
+                        <div class="form-group">
+                            <h2 class="mb-0">تکرار رمز عبور</h2>
+                            <input type="password" class="form-control" asp-for="RePasswordUs"
+                                placeholder=" تکرار رمز عبور  " required>
+                        </div>
+                        <button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;">
+                            ثبت رمز جدید
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,42 @@
+@{
+	Layout = "_Layout";
+}
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> دریافت مشخصات جغرافیایی براساس کدپستی
+        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <p id="S_G" class="d-none">@ViewBag.result</p>
+        @if (ViewBag.Msg != null)
+        {
+            <div class="text-center">
+                <p class="alert alert-danger">@ViewBag.Msg</p>
+            </div>
+        }
+        else
+        {
+            <p id="latitude"> عرض جغرافیایی :</p>
+            <p id="longitude"> طول جغرافیایی :</p>
+        }
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <a href="/Kasabeyar/Makan/index" class="btn btn-success " style="width: min-content;">
+            بازگشت
+        </a>
+    </div>
+</div>
+
+<script>
+    debugger
+
+    var str = document.getElementById('S_G').innerText.replace("{", "").replace(' \" ', '').replace("}", "").replace("}", "").replace("}", "").split('"').join('').replace("]", "");
+    var res = str.split(",");
+
+    var latitude = res[1].split(":");
+    document.getElementById('latitude').innerText = " عرض جغرافیایی :" + latitude[1];
+
+    var longitude = res[1].split(":");
+    document.getElementById('longitude').innerText = " طول جغرافیایی :" + longitude[1];
+
+</script>

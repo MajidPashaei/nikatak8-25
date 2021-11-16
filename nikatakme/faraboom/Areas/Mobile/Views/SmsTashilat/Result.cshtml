@@ -1,0 +1,177 @@
+<style>
+  th
+  {
+    font-size: 12px;
+    font-weight: normal;
+  }
+</style>
+
+<br>
+<br>
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <!-- Checkout Wrapper-->
+    <div class="checkout-wrapper-area py-3">
+      <!-- Billing Address-->
+      <div class="billing-information-card mb-3">
+        <div class="card billing-information-title-card bg-primary">
+          <div class="card-body">
+            <h6 class="text-center mb-0 text-white"> نمایش استعلام تسهیلات </h6>
+          </div>
+        </div>
+        <div class="card user-data-card">
+          <div class="card-body">
+			@if (ViewBag.msg != null)
+			{
+				<br>
+				<div class="text-center">
+					<h5 class="alert alert-danger">@ViewBag.msg</h5>
+				</div>
+				<br>
+				<br>
+			}      
+			else
+			{      
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>نام و نام خانوادگی : </span></div>
+            	  <div class="data-content">@ViewBag.Name</div>
+            	</div>                      
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>کد ملی : </span></div>
+            	  <div class="data-content">@ViewBag.User</div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>بد حسابی : </span></div>
+            	  <div class="data-content">@ViewBag.Dishonored </div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>مجموع تسهیلات مانده : </span></div>
+            	  <div class="data-content" id="a">@ViewBag.FacilityDebtTotalAmount </div>
+                    <script>
+			            document.getElementById("a").innerText = document.getElementById("a").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			        </script>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>مانده معوق : </span></div>
+            	  <div class="data-content" id="b">@ViewBag.FacilityDeferredTotalAmount </div>
+                    <script>
+			            document.getElementById("b").innerText = document.getElementById("b").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			        </script> 
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>مانده سررسیده گذشته : </span></div>
+            	  <div class="data-content" id="c">@ViewBag.FacilityPastExpiredTotalAmount </div>
+                    <script>
+			            document.getElementById("c").innerText = document.getElementById("c").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			        </script> 
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span> مانده مشکوک الوصول : </span></div>
+            	  <div class="data-content" id="d">@ViewBag.FacilitySuspiciousTotalAmount </div>
+                    <script>
+			            document.getElementById("d").innerText = document.getElementById("d").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			        </script> 
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span> مجموع مبلغ تسهیلات  : </span></div>
+            	  <div class="data-content" id="e">@ViewBag.FacilityTotalAmount </div>
+                    <script>
+			            document.getElementById("e").innerText = document.getElementById("e").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			        </script> 
+            	</div>
+              <div class="row">
+                  <div class="table-responsive">
+                    <div class="form-group justify-content-center text-center">
+                      <table class="table table-hover table-responsive mt-3">
+                        <thead class="bg-info">
+                            <tr>
+                                <th class="text-light">ردیف:</th>
+                                <th class="text-light">مبلغ وجه التزام:</th>
+                                <th class="text-light">اصل مبلغ تسهیلات:</th>
+                                <th class="text-light">کد بانک:</th>
+                                <th class="text-light">سود مبلغ تسهیلات:</th>
+                                <th class="text-light">شعبه بانک:</th>
+                                <th class="text-light">کد شعبه بانک:</th>
+                                <th class="text-light">IRR:</th>
+                                <th class="text-light">مانده کل بدهی:</th>
+                                <th class="text-light">مانده معوقه:</th>
+                                <th class="text-light">تاریخ سررسید نهایی:</th>
+                                <th class="text-light">دسته بندی:</th>
+                                <th class="text-light">تاریخ:</th>
+                                <th class="text-light">مانده سررسید گذشته:</th>
+                                <th class="text-light">شماره درخواست:</th>
+                                <th class="text-light">نوع درخواست:</th>
+                                <th class="text-light">تاریخ تنظیم قرارداد:</th>
+                                <th class="text-light">وضعیت:</th>
+                                <th class="text-light">مانده مشکوک الوصول:</th>
+                                <th class="text-light">نوع قرارداد:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            @{
+                                if (ViewBag.FacilityListResult != null)
+                                {
+                                    int i=1;
+                                    foreach (var item in ViewBag.FacilityListResult)
+                                    {
+                                        <tr>
+                                            <th class="text-primary">@i</th>
+                                            <th class="text-primary">@item.FacilityAmountObligation</th>
+                                            <th class="text-primary" id="@i">@item.FacilityAmountOrginal</th>
+                                                <script>
+			                                        document.getElementById("@i").innerText = document.getElementById("@i").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			                                    </script>
+                                            <th class="text-primary">@item.FacilityBankCode</th>
+                                            <th class="text-primary">@item.FacilityBenefitAmount</th>
+                                            <th class="text-primary">@item.FacilityBranch</th>
+                                            <th class="text-primary">@item.FacilityBranchCode</th>
+                                            <th class="text-primary">@item.FacilityCurrencyCode</th>
+                                            <th class="text-primary" id="@i@i">@item.FacilityDebtorTotalAmount</th>
+                                                <script>
+			                                        document.getElementById("@i@i").innerText = document.getElementById("@i@i").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			                                    </script>
+                                            <th class="text-primary">@item.FacilityDeferredAmount</th>
+                                            <th class="text-primary">@item.FacilityEndDate</th>
+                                            <th class="text-primary">@item.FacilityGroup</th>
+                                            <th class="text-primary">@item.FacilityMoratoriumDate</th>
+                                            <th class="text-primary">@item.FacilityPastExpiredAmount</th>
+                                            <th class="text-primary">@item.FacilityRequestNo</th>
+                                            <th class="text-primary">@item.FacilityRequestType</th>
+                                            <th class="text-primary">@item.FacilitySetDate</th>
+                                            <th class="text-primary">@item.FacilityStatus</th>
+                                            <th class="text-primary">@item.FacilitySuspiciousAmount</th>
+                                            <th class="text-primary">@item.FacilityType</th>
+                                        </tr>
+                                        i++;
+                                    }
+                                }
+                            }
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+              </div>
+
+
+
+
+
+			} 
+          </div>
+        </div>
+      </div>
+	</div>
+  </div>
+</div>  
+    </div>
+    <div class="card-body">
+        <div class="card-body">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

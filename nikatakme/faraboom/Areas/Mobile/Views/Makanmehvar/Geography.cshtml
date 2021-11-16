@@ -1,0 +1,20 @@
+@model ViewModels.AdminViewModel.Makanmehvar.Vm_Makanmehvar;
+
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <div class="checkout-wrapper-area py-3">
+      <div class="credit-card-info-wrapper"><img class="d-block mb-4" src="~/mobile2/img/bg-img/credit-card.png" alt="">
+        <div class="pay-credit-card-form">
+            <form autocomplete="off" action="/mobile/Makanmehvar/ShowGeography" method="POST">
+            <div class="mb-3">
+              <label class="mb-2" for="parameter">کد پستی را وارد کنید : </label>
+              <input class="form-control" type="number" placeholder="کد پستی : " required asp-for="zip_code">
+            </div>
+            <button class="btn btn-warning btn-lg w-100" type="submit">استعلام</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

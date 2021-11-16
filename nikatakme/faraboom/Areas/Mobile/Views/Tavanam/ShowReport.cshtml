@@ -1,0 +1,61 @@
+<br>
+<br>
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <!-- Checkout Wrapper-->
+    <div class="checkout-wrapper-area py-3">
+      <!-- Billing Address-->
+      <div class="billing-information-card mb-3">
+        <div class="card billing-information-title-card bg-primary">
+          <div class="card-body">
+            <h6 class="text-center mb-0 text-white"> نمایش استعلام اعتبار سنجی </h6>
+          </div>
+        </div>
+        <div class="card user-data-card">
+          <div class="card-body">
+			@if ( ViewBag.msg != null )
+			{
+				<br>
+				<div class="text-center">
+					<p class="alert alert-danger text-center">@ViewBag.msg</p>
+				</div>
+				<br>
+				<br>
+			}   
+            @if ( ViewBag.result != null )
+            {   
+                var item = ViewBag.result ;
+            	<div class="row">
+            	  <div class="title col-12"><span>وضعیت : </span></div>
+                  <br>
+            	  <div class="data-content" style="font-size: small;">@item.ReasonCodes </div>
+            	  @* <div class="data-content m-2" style="font-size: small;">
+                      خیلی پایین بودنِ تعداد ماههای دارای پرداخت خوب در حداقل یک قرارداد, دارای 2 ماه یا بیشتر با وضعیت منفی (سررسید گذشته، معوق و مشکوک الوصول) در قرارداد جاری در 24 ماه گذشته‫‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬, گروه سنی جوان, دارای ‪‫حداقل یک قرارداد خاتمه یاقته اصلی در 3 سال گذشته می باشد‬‬‬‬‬‬‬‬‬‬‬‬‬‬, دارای 4 ماه یا بیشتر با وضعیت منفی (سررسید گذشته، معوق و مشکوک الوصول) در 24 ماه گذشته‫‬‬‬‬‬‬‬‬‬
+                  </div> *@
+            	</div>  
+
+                <br>     
+
+            	<div class="single-profile-data d-flex align-items-center justify-content-center text-left pr-4 pl-4">
+            	  <div class="title text-left align-items-center"><span>نرخ : </span></div>
+            	  <div class="data-content">@item.Rate</div>
+            	</div>
+
+            	<div class="single-profile-data d-flex align-items-center justify-content-center text-left pr-4 pl-4">
+            	  <div class="title text-left align-items-center"><span>رتبه : </span></div>
+            	  <div class="data-content">@item.Rank </div>
+            	</div>
+
+            	<div class="single-profile-data d-flex align-items-center justify-content-center text-left pr-4 pl-4">
+            	  <div class="title text-left align-items-center"><span>توضیحات : </span></div>
+            	  <div class="data-content">@item.Description </div>
+            	</div>
+                <br>
+			} 
+          </div>
+        </div>
+      </div>
+	</div>
+  </div>
+</div>

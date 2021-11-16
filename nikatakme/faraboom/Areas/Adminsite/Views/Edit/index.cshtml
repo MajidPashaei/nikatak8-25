@@ -1,0 +1,984 @@
+@model ViewModels.AdminViewModel.Admin.Vm_info
+<div class="row">
+	<!-- BASIC WIZARD -->
+	<div class="col-xl-12">
+		<div class="card m-b-20">
+			<div class="card-header">
+				<h2 class="mb-0">تکمیل اطلاعات </h2>
+			</div>
+			<div class="card-body">
+				<form action="/Adminsite/Edit/Update " method="POST" enctype="multipart/form-data">
+					@if (ViewBag.msg != null)
+					{
+		 <p style="background-color: #00a4218c;" class="alert "> @ViewBag.msg</p>
+					}
+	 <div id="basicwizard" class="border pt-0" >
+	  <ul class="nav nav-tabs nav-justified">
+	   <li class="nav-item " ><a href="#tab1" data-toggle="tab" class="nav-link ">اطلاعات هویتی </a>
+	   </li>
+
+	   <li class="nav-item"><a href="#tab2" data-toggle="tab" class="nav-link ">اطلاعات ارتباطی
+		</a></li>
+	   <li class="nav-item"><a href="#tab3" data-toggle="tab" class="nav-link">اطلاعات حساب</a>
+	   </li>
+	   <li class="nav-item"><a href="#tab4" data-toggle="tab" class="nav-link ">میزان تحصیلات</a>
+	   </li>
+	   <li class="nav-item"><a href="#tab5" data-toggle="tab" class="nav-link ">سوابق کاری
+		</a></li>
+	   <li class="nav-item"><a href="#tab6" data-toggle="tab" class="nav-link">الصاق مدارک</a></li>
+	   <li class="nav-item"><a href="#tab7" data-toggle="tab" class="nav-link">پرداخت هزینه</a>
+	   </li>
+	  </ul>
+	  <div class="tab-content card-body  b-0 mb-0">
+
+	   <!---account--->
+	   <div class="tab-pane fade" id="tab3">
+		<div class="row">
+		 <div class="col-12">
+		  <div class="form-group clearfix">
+
+		   <div class="row mt-1">
+
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="نام بانک " type="text"
+			  asp-for="Bankname">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="کد بانک" type="text"
+			  asp-for="Bankcode">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="نام شعبه" type="text"
+			  asp-for="Branchname">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="	نوع حساب(سپرده – جاری )"
+			  type="text" asp-for="Accounttype">
+			</div>
+		   </div>
+		   <div class="row mt-1">
+
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="	شماره کارت عابر بانک  "
+			  type="text" asp-for="cardnumber">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="	شماره شبا" type="text"
+			  asp-for="Shabanumber">
+			</div>
+
+			<div class="col-lg-3">
+			 <input class="form-control d-none " placeholder="	شماره شبا" type="text"
+			  asp-for="UserNameId">
+			</div>
+
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		شماره حساب" type="text"
+			  asp-for="accountnumber">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		نام دارنده حساب"
+			  type="text" asp-for="AccountName">
+			</div>
+		   </div>
+		   <div class="row mt-1">
+			<div class="col-lg-3">
+			 <input class="form-control  text-center " placeholder="کد پستی"
+			  type="text" asp-for="PostalcodeBank">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="ادرس محل فعالیت"
+			  type="text" asp-for="Address">
+			</div>
+			
+		   </div>
+		  </div>
+		 </div>
+		</div>
+	   </div>
+	   <!---account--->
+
+	   <!---contact--->
+	   <div class="tab-pane fade" id="tab2">
+
+		<div class="row">
+		 <div class="col-12">
+		  <div class="form-group clearfix">
+
+		   <div class="row mt-1">
+
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="همراه " type="text"
+			  asp-for="Phone">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="	تلفن ثابت منزل با کد"
+			  type="text" asp-for="PhoneHome">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control "
+			  placeholder="	تلفن ثابت محل نمایندگی با کد" type="text"
+			  asp-for="PhonelocationN">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="تلفن نمایندگی نیکا تک"
+			  type="text" asp-for="PhoneNikatak ">
+			</div>
+		   </div>
+		   <div class="row mt-1">
+
+			<div class="col-lg-3">
+			  <select id="State" class="form-control"  onchange="Func(this.value)">
+                                        <option value=""></option>
+                                        <option value="  ,آذرشهر ,اسکو ,اهر ,بستان‌آباد ,بناب ,تبریز ,جلفا ,چاراویماق ,سراب ,شبستر ,عجب‌شیر ,کلیبر ,مراغه ,مرند ,ملکان ,میانه ,ورزقان ,هریس ,هشترود">آذربایجان شرقی</option>
+                                        <option value="  ,ارومیه ,اشنویه ,بوکان ,پیرانشهر ,تکاب ,چالدران ,خوی ,سردشت ,سلماس ,شاهین‌دژ ,ماکو ,مهاباد ,میاندوآب ,نقده">آذربایجان غربی</option>
+                                        <option value="  ,اردبیل ,بیله‌سوار ,پارس‌آباد ,خلخال ,کوثر ,گِرمی ,مِشگین‌شهر ,نَمین ,نیر">اردبیل</option>
+                                        <option value="  ,آران و بیدگل ,اردستان ,اصفهان ,برخوار و میمه ,تیران و کرون ,چادگان ,خمینی‌شهر ,خوانسار ,سمیرم ,شهرضا ,سمیرم سفلی ,فریدن ,فریدون‌شهر ,فلاورجان ,کاشان ,گلپایگان ,لنجان ,مبارکه ,نائین ,نجف‌آباد ,نطنز">اصفهان</option>
+                                        <option value="  ,آبدانان ,ایلام ,ایوان ,دره‌شهر ,دهلران ,شیروان و چرداول ,مهران">ایلام</option>
+                                        <option value="  ,بوشهر ,تنگستان ,جم ,دشتستان ,دشتی,دیر ,دیلم ,کنگان ,گناوه">بوشهر</option>
+                                        <option value="  ,اسلام‌شهر ,پاکدشت ,تهران ,دماوند ,رباط‌کریم ,ری ,ساوجبلاغ ,شمیرانات ,شهریار ,فیروزکوه ,کرج ,نظرآباد ,ورامین">تهران</option>
+                                        <option value="  ,اردل ,بروجن ,شهرکرد ,فارسان ,کوهرنگ ,لردگان">چهارمحال و بختیاری</option>
+                                        <option value="  ,بیرجند ,درمیان ,سرایان ,سربیشه ,فردوس ,قائنات,نهبندان">خراسان جنوبی</option>
+                                        <option value="  ,بردسکن ,تایباد ,تربت جام ,تربت حیدریه ,چناران ,خلیل‌آباد ,خواف ,درگز ,رشتخوار ,سبزوار ,سرخس ,فریمان ,قوچان ,کاشمر ,کلات ,گناباد ,مشهد ,مه ولات ,نیشابور">خراسان رضوی</option>
+                                        <option value="  ,اسفراین ,بجنورد ,جاجرم ,شیروان ,فاروج ,مانه و سملقان">خراسان شمالی</option>
+                                        <option value="  ,آبادان ,امیدیه ,اندیمشک ,اهواز ,ایذه ,باغ‌ملک ,بندر ماهشهر ,بهبهان ,خرمشهر ,دزفول ,دشت آزادگان ,رامشیر ,رامهرمز ,شادگان ,شوش ,شوشتر ,گتوند ,لالی ,مسجد سلیمان,هندیجان ">خوزستان</option>
+                                        <option value="  ,ابهر ,ایجرود ,خدابنده ,خرمدره ,زنجان ,طارم ,ماه‌نشان">زنجان</option>
+                                        <option value="  ,دامغان ,سمنان ,شاهرود ,گرمسار ,مهدی‌شهر">سمنان</option>
+                                        <option value="  ,ایرانشهر ,چابهار ,خاش ,دلگان ,زابل ,زاهدان ,زهک ,سراوان ,سرباز ,کنارک ,نیک‌شهر">سیستان و بلوچستان</option>
+                                        <option value="  ,آباده ,ارسنجان ,استهبان ,اقلید ,بوانات ,پاسارگاد ,جهرم ,خرم‌بید ,خنج ,داراب ,زرین‌دشت ,سپیدان ,شیراز ,فراشبند ,فسا ,فیروزآباد ,قیر و کارزین ,کازرون ,لارستان ,لامِرد ,مرودشت ,ممسنی ,مهر ,نی‌ریز">فارس</option>
+                                        <option value="  ,آبیک ,البرز ,بوئین‌زهرا ,تاکستان ,قزوین">قزوین</option>
+                                        <option value="  ,قم">قم</option>
+                                        <option value="  ,بانه ,بیجار ,دیواندره ,سروآباد ,سقز ,سنندج ,قروه ,کامیاران ,مریوان">کردستان</option>
+                                        <option value="  ,بافت ,بردسیر ,بم ,جیرفت ,راور ,رفسنجان ,رودبار جنوب ,زرند ,سیرجان ,شهر بابک ,عنبرآباد ,قلعه گنج ,کرمان ,کوهبنان ,کهنوج ,منوجان">کرمان</option>
+                                        <option value="  ,اسلام‌آباد غرب ,پاوه ,ثلاث باباجانی ,جوانرود ,دالاهو ,روانسر ,سرپل ذهاب ,سنقر ,صحنه ,قصر شیرین ,کرمانشاه ,کنگاور ,گیلان غرب ,هرسین">کرمانشاه</option>
+                                        <option value="  ,بویراحمد ,بهمئی ,دنا ,کهگیلویه ,گچساران">کهگیلویه و بویراحمد</option>
+                                        <option value="  ,آزادشهر ,آق‌قلا ,بندر گز ,ترکمن ,رامیان ,علی‌آباد ,کردکوی ,کلاله ,گرگان ,گنبد کاووس ,مراوه‌تپه ,مینودشت">گلستان</option>
+                                        <option value="  ,آستارا ,آستانه اشرفیه ,اَملَش ,بندر انزلی ,رشت ,رضوانشهر ,رودبار ,رودسر ,سیاهکل ,شَفت ,صومعه‌سرا ,طوالش ,فومَن ,لاهیجان ,لنگرود ,ماسال">گیلان</option>
+                                        <option value="  ,ازنا ,الیگودرز ,بروجرد ,پل‌دختر ,خرم‌آباد ,دورود ,دلفان ,سلسله ,کوهدشت">لرستان</option>
+                                        <option value="  ,آمل ,بابل ,بابلسر ,بهشهر ,تنکابن ,جویبار ,چالوس ,رامسر ,ساری ,سوادکوه ,قائم‌شهر ,گلوگاه ,محمودآباد ,نکا ,نور ,نوشهر">مازندران</option>
+                                        <option value="  ,آشتیان ,اراک ,تفرش ,خمین ,دلیجان ,زرندیه ,ساوه ,شازند ,کمیجان ,محلات">مرکزی</option>
+                                        <option value="  ,ابوموسی ,بستک ,بندر عباس ,بندر لنگه ,جاسک ,حاجی‌آباد ,شهرستان خمیر ,رودان  ,قشم ,گاوبندی ,میناب">هرمزگان</option>
+                                        <option value="  ,اسدآباد ,بهار ,تویسرکان ,رزن ,کبودرآهنگ ,ملایر ,نهاوند ,همدان">همدان</option>
+                                        <option value="  ,ابرکوه ,اردکان ,بافق ,تفت ,خاتم ,صدوق ,طبس ,مهریز ,مِیبُد ,یزد">یزد</option>
+                                    </select>
+			</div>
+
+			<div class="col-lg-3">
+			<select id="City" class="form-control" >
+                                    </select>
+									
+									<input  class="form-control" asp-for="City" type="text" disabled>
+									
+			</div>
+			
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="	کدپستی" type="text"
+			  asp-for="Postalcode">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="	ادرس منزل" type="text"
+			  asp-for="homeaddress">
+			</div>
+		   </div>
+		   <div class="row mt-1">
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="ادرس محل فعالیت"
+			  type="text" asp-for="Locationaddress">
+			</div>
+		   </div>
+		  </div>
+		 </div>
+		</div>
+	   </div>
+	   <!---contact--->
+
+	   <!---persenal--->
+	   <div class="tab-pane fade active show" id="tab1">
+		<div class="row">
+		 <div class="col-12">
+		  <div class="form-group clearfix">
+
+		   <div class="row mt-1">
+
+			<div class="col-lg-3">
+			 <input asp-for="Nameper" class="form-control "
+			  placeholder="نام به فارسی" type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input asp-for="Familyper" class="form-control "
+			  placeholder="نام خانوادگی به فارسی" type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input asp-for="Fathernameper" class="form-control "
+			  placeholder="نام پدر به فارسی" type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input asp-for="NationalCode" class="form-control "
+			  placeholder="کد ملی" type="text">
+			</div>
+
+		   </div>
+
+
+
+
+		   <div class="row mt-1">
+
+			<div class="col-lg-3">
+			 <input asp-for="Nameen" class="form-control "
+			  placeholder="نام به لاتین" type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input asp-for="Familyen" class="form-control "
+			  placeholder="نام خانوادگی به لاتین" type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input asp-for="Fathernameen" class="form-control "
+			  placeholder="نام پدر به لاتین" type="text">
+			</div>
+
+
+		   </div>
+
+
+
+		   <div class="row mt-1">
+
+
+			<div class="col-lg-3">
+			 <input asp-for="Place" class="form-control " placeholder="محل صدور"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input asp-for="Serial" class="form-control "
+			  placeholder="سریال شناسنامه" type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input asp-for="Religion" class="form-control " placeholder="مذهب"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input asp-for="Email" class="form-control " placeholder="ایمیل"
+			  type="text">
+			</div>
+		   </div>
+
+		   <div class="row mt-2">
+
+			<div class="col-lg-4">
+
+			 <div class="form-group m-0">
+			  <label class="form-label">تاریخ تولد</label>
+			  <div class="row gutters-xs">
+			   <div class="col-5">
+				  
+				<select
+				 class="form-control custom-select" asp-for="Mont">
+				 <option value="ماه">ماه</option>
+				 <option value="فروردین">فروردین</option>
+				 <option value="اردیبهشت">اردیبهشت</option>
+				 <option value="خرداد">خرداد</option>
+				 <option value="تیر">تیر</option>
+				 <option value="مرداد">مرداد</option>
+				 <option value="شهریور">شهریور </option>
+				
+				 <option value="مهر">مهر</option>
+				 <option value="آبان">آبان</option>
+				 <option value="آذر">آذر</option>
+				 <option value="دی">دی</option>
+				 <option value="بهمن">بهمن</option>
+				 <option value="اسفند">اسفند</option>
+				</select>
+				
+			   </div>
+			   <div class="col-3">
+				<select 
+				 class="form-control custom-select" asp-for="Day">
+				 <option value="روز">روز</option>
+				 <option value="1">1</option>
+				 <option value="2">2</option>
+				 <option value="3">3</option>
+				 <option value="4">4</option>
+				 <option value="5">5</option>
+				 <option value="6">6</option>
+				 <option value="7">7</option>
+				 <option value="8">8</option>
+				 <option value="9">9</option>
+				 <option value="10">10</option>
+				 <option value="11">11</option>
+				 <option value="12">12</option>
+				 <option value="13">13</option>
+				 <option value="14">14</option>
+				 <option value="15">15</option>
+				 <option value="16">16</option>
+				 <option value="17">17</option>
+				 <option value="18">18</option>
+				 <option value="19">19</option>
+				 <option value="20">20</option>
+				 <option value="21">21</option>
+				 <option value="22">22</option>
+				 <option value="23">23</option>
+				 <option value="24">24</option>
+				 <option value="25">25</option>
+				 <option value="26">26</option>
+				 <option value="27">27</option>
+				 <option value="28">28</option>
+				 <option value="29">29</option>
+				 <option value="30">30</option>
+				 <option value="31">31</option>
+				</select>
+			   </div>
+			   <div class="col-4">
+				<select 
+				 class="form-control custom-select" asp-for="Yers">
+				 <option value="سال">سال</option>
+				 <option value="1400">1400</option>
+				 <option value="1399">1399</option>
+				 <option value="1398">1398</option>
+				 <option value="1397">1397</option>
+				 <option value="1396">1396</option>
+				 <option value="1395">1395</option>
+				 <option value="1394">1394</option>
+				 <option value="1393">1393</option>
+				 <option value="1392">1392</option>
+				 <option value="1391">1391</option>
+				 <option value="1390">1390</option>
+				 <option value="1389">1389</option>
+				 <option value="1388">1388</option>
+				 <option value="1387">1387</option>
+				 <option value="1386">1386</option>
+				 <option value="1385">1385</option>
+				 <option value="1384">1384</option>
+				 <option value="1383">1383</option>
+				 <option value="1382">1382</option>
+				 <option value="1381">1381</option>
+				 <option value="1380">1380</option>
+				 <option value="1379">1379</option>
+				 <option value="1378">1378</option>
+				 <option value="1377">1377</option>
+				 <option value="1376">1376</option>
+				 <option value="1375">1375
+				 </option>
+				 <option value="1374">1374</option>
+				 <option value="1373">1373</option>
+				 <option value="1372">1372</option>
+				 <option value="1371">1371</option>
+				 <option value="1370">1370</option>
+				 <option value="1369">1369</option>
+				 <option value="1368">1368</option>
+				 <option value="1367">1367</option>
+				 <option value="1366">1366</option>
+				 <option value="1365">1365</option>
+				 <option value="1364">1364</option>
+				 <option value="1363">1363</option>
+				 <option value="1362">1362</option>
+				 <option value="1361">1361</option>
+				 <option value="1360">1360</option>
+				 <option value="1359">1359</option>
+				 <option value="1358">1358</option>
+				 <option value="1357">1357</option>
+				 <option value="1356">1356</option>
+				 <option value="1355">1355</option>
+				 <option value="1354">1354</option>
+				 <option value="1353">1353</option>
+				 <option value="1352">1352</option>
+				 <option value="1351">1351</option>
+				 <option value="1350">1350</option>
+				 <option value="1349">1349</option>
+				 <option value="1348">1348</option>
+				 <option value="1347">1347</option>
+				 <option value="1346">1346</option>
+				 <option value="1345">1345</option>
+				 <option value="1344">1344</option>
+				 <option value="1343">1343</option>
+				 <option value="1342">1342</option>
+				 <option value="1341">1341</option>
+				 <option value="1340">1340</option>
+				</select>
+			   </div>
+			  </div>
+			 </div>
+			</div>
+			<div class="col-lg-3">
+			 <div class="form-group">
+			  <label class="form-label">انتخاب جنسیت</label>
+			  <select name="country" class="form-control custom-select"
+			   asp-for="Gender">
+			   <option value="male">مرد
+			   </option>
+			   <option value="woman" d>زن
+			   </option>
+
+			  </select>
+			 </div>
+			</div>
+			<div class="col-lg-3">
+			 <div class="form-group">
+			  <label class="form-label">وضعیت تاهل</label>
+			  <select name="country" class="form-control custom-select"
+			   asp-for="maritalstatus">
+			   <option value="marid">متاهل
+			   </option>
+			   <option value="single" d>مجرد
+			   </option>
+
+			  </select>
+			 </div>
+			</div>
+
+
+			<div class="col-lg-3">
+			 <div class="form-group">
+
+			 </div>
+			</div>
+
+
+		   </div>
+
+		  </div>
+
+		 </div>
+		</div>
+	   </div>
+	   <!---persenal--->
+
+	   <!---Level--->
+	   <div class="tab-pane fade" id="tab4">
+		<div class="row">
+		 <div class="col-12">
+		  <div class="form-group clearfix">
+		   <div class="row mt-1">
+			<div class="col-lg-3">
+			 <input class="form-control " type="text" value="دیپلم" disabled>
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		تاریخ اخذ مدرک"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		محل اخذ مدرک
+			  type=" text">
+			</div>
+		   </div>
+		   <div class="row mt-1">
+
+			<div class="col-lg-3">
+			 <input class="form-control " type="text" value="کاردانی" disabled>
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		تاریخ اخذ مدرک"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		محل اخذ مدرک
+			  type=" text">
+			</div>
+		   </div>
+		   <div class="row mt-1">
+			<div class="col-lg-3">
+			 <input class="form-control " type="text" value="کارشناسی" disabled>
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		تاریخ اخذ مدرک"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		محل اخذ مدرک
+			  type=" text">
+			</div>
+		   </div>
+		   <div class="row mt-1">
+
+			<div class="col-lg-3">
+			 <input class="form-control " type="text" value="ارشد" disabled>
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		تاریخ اخذ مدرک"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		محل اخذ مدرک
+			  type=" text">
+			</div>
+		   </div>
+		   <div class="row mt-1">
+
+			<div class="col-lg-3">
+			 <input class="form-control " type="text" value="دکترا" disabled>
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		تاریخ اخذ مدرک"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		محل اخذ مدرک
+			  type=" text">
+			</div>
+		   </div>
+		  </div>
+		 </div>
+		</div>
+	   </div>
+	   <!---Level--->
+
+	   <!---documents--->
+	   <div class="tab-pane fade" id="tab5">
+		<div class="row">
+		 <div class="col-12">
+		  <div class="form-group clearfix">
+		   <div class="row mt-1">
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		نام شرکت  " type="text"
+			  asp-for="Companyname">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="			شروع همکاری"
+			  type="text" asp-for="start">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="			خاتمه همکاری"
+			  type="text" asp-for="End">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		نوع فعالیت" type="text"
+			  asp-for="Typeactivity">
+			</div>
+		   </div>
+		   <div class="row mt-1">
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		نام شرکت  " type="text"
+			  >
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="			شروع همکاری"
+			  type="text" >
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="			خاتمه همکاری"
+			  type="text" >
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		نوع فعالیت" type="text"
+			 >
+			</div>
+		   </div>
+		   <div class="row mt-1">
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		نام شرکت  " type="text"
+			 >
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="			شروع همکاری"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="			خاتمه همکاری"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		نوع فعالیت" type="text">
+			</div>
+		   </div>
+		   <div class="row mt-1">
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		نام شرکت  " type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="			شروع همکاری"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="			خاتمه همکاری"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		نوع فعالیت" type="text">
+			</div>
+		   </div>
+		   <div class="row mt-1">
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		نام شرکت  " type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="			شروع همکاری"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="			خاتمه همکاری"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		نوع فعالیت" type="text">
+			</div>
+		   </div>
+		   <div class="row mt-1">
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		نام شرکت  " type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="			شروع همکاری"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="			خاتمه همکاری"
+			  type="text">
+			</div>
+			<div class="col-lg-3">
+			 <input class="form-control " placeholder="		نوع فعالیت" type="text">
+			</div>
+		   </div>
+		  </div>
+		 </div>
+		</div>
+	   </div>
+	   <!---documents--->
+
+	   <!----upload--->
+	   <div class="tab-pane fade" id="tab6">
+
+		   <div class="row">
+		    @if (Model.photos != null)
+									{
+			 <div class="col-lg-4">
+			  <div class="card shadow">
+			   <div class="card-header">
+				<h2 class="mb-0">الصاق عکس</h2>
+			   </div>
+			   <div class="card-body">
+				<img src="~/filetest/@Model.photos" alt=""
+				 style="width: 175px ;height: 175px;border-radius: 5px;">
+			   </div>
+			  </div>
+			 </div>
+									}
+
+		 @if (Model.Nationalcard != null)
+									{
+			 <div class="col-lg-4">
+			  <div class="card shadow">
+			   <div class="card-header">
+				<h2 class="mb-0"> عکس کارت ملی</h2>
+			   </div>
+			   <div class="card-body">
+				<img src="~/filetest/@Model.Nationalcard" alt=""
+				 style="width: 175px ;height: 175px;">
+			   </div>
+			  </div>
+			 </div>
+									}
+		 @if (Model.Nationalcardback != null)
+									{
+			 <div class="col-lg-4">
+			  <div class="card shadow">
+			   <div class="card-header">
+				<h2 class="mb-0">  پشت کارت ملی</h2>
+			   </div>
+			   <div class="card-body">
+				<img src="~/filetest/@Model.Nationalcardback" alt=""
+				 style="width: 175px ;height: 175px;">
+			   </div>
+			  </div>
+			 </div>
+									}
+
+		 @if (Model.Certificate != null)
+									{
+			 <div class="col-lg-4">
+			  <div class="card shadow">
+			   <div class="card-header">
+				<h2 class="mb-0"> صفحه اول شناسنامه</h2>
+			   </div>
+			   <div class="card-body">
+				<img src="~/filetest/@Model.Certificate" alt=""
+				 style="width: 175px ;height: 175px;">
+			   </div>
+			  </div>
+			 </div>
+									}
+		 @if (Model.Shaba != null)
+									{
+			 <div class="col-lg-4">
+			  <div class="card shadow">
+			   <div class="card-header">
+				<h2 class="mb-0"> شبا</h2>
+			   </div>
+			   <div class="card-body">
+				<img src="~/filetest/@Model.Shaba" alt=""
+				 style="width: 175px ;height: 175px;">
+			   </div>
+			  </div>
+			 </div>
+									}
+		 @if (Model.Degreeeducation != null)
+									{
+			 <div class="col-lg-4">
+			  <div class="card shadow">
+			   <div class="card-header">
+				<h2 class="mb-0"> مدرک تحصیلی</h2>
+			   </div>
+			   <div class="card-body">
+				<img src="~/filetest/@Model.Degreeeducation" alt=""
+				 style="width: 175px ;height: 175px;">
+			   </div>
+			  </div>
+			 </div>
+									}
+		 @if (Model.PostalcodeDoc != null)
+									{
+
+			 <div class="col-lg-4">
+			  <div class="card shadow">
+			   <div class="card-header">
+				<h2 class="mb-0"> کد پستی</h2>
+			   </div>
+			   <div class="card-body">
+				<img src="~/filetest/@Model.PostalcodeDoc" alt=""
+				 style="width: 175px ;height: 175px;">
+			   </div>
+			  </div>
+			 </div>
+									}
+		 @if (Model.Document != null)
+									{
+			 <div class="col-lg-4">
+			  <div class="card shadow">
+			   <div class="card-header">
+				<h2 class="mb-0"> سند یااجاره نامه</h2>
+			   </div>
+			   <div class="card-body">
+				<img src="~/filetest/@Model.Document" alt=""
+				 style="width: 175px ;height: 175px;">
+			   </div>
+			  </div>
+			 </div>
+									}
+		 @if (Model.Badbackground != null)
+									{
+			 <div class="col-lg-4">
+			  <div class="card shadow">
+			   <div class="card-header">
+				<h2 class="mb-0"> سوء پیشینه کیفری
+</h2>
+			   </div>
+			   <div class="card-body">
+				<img src="~/filetest/@Model.Badbackground" alt=""
+				 style="width: 175px ;height: 175px;">
+			   </div>
+			  </div>
+			 </div>
+									}
+		 @if (Model.Receipt != null)
+									{
+
+			 <div class="col-lg-4">
+			  <div class="card shadow">
+			   <div class="card-header">
+				<h2 class="mb-0">رسید فیش واریز</h2>
+			   </div>
+			   <div class="card-body">
+				<img src="~/filetest/@Model.Receipt" alt=""
+				 style="width: 175px ;height: 175px;">
+			   </div>
+			  </div>
+			 </div>
+									}
+	
+		</div>
+		
+		
+		
+		<div class="row">
+		 <div class="col-lg-4">
+		  <div class="card shadow">
+		   <div class="card-header">
+			<h2 class="mb-0">الصاق عکس</h2>
+		   </div>
+		   <div class="card-body">
+			<input type="file"  class="dropify"  asp-for="Fphotos">
+		   </div>
+		  </div>
+		 </div>
+		 <div class="col-lg-4">
+		  <div class="card shadow">
+		   <div class="card-header">
+			<h2 class="mb-0"> کارت ملی رو</h2>
+		   </div>
+		   <div class="card-body">
+			<input type="file" class="dropify" asp-for="FNationalcard" >
+		   </div>
+		  </div>
+		 </div>
+		 <div class="col-lg-4">
+		  <div class="card shadow">
+		   <div class="card-header">
+			<h2 class="mb-0"> کارت ملی پشت</h2>
+		   </div>
+		   <div class="card-body">
+			<input type="file" class="dropify" asp-for="FNationalcardback">
+		   </div>
+		  </div>
+		 </div>
+		 <div class="col-lg-4">
+		  <div class="card shadow">
+		   <div class="card-header">
+			<h2 class="mb-0">الصاق شناسنامه صفحه اول </h2>
+		   </div>
+		   <div class="card-body">
+			<input type="file" class="dropify" asp-for="FCertificate">
+		   </div>
+		  </div>
+		 </div>
+		 <div class="col-lg-4">
+		  <div class="card shadow">
+		   <div class="card-header">
+			<h2 class="mb-0"> تاییدیه حساب و شبا ممهور به مهر بانک </h2>
+		   </div>
+		   <div class="card-body">
+			<input type="file" class="dropify" asp-for="FShaba">
+		   </div>
+		  </div>
+		 </div>
+		 <div class="col-lg-4">
+		  <div class="card shadow">
+		   <div class="card-header">
+			<h2 class="mb-0"> مدرک تحصیلی </h2>
+		   </div>
+		   <div class="card-body">
+			<input type="file" class="dropify"  asp-for="FDegreeeducation">
+		   </div>
+		  </div>
+		 </div>
+		 <div class="col-lg-4">
+		  <div class="card shadow">
+		   <div class="card-header">
+			<h2 class="mb-0"> تاییدیه کدپستی </h2>
+		   </div>
+		   <div class="card-body">
+			<input type="file" class="dropify" asp-for="FPostalcodeDoc">
+		   </div>
+		  </div>
+		 </div>
+		 <div class="col-lg-4">
+		  <div class="card shadow">
+		   <div class="card-header">
+			<h2 class="mb-0"> سند یااجاره نامه محل فعالیت </h2>
+		   </div>
+		   <div class="card-body">
+			<input type="file" class="dropify" asp-for="FDocument">
+		   </div>
+		  </div>
+		 </div>
+		 <div class="col-lg-4">
+		  <div class="card shadow">
+		   <div class="card-header">
+			<h2 class="mb-0"> سوء پیشینه کیفری </h2>
+		   </div>
+		   <div class="card-body">
+			<input type="file" class="dropify"  asp-for="FBadbackground">
+		   </div>
+		  </div>
+		 </div>
+		 <div class="col-lg-4">
+		  <div class="card shadow">
+		   <div class="card-header">
+			<h2 class="mb-0"> رسید فیش واریز </h2>
+		   </div>
+		   <div class="card-body">
+			<input type="file" class="dropify"  asp-for="FReceipt">
+		   </div>
+		  </div>
+		 </div>
+		</div>
+	   </div>
+	   <!----upload--->
+	   <div class="tab-pane fade" id="tab7">
+		<div class="row">
+		 <div class="col-12">
+		  <div class="form-group clearfix">
+		   <div class="row mt-1">
+			<div class="col-lg-6">
+			 <div class="card pull-up shadow bg-gradient-primary">
+
+			  <a href="/pay/Request2">
+
+			   <div class="card-content">
+				<div class="card-body">
+				 <img src="~/admin/assets/img/circle.svg"
+				  class="card-img-absolute" alt="circle-image" height="100" width="100">
+				 <div class="media d-flex">
+				  <div class="media-body text-center">
+				   <h4 class="text-white">مراکز استان</h4>
+				   <h2 class="text-white mb-0">60,000,000 تومان
+				   </h2>
+				  </div>
+				  <div class="align-self-center">
+				   <i
+					class="fe fe-shopping-cart text-white font-large-2 float-right"></i>
+				  </div>
+				 </div>
+				</div>
+			   </div>
+			  </a>
+			 </div>
+			</div>
+			<div class="col-lg-6">
+			 <a href="/pay/Request">
+			  <div class="card pull-up shadow bg-gradient-warning">
+			   <div class="card-content">
+				<div class="card-body">
+				 <img src="~/admin/assets/img/circle.svg"
+				  class="card-img-absolute" alt="circle-image"  height="100" width="100">
+				 <div class="media d-flex">
+				  <div class="media-body text-center">
+				   <h4 class="text-white" >سایر شهرستان ها</h4>
+				   <h2 class="text-white mb-0" >40,000,000 تومان
+				   </h2>
+				  </div>
+				  <div class="align-self-center">
+				   <i
+					class="fe fe-bar-chart text-white font-large-2 float-right"></i>
+				  </div>
+				 </div>
+				</div>
+			   </div>
+			  </div>
+			 </a>
+			</div>
+		   </div>
+		  </div>
+		 </div>
+		</div>
+	   </div>
+	
+	  </div>
+	 </div>
+	 <div style="text-align:center;">
+	  <button type="submit" class="btn btn-primary">ذخیره و ادامه </button>
+	 </div>
+
+	</form>
+   </div>
+  </div>
+ </div>
+</div>
+<!-- end row -->
+ <script> 
+ function Func(Shahrestanha) {
+       var _Shahrestan = document.getElementById("City");
+       _Shahrestan.options.length = 0;
+       if(Shahrestanha != "") {
+          var arr = Shahrestanha.split(",");
+          for(i = 0; i < arr.length; i++) {
+              if(arr[i] != "") {
+                 _Shahrestan.options[_Shahrestan.options.length]=new Option(arr[i],arr[i]);
+              }
+          }
+       }
+   }
+   
+$(document).ready(function(){
+        	document.getElementById('shahr').value=document.getElementById('City').value;
+        });
+
+</script>

@@ -1,0 +1,65 @@
+
+
+    <!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+  <!-- DataTable starts -->
+  <div class="table-responsive">
+    <table class="table data-list-view">
+      <thead>
+        <tr>
+          <th></th>
+          <th>ردیف</th>
+          <th> نام سفارش دهنده </th>
+          <th> شماره تماس  </th>
+          <th> تاریخ  </th>
+           <th> مبلغ کل</th>
+           <th> پرداختی آنلاین</th>
+          <th> عملیات</th>
+        </tr>
+      </thead>
+      <tbody>
+@{
+  if (ViewBag.listp != null)
+  {
+    int i=1;
+    foreach (var item in ViewBag.listp)
+    {
+        <tr>
+          <td></td>
+          <td class="product-category"> @i</td>
+          <td class="product-name">@item.UserName</td>
+            <td class="product-category">@item.phone </td>
+
+            <td class="product-category">@item.datesave </td>
+            <td class="product-category">@item.Total</td>
+               <td class="product-category">@item.Pay</td>
+           <td class="product-action">
+             <div class="col-lg-3 col-md-3 mb-1">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <a href="/adminsite/order/show/@item.Id" class="btn btn-primary btn-sm" >  جزییات </a>
+                  <a href="/adminsite/order/del/@item.Id"  class="btn btn-danger btn-sm" onclick="return confirm('آیا از حذف رکورد مورد نظر مطمئن هستید؟')">حذف</a>
+                  <a href="/adminsite/order/send/@item.Id"  class="btn btn-success  btn-sm" onclick="return confirm('آیا از ارسال کالا مورد نظر مطمن هستید؟')">ارسال</a>
+                  
+                </div>
+              </div>
+          </td>
+        </tr>
+       i++;
+
+    }
+    
+  }
+
+
+     
+
+
+}
+ </tbody>
+    </table>
+  </div>
+
+      
+
+      </section>
+<!-- Data list view end -->

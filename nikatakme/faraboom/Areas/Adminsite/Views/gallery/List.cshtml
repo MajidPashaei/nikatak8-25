@@ -1,0 +1,65 @@
+
+
+    <!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+   @if (ViewBag.er != null)
+{
+<p class="alert alert-success">@ViewBag.er</p>
+}
+  <!-- DataTable starts -->
+  <div class="table-responsive">
+    <table class="table data-list-view">
+      <thead>
+        <tr>
+          <th></th>
+          <th>ردیف</th>
+          <th> عنوان  </th>
+         
+          <th> تصویر اصلی </th>
+           <th>  زبان</th>
+          <th> عملیات</th>
+        </tr>
+      </thead>
+      <tbody>
+@if (ViewBag.list != null)
+{
+  int i=1;
+     foreach (var item in ViewBag.list)
+     {
+        <tr>
+          <td></td>
+          <td class="product-category"> @i</td>
+          <td class="product-name">@item.TitleGal</td>
+           
+           <td class="product-category">  <img style="width: 60px;border-radius: 40px;" src="~/fileupload/@item.pathImage" alt="">  </td>
+                        <td class="product-category">@item.Language </td>
+           <td class="product-action">
+             <div class="col-lg-3 col-md-3 mb-1">
+                <div class="btn-group" role="group" aria-label="Basic example">
+              
+                  <a href="/adminsite/gallery/del/@item.Id" type="button" class="btn btn-danger btn-sm" onclick="return confirm('آیا از حذف رکورد مورد نظر مطمن هستید؟')">حذف</a>
+                
+                </div>
+              </div>
+          </td>
+        </tr>
+
+
+         i++;
+     }
+}
+  
+
+
+
+
+      </tbody>
+    </table>
+  </div>
+  <!-- DataTable ends -->
+
+  <!-- add new sidebar starts -->
+ 
+  <!-- add new sidebar ends -->
+</section>
+<!-- Data list view end -->

@@ -1,0 +1,343 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<style>
+	@@font-face {
+		font-family: "font";
+		src: url('./css/Fonts/IRANSansWeb(FaNum) Medium.ttf')
+	}
+
+	label {
+		font-family: 'yekan';
+		text-align: right;
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	p {
+		font-family: "yekan" !important;
+		font-weight: lighter;
+		margin-top: 5px;
+		font-size: medium;
+	}
+
+	h6 {
+		font-family: 'font';
+		font-weight: 900;
+	}
+
+
+	@@font-face {
+		font-family: "yekan";
+		src: url(./Fonts/Yekan.woff)format('woff');
+	}
+
+	h5 {
+		text-align: right;
+		font-family: "yekan";
+	}
+</style>
+<div class="card shadow" id="myDiv">
+	<div class="card-header">
+		<h4 class="mb-0"> نمایش استعلام قبض برق</h4>
+	</div>
+	<div class="card-body">
+
+		<form method="POST" action="/Mobile/PayGabz/result">
+			<div class="row">
+				<div class="table-responsive">
+					<div class="form-group justify-content-center ">
+						<p style="direction: ltr; display: none;" id="Electricity">@ViewBag.result</p>
+
+						@if (ViewBag.Msg != null)
+						{
+							<div class="text-center">
+								<p class="alert alert-danger">@ViewBag.Msg</p>
+							</div>
+						}
+
+						<input class="d-none" asp-for="amount">
+						<input class="d-none" asp-for="bill_id2">
+						<input class="d-none" asp-for="pay_id2">
+						<input class="d-none" asp-for="Titel" value="برق">
+
+						<div class="col-xl-12 col-lg-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="basic-form">
+										<div class="form-group">
+											<div class="col-12 row">
+
+												<div class="col-6">
+													<label class="text-label">
+														شناسه قبض:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="bill_id">
+														
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														شناسه پرداخت:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="pay_id">
+														
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														مبلغ :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="amount2">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														تاریخ:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="date">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														تاریخ صدور صورتحساب:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="bill_exportation_date">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														مقدار دوره:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="period_amount">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														بدهی قبلی :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="previous_debt">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														نوع مشتری:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="customer_type">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														نام مشتری :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="customer_name">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														تاریخ فعلی :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="current_date">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														دوره :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="period">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														آدرس :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="address">
+													</p>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-end ">
+								<button type="submit" class="btn btn-success col-12 mt-1 mb-1"
+									style="width: min-content;">
+									پرداخت
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<script>
+
+	debugger
+	var str = document.getElementById('Electricity').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+	var res = str.split(",");
+
+	var bill_id = res[1].split(":");
+	document.getElementById('bill_id2').value = "" + bill_id[1];////////////// شناسه قبض
+	var bill_id = res[1].split(":");
+	document.getElementById('bill_id').innerText = "" + bill_id[1];////////////// شناسه قبض
+
+	var pay_id = res[2].split(":");
+	document.getElementById('pay_id2').value = " " + pay_id[1];//////////// شناسه پرداخت
+	var pay_id = res[2].split(":");
+	document.getElementById('pay_id').innerText = " " + pay_id[1];//////////// شناسه پرداخت
+
+	var amount = res[3].split(":");
+	document.getElementById('amount').value = " " + amount[1];//////////// مبلغ
+	var amount = res[3].split(":");
+	document.getElementById('amount2').innerText = " " + amount[1];//////////// مبلغ
+
+	var date = res[4].split(":");
+	var timestamp = parseInt(date[1]);
+	let mydate = new Date(timestamp);
+	let mypersiandate = mydate.toLocaleDateString('fa-IR');
+	document.getElementById('date').innerText = " " + mypersiandate;/////////////// تاریخ
+
+	var bill_exportation_date = res[5].split(":");
+	var timestamp1 = parseInt(bill_exportation_date[1]);
+	let mydate1 = new Date(timestamp1);
+	let mypersiandate1 = mydate1.toLocaleDateString('fa-IR');
+	document.getElementById('bill_exportation_date').innerText = " " + mypersiandate1;//////////// تاریخ صدور صورتحساب
+
+	var previous_reading_date = res[6].split(":");
+	var timestamp2 = parseInt(previous_reading_date[1]);
+	let mydate2 = new Date(timestamp2);
+	let mypersiandate2 = mydate2.toLocaleDateString('fa-IR');
+	document.getElementById('previous_reading_date').innerText = " " + mypersiandate2;/////////// تاریخ قرائت قبلی
+
+	var current_reading_date = res[7].split(":");
+	var timestamp3 = parseInt(current_reading_date[1]);
+	let mydate3 = new Date(timestamp3);
+	let mypersiandate3 = mydate3.toLocaleDateString('fa-IR');
+	document.getElementById('current_reading_date').innerText = " " + mypersiandate3;/////////// تاریخ قرائت فعلی
+
+	var normal_consumption = res[8].split(":");
+	document.getElementById('normal_consumption').innerText = " " + normal_consumption[1];///////////// مصرف عادی
+
+	var peak_consumption = res[9].split(":");
+	document.getElementById('peak_consumption').innerText = " " + peak_consumption[1];//////////// مصرف اوج بار
+
+	var low_consumption = res[10].split(":");
+	document.getElementById('low_consumption').innerText = " " + low_consumption[1];/////////////مصرف کم بار
+
+	var demand_read = res[11].split(":");
+	document.getElementById('demand_read').innerText = " " + demand_read[1];////////////////// قرائت کنتور 
+
+	var average_consumption = res[12].split(":");
+	document.getElementById('average_consumption').innerText = " " + average_consumption[1]; //////////////// میانگین مصرف
+
+	var bill_payable_amount = res[13].split(":");
+	document.getElementById('bill_payable_amount').innerText = " " + bill_payable_amount[1];//////////////////////////// مبلغ قابل پرداخت صورتحساب
+
+	var period_amount = res[14].split(":");
+	document.getElementById('period_amount').innerText = " " + period_amount[1];//////////// مقدار دوره
+
+	var insurance_amount = res[15].split(":");
+	document.getElementById('insurance_amount').innerText = " " + insurance_amount[1];////////////مبلغ بیمه
+
+	var tax_amount = res[16].split(":");
+	document.getElementById('tax_amount').innerText = " " + tax_amount[1];///////////مالیات
+
+	var electricity_tax_amount = res[17].split(":");
+	document.getElementById('electricity_tax_amount').innerText = " " + electricity_tax_amount[1];//////////////مقدار مالیات برق
+
+	var previous_debt = res[18].split(":");
+	document.getElementById('previous_debt').innerText = " " + previous_debt[1];////////////بدهی قبلی
+
+	var energy_amount = res[19].split(":");
+	document.getElementById('energy_amount').innerText = " " + energy_amount[1];///////////مقدار انزژی
+
+	var total_days_count = res[20].split(":");
+	document.getElementById('total_days_count').innerText = " " + total_days_count[1];/////////// مجموع روزها
+
+	var company_name = res[21].split(":");
+	document.getElementById('company_name').innerText = " " + company_name[1];//////////نام شرکت
+
+	var phase = res[22].split(":");
+	document.getElementById('phase').innerText = " " + phase[1];///////////فاز
+
+	var voltage_type = res[23].split(":");
+	document.getElementById('voltage_type').innerText = " " + voltage_type[1];/////////نوع ولتاژ
+
+	var amper = res[24].split(":");
+	document.getElementById('amper').innerText = " " + amper[1];///////////آمپر
+
+	var contract_demand = res[25].split(":");
+	document.getElementById('contract_demand').innerText = " " + contract_demand[1];///////////تقاضای قرارداد
+
+	var customer_type = res[26].split(":");
+	document.getElementById('customer_type').innerText = " " + customer_type[1];//////////////نوع مشتری
+
+	var customer_name = res[27].split(":");
+	document.getElementById('customer_name').innerText = " " + customer_name[1];//////////////نام مشتری
+
+	var address = res[28].split(":");
+	document.getElementById('address').innerText = " " + address[1];//////////آدرس
+
+	var postal_code = res[29].split(":");
+	document.getElementById('postal_code').innerText = " " + postal_code[1];////////// کد پستی
+
+	var identification_number = res[30].split(":");
+	document.getElementById('identification_number').innerText = " " + identification_number[1];///////////// شماره شناسایی
+
+	var period = res[31].split(":");
+	document.getElementById('period').innerText = " " + period[1];//////////////دوره
+
+	var year = res[32].split(":");
+	document.getElementById('year').innerText = " " + year[1];////////////سال
+
+</script>
+
+<script>
+	function print() {
+		var printContents = document.getElementById('myDiv').innerHTML;
+		var originalContents = document.body.innerHTML;
+
+		document.body.innerHTML = printContents;
+
+		window.print();
+
+		document.body.innerHTML = originalContents;
+	}
+</script>

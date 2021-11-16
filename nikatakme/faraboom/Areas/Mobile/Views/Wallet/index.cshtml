@@ -1,0 +1,50 @@
+@model ViewModels.AdminViewModel.Admin.Vm_info
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <div class="checkout-wrapper-area py-3">
+      <div class="credit-card-info-wrapper"><img class="d-block mb-4" src="~/mobile2/img/bg-img/credit-card.png" alt="">
+        <div class="pay-credit-card-form">               
+			<p class="text-center alert alert-warning" >
+                   لطفا برای استفاده از خدمات کیف پول خود را شارژ کنید
+            </p>
+            <p class="alert alert-dark text-center">
+				 موجودی کیف پول : &nbsp;
+                 <span id="pay" style="font-size: large;" class="text-info"> @HttpContextAccessor.HttpContext.Session.GetInt32("sum") </span> 
+                     &nbsp; تومان
+			</p>
+            <div class="mb-3">
+              <label class="mb-2" >لطفا مبلغ شارژ را وارد کنید : </label>
+              <input class="form-control" type="number" placeholder="مبلغ : " required id="pay25" >
+            </div>
+            <button class="btn btn-warning btn-lg w-100" type="submit" onclick="sendpay();">پرداخت</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+	document.getElementById("pay").innerText = document.getElementById("pay").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+</script>
+<script>
+	function sendpay()
+	{
+		var a = parseInt(document.getElementById('pay25').value);
+		if (a < 10000)
+		{
+			alert("مبلغ شارژ کیف پول نمی تواند کمتر از 10 هزار تومان باشد");
+		}
+
+		else if (document.getElementById('pay25').value != "")
+		{
+			window.location.href = "/mobile/pay/index/" + document.getElementById('pay25').value;
+		}
+
+	}
+</script>

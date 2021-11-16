@@ -1,0 +1,81 @@
+<div class="card shadow">
+										<div class="card-header">
+											<h2 class="mb-2"> افتتاح سپرده</h2>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+                                                        	<h2 class="mb-0"> نام و نام خانوادگی</h2>
+														<input type="text" class="form-control" name="input" placeholder="نام ونام خانوادگی خود را وارد کنید"  >
+													</div>
+
+                                                    <div class="form-group">
+                                                        <h2 class="mb-0">  کدملی  </h2>
+														<input type="text" class="form-control" name="input" placeholder="کدملی  خود را وارد کنید"  >
+													</div>
+
+                                                    <div class="form-group">
+                                                           <h2 class="mb-0">  آدرس  </h2>
+														<input type="text" class="form-control" name="input" placeholder="آدرس خود را وارد کنید"  >
+													</div>
+
+                                                       <div class="form-group">
+                                                                <h2 class="mb-0">  واحد پول  </h2>
+														<input type="text" class="form-control" name="input" placeholder="واحد پول سپرده افتتاحی"  >
+													</div>
+                                                    
+
+
+													
+													
+												</div>
+												<div class="col-md-6">
+												
+															<div class="form-group">
+                                                                     <h2 class="mb-0">  شماره موبایل  </h2>
+														<input type="text" class="form-control" name="input" placeholder="شماره موبایل خود را وارد کنید"  >
+													</div>
+
+                                                    <div class="form-group">
+                                                             <h2 class="mb-0">  ایمیل  </h2>
+														<input type="text" class="form-control" name="input" placeholder="ایمیل خود را وارد کنید"  >
+													</div>
+
+                                                    <div class="form-group">
+                                                             <h2 class="mb-0">  کد پستی  </h2>
+														<input type="text" class="form-control" name="input" placeholder=" کد پستی خود را وارد کنید"  >
+													</div>
+
+                                                    <div class="form-group">
+                                                             <h2 class="mb-0">  مبلغ دریافتی  </h2>
+														<input type="text" class="form-control" name="input" placeholder="مبلغ دریافتی برای افتتاح سپرده"  >
+													</div>
+                                                     <div class="col-sm-6 col-12">
+                    <label for="file" class="btn btn-default"> نمونه امضاء صاحب سپرده  </label>
+                    <input  type="file" accept="image/*" onchange="preview_image(event)">
+                  </div>
+                </fieldset>
+
+
+
+
+													
+												</div>
+												 <button type="button" class="btn btn-success  mt-1 mb-1" style="width: min-content;">دریافت
+            اطلاعات حساب
+        </button>
+											</div>
+										</div>
+									</div>
+
+                                    <script>
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output_image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>

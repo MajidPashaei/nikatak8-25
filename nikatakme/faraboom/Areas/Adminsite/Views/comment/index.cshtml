@@ -1,0 +1,82 @@
+
+
+    <!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+  @if (ViewBag.suc != null)
+  {
+      <span class="alert alert-success">@ViewBag.suc</span>
+  }
+  
+  <!-- DataTable starts -->
+  <div class="table-responsive">
+    <table class="table data-list-view">
+      <thead>
+        <tr>
+          <th></th>
+          <th>ردیف</th>
+          <th>  ایمیل </th>
+           <th>  شماره موبایل</th>
+         
+          <th> سرتیتر پیام</th>
+           <th> متن پیام</th>
+        </tr>
+      </thead>
+      <tbody>
+@if (ViewBag.List != null)
+{
+  int i=0;
+    @foreach (var item in ViewBag.List)
+{
+
+    <tr>
+          <td>
+          
+          </td>
+
+          <td class="product-category">@i</td>
+          <td class="product-category">@item.Email </td>
+         
+          @* <td class="product-name">@item.Email <input style="display: none;"  id="comment" type="text" value="@item.Comment"></td> *@
+
+                        <td class="product-category">@item.Phone </td>
+                        <td class="product-category">@item.Title </td>
+                         <td class="product-category"><a href="/Adminsite/comment/details/@item.Id">مشاهده</a></td>
+           <td class="product-action">
+             <div class=" mb-1">
+                <div class="btn-group"  aria-label="Basic example">
+                  
+                  <a href="/adminsite/comment/del/@item.Id" class="btn btn-danger btn-sm" onclick="return confirm('آیا از حذف رکورد مورد نظر مطمئن هستید')">حذف</a>
+                  
+                 
+                </div>
+              </div>
+          </td>
+        </tr>
+        i++;
+}
+   
+}
+
+     
+<script>
+  function a()
+  {
+    debugger
+    var msg=document.getElementById("comment").value;
+   alert(msg);
+  }
+</script>
+
+
+
+
+      </tbody>
+    </table>
+  </div>
+  <!-- DataTable ends -->
+
+  <!-- add new sidebar starts -->
+ 
+  <!-- add new sidebar ends -->
+</section>
+<!-- Data list view end -->

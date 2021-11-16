@@ -1,0 +1,56 @@
+@model DataLayer.AdminEntities.Teaser.Tb_Teaser;
+<section id="timeline-card">
+    <div class="row ">
+        <div class="col-lg-12 col-sm-12">
+            <div class="card" >
+                <div class="card-content">
+                    <div class="card-body">
+                        <ul class="activity-timeline timeline-left list-unstyled">
+                            <li>
+                                <div class="timeline-icon bg-primary">
+                                    <i class="feather icon-check font-medium-2"></i>
+                                </div>
+                                <div class="timeline-info">
+                                    <p class="font-weight-bold" style="text-align: right;">
+                                        عنوان :</p>
+                                    <br>
+                                    <div class="col-lg-12 d-lg-block  text-center align-self-center px-1 py-0">
+                                        <div class="footer-btn alert alert-primary  " style="line-height: 40px;font-size: 14px;text-align: justify;">
+                                            @Model.TitleTeaser
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-sm-12">
+            <div class="card" >
+                <div class="card-content">
+                    <div class="card-body">
+                        <ul class="activity-timeline timeline-left list-unstyled" style="margin-right: 0px !important;">
+                            <li>
+                                <div class="timeline-icon bg-primary">
+                                    <i class="feather icon-check font-medium-2"></i>
+                                </div>
+                                <div class="timeline-info">
+                                    <p class="font-weight-bold" style="text-align: right;"> ویدیو
+                                      </p>
+                                    <br>
+                                    <div class="footer-btn alert alert-primary text-center ">
+                                             <video width="80%" height="400px" controls  id="output_image">
+                                         <source  src="~/fileupload/@Model.LinkVideoTeaser" type="video/mp4">
+                                        <source src="movie.ogg" type="video/ogg">
+                                        </video>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

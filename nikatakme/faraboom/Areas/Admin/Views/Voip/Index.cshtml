@@ -1,0 +1,152 @@
+@{
+    Layout = "_Layout4" ;
+}
+<div class="friend-list">
+    <div class="row">
+        <div class="col-lg-4 col-sm-12">
+            <div class="friend-card card shadow">
+                <img src="~/admin/assets/img/bg3.jpg" alt="profile-cover" class="img-responsive cover">
+                <div class="card-info">
+                    <img src="~/admin/assets/img/icons/seporde.png" alt="user" class="profile-photo-lg">
+                    <div class="friend-info">
+                        <a href="/admin/Voip/AddNumCode" class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+                            خدمات</a>
+                        <h3 class=" mb-0"><a href="/admin/Voip/AddNumCode" class="profile-link"> ثبت نام جدید </a></h3>
+                        <p class="text-sm mb-0"> ثبت نام کاربر جدید </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+            <div class="friend-card card shadow">
+                <img src="~/admin/assets/img/bg3.jpg" alt="profile-cover" class="img-responsive cover">
+                <div class="card-info">
+                    <img src="~/admin/assets/img/icons/seporde.png" alt="user" class="profile-photo-lg">
+                    <div class="friend-info">
+                        <a href="/admin/Voip/Sabt" class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+                            خدمات</a>
+                        <h3 class=" mb-0"><a href="/admin/Voip/Sabt" class="profile-link"> ثبت شماره تلفن </a></h3>
+                        <p class="text-sm mb-0"> ثبت شماره تلفن کاربر </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+            <div class="friend-card card shadow">
+                <img src="~/admin/assets/img/bg3.jpg" alt="profile-cover" class="img-responsive cover">
+                <div class="card-info">
+                    <img src="~/admin/assets/img/icons/seporde.png" alt="user" class="profile-photo-lg">
+                    <div class="friend-info">
+                        <a href="/admin/Voip/Report" class="float-left btn btn-sm btn-primary btn-pill">مشاهده
+                            خدمات</a>
+                        <h3 class=" mb-0"><a href="/admin/Voip/Report" class="profile-link"> گزارش </a></h3>
+                        <p class="text-sm mb-0"> گزارش </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="friend-list">
+    <div class="row">
+        <div class="col-12 alert alert-light text-center  container">
+            <strang style="text-align: center; " class="text-dark">شماره تلفن های پیشنهادی </strang>
+        </div>
+
+        <div class="col-lg-3 col-sm-12">
+            <div class="friend-card card shadow">
+                <div class="card-info">
+                    <div class="friend-info">
+                        <div class="card mt-4 ml-3 row justify-content-center" style="width: 15rem;">
+                            <div class="card-header alert alert-dark text-center">
+                                شماره معمولی
+                            </div>
+                            @if ( ViewBag.normal != null )
+                            {
+                                <ul class="list-group list-group-flush text-center">
+                                    @foreach (var item in ViewBag.normal )
+                                    {
+                                        <li class="list-group-item"> @item.Number </li>
+                                    }
+                                </ul>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-12">
+            <div class="friend-card card shadow">
+                <div class="card-info">
+                    <div class="friend-info">
+                        <div class="card mt-4 ml-3 row justify-content-center" style="width: 15rem;">
+                            <div class="card-header alert alert-warning text-center">
+                                شماره برنزی
+                            </div>
+                            @if ( ViewBag.bronze != null )
+                            {
+                                <ul class="list-group list-group-flush text-center">
+                                    @foreach (var item in ViewBag.bronze )
+                                    {
+                                        <li class="list-group-item"> @item.Number </li>
+                                    }
+                                </ul>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-12">
+            <div class="friend-card card shadow">
+                <div class="card-info">
+                    <div class="friend-info">
+                        <div class="card mt-4 ml-3 row justify-content-center" style="width: 15rem;">
+                            <div class="card-header alert alert-primary text-center">
+                                شماره نقره ای
+                            </div>
+                            @if ( ViewBag.silver != null )
+                            {
+                                <ul class="list-group list-group-flush text-center">
+                                    @foreach (var item in ViewBag.silver )
+                                    {
+                                        <li class="list-group-item"> @item.Number </li>
+                                    }
+                                </ul>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-12">
+            <div class="friend-card card shadow">
+                <div class="card-info">
+                    <div class="friend-info">
+                        <div class="card mt-4 ml-3 row justify-content-center" style="width: 15rem;">
+                            <div class="card-header alert alert-success text-center">
+                                شماره طلایی
+                            </div>
+                            @if ( ViewBag.gold != null )
+                            {
+                                <ul class="list-group list-group-flush text-center">
+                                    @foreach (var item in ViewBag.gold )
+                                    {
+                                        <li class="list-group-item"> @item.Number </li>
+                                    }
+                                </ul>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

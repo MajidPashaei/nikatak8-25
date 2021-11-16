@@ -1,0 +1,54 @@
+@model ViewModels.AdminViewModel.Tavanam.Vm_Tavanam;
+
+<br>
+<br>
+ @if ( ViewBag.Msg != null )
+ {
+	<div class="page-content-wrapper">
+	  	<div class="container">
+	    	<!-- Checkout Wrapper-->
+	    	<div class="checkout-wrapper-area py-3">
+	      		<!-- Billing Address-->
+	      		<div class="billing-information-card mb-3">
+	        		<div class="card billing-information-title-card bg-primary">
+	          			<div class="card-body">
+	            			<h6 class="text-center mb-0 text-white"> اعتبار سنجی </h6>
+	          			</div>
+	        		</div>
+	        		<div class="card user-data-card">
+	          			<div class="card-body">   
+						  	<br>
+							<p class="text-center alert alert-danger">
+							  @ViewBag.Msg
+							</p>
+						  	<br>
+						  	<br>
+		          		</div>
+		        	</div>
+		      	</div>
+			</div>
+		</div>
+	</div>
+}    
+@if ( ViewBag.result != null )
+{   
+	<br>
+	<div class="page-content-wrapper">
+		<div class="container">
+	    	<div class="checkout-wrapper-area py-3">
+	      		<div class="credit-card-info-wrapper"><img class="d-block mb-4" src="~/mobile2/img/bg-img/credit-card.png" alt="">
+	        		<div class="pay-credit-card-form">
+						<form method="POST" action="/Mobile/Tavanam/ShowReport" autocomplete="off" >
+	            			<div class="mb-3">
+	            	  			<label class="mb-2" for="otp"> کد مجوز خود را وارد کنید : </label>
+	            	  			<input class="form-control" type="number" placeholder="کد مجوز : " required asp-for="otp">
+								<input type="text" value="@ViewBag.fid" class="d-none" asp-for="factor_id">
+	            			</div>
+	            			<button class="btn btn-warning btn-lg w-100" type="submit">تایید</button>
+	          			</form>
+	        		</div>
+	     		</div>
+	    	</div>
+	 	</div>
+	</div>
+}

@@ -1,0 +1,131 @@
+@{
+    Layout = null;
+}
+@model ViewModels.AdminViewModel.User.Vm_User
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no">
+    <meta name="description" content="سوها- Multipurpose Ecommerce Mobile HTML Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#100DD1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>تکنولوژی هوشمند نیکا</title>
+    <!-- manifest meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="~/mobile/img/favicon180.png" sizes="180x180">
+    <link rel="icon" href="~/mobile/img/favicon16.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="~/mobile/img/favicon16.png" sizes="16x16" type="image/png">
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="~/mobile2/style.css">
+    <!-- Web App Manifest-->
+    <link rel="manifest" href="~/mobile2/manifest.json">
+  </head>
+
+  <body>
+    <!-- Preloader-->
+    <div class="preloader" id="preloader">
+      <div class="spinner-grow text-secondary" role="status">
+        <div class="sr-only">بارگذاری...</div>
+      </div>
+    </div>
+    <!-- Header Area-->
+    <div class="header-area" id="headerArea">
+      <div class="container h-100 d-flex align-items-center justify-content-center">
+        <!-- Page Title-->
+          <h6 class="mb-0">
+              تکمیل پروفایل
+          </h6>
+      </div>
+    </div>
+    <!-- Sidenav Black Overlay-->
+    <div class="sidenav-black-overlay"></div>
+    </div>
+    <div class="page-content-wrapper">
+      <div class="container">
+        <!-- Profile Wrapper-->
+        <div class="profile-wrapper-area py-3">
+            @if (ViewBag.msg != null)
+            {
+                <p class="alert alert-danger text-center">@ViewBag.msg</p>
+            }
+          <!-- User Meta Data-->
+          <div class="card user-data-card rounded">
+            <div class="card-body">
+                <form action="/mobile/Menu/AddProfile" method="POST" autocomplete="off" enctype="multipart/form-data">
+                    <div class="mb-3">
+                      <div class="title mb-2"><i class="lni lni-user"></i><span>نام : </span></div>
+                      <input class="form-control" asp-for="Name" type="text" required>
+                    </div>
+                    <div class="mb-3">
+                      <div class="title mb-2"><i class="lni lni-user"></i><span>نام خانوادگی : </span></div>
+                      <input class="form-control" asp-for="Family" type="text" required>
+                    </div>
+                    <div class="mb-3">
+                      <div class="title mb-2"><i class="lni lni-key"></i><span>کدملی : </span></div>
+                      <input class="form-control" asp-for="CodeNational" type="number" required>
+                    </div>
+                    <div class="mb-3">
+                      <div class="title mb-2"><i class="lni lni-envelope"></i><span>پست الکترونیک : </span></div>
+                      <input class="form-control" asp-for="Gmail" type="email" required>
+                    </div>
+                    <div class="mb-3">
+                      <div class="title mb-2"><i class="lni lni-star"></i><span>کد معرف : </span></div>
+                      <input class="form-control" asp-for="CodeInvite" type="number" required>
+                    </div>
+                    <div class="mb-3">
+                      <div class="title mb-2"><i class="lni lni-key"></i><span>بارگذاری عکس : </span></div>
+                        <input autocomplete="off" type="file" asp-for="img" onchange="preview_image(event)" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <span class="btn btn-default btn-file">
+                            آپلود عکس  
+                            </span>
+                        </span>
+                    </div>
+                    <div class="row justify-content-center">
+                        <img class="mb-3 rounded-circle" style="width: 150px ;" src="../img/my-profile-icon-10.jpg" id="output_image"/>
+                    </div>
+                        <script>
+                            function preview_image(event) {
+                                var reader = new FileReader();
+                                reader.onload = function () {
+                                    var output = document.getElementById('output_image');
+                                    output.src = reader.result;
+                                }
+                                reader.readAsDataURL(event.target.files[0]);
+                            }
+                        </script>
+                <button class="btn btn-success w-100" type="submit"> ثبت اطلاعات </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Internet Connection Status-->
+    <div class="internet-connection-status" id="internetStatus"></div>
+
+    <!-- All JavaScript Files-->
+    <script src="~/mobile2/js/jquery.min.js"></script>
+    <script src="~/mobile2/js/bootstrap.bundle.min.js"></script>
+    <script src="~/mobile2/js/waypoints.min.js"></script>
+    <script src="~/mobile2/js/jquery.easing.min.js"></script>
+    <script src="~/mobile2/js/owl.carousel.min.js"></script>
+    <script src="~/mobile2/js/jquery.counterup.min.js"></script>
+    <script src="~/mobile2/js/jquery.countdown.min.js"></script>
+    <script src="~/mobile2/js/default/jquery.passwordstrength.js"></script>
+    <script src="~/mobile2/js/wow.min.js"></script>
+    <script src="~/mobile2/js/jarallax.min.js"></script>
+    <script src="~/mobile2/js/jarallax-video.min.js"></script>
+    <script src="~/mobile2/js/default/dark-mode-switch.js"></script>
+    <script src="~/mobile2/js/default/active.js"></script>
+    <script src="~/mobile2/js/pwa.js"></script>
+    
+</body>
+</html>

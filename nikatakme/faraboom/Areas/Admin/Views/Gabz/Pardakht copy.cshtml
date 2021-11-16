@@ -1,0 +1,164 @@
+<div class="card shadow" id="myDiv">
+	<div class="card-header">
+		<h2 class="mb-0"> نمایش پرداخت قبض </h2>
+	</div>
+	<div class="card-body">
+		<div class="card-body">
+			<div class="row">
+				<div class="table-responsive">
+					@* <div class="form-group justify-content-center text-center">
+						<p style="direction: ltr;" class="d-none" id="P_G">@ViewBag.result</p>
+						@if (ViewBag.Code.IsSuccessStatusCode == true)
+						{
+						@if (ViewBag.Msg != null)
+						{
+						<div class="text-center">
+						<p class="alert alert-danger">@ViewBag.Msg</p>
+						</div>
+						}
+						else
+						{
+						<p class="alert alert-success" style="text-align: center;">قبض مورد نظر پرداخت شد .</p>
+						}
+						}
+						else
+						{
+						<p class="alert alert-danger">قبض مورد نظر پرداخت نشد .</p>
+						}
+						<table class="table table-hover">
+						<thead class="bg-primary ">
+						<tr>
+						<th> شناسه قبض:</th>
+						<th> شناسه پرداخت: </th>
+						<th>مبلغ :</th>
+						<th>عنوان قبض:</th>
+						<th>نوع قبض : </th>
+						</tr>
+						</thead>
+						<tbody class="bg-white">
+						<tr>
+						<th id="bill_id"> </th>
+						<th id="pay_id"> </th>
+						<th id="amount"> </th>
+						<th id="bill_title"> </th>
+						<th id="bill_type"> </th>
+						</tr>
+						</tbody>
+						<thead class="bg-primary ">
+						<tr>
+						<th>کد پرونده :</th>
+						<th>شماره ارجاع :</th>
+						<th>چرخه :</th>
+						<th>تاریخ :</th>
+						</tr>
+						</thead>
+						<tbody class="bg-white">
+						<tr>
+						<th id="file_code"></th>
+						<th id="referral_number"></th>
+						<th id="cycle"></th>
+						<th id="date"></th>
+						</tr>
+						</tbody>
+						</table>
+						</div> *@
+					<div class="form-group justify-content-center text-center">
+						@* <p style="direction: ltr;" class="d-none" id="P_G">@ViewBag.result</p> *@
+						<p class="alert alert-success" style="text-align: center;">قبض مورد نظر پرداخت شد .</p>
+						<table class="table table-hover">
+							<thead class="bg-primary ">
+								<tr>
+									<th> شناسه قبض:</th>
+									<th> شناسه پرداخت: </th>
+									<th>مبلغ :</th>
+									<th>عنوان قبض:</th>
+									<th>نوع قبض : </th>
+								</tr>
+							</thead>
+							<tbody class="bg-white">
+								<tr>
+									<th id="bill_id"> </th>
+									<th id="pay_id"> </th>
+									<th id="amount"> </th>
+									<th id="bill_title"> </th>
+									<th id="bill_type"> </th>
+								</tr>
+							</tbody>
+							<thead class="bg-primary ">
+								<tr>
+									<th>کد پرونده :</th>
+									<th>شماره ارجاع :</th>
+									<th>چرخه :</th>
+									<th>تاریخ :</th>
+								</tr>
+							</thead>
+							<tbody class="bg-white">
+								<tr>
+									<th id="file_code"></th>
+									<th id="referral_number"></th>
+									<th id="cycle"></th>
+									<th id="date"></th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="d-flex justify-content-end ">
+				<a onclick="print();" class="btn btn-success mt-1 mb-1" style="width: min-content;"> چاپ
+				</a>
+				<a href="~/Admin/" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+					بازگشت
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	debugger
+
+	var str = document.getElementById('P_G').innerText.replace("{", "").replace("}", "").split('"').join('');
+	var res = str.split(",");
+
+	var amount = res[1].split(":");
+	document.getElementById('amount').innerText = "" + amount[1];
+
+	var bill_id = res[2].split(":");
+	document.getElementById('bill_id').innerText = "" + bill_id[1];
+
+	var bill_title = res[3].split(":");
+	document.getElementById('bill_title').innerText = "" + bill_title[1];
+
+	var bill_type = res[4].split(":");
+	document.getElementById('bill_type').innerText = "" + bill_type[1];
+
+	var pay_id = res[5].split(":");
+	document.getElementById('pay_id').innerText = "" + pay_id[1];
+
+	var file_code = res[6].split(":");
+	document.getElementById('file_code').innerText = "" + file_code[1];/////// کد پرونده
+
+	var cycle = res[7].split(":");
+	document.getElementById('cycle').innerText = "" + cycle[1];////////چرخه
+
+	var referral_number = res[8].split(":");
+	document.getElementById('referral_number').innerText = "" + referral_number[1];//////////// شماره ارجاع
+
+	var date = res[9].split(":");
+	document.getElementById('date').innerText = "" + date[1];////////// تاریخ
+
+</script>
+
+<script>
+	function print() {
+		var printContents = document.getElementById('myDiv').innerHTML;
+		var originalContents = document.body.innerHTML;
+
+		document.body.innerHTML = printContents;
+
+		window.print();
+
+		document.body.innerHTML = originalContents;
+	}
+</script>

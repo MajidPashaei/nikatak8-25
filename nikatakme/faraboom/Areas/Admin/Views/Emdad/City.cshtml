@@ -1,0 +1,84 @@
+<div class="card shadow" id="myDiv">
+    <div class="card-header">
+        <h2 class="mb-0">شهرستان مورد نظر را انتخاب نمایید </h2>
+    </div>
+    <div class="card-body">
+        @if (ViewBag.msg != null)
+        {
+            <p class="alert alert-danger">@ViewBag.msg</p>
+                <div class="d-flex justify-content-end ">
+                    <a href="/admin/emdad/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                        بازگشت
+                    </a>
+                </div>
+        }
+            <div class="card-body">
+                @if (ViewBag.city != null)
+                {
+                <div class="row">
+                    <div class="table-responsive">
+                        <div class="form-group justify-content-center text-center">
+                            <table class="table table-hover">
+                                <thead class="bg-primary ">
+                                <tr>
+                                    <th>ردیف</th>
+                                    <th>شهرستان</th>
+                                    <th>عملیات</th>
+                                </tr>
+                                </thead>
+                                <tbody class="bg-white">
+                                @{
+                                    if (ViewBag.city != null)
+                                    {
+                                        int i=1;
+                                        foreach (var item in ViewBag.city)
+                                        {
+                                            <tr>
+                                                <td>@i</td>
+                                                <td>@item.CityName</td>
+                                                <td>
+                                                    <a href="/admin/emdad/Details/@item.Id" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                                                        انتخاب
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            i++;
+                                        }
+                                    }
+                                }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                        
+                    <div class="d-flex justify-content-end ">
+                        <a onclick="print();" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                            چاپ
+                        </a>
+                        <a href="/admin/emdad/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                            بازگشت
+                        </a>
+                    </div>
+                }
+            </div>
+    </div>
+</div>
+
+
+
+
+<script>
+
+
+    function print() {
+        var printContents = document.getElementById('myDiv').innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>

@@ -1,0 +1,73 @@
+
+
+    <!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+  <!-- DataTable starts -->
+  <div class="table-responsive">
+    <table class="table data-list-view" style="text-align: center;">
+      <thead>
+        <tr>
+          <th></th>
+          <th>ردیف</th>
+          <th> استان  </th>
+          <th> شهر  </th>
+          <th> بخش  </th>
+          <th>نام متصدی </th>
+          <th> کد نمایندگی </th>
+          <th> تصویر کارشناس </th>
+          <th> شماره تماس  </th>
+          <th> عملیات</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+
+@if (ViewBag.list != null)
+{
+  int i=1;
+     foreach (var item in ViewBag.list)
+     {
+        <tr>
+          <td></td>
+          <td class="product-category"> @i</td>
+          <td class="product-name">@item.State</td>
+           <td class="product-name">@item.City</td>
+            <td class="product-name">@item.part</td>
+            
+             <td class="product-name">@item.Clerk</td>
+            <td class="product-name">@item.cod</td>
+
+           <td class="product-category">  <img style="width: 60px;" src="~/fileupload/@item.photos" alt="">  </td>
+           <td class="product-category"> @item.Phone </td>
+           <td class="product-action">
+             <div class="col-lg-3 col-md-3 mb-1">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  
+                  <a href="/adminsite/agency/del/@item.Id" type="button" class="btn btn-danger btn-sm" onclick="return confirm('آیا از حذف رکورد مورد نظر مطمن هستید؟')">حذف</a>
+                   <a href="/adminsite/agency/edit/@item.Id" type="button" class="btn btn-success btn-sm" >ویرایش</a>
+                
+                </div>
+              </div>
+          </td>
+        </tr>
+
+
+       i++;
+     }
+}
+   
+
+
+
+
+      </tbody>
+    </table>
+  </div>
+  <!-- DataTable ends -->
+
+  <!-- add new sidebar starts -->
+ 
+  <!-- add new sidebar ends -->
+</section>
+<!-- Data list view end -->

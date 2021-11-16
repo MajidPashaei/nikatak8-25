@@ -1,0 +1,197 @@
+
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    Layout = "_Layout4" ;
+}
+@model ViewModels.AdminViewModel.Voip.Vm_VoipNumber
+@if ( ViewBag.result != null )
+{
+    foreach (var item in ViewBag.result)
+    {
+        <div class="container-xl">
+            <div class="card shadow" id="myDiv">
+        	    <div class="card-header">
+                    <div class="row">
+                        <div class="col-3 text-center"></div>
+                        <div class="col-6 text-center">
+                            <h3 class="font-weight-bold"> صورتحساب فروش تلفن های اینترنتی (Voip) </h3>
+                        </div>
+                        <div class="col-3 text-right  ">
+                            <p>شماره سفارش: @item.Order_Id </p>
+                            <p>تاریخ سفارش:  @item.Date_Tel </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="text-center bg-info" colspan="8">مشخصات فروشنده</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="8" class="text-right">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <p>
+                                                     نام و نام خانوادگی : 
+                                                    <span>
+                                                        @Context.Session.GetString("name")
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p>
+                                                     کد نمایندگی :
+                                                     <span>
+                                                        @User.Identity.GetId()
+                                                     </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th class="text-center bg-info" colspan="8">مشخصات خریدار</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="8" class="text-right">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <p>
+                                                    نام و نام خانوادگی :
+                                                    <span>
+                                                        @item.NameFamily
+                                                    </span>
+                                                </p>
+                                                <p>
+                                                    آدرس کامل:
+                                                    <span>
+                                                        @item.Address
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            <div class="col-3">
+                                                <p>
+                                                     کد ملی : 
+                                                    <span>
+                                                        @item.CodeMeli
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            <div class="col-3">
+                                                <p>
+                                                    تلفن همراه : 
+                                                    <span>
+                                                        @item.Mobile
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            <div class="col-3">
+                                                <p>
+                                                    کد پستی:
+                                                    <span>
+                                                        @item.Post
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th class="text-center bg-info" colspan="8">مشخصات کالا یا خدمات
+                                        مورد معامله</th>
+                                </tr>
+                            </thead>
+                            <thead>
+                                <tr class="text-center">
+                                    <th>ردیف</th>
+                                    <th>کد</th>
+                                    <th>عنوان</th>
+                                    <th>نوع</th>
+                                    <th>مبلغ واحد</th>
+                                    <th>درصد ارزش افزوده</th>
+                                    <th>جمع مبلغ ارزش افزوده</th>
+                                    <th>مبلغ کل</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-center">
+                                    <td>۱</td>
+                                    <td>@item.Id_Tel</td>
+                                    <td>@item.Title_Tel</td>
+                                    <td>@item.Type_Tel</td>
+                                    <td>@item.Amount_Tel  تومان </td>
+                                    <td>%9</td>
+                                    <td>@item.Amount_ArAf_Tel  تومان </td>
+                                    <td>@item.Total_Amount_Tel  تومان </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td>2</td>
+                                    <td>X</td>
+                                    <td>نصب و راه اندازی</td>
+                                    <td>کانفیگ</td>
+                                    <td>@item.Amount_Set  تومان </td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>@item.Amount_Set  تومان </td>
+                                </tr>
+                                <tr>
+                                    <th style="background-color: darkgrey;" colspan="4" class="text-right">جمع کل</th>
+                                    <th style="background-color: darkgrey;" class="text-center"> @item.ta1  تومان  </th>
+                                    <th style="background-color: darkgrey;" class="text-center"> - </th>
+                                    <th style="background-color: darkgrey;" class="text-center"> @item.Amount_ArAf_Tel  تومان</th>
+                                    <th style="background-color: darkgrey;" class="text-center"> @item.ta2   تومان </th>
+                                </tr>
+                                <tr>
+                                    <th colspan="5" class="text-right ">شرایط و نحوه فروش: &nbsp&nbsp&nbsp&nbsp نقدی
+                                        &nbsp&nbsp&nbsp&nbsp غیرنقدی</th>
+                                    <th colspan="6" class="text-right">توضیحات:</th>
+                                </tr>
+                                <tr style="padding: 60px 0;">
+                                    <td colspan="5" class="text-right">مهر و امضا فروشنده</td>
+                                    <td colspan="6" class="text-right">مهر و امضا خریدار</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <form action="/Admin/Voip/AddNum" method="post">
+                <input type="text" class="d-none" value="@ViewBag.numid" asp-for="NumId">
+                <input type="text" class="d-none" value="@ViewBag.userid" asp-for="UserId">
+                <div class="d-flex row justify-content-end mt-0">
+        	        <button type="submit" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                         تایید نهایی و خرید
+        	        </button>
+        	        <a onclick="print();" class="btn btn-success mt-1 mb-1" style="width: min-content;"> 
+                        چاپ
+        	        </a>
+        	        <a href="~/Admin/Voip/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+        	            بازگشت
+        	        </a>
+                </div>
+            </form>
+        </div>
+    }
+}
+
+<script>
+ function print() {
+  var printContents = document.getElementById('myDiv').innerHTML;
+  var originalContents = document.body.innerHTML;
+
+  document.body.innerHTML = printContents;
+
+  window.print();
+
+  document.body.innerHTML = originalContents;
+ }
+</script>

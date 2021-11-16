@@ -1,0 +1,93 @@
+@model ViewModels.AdminViewModel.Tavanam.Vm_Tavanam;
+
+<style>
+    @@font-face {
+        font-family: 'font';
+        src: url('./css/Fonts/IRANSansWeb(FaNum) Medium.ttf')
+    }
+        
+    label
+    {
+        font-family: 'yekan';
+        text-align: right;
+    }   
+
+    h6
+    {
+        font-family: 'font';
+        font-weight: 900;
+    }
+
+    .font {
+        font-family: 'font';
+    }
+    .btn-file {
+    	position: relative;
+    	overflow: hidden;
+	}
+	.btn-file input[type=file] {
+   		position: absolute;
+   		top: 0;
+   		right: 0;
+   		min-width: 100%;
+   		min-height: 100%;
+   		font-size: 100px;
+   		text-align: right;
+   		filter: alpha(opacity=0);
+   		opacity: 0;
+   		outline: none;
+   		background: white;
+   		cursor: inherit;
+   		display: block;
+	}
+
+	#img-upload{
+    	width: 100%;
+	}
+    @@font-face {
+        font-family: "yekan";
+        src: url(./Fonts/Yekan.woff)format('woff');
+    }
+
+    h5 {
+        text-align: right;
+        font-family: "yekan" !important;
+    }
+</style>
+<div class="main-container" dir="rtl">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="subtitle mb-0" >
+ 				ارسال رمز یکبار مصرف اعتبار سنجی
+                </h3>
+            </div>
+            <form autocomplete="off" action="/mobile/Tavanam/ShowSend" method="POST">
+
+                <div class="card-body">
+                    <div class="form-group float-label ">
+
+                        <label class="">شماره فاکتور  خود را وارد کنید :</label>
+                        <input type="number" placeholder=" " required asp-for="factor_id" class="form-control bg-darken-1" >
+
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="card-footer">
+					<div class="d-flex justify-content-around ">
+						<button type="submit" class="btn btn-block btn-success col-5 mt-1 mb-1 rounded"
+							style="width: min-content;">
+							ارسال
+						</button>
+						<a href="/mobile/Tavanam/Index" class="btn btn-warning mt-1 mb-1 col-5 rounded" style="width: min-content;">
+							بازگشت
+						</a>
+					</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش پرداخت صورت حساب پرونده های اعتباری
+        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <p   id="P_E">@ViewBag.result</p>
+        @* <p id="msg1" class="alert alert-success" style="display: none;">شماره حساب متعلق به کد ملی وارد شده است</p>
+        <p id="msg2" class="alert alert-danger" style="display: none;">شماره حساب متعلق به کد ملی وارد شده نیست</p> *@
+    </div>
+</div>
+
+
+<script>
+    debugger
+    var str = document.getElementById('P_E').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+    var res = str.split(",");
+
+    @* var match = res[1].split(":"); *@
+    @* document.getElementById('match').innerText = "" + match[1]; *@
+
+</script>
+

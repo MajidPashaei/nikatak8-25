@@ -1,0 +1,32 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<link href="~/TAG/tagcss.css" rel="stylesheet">
+@* <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+*@
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<script src="~/TAG/tagjs.js"></script>
+
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> استعلام دسته ای بدهی قبوض برق </h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<form action="/Admin/Gabz/Showelectricitybillisnquiry" method="POST">
+				<div class="col-md-6">
+					<div class="form-group">
+						<h2 class="mb-0"> لیستی از شناسه‌های قبض برق: </h2>
+						<center>
+							<input type="text" class="form-control" asp-for="G_E"
+								placeholder=" لیستی از شناسه‌های قبض برق: " data-role="tagsinput" required>
+						</center>
+					</div>
+					<button type="submit" class="btn btn-success mt-1 mb-1" style="width: min-content;"> استعلام
+					</button>
+					<a href="~/Admin/Gabz_Charge/Estelam" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+						بازگشت
+					</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

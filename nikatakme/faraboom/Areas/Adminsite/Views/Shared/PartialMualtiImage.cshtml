@@ -1,0 +1,24 @@
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.4-rc1/css/foundation.css'><link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="/Css-Js-UpMultiImg/style.css">
+
+<!-- partial:index.partial.html -->
+<div class="grid-x grid-padding-x">
+  <div class="small-10 small-offset-1 medium-8 medium-offset-2 cell">
+    <h1></h1>
+    <form action="upload_file.php" id="img-upload-form" method="post" enctype="multipart/form-data">
+      <p>
+        <label for="upload_imgs" class="btn btn-outline-primary">   انتخاب عکس ها </label>
+        <input class="show-for-sr" type="file" id="upload_imgs" name="upload_imgs[]" multiple/>
+      </p>
+      <div class="quote-imgs-thumbs quote-imgs-thumbs--hidden" id="img_preview" aria-live="polite"></div>
+      @* <p>
+        <input class="btn btn-primary  " type="submit" name="submit" value=" بارگزاری تصاویر"/>
+      </p> *@
+    </form>
+  </div>
+</div>
+
+  <script  src="/Css-Js-UpMultiImg/script.js"></script>
+
+

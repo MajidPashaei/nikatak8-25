@@ -1,0 +1,63 @@
+<section id="data-list-view" class="data-list-view-header">
+    <div class="col-6 text-center"> 
+        <p class="alert alert-primary col-8 m-1">
+                ثبت نامی های آزمون استخدامی
+        </p> 
+    </div>
+    <div class="table-responsive">
+        <table class="table data-list-view">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>ردیف:</th>
+                    <th>نام ونام خانوادگی:</th>
+                    <th>نام پدر:</th>
+                    <th>کدملی:</th>
+                    <th>کد پیگیری:</th>
+                    <th>تاریخ تولد:</th>
+                    <th>تلفن همراه-تلفن ثابت:</th>
+                    <th>ایمیل:</th>
+                    <th>استان-شهر:</th>
+                    <th>آدرس:</th>
+                    <th>کدپستی:</th>
+                    <th>تحصیللات-رشته:</th>
+                    <th>تاریخ ثبت نام:</th>
+                    <th>مدارک:</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (ViewBag.user != null)
+                {
+                    int i=1;
+                    foreach (var item in ViewBag.user)
+                    {
+                        <tr>
+                            <td></td>
+                            <td class="product-category">@i</td>
+                            <td class="product-name">@item.Name @item.Family</td>
+                            <td class="product-name">@item.FatherName</td>
+                            <td class="product-category">@item.CodeMeli</td>
+                            <td class="product-category">@item.Rand</td>
+                            <td class="product-category">@item.tavalood</td>
+                            <td class="product-category">@item.Mobile  @item.Telphone</td>
+                            <td class="product-category">@item.Email </td>
+                            <td class="product-category">@item.Ostan  @item.City</td>
+                            <td class="product-category">@item.Address</td>
+                            <td class="product-category">@item.Post</td>
+                            <td class="product-category">@item.Tahsilat  @item.Reshte</td>
+                            <td class="product-category">@item.time</td>
+                            <td class="product-category">
+                                @* <a style="margin-top: 2px;" class="btn btn-primary btn-sm col-12" href="~/fileupload/@item.Img_Aks"></a> *@
+                                <a style="margin-top: 2px;" class="btn btn-primary btn-sm col-12" href="~/fileupload/@item.Img_PayanKH">عکس پرسنلی</a>
+                                <a style="margin-top: 2px;" class="btn btn-success btn-sm col-12" href="~/fileupload/@item.Img_CartMeli"> عکس کارت ملی</a>
+                                <a style="margin-top: 2px;" class="btn btn-warning btn-sm col-12" href="~/fileupload/@item.Img_Shenasname">عکس شناسنامه</a>
+                                <a style="margin-top: 2px;" class="btn btn-danger  btn-sm col-12" href="~/fileupload/@item.Img_MadrakTahsili">عکس مدرک تحصیلی</a>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+ </section>

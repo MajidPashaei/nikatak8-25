@@ -1,0 +1,48 @@
+<section id="data-list-view" class="data-list-view-header">
+    <div class="col-6 text-center"> 
+        <p class="alert alert-primary col-8 m-1">
+                شماره تلفن های اینترنتی رزرو شده 
+        </p> 
+    </div>
+    <div class="table-responsive">
+        <table class="table data-list-view">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="text-center"> ردیف : </th>
+                    <th class="text-center"> نام و نام خانوادگی : </th>
+                    <th class="text-center"> شماره تلفن اینترنتی : </th>
+                    <th class="text-center"> استان تلفن اینترنتی : </th>
+                    <th class="text-center"> نوع شماره : </th>
+                    <th class="text-center"> قیمت : </th>
+                    <th class="text-center"> نمایندگی ثبت کننده : </th>
+                    <th class="text-center"> تاریخ : </th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (ViewBag.user != null)
+                {
+                    int i=1;
+                    foreach (var item in ViewBag.user)
+                    {
+                        <tr>
+                            <td></td>
+                            <td class="text-center product-category"> @i </td>
+                            <td class="text-center product-name"> @item.Name </td>
+                            <td class="text-center product-category"> @item.Number </td>
+                            <td class="text-center product-category"> @item.Ostan </td>
+                            <td class="text-center product-category"> @item.Type </td>
+                            <td class="text-center product-category" id="@item.Id"> @item.Price   تومان </td>
+                                <script>
+                                    document.getElementById("@item.Id").innerText=document.getElementById("@item.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                            <td class="text-center product-name"> @item.UserName </td>
+                            <td class="text-center product-category"> @item.Date </td>
+                        </tr>
+                        i++;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+ </section>

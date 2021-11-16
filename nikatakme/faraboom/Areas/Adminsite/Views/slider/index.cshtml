@@ -1,0 +1,94 @@
+@model ViewModels.AdminViewModel.Slider.Vm_Slider
+@if (ViewBag.er != null)
+{
+<p class="alert alert-success">@ViewBag.er</p>
+}
+<!-- Basic Select2 start -->
+<form action="/adminsite/slider/add" method="POST" enctype="multipart/form-data">
+<section class="basic-select2">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-content">
+          <div class="card-body">
+            <div class="row">
+            	<div class="col-12 mb-2">
+            	</div>
+            
+            <div class="col-sm-6 col-12">
+	            <div class="form-group">
+                      <h4 class="card-title"> ثبت فیلد </h4>
+				</div>
+		    </div>
+
+      	<div class="col-sm-6 col-12">
+	        <div class="form-group">
+                      <label for="basicInput">انتخاب زبان  </label>
+				    	<select class="select2 form-control" asp-for="Language">
+						           <option value="fa">فارسی</option>
+	                     <option value="en">انگلیسی</option>
+	                     <option value="tr">ترکی</option>
+	                     <option value="ar">عربی</option>
+					  	</select>
+			</div>
+	    </div>
+
+        	<div class="col-sm-12 col-12">
+	            <div class="form-group">
+                      <label for="basicInput">  انتخاب محصول  </label>
+				    	<select class="select2 form-control" asp-for="CategoryProductIdSlid" asp-items="@ViewBag.list">
+						
+	                     
+					  	</select>
+		    	</div>
+	        </div>
+
+              <p class="alert alert-success">
+                               <strong>اندازه مناسب لوگو:</strong>
+                               حتما باید 
+                               <strong style="color: brown;">1980*660</strong>
+                               پیکسل باشد.
+                             </p>
+
+             <div class="col-sm-6 col-12">
+				       <fieldset class="form-group">
+                     <div class="col-sm-6 col-12">
+                             <label for="file" class="btn btn-default">انتخاب تصویر اسلایدر</label>
+                             <input required asp-for="img" type="file" accept="image/*" onchange="preview_image(event)" >
+                      </div>
+                       </fieldset>
+		        </div>
+
+ <div class="col-sm-12 col-12">
+				               <fieldset class="form-group text-center ">
+                             <img  id="output_image" src="~/app-assets/images/banner/slider98.jpg" height=267px width=800px>
+                       </fieldset>
+		        </div>
+
+            
+             <div class="col-sm-12 col-12">
+                    <fieldset style="text-align: left;" class="form-group position-relative has-icon-left input-divider-left">
+                        <button type="submit" class="btn btn-success mr-1 mb-1">ثبت</button>
+                        <button type="button" class="btn btn-danger mr-1 mb-1">لغو</button>
+                    </fieldset>
+                </div>
+
+	        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Basic Select2 end -->
+</form>
+<script >
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var output = document.getElementById('output_image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>

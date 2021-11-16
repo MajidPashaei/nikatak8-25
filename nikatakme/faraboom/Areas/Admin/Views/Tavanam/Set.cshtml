@@ -1,0 +1,29 @@
+
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> دریافت فاکتور اعتبار سنجی </h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					@if( ViewBag.res != null )
+					{
+						foreach( var item in ViewBag.res )
+						{
+				    		<a href="/Admin/Tavanam/ShowReport?ot=@item.otp&fi=@item.factor_id" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                    		      گزارش اعتبار سنجی
+				    		</a>
+				    		<a href="/Admin/Tavanam/ShowAdvancedReport?ot=@item.otp&fi=@item.factor_id" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                    		      گزارش پیشرفته اعتبار سنجی
+				    		</a>
+						}
+					}
+				    <a href="/Admin/Tavanam/Step1" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+				    	بازگشت
+				    </a>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,87 @@
+<div class="card shadow" id="myDiv">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش استعلام اشتراک  </h2>
+    </div>
+    <div class="card-body">
+        @if (ViewBag.msg != null)
+        {
+            <p class="alert alert-danger">@ViewBag.msg</p>
+                <div class="d-flex justify-content-end ">
+                    <a href="/admin/emdad/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                        بازگشت
+                    </a>
+                </div>
+        }
+            <div class="card-body">
+                @if (ViewBag.Details != null)
+                {
+                    <div class="row">
+                        <div class="table-responsive">
+                            <div class="form-group justify-content-center text-center">
+                                <span class="text-info">  سال ساخت :</span> @ViewBag.Details.BuildYear
+                                <br>
+                                <hr>
+                                <span class="text-info">گروه :</span> @ViewBag.Details.CarGroup
+                                <br>
+                                <hr>
+                                <span class="text-info" > نوع :</span> @ViewBag.Details.CarType
+                                <hr>
+                                <span class="text-info">  شماره شاسی :</span> @ViewBag.Details.ChassisNumber <br>
+                                <hr>
+                                <span class="text-info"> رنگ:</span> @ViewBag.Details.Color <br>
+                                <hr>
+                                <span class="text-info">  وضعیت :</span> @ViewBag.Details.Condition <br>
+                                <hr>
+                                <span class="text-info">  اطلاعات ایجاد کننده :</span> @ViewBag.Details.CustomerName <br>
+                                <hr>
+                                <span class="text-info">  اشتراک :</span> @ViewBag.Details.Eshterak  <br>
+                                <hr>
+                                <span class="text-info">   تاریخ شروع :</span> @ViewBag.Details.StartDate <br>
+                                <hr>
+                                <span class="text-info">   تاریخ خاتمه :</span> @ViewBag.Details.EndDate <br>
+                                <hr>
+                                <span class="text-info"> حالت:</span> @ViewBag.Details.IsSubscriber  <br>
+                                <hr>
+                                <span class="text-info">  پلاک :</span> @ViewBag.Details.NumberPlate  <br>
+                                <hr>
+                                <span class="text-info"> استان :</span> @ViewBag.Details.Office  <br>
+                                <hr>
+                                <span class="text-info">   شهرستان :</span> @ViewBag.Details.City  <br>
+                                <hr>
+                                <span class="text-info">  نوع سرویس :</span> @ViewBag.Details.ServiceType  <br>
+                                <hr>
+                                <span class="text-info"> استفاده :</span> @ViewBag.Details.Usageid  <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end ">
+                        <a  class="btn btn-success mt-1 mb-1" href="/admin/Emdad/serviceCard" style="width: min-content;"> استعلام لیست اشتراک ها
+                        </a>
+                        <a onclick="print();" class="btn btn-success mt-1 mb-1" style="width: min-content;"> چاپ
+                        </a>
+                        <a href="/admin/emdad/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                            بازگشت
+                        </a>
+                    </div>
+                }
+            </div>
+    </div>
+</div>
+
+
+
+
+<script>
+
+
+    function print() {
+        var printContents = document.getElementById('myDiv').innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>

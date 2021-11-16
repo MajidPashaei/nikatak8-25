@@ -1,0 +1,75 @@
+@{ Layout = null ; }
+@model ViewModels.AdminViewModel.Job.Vm_JobPay
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>نیکاتک</title>
+    <!-- External CSS -->
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/bootstrap-rtl.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/fonts.css">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="~/login/login-one/images/fev.png">
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="~/login/login-one/css/login-one.css">
+</head>
+<body>
+<!-- Loader -->
+<Form method="POST" action="/Pay/RequestJob"  enctype="multipart/form-data" autocomplete="off">
+<!-- Login page -->
+<div class="login_wrapper">
+    <div class="container">
+        <div class="col-md-12 pad-0" style="opacity: 90%;">
+            <di class="row login-box-12">
+                <div class="col-lg-2 col-md-12 col-sm-12 px-0">
+                    <div class="login_left">
+                        <a href="#" class="logo_text">
+                            <img src="~/login/login-one/images/Nikatek.png" alt="Simply Easy Learning"> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-12 ">
+                    <div class="login-inner-form">
+                        <div class="details">
+                            <p><span>برای خرید کارت اعتباری ، فرم زیر را</span> تکمیل کنید.</p>
+                            <div class="form-group">
+                                <input type="text"  asp-for="Name" class="input-text" placeholder="نام " required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text"  asp-for="Family" class="input-text" placeholder=" نام خانوادگی" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" asp-for="CodeMeli" class="input-text" placeholder=" کدملی " required>
+                            </div>
+                             <div class="form-group">
+                                <input type="text"  asp-for="Mobile" class="input-text" placeholder="شماره تلفن همراه " required minlength="11" maxlength="11"  >
+                            </div>
+                             <div class="form-group">
+                                <input type="email"  asp-for="Email" class="input-text" placeholder="ایمیل " required >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-12 ">
+                    <div class="login-inner-form">
+                        <div class="details">
+                            <button class="btn btn-success mt-2 btn-lg" type="submit">ثبت و پرداخت</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+</Form>
+<!-- External JS libraries -->
+<script src="~/login/assets/js/jquery-2.2.0.min.js"></script>
+<script src="~/login/assets/js/popper.min.js"></script>
+<script src="~/login/assets/js/bootstrap.min.js"></script>
+<!-- Custom JS Script -->
+</body>
+</html>

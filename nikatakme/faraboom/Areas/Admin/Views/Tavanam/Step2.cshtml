@@ -1,0 +1,41 @@
+@model ViewModels.AdminViewModel.Tavanam.Vm_Tavanam;
+
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> دریافت کد مجوز اعتبار سنجی </h2>
+	</div>
+	<form action="/Admin/Tavanam/Set" method="POST" autocomplete="off">
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-6">
+					<P class="d-none">
+						@ViewBag.res
+					</P>
+                    @if ( ViewBag.Msg != null )
+                    {
+						<div>
+							<p class="alert alert-danger">
+								@ViewBag.Msg
+							</p>
+						</div>
+					}
+					@if( ViewBag.result != null )
+					{
+						<div class="form-group">
+							<h2 class="mb-0">کد مجوز را وارد کنید :</h2>
+							<input type="number" class="form-control" asp-for="otp"
+								placeholder=" کد مجوز را وارد کنید " required>
+								<input class="d-none" type="text" value="@ViewBag.fid" asp-for="factor_id">
+						</div>
+						<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;">
+							 تایید
+						</button>
+					}
+					<a href="/Admin/Tavanam/Step1" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+						بازگشت
+					</a>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

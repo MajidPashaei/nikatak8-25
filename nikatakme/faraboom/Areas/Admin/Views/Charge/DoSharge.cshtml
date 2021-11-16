@@ -1,0 +1,62 @@
+<div class="card shadow" id="myDiv">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش  شارژ موبایل </h2>
+    </div>
+    <div class="card-body">
+            <div class="card-body">
+                @if (ViewBag.mesage != null)
+                {
+                    <p class="alert alert-success text-center">@ViewBag.mesage</p>
+                    <div class="row">
+                        <div class="table-responsive">
+                            <div class="form-group justify-content-center text-center">
+                                <span class="text-info"> زمان درخواست :</span>  @ViewBag.LocalDateTime
+                                <br>
+                                <hr>
+                                <span class="text-info"> اپراتور :</span> @ViewBag.Operator
+                                <br>
+                                <hr>
+                                <span class="text-info" >شماره مرجع :</span> @ViewBag.ReferenceNumber
+                                <hr>
+                                <span class="text-info"> شماره سفارش :</span> @ViewBag.ReserveNumber <br>
+                                <hr>
+                                <span class="text-info">  پاسخ :</span>  @ViewBag.ReturnMsg <br>
+                                <hr>
+                                <span class="text-info">  شماره موبایل :</span> @ViewBag.CellNumber <br>
+                                <hr>
+                                <span class="text-info"> مبلغ :</span> @ViewBag.TotalAmount <br>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @if (ViewBag.mesagee != null)
+                {
+                    <p class="alert alert-danger text-center">@ViewBag.mesagee</p>
+                }
+                <div class="d-flex justify-content-end ">
+                    <a onclick="print();" class="btn btn-success mt-1 mb-1" style="width: min-content;"> چاپ
+                    </a>
+                    <a href="#" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                        بازگشت
+                    </a>
+                </div>
+            </div>
+        
+        
+    </div>
+</div>
+<script>
+
+
+    function print() {
+        var printContents = document.getElementById('myDiv').innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>

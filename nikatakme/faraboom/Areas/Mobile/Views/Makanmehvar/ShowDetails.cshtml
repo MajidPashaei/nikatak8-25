@@ -1,0 +1,134 @@
+<br>
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <!-- Checkout Wrapper-->
+    <div class="checkout-wrapper-area py-3">
+      <!-- Billing Address-->
+      <div class="billing-information-card mb-3">
+        <div class="card billing-information-title-card bg-primary">
+          <div class="card-body">
+            <h6 class="text-center mb-0 text-white"> نمایش جزییات آدرس براساس کدپستی</h6>
+			<p id="S_D" class="d-none">@ViewBag.result</p>
+          </div>
+        </div>
+        <div class="card user-data-card">
+          <div class="card-body">   
+			@if (ViewBag.Msg != null)
+			{
+				<div class="text-center">
+					<h5 class="alert alert-danger">@ViewBag.Msg</h5>
+				</div>
+			}
+			else
+			{       
+				<br>                         
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>استان :</span></div>
+            	  <div class="data-content" id="province"></div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>شهرستان :</span></div>
+            	  <div class="data-content" id="locality_name"></div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>شهر :</span></div>
+            	  <div class="data-content" id="town_ship"></div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>روستا : </span></div>
+            	  <div class="data-content" id="village"></div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>کوی : </span></div>
+            	  <div class="data-content" id="sub_locality"></div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>خیابان : </span></div>
+            	  <div class="data-content" id="street"></div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>کوچه : </span></div>
+            	  <div class="data-content" id="street2"></div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>طبقه جانبی : </span></div>
+            	  <div class="data-content" id="side_floor"></div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>شناسه ردیابی : </span></div>
+            	  <div class="data-content" id="trace_id"></div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>کد محله : </span></div>
+            	  <div class="data-content" id="locality_code"></div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>شماره خانه : </span></div>
+            	  <div class="data-content" id="house_number"></div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>کد پستی : </span></div>
+            	  <div class="data-content" id="zip_code"></div>
+            	</div>
+            	<div class="single-profile-data d-flex align-items-center justify-content-between">
+            	  <div class="title d-flex align-items-center"><span>توضیحات : </span></div>
+            	  <div class="data-content" id="description"></div>
+            	</div>
+				<br>
+			}
+          </div>
+        </div>
+      </div>
+	</div>
+  </div>
+</div>
+
+<script>
+
+    var str = document.getElementById('S_D').innerText.replace("{", "").replace(' \" ', '').replace("}", "").replace("}", "").replace("}", "").split('"').join('').replace("]", "");
+    var res = str.split(",");
+
+    var description = res[1].split(":");
+    document.getElementById('description').innerText = "" + description[1];
+
+    var floor = res[2].split(":");
+    document.getElementById('floor').innerText = "" + floor[1];
+
+    var house_number = res[3].split(":");
+    document.getElementById('house_number').innerText = "" + house_number[1];
+
+    var locality_code = res[4].split(":");
+    document.getElementById('locality_code').innerText = "" + locality_code[1];
+
+    var locality_name = res[5].split(":");
+    document.getElementById('locality_name').innerText = "" + locality_name[1];
+
+    var zip_code = res[6].split(":");
+    document.getElementById('zip_code').innerText = "" + zip_code[1];
+
+    var province = res[7].split(":");
+    document.getElementById('province').innerText = "" + province[1];
+
+    var side_floor = res[8].split(":");
+    document.getElementById('side_floor').innerText = "" + side_floor[1];
+
+    var street = res[9].split(":");
+    document.getElementById('street').innerText = "" + street[1];
+
+    var street2 = res[10].split(":");
+    document.getElementById('street2').innerText = "" + street2[1];
+
+    var sub_locality = res[11].split(":");
+    document.getElementById('sub_locality').innerText = "" + sub_locality[1];
+
+    var town_ship = res[12].split(":");
+    document.getElementById('town_ship').innerText = "" + town_ship[1];
+
+    var trace_id = res[13].split(":");
+    document.getElementById('trace_id').innerText = "" + trace_id[1];
+
+    var village = res[14].split(":");
+    document.getElementById('village').innerText = "" + village[1];
+
+</script>

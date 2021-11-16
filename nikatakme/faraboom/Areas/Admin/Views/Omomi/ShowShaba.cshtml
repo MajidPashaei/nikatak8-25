@@ -1,0 +1,69 @@
+<div class="card shadow" id="myDiv">
+    <div class="card-header">
+        <h2 class="mb-0">نمایش استعلام شماره شبا</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="table-responsive">
+                <div class="form-group justify-content-center">
+                    <p style="direction: ltr; display: none;" id="Shaba">@ViewBag.result</p>
+                    @if (ViewBag.Msg != null)
+                    {
+                        <div class="text-center">
+                            <p class="alert alert-danger">@ViewBag.Msg</p>
+                        </div>
+                    }
+                    <table class="table table-hover">
+                        <thead class="bg-primary ">
+                            <tr>
+                                <th> شماره سپرده:</th>
+                                <th> نوع حساب شبا: </th>
+                                <th> کد بانک :</th>
+                                <th> نام بانک :</th>
+                                <th> اطلاعات مالک :</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr>
+                                <th id="deposit_number"> </th>
+                                <th id="iban_type"> </th>
+                                <th id="bank_code"> </th>
+                                <th id="bank_name"> </th>
+                                <th id="owners_info"> </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="offset-6">
+                    <a href="~/Admin/Sepordeh/Index" class="btn btn-success mt-1 mb-3" style="width: min-content;">
+                        بازگشت
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    debugger
+    var str = document.getElementById('Shaba').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('').replace("}", "").replace("]", "");
+    var res = str.split(",");
+
+    var deposit_number = res[1].split(":");
+    document.getElementById('deposit_number').innerText = "" + deposit_number[1];
+
+    var iban_type = res[2].split(":");
+    document.getElementById('iban_type').innerText = "" + iban_type[1];
+
+    var bank_code = res[3].split(":");
+    document.getElementById('bank_code').innerText = "" + bank_code[1];
+
+    var bank_name = res[4].split(":");
+    document.getElementById('bank_name').innerText = "" + bank_name[1];
+
+    var owners_info = res[5].split(":");
+    var last_name = res[6].split(":");
+    document.getElementById('owners_info').innerText = " " + owners_info[2] + " " + last_name[1];
+
+</script>

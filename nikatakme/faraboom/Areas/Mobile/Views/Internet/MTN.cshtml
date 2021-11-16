@@ -1,0 +1,82 @@
+<style>
+    th , td
+    {
+        font-weight: normal;
+        font-size: 14px;
+    }
+</style>
+
+<br>
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <!-- Checkout Wrapper-->
+    <div class="checkout-wrapper-area py-3">
+      <!-- Billing Address-->
+      <div class="billing-information-card mb-3">
+        <div class="card billing-information-title-card bg-primary">
+          <div class="card-body">
+            <p class="text-center mb-0 text-white"> نمایش  بسته های اینترنتی ایرانسل </p>
+          </div>
+        </div>
+        <div class="card user-data-card">
+          <div class="card-body">  
+
+
+        @if (ViewBag.msg != null)
+        {
+            <br>
+            <p class="alert alert-danger text-center">@ViewBag.msg</p>
+            <br>
+            <br>
+            <br>
+        }
+         else
+        { 
+            <br>
+            <div class="table-responsive">
+                        <table class="table table-hover mt-3 text-center">
+                            <thead class="bg-info">
+                                <tr class="">
+                                    <th class="text-light">ردیف:</th>
+                                    <th class="text-light">عنوان:</th>
+                                    <th class="text-light">مبلغ:</th>
+                                    <th class="text-light">خرید:</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+            					@{
+                                    if (ViewBag.package != null)
+                                    {
+                                        int i=1;
+                                        foreach (var item in ViewBag.package)
+                                        {
+                                            <tr class="">
+                                                <td class="">@i</td>
+                                                <td class="">@item.Title</td>
+                                                <td class="" id="@i">@item.AffAmount  ریال</td>
+                                                    <script>
+					            				        document.getElementById("@i").innerText = document.getElementById("@i").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+					            				    </script>
+                                                
+                                                <td>
+                                                    <a href="/mobile/internet/BuyRightel?ChargeType=@item.ChType&AffAmount=@item.AffAmount&Title=@item.Title&OrgAmount=@item.OrgAmount"
+                                                        class="btn btn-danger btn-sm">
+                                                        خرید 
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            i++;
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table> 
+                        </div>
+                    }
+                    </div>
+                   </div>
+                  </div>
+                </div>
+               </div>
+            </div>

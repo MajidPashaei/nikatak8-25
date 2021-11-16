@@ -1,0 +1,87 @@
+@model ViewModels.AdminViewModel.Richat.Vm_Richat
+@if (ViewBag.er != null)
+{
+    <p class="alert alert-success">@ViewBag.er</p>
+}
+<!-- Basic Inputs start -->
+<section id="basic-input">
+   
+    <form action="/adminsite/RayChat/add" method="POST">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+               
+               
+                <div class="card-header">
+                    <h4 class="card-title"> لینک های پایه خود را وارد نمایید </h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="row">
+                          
+                            <div class="col-xl-9 col-md-9 col-9 mb-1 mt-1 ml-1">
+                                <fieldset class="form-group">
+                                    <label for="basicInput"> لینک رایچت </label>
+                                    <input type="text" class="form-control" asp-for="ScriptChat" placeholder="لینک رایچت خود را وارد کنید" >
+                                                                                         <a href="https://app.raychat.io/" class="btn btn-primary mt-2 " target="blank">ورود به پنل چت آنلاین</a>
+
+                                </fieldset>
+                            </div>
+                            
+                              <div class="col-xl-9 col-md-9 col-9 mb-1 mt-1 ml-1">
+                                <fieldset class="form-group">
+                                    <label for="basicInput"> کد زرین پال </label>
+                                    <input type="text" class="form-control" asp-for="zarinpal" placeholder=" کد زرین پال خود را وارد کنید" >
+                                                                <a href="https://my.zarinpal.com/auth/login" class="btn btn-primary mt-2 " target="blank">ورود به زرین پال</a>
+
+                                </fieldset>
+                            </div>
+                            <div class="col-xl-9 col-md-9 col-9 mb-1 mt-1 ml-1">
+                                <fieldset class="form-group">
+                                    <label for="basicInput"> آدرس وب سایت </label>
+                                    <input type="text" class="form-control" asp-for="website" placeholder="آدرس وب سایت  خود را وارد کنید" >
+                                </fieldset>
+                            </div>
+
+                            
+                  
+                              <div class="col-xl-9 col-md-9 col-9 mb-1 mt-1 ml-1">
+                                <fieldset class="form-group">
+                                    <label for="basicInput">لینک اینماد </label>
+                                    <input type="text" class="form-control" asp-for="enemad" placeholder="لینک اینماد خود را وارد کنید" >
+                                                                <a href="https://comp.enamad.ir/Panel" class="btn btn-primary mt-2 " target="blank">ورود به اینماد</a>
+
+                                </fieldset>
+                            </div>
+                           
+                            
+                              <div class="col-xl-9 col-md-9 col-9 mb-1 mt-1 ml-1">
+                                <fieldset class="form-group">
+                                    <label for="basicInput">کد فعال سازی اس ام اس  </label>
+                                    <input type="text" class="form-control" asp-for="sms" placeholder="کد فعال سازی اس ام اس  خود را وارد کنید" >
+                                                                <a href="https://panel.kavenegar.com/Client/membership/login" class="btn btn-primary mt-2 " target="blank">ورود به پنل اس ام اس</a>
+
+                                </fieldset>
+                            </div>
+                             <div class="col-xl-9 col-md-9 col-9 mb-1 mt-1 ml-1">
+                                <fieldset class="form-group">
+                                    <label for="basicInput"> نام الگوی اس ام اس  </label>
+                                    <input type="text" class="form-control" asp-for="paternsms" placeholder="نام  الگو  اس ام اس  خود را وارد  کنید" >
+                                </fieldset>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-6 col-12 mb-1">   
+                                <fieldset style="text-align: left;" class="form-group mt-4">
+                                   <button type="submit" class="btn btn-success mr-1 mb-1">ذخیره</button>
+                                   <button type="button" class="btn btn-danger mr-1 mb-1">لغو</button>
+                                </fieldset>
+                            </div>
+    </form>
+</section>
+<!-- Basic Inputs end -->

@@ -1,0 +1,32 @@
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش تبدیل شماره سپرده به شبا
+        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <p class="d-none" id="S_C">@ViewBag.result</p>
+        @if (ViewBag.Msg != null)
+        {
+            <div class="text-center">
+                <p class="alert alert-danger">@ViewBag.Msg</p>
+            </div>
+        }
+        <p class="" id="iban_number"></p>
+    </div>
+    <div class="offset-6">
+        <a href="~/Admin/Sepordeh/Index" class="btn btn-success mt-1 mb-3" style="width: min-content;">
+            بازگشت
+        </a>
+    </div>
+</div>
+
+
+<script>
+    debugger
+    var str = document.getElementById('S_C').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+    var res = str.split(",");
+
+    var iban_number = res[1].split(":");
+    document.getElementById('iban_number').innerText = "شماره شبا :  " + iban_number[1];
+
+</script>

@@ -1,0 +1,105 @@
+@using Microsoft.AspNetCore.Http
+
+<div class="app-sidebar__overlay " data-toggle="sidebar"></div>
+<aside class="app-sidebar">
+	<div class="sidebar-img">
+		<a href="#" class="navbar-brand">
+			<img alt="..." class="navbar-brand-img main-logo" src="~/admin/assets/img/brand/logolight1.png">
+			<img alt="..." class="navbar-brand-img logo" src="~/admin/assets/img/brand/logo.png">
+		</a>
+		<ul class="side-menu">
+			@* <li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+				class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> قبوض
+				</span><i class="angle fa fa fa-angle-down"></i></a>
+				<ul class="slide-menu">
+				<li>
+				<a href="/admin/Gabz/Waterbilldebtinquiry" class="slide-item">استعلام بدهی
+				قبض
+				آب </a>
+				<a href="/admin/Gabz/Inquiryofelectricitybilldebt" class="slide-item">استعلام
+				بدهی قبض برق </a>
+				<a href="/admin/Gabz/Inquiryofgasbilldebt" class="slide-item">استعلام بدهی
+				قبض
+				گاز </a>
+				<a href="/admin/Gabz/Inquiryoftelephonebilldebt" class="slide-item">استعلام
+				بدهی
+				قبض تلفن ثابت </a>
+				<a href="/admin/Gabz/Inquiryofmobilephonebilldebt" class="slide-item">استعلام
+				بدهی قبض تلفن همراه </a>
+				<a href="/admin/Gabz/Violationofcarsandmotorcycles" class="slide-item">استعلام
+				بدهی خلافی خودرو </a>
+				<a href="/admin/Avarez/detailsWay" class="slide-item">جزئیات بدهی عوارض
+				آزادراه
+				</a>
+				<a href="/admin/Avarez/Way" class="slide-item"> بدهی کلی عوارض آزادراه </a>
+				<a href="/admin/Avarez/Pardakht" class="slide-item"> پرداخت عوارض آزادراه
+				</a>
+				</li>
+				</ul>
+				</li>
+				<li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+				class="side-menu__icon fe fe-edit"></i><span class="side-menu__label">خدمات
+				عمومی بانکی
+				</span><i class="angle fa fa fa-angle-down"></i></a>
+				<ul class="slide-menu">
+				<li>
+				<li>
+				<a href="/admin/Omomi/Tatbigh" class="slide-item">سامانه شاهکار</a>
+				<a href="/admin/Tavanam/Index" class="slide-item">اعتبار سنجی</a>
+				<a href="/admin/Makanmehvar/Index" class="slide-item">خدمات مکان
+				محور</a>
+				<a href="/Admin/Sepordeh/Rname" class="slide-item">دریافت نام صاحب
+				سپرده</a>
+				<a href="/Admin/Sepordeh/ReConvert" class="slide-item">تبدیل شماره
+				شبا به سپرده </a>
+				<a href="/Admin/Sepordeh/Convert" class="slide-item">تبدیل شماره
+				سپرده به شبا</a>
+				<a href="/admin/Omomi/Shaba" class="slide-item">استعلام شماره
+				شبا</a>
+				<a href="/Admin/Sepordeh/NationalCode" class="slide-item">انطباق کد
+				ملی و حساب/شبا</a>
+				</li>
+				</ul>
+				</li> *@
+			<li class="slide">
+				<a href="/admin/menu/index" class="side-menu__item"><i class="side-menu__icon fe fe-home"></i><span
+						class="side-menu__label"> صفحه اصلی
+					</span></a>
+				<a href="/admin/Voip/AddNumCode" class="slide-item"> ثبت نام کاربر جدید </a>
+				<a href="/admin/Voip/Sabt" class="slide-item"> ثبت شماره تلفن کاربر </a>
+				<a href="/admin/Voip/Report" class="slide-item"> گزارش </a>
+				<li class="slide">
+					<a href="#" class="side-menu__item active" data-toggle="slide" href="#"><i
+							class="side-menu__icon fe fe-home"></i><span class="side-menu__label">کیف پول</span><i
+							class="angle fa fa fa-angle-down"></i></a>
+					<ul class="slide-menu">
+						<li>
+							<a href="/Admin/Wallet/index" class=" slide-item" href="index-ldf-2.html">واریزی های کیف پول </a>
+						</li>
+						<li>
+							<a href="/Admin/Wallet/Tarakonesh" class=" slide-item" href="index-ldf-2.html">برداشتی های کیف پول </a>
+						</li>
+						<li>
+							<a href="/Admin/Wallet/Tarakoneshs" class=" slide-item" href="index-ldf-2.html">واریزی های حساب من</a>
+						</li>
+					</ul>
+				</li>
+
+				@*<a href="/admin/sazeman/sana" class="slide-item">سامانه ثنا</a>
+				<a href="/admin/sazeman/sabteahval" class="slide-item">ثبت احوال</a>
+				<a href="/admin/sazeman/vam" class="slide-item">وام ازدواج</a>
+				<a href="/admin/sazeman/shahid" class="slide-item"> بنیاد شهید</a>
+				<a href="/admin/sazeman/vazife" class="slide-item">نظام وظیفه</a>
+				<a href="/admin/sazeman/parvaresh" class="slide-item">آموزش و پرورش</a>
+				<a href="/admin/sazeman/bazneshaste" class="slide-item">امور بازنشستگان</a>
+				<a href="/admin/sazeman/electronic" class="slide-item">نسخه الکترونیک</a>
+				<a href="/admin/sazeman/taradod" class="slide-item">برگه تردد بین شهری</a>
+				<a href="/admin/sazeman/bargi" class="slide-item"> اداره برق</a>
+				<a href="/admin/sazeman/abi" class="slide-item"> اداره آب و فاضلاب </a> *@
+			</li>
+
+		</ul>
+	</div>
+</aside>

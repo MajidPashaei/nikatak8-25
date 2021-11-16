@@ -1,0 +1,27 @@
+@model ViewModels.AdminViewModel.Tavanam.Vm_Tavanam;
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-2"> ارسال رمز یکبار مصرف اعتبار سنجی</h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<form action="/Admin/Tavanam/ShowSend" method="POST">
+				<div class="row">
+					<div class="form-group col-12">
+						<h2 class="mb-0">شماره فاکتور </h2>
+						<input type="text" asp-for="factor_id" class="form-control"
+							placeholder=" شماره فاکتور  خود را وارد کنید" required>
+					</div>
+					<div class="col-12">
+						<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;">
+							دریافت
+						</button>
+						<a href="~/Admin/Tavanam/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+							بازگشت
+						</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

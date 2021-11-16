@@ -1,0 +1,256 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<style>
+	@@font-face {
+		font-family: "font";
+		src: url('./css/Fonts/IRANSansWeb(FaNum) Medium.ttf')
+	}
+
+	label {
+		font-family: 'yekan';
+		text-align: right;
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	p {
+		font-family: "yekan" !important;
+		font-weight: lighter;
+		margin-top: 5px;
+		font-size: medium;
+	}
+
+	h6 {
+		font-family: 'font';
+		font-weight: 900;
+	}
+
+
+	@@font-face {
+		font-family: "yekan";
+		src: url(./Fonts/Yekan.woff)format('woff');
+	}
+
+	h5 {
+		text-align: right;
+		font-family: "yekan";
+	}
+</style>
+<div class="card shadow" id="myDiv">
+	<div class="card-header">
+		<h4 class="mb-0"> نمایش استعلام قبض آب</h4>
+	</div>
+	<div class="card-body">
+
+		<form method="POST" action="/Mobile/PayGabz/result">
+			<div class="row">
+				<div class="table-responsive">
+					<div class="form-group justify-content-center ">
+						<p style="direction: ltr; display: none;" id="Water">@ViewBag.result</p>
+						@if (ViewBag.Msg != null)
+						{
+							<div class="text-center">
+								<p class="alert alert-danger">@ViewBag.Msg</p>
+							</div>
+						}
+						<input asp-for="amount" class="d-none">
+						<input asp-for="bill_id2" class="d-none">
+						<input asp-for="pay_id2" class="d-none">
+						<input class="d-none" asp-for="Titel" value="آب">
+
+						<div class="col-xl-12 col-lg-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="basic-form">
+										<div class="form-group">
+											<div class="col-12 row">
+
+												<div class="col-6">
+													<label class="text-label">
+														شناسه قبض:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="bill_id">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														شناسه پرداخت:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="pay_id">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														مبلغ :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="amount2">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														نام مالک :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="owner_name">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														استان :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="province">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														کل مصرف :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="total_consumption">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														بدهی قبلی :
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="previous_debt">
+													</p>
+												</div>
+
+												<div class="col-6">
+													<label class="text-label">
+														مدت به روز:
+													</label>
+												</div>
+												<div class="col-6">
+													<p id="total_day">
+													</p>
+												</div>
+
+												<div class="col-7">
+													<label class="text-label">
+														تاریخ صورت حساب :
+													</label>
+												</div>
+												<div class="col-5">
+													<p id="bill_exportation_date">
+													</p>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-end ">
+								<button type="submit" class="btn btn-success col-12 mt-1 mb-1"
+									style="width: min-content;">
+									پرداخت
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+		</form>
+	</div>
+</div>
+
+<script>
+
+	var str = document.getElementById('Water').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+	var res = str.split(",");
+
+	var bill_id = res[1].split(":");
+	document.getElementById('bill_id2').value = "" + bill_id[1];
+	var bill_id = res[1].split(":");
+	document.getElementById('bill_id').innerText = "" + bill_id[1];
+
+
+	var pay_id = res[2].split(":");
+	document.getElementById('pay_id2').value = "" + pay_id[1];
+	var pay_id = res[2].split(":");
+	document.getElementById('pay_id').innerText = "" + pay_id[1];
+
+	var amount = res[2].split(":");
+	document.getElementById('amount').value = "" + amount[1];
+	var amount = res[3].split(":");
+	document.getElementById('amount2').innerText = "" + amount[1];
+
+	var file_number = res[4].split(":");
+	document.getElementById('file_number').innerText = "" + file_number[1];
+
+	var owner_name = res[5].split(":");
+	document.getElementById('owner_name').innerText = "" + owner_name[1];
+
+	var province = res[6].split(":");
+	document.getElementById('province').innerText = "" + province[1];
+
+	var unit_count = res[7].split(":");
+	document.getElementById('unit_count').innerText = "" + unit_count[1];
+
+	var previous_date = res[8].split(":");
+	var timestamp = parseInt(previous_date[1]);
+	let mydate = new Date(timestamp);
+	let mypersiandate = mydate.toLocaleDateString('fa-IR');
+	document.getElementById('previous_date').innerText = "" + mypersiandate;
+
+	var current_date = res[9].split(":");
+	var timestamp1 = parseInt(current_date[1]);
+	let mydate1 = new Date(timestamp1);
+	let mypersiandate1 = mydate1.toLocaleDateString('fa-IR');
+
+	document.getElementById('current_date').innerText = "" + mypersiandate1;
+
+	var previous_number = res[10].split(":");
+	document.getElementById('previous_number').innerText = "" + previous_number[1];
+
+
+	var current_number = res[11].split(":");
+	document.getElementById('current_number').innerText = "" + current_number[1];
+
+	var total_consumption = res[12].split(":");
+	document.getElementById('total_consumption').innerText = "" + total_consumption[1];
+
+	var previous_debt = res[13].split(":");
+	document.getElementById('previous_debt').innerText = "" + previous_debt[1];
+
+	var total_day = res[14].split(":");
+	document.getElementById('total_day').innerText = " " + total_day[1];
+
+	var bill_exportation_date = res[15].split(":");
+	var timestamp2 = parseInt(bill_exportation_date[1]);
+	let mydate2 = new Date(timestamp2);
+	let mypersiandate2 = mydate2.toLocaleDateString('fa-IR');
+	document.getElementById('bill_exportation_date').innerText = " " + mypersiandate2;
+
+</script>
+
+<script>
+	function print() {
+		var printContents = document.getElementById('myDiv').innerHTML;
+		var originalContents = document.body.innerHTML;
+
+		document.body.innerHTML = printContents;
+
+		window.print();
+
+		document.body.innerHTML = originalContents;
+	}
+</script>

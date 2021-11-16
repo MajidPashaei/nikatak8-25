@@ -1,0 +1,56 @@
+<br>
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <!-- Checkout Wrapper-->
+    <div class="checkout-wrapper-area py-3">
+      <!-- Billing Address-->
+      <div class="billing-information-card mb-3">
+        <div class="card billing-information-title-card bg-primary">
+          <div class="card-body">
+            <h6 class="text-center mb-0 text-white"> نمایش جزییات تراکنش </h6>
+          </div>
+        </div>
+        <div class="card user-data-card">
+          <div class="card-body"> 
+			  
+            @if (ViewBag.id != null)
+            {
+                @foreach (var item in ViewBag.id)
+                {                                  
+            		<div class="single-profile-data d-flex align-items-center justify-content-between">
+            		  <div class="title d-flex align-items-center"><span>شناسه تراکنش :</span></div>
+            		  <div class="data-content">@item.Id</div>
+            		</div>
+            		<div class="single-profile-data d-flex align-items-center justify-content-between">
+            		  <div class="title d-flex align-items-center"><span>نوع تراکنش :</span></div>
+            		  <div class="data-content">@item.Type_Request</div>
+            		</div>
+            		<div class="single-profile-data d-flex align-items-center justify-content-between">
+            		  <div class="title d-flex align-items-center"><span>عنوان تراکنش :</span></div>
+            		  <div class="data-content">@item.Titel_Request</div>
+            		</div>
+            		<div class="single-profile-data d-flex align-items-center justify-content-between">
+            		  <div class="title d-flex align-items-center"><span>شناسه قبض : </span></div>
+            		  <div class="data-content">@item.Bill_Id</div>
+            		</div>
+            		<div class="single-profile-data d-flex align-items-center justify-content-between">
+            		  <div class="title d-flex align-items-center"><span>شناسه پرداخت : </span></div>
+            		  <div class="data-content">@item.Pay_Id</div>
+            		</div>
+            		<div class="single-profile-data d-flex align-items-center justify-content-between">
+            		  <div class="title d-flex align-items-center"><span>مبلغ : </span></div>
+            		  <div class="data-content">@item.Amountst  تومان</div>
+            		</div>
+            		<div class="single-profile-data d-flex align-items-center justify-content-between">
+            		  <div class="title d-flex align-items-center"><span>تاریخ : </span></div>
+            		  <div class="data-content">@item.Date1</div>
+            		</div>
+				}
+			}
+          </div>
+        </div>
+      </div>
+	</div>
+  </div>
+</div>

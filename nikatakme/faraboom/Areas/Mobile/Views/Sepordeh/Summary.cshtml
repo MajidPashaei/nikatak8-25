@@ -1,0 +1,20 @@
+@model ViewModels.AdminViewModel.Sepordeh.Vm_ShowSummary;
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> خلاصه صورتحساب روزانه سپرده
+        </h2>
+    </div>
+    <form action="/Admin/Sepordeh/ShowSummary" method="POST">
+        <div class="card-body col-md-12">
+            <h2 class="mb-0"> شماره سپرده : </h2>
+            <input type="text" class="form-control" asp-for="deposit_number"
+                placeholder=" شماره سپرده را وارد کنید">
+            <button type="submit" class="btn btn-success  mt-3 mb-1" style="width: min-content;">دریافت
+                اطلاعات حساب
+            </button>
+            <a href="~/Admin/Sepordeh/Index" class="btn btn-success mt-3 mb-1" style="width: min-content;">
+                بازگشت
+            </a>
+        </div>
+    </form>
+</div>

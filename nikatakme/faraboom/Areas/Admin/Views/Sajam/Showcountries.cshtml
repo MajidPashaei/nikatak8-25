@@ -1,0 +1,57 @@
+
+@{
+    Layout = "_Layout4" ;
+}
+<div class="card shadow ">
+    <div class="card-header ">
+        <h2 class="mb-0"> لیست کشور ها </h2>
+    </div>
+    <div class="card-body col-md-12 text-center ">
+        <p id="S_C">@ViewBag.result</p>
+        <div class="">
+            @* <table class="table table-responsive">
+                <thead class="bg-primary">
+                    <tr>
+                        <th class="bg-info">نام کشور :</th>
+                        <th> ایران </th>
+                        <th> چین </th>
+                        <th> عراق </th>
+                        <th> افغانستان</th>
+                        <th> پاکستان </th>
+                        <th> ترکیه </th>
+                        <th> آلمان </th>
+                    </tr>
+                </thead>
+                <tbody class="bg-primary">
+                    <tr>
+                        <th class="bg-info"> کد کشور :</th>
+                        <th> 1 </th>
+                        <th> 2 </th>
+                        <th> 3 </th>
+                        <th> 123126 </th>
+                        <th> 123128 </th>
+                        <th> 123130 </th>
+                        <th> 123137 </th>
+                    </tr>
+                </tbody>
+            </table> *@
+        </div>
+        <a href="~/Admin/Sajam/Index" class="btn btn-success mt-3 mb-1" style="width: min-content;">
+            بازگشت
+        </a>
+    </div>
+</div>
+
+<script>
+    debugger
+    
+    var str = document.getElementById('S_C').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+    var res = str.split(",");
+
+    var data = res[1].split(":");
+    document.getElementById('data').innerText = "" + data[2];
+
+    var name = res[2].split(":");
+    document.getElementById('name').innerText = "" + name[1];
+
+</script>

@@ -1,0 +1,70 @@
+<!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+  <!-- DataTable starts -->
+  @if (ViewBag.er != null)
+  {
+  <p class="alert alert-success">@ViewBag.er</p>
+  }
+  <div class="table-responsive">
+    <table class="table data-list-view">
+      <thead>
+        <tr>
+          <th></th>
+          <th>ردیف</th>
+          <th> عنوان محصول </th>
+          <th>شماره فاکتور </th>
+         
+          <th> قیمت </th>
+          <th> تعداد</th>
+          <th> جمع کل</th>
+
+          
+        </tr>
+      </thead>
+      <tbody>
+        @if ( ViewBag.listp != null)
+        {
+
+        int i=1;
+        @foreach (var item in ViewBag.listp)
+        {
+
+        <tr>
+          <td></td>
+          <td class="product-category"> @i</td>
+          <td class="product-name">@item.product_Name</td>
+          <td class="product-category">@item.Id_Order</td>
+
+          <td class="product-category">@item.product_Price </td>
+          <td class="product-category">@item.Product_Count</td>
+
+          <td class="product-category">@item.Total_sum </td>
+
+         
+        </tr>
+i++;
+        }
+
+        }
+
+
+
+
+
+
+
+
+      </tbody>
+    </table>
+  </div>
+  <!-- DataTable ends -->
+
+  <!-- add new sidebar starts -->
+
+  <!-- add new sidebar ends -->
+</section>
+<!-- Data list view end -->
+<p class="alert alert-info text-center" style="color: black !important;">جمع کل: @ViewBag.sum</p>
+<div class="text-center">
+
+</div>

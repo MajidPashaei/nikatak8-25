@@ -1,0 +1,119 @@
+@{
+	Layout = "_Layout";
+}
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> دریافت جزییات آدرس براساس کدپستی
+        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <p id="S_D" class="d-none">@ViewBag.result</p>
+        @if (ViewBag.Msg != null)
+        {
+            <div class="text-center">
+                <p class="alert alert-danger">@ViewBag.Msg</p>
+            </div>
+        }
+        <table class="table table-hover">
+            <thead class="bg-primary">
+                <tr>
+                    <th> استان : </th>
+                    <th> شهرستان : </th>
+                    <th> شهر : </th>
+                    <th> روستا : </th>
+                    <th> کوی : </th>
+                    <th> خیابان : </th>
+                    <th> کوچه : </th>
+                </tr>
+            </thead>
+            <tbody class="bg-white">
+                <tr>
+                    <th id="province"> </th>
+                    <th id="locality_name"> </th>
+                    <th id="town_ship"> </th>
+                    <th id="village"> </th>
+                    <th id="sub_locality"> </th>
+                    <th id="street"> </th>
+                    <th id="street2"> </th>
+                </tr>
+            </tbody>
+            <thead class="bg-primary">
+                <tr>
+                    <th> طبقه : </th>
+                    <th> طبقه جانبی : </th>
+                    <th> شناسه ردیابی : </th>
+                    <th> کد محله :</th>
+                    <th> شماره خانه : </th>
+                    <th> کد پستی : </th>
+                    <th> توضیحات : </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th id="floor"> </th>
+                    <th id="side_floor"> </th>
+                    <th id="trace_id"> </th>
+                    <th id="locality_code"> </th>
+                    <th id="house_number"> </th>
+                    <th id="zip_code"> </th>
+                    <th id="description"> </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <a href="/Kasabeyar/Makan/index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+            بازگشت
+        </a>
+    </div>
+</div>
+
+<script>
+    debugger
+
+    var str = document.getElementById('S_D').innerText.replace("{", "").replace(' \" ', '').replace("}", "").replace("}", "").replace("}", "").split('"').join('').replace("]", "");
+    var res = str.split(",");
+
+    var description = res[1].split(":");
+    document.getElementById('description').innerText = "" + description[1];
+
+    var floor = res[2].split(":");
+    document.getElementById('floor').innerText = "" + floor[1];
+
+    var house_number = res[3].split(":");
+    document.getElementById('house_number').innerText = "" + house_number[1];
+
+    var locality_code = res[4].split(":");
+    document.getElementById('locality_code').innerText = "" + locality_code[1];
+
+    var locality_name = res[5].split(":");
+    document.getElementById('locality_name').innerText = "" + locality_name[1];
+
+    var zip_code = res[6].split(":");
+    document.getElementById('zip_code').innerText = "" + zip_code[1];
+
+    var province = res[7].split(":");
+    document.getElementById('province').innerText = "" + province[1];
+
+    var side_floor = res[8].split(":");
+    document.getElementById('side_floor').innerText = "" + side_floor[1];
+
+    var street = res[9].split(":");
+    document.getElementById('street').innerText = "" + street[1];
+
+    var street2 = res[10].split(":");
+    document.getElementById('street2').innerText = "" + street2[1];
+
+    var sub_locality = res[11].split(":");
+    document.getElementById('sub_locality').innerText = "" + sub_locality[1];
+
+    var town_ship = res[12].split(":");
+    document.getElementById('town_ship').innerText = "" + town_ship[1];
+
+    var trace_id = res[13].split(":");
+    document.getElementById('trace_id').innerText = "" + trace_id[1];
+
+    var village = res[14].split(":");
+    document.getElementById('village').innerText = "" + village[1];
+
+</script>

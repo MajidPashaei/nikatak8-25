@@ -1,0 +1,46 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> خدمات بیمه درمانی و کرونا </h2>
+    </div>
+    <div class="card-body">
+        <form action="" method="POST">
+            <div class="row ">
+                <div class="col-12 col-xl-6 col-lg-6">
+                    <div class="form-group col-12">
+                        <h2 class="mb-0"> تعداد افراد : </h2>
+                        <input type="text" class="form-control" placeholder="تعداد افراد را وارد کنید:">
+                    </div>
+
+                    <div class="form-group col-12">
+                        <h2 class="mb-0"> بیمه گر پایه : </h2>
+                        <input type="text" class="form-control" placeholder="نام بیمه گر پایه را وارد کنید:">
+                    </div>
+
+                </div>
+                <div class="col-12 col-xl-6 col-lg-6">
+
+                    <div class="form-group col-12">
+                        <h2 class="mb-0"> بازه سنی : </h2>
+                        <select type="number" class="form-control mt-1">
+                            <option value=""> </option>
+                            <option value="1">1 تا 15 </option>
+                            <option value="2"> 16 تا 30</option>
+                            <option value="3">30 تا 60</option>
+                            <option value="4">60 به بالا</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="">
+                <button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+                </button>
+                <a href="~/Admin/Bimeh/index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                    بازگشت
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

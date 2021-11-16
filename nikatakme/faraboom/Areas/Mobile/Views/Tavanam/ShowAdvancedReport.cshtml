@@ -1,0 +1,55 @@
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0">نمایش گزارش پیشرفته اعتبار سنجی
+        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <p id="S_AR" class="d-none">@ViewBag.result</p>
+
+        <p id="reason_codes"></p>
+        <p id="rate"></p>
+        <p id="report_file"></p>
+        <p id="report_data"></p>
+        @* <p id="rank"></p> *@
+        <p id="description"></p>
+        <p id="score_comments"></p>
+    </div>
+    
+                <br>
+                <br>
+                <br>
+                <br>
+    <a href="~/Admin/Tavanam/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+        بازگشت
+    </a>
+</div>
+
+
+
+<script>
+    debugger
+    var str = document.getElementById('S_AR').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+    var res = str.split(",");
+
+    var reason_codes = res[1].split(":");
+    document.getElementById('reason_codes').innerText = "" + reason_codes[1];
+
+    var rate = res[2].split(":");
+    document.getElementById('rate').innerText = "" + rate[1];
+
+    var report_file = res[3].split(":");
+    document.getElementById('report_file').innerText = "" + report_file[1];
+
+    var report_data = res[4].split(":");
+    document.getElementById('report_data').innerText = "" + report_data[1];
+
+    var rank = res[5].split(":");
+    document.getElementById('rank').innerText = "" + rank[1];
+
+    var description = res[6].split(":");
+    document.getElementById('description').innerText = "" + description[1];
+
+    var score_comments = res[7].split(":");
+    document.getElementById('score_comments').innerText = "" + score_comments[1];
+
+</script>

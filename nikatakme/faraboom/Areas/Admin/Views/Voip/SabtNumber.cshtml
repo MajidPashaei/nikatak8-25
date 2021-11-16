@@ -1,0 +1,81 @@
+@{
+    Layout = "_Layout4" ;
+}
+@model ViewModels.AdminViewModel.Voip.Vm_VoipNumber
+<Form method="POST" action="/Admin/Voip/CheckNum" enctype="multipart/form-data" autocomplete="off">
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> ثبت شماره کاربر </h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+            <div class="container row">
+			    <div class="form-group col-4">
+			    	<h3 class="mb-0 mt-3"> استان را انتخاب کنید :</h3>
+			    	<center>
+                        <select asp-for="Ostan" class="form-control" style="width: 100%;" required>
+                            <option value=""> </option>
+                            <option value="آذربایجان شرقی">آذربایجان شرقی</option>
+                            <option value="آذربایجان غربی">آذربایجان غربی</option>
+                            <option value="تهران">تهران</option>
+                            <option value="کردستان">کردستان</option>
+                            <option disabled value="البرز">البرز ( درحال بروز رسانی ) </option>
+                            <option disabled value="اردبیل">اردبیل ( درحال بروز رسانی ) </option>
+                            <option disabled value="اصفهان">اصفهان ( درحال بروز رسانی ) </option>
+                            <option disabled value="ایلام">ایلام ( درحال بروز رسانی ) </option>
+                            <option disabled value="بوشهر">بوشهر ( درحال بروز رسانی ) </option>
+                            <option disabled value="چهارمحال و بختیاری">چهارمحال و بختیاری ( درحال بروز رسانی ) </option>
+                            <option disabled value="خراسان جنوبی">خراسان جنوبی ( درحال بروز رسانی ) </option>
+                            <option disabled value="خراسان رضوی">خراسان رضوی ( درحال بروز رسانی ) </option>
+                            <option disabled value="خراسان شمالی">خراسان شمالی ( درحال بروز رسانی ) </option>
+                            <option disabled value="خوزستان">خوزستان ( درحال بروز رسانی ) </option>
+                            <option disabled value="زنجان">زنجان ( درحال بروز رسانی ) </option>
+                            <option disabled value="سمنان">سمنان ( درحال بروز رسانی ) </option>
+                            <option disabled value="سیستان و بلوچستان">سیستان و بلوچستان ( درحال بروز رسانی ) </option>
+                            <option disabled value="فارس">فارس ( درحال بروز رسانی ) </option>
+                            <option disabled value="قزوین">قزوین ( درحال بروز رسانی ) </option>
+                            <option disabled value="قم">قم ( درحال بروز رسانی ) </option>
+                            <option disabled value="کرمان">کرمان ( درحال بروز رسانی ) </option>
+                            <option disabled value="کرمانشاه">کرمانشاه ( درحال بروز رسانی ) </option>
+                            <option disabled value="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد ( درحال بروز رسانی ) </option>
+                            <option disabled value="گلستان">گلستان ( درحال بروز رسانی ) </option>
+                            <option disabled value="گیلان">گیلان ( درحال بروز رسانی ) </option>
+                            <option disabled value="لرستان">لرستان ( درحال بروز رسانی ) </option>
+                            <option disabled value="مازندران">مازندران ( درحال بروز رسانی ) </option>
+                            <option disabled value="مرکزی">مرکزی ( درحال بروز رسانی ) </option>
+                            <option disabled value="هرمزگان">هرمزگان ( درحال بروز رسانی ) </option>
+                            <option disabled value="همدان">همدان ( درحال بروز رسانی ) </option>
+                            <option disabled value="یزد">یزد ( درحال بروز رسانی ) </option>
+                        </select>
+			    	</center>
+			    	<h3 class="mb-0 mt-3"> نوع شماره را انتخاب کنید :</h3>
+			    	<center>
+                        <select asp-for="Type" class="form-control" style="width: 100%;" required>
+                            <option value=""> </option>
+                            <option value="معمولی">معمولی</option>
+                            <option value="برنزی">برنزی</option>
+                            <option value="نقره ای">نقره ای</option>
+                            <option value="طلایی">طلایی</option>
+                        </select>
+			    	</center>
+			    	<h3 class="mb-0 mt-3"> نوع انتخاب شماره را تعیین کنید :</h3>
+			    	<center>
+                        <select asp-for="SelectVoip" class="form-control" style="width: 100%;" required>
+                            <option value=""> </option>
+                            <option value="پیشنهادی">پیشنهادی</option>
+                            <option value="انتخابی">انتخابی</option>
+                        </select>
+			    	</center>
+                    <input class="d-none" type="text" asp-for="UserId" value="@ViewBag.user">
+                </div>
+			</div>
+		</div>
+        <div class="row ml-5">
+            <button type="submit" class="btn btn-success btn-lg mt-1 mb-1"> ثبت </button>
+			<a href="/Admin/Voip/Index" class="btn btn-success btn-lg mt-1 mb-1" style="width: min-content;">
+				بازگشت
+			</a>
+        </div>
+	</div>
+</div>
+</Form>

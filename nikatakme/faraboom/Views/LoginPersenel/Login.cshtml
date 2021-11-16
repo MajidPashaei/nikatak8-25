@@ -1,0 +1,130 @@
+
+@model ViewModels.AdminViewModel.User.Vm_User;
+<!DOCTYPE html>
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>نیکاتک</title>
+    <!-- External CSS -->
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/bootstrap-rtl.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/fonts.css">
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="~/login/login-one/images/fev.png">
+
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="~/login/login-one/css/login-one.css">
+
+</head>
+
+<body>
+
+    <!-- Loader -->
+ 
+    <!-- Login page -->
+    <div class="login_wrapper">
+        <div class="container">
+            <div class="col-md-12 pad-0" style="opacity: 90%;">
+                <div class="row login-box-12">
+                    <div class="col-lg-5 col-md-12 col-sm-12 px-0">
+                        <div class="login_left">
+                            <a href="#" class="logo_text">
+                                @* <span>JL</span> جاست لاگ *@
+                                <img style="opacity: 100% !important;" src="~/login/login-one/images/Nikatek.png"
+                                    alt="Simply Easy Learning"> </a>
+                            <p>تکنولوژی هوشمند نیکاتک</p>
+                            <a href="~/loginPersenel/RegisterAgency" class="btn-outline"> ثبت نام پرسنل </a>
+                       
+                    
+                      @* <p class="alert alert-warning mt-5" style="font-size: medium;" >
+                       
+                زمان ثبت نام به اتمام رسیده است منتظر اطلاعیه های بعدی ما باشید
+                        </p> *@
+
+                     
+                            <br>
+                            
+                            @* <ul class="social-list clearfix">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul> *@
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-sm-12">
+                        <div class="login-inner-form">
+                            <div class="details">
+                                <p> ورود <span>به حساب کاربری</span></p>
+                                @if (ViewBag.eror!=null)
+                                 {
+                                    <p class="alert alert-danger">@ViewBag.eror</p>
+                                 }
+
+                                @if (ViewBag.msg  != null)
+					{
+					<p class="alert alert-success text-center">@ViewBag.msg</p>
+					}
+                    
+					@* else if (ViewBag.msg == "اطلاعات فردی با این کد ملی قبلا ثبت شده است")
+					{
+					<p class="alert alert-danger text-center">@ViewBag.msg</p>
+					} *@
+                                
+                                <form method="post" action="/LoginPersenel/login_check">
+                                    <div class="form-group">
+                                        <input type="" asp-for="UserNameUs" class="input-text" placeholder="نام کاربری" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" asp-for="PasswordUs" class="input-text" placeholder="رمزعبور" required>
+                                    </div>
+                                    <div class="checkbox clearfix">
+                                        <div class="form-check checkbox-theme">
+                                            <div class="form-group">
+                                
+                                   <img src="/login/GetCaptchaImage" alt="">
+                                   <input type="text" asp-for="Captcha"  placeholder=" کد امنیتی   " required>
+                                </div>
+                                            <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                                            <label class="form-check-label" for="rememberMe">
+                                                مرا به خاطر بسپار
+                                            </label>
+                                        </div>
+                                        <a href="/login/forgotpass">فراموشی رمزعبور</a>
+                                    </div>
+                                    <div class="form-group">
+                                        <button  type="submit"
+                                            class="btn-md btn-theme btn-block">ورود</button>
+                                    </div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /. Login page -->
+
+
+    <!-- External JS libraries -->
+    <script src="~/login/assets/js/jquery-2.2.0.min.js"></script>
+    <script src="~/login/assets/js/popper.min.js"></script>
+    <script src="~/login/assets/js/bootstrap.min.js"></script>
+    <!-- Custom JS Script -->
+    <script type="text/javascript">
+        $(window).load(function () {
+            // Animate loader off screen
+            $(".loader").fadeOut("slow");;
+        });
+    </script>
+
+</body>
+
+</html>

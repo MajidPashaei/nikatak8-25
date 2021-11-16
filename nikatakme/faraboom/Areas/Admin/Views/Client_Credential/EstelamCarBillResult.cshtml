@@ -1,0 +1,126 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<div class="card shadow" id="myDiv">
+	<div class="card-header">
+		<h2 class="mb-0"> نمایش استعلام بدهی خلافی خودرو و موتورسیکلت </h2>
+	</div>
+	@* <form method="POST" action="/Admin/Gabz/Pardakht"> *@
+	<form method="POST" action="/Admin/Gabz/PardakhtTe">
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<p style="direction: rtl; display: none;" id="Violation">@ViewBag.result</p>
+						@if (ViewBag.Msg != null)
+						{
+							<div class="text-center">
+								<p class="alert alert-danger">@ViewBag.Msg</p>
+							</div>
+						}
+						<table class="table table-hover">
+							<thead class="bg-info">
+								<tr>
+									<th> شماره پلاک : </th>
+									<th> مبلغ کل جریمه: </th>
+								</tr>
+							</thead>
+							<tbody class="bg-white">
+								<tr>
+									<th>@ViewBag.Pelak</th>
+									<th>@ViewBag.AmountPay</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div>
+					<div class="d-flex justify-content-end ">
+
+						@* <button type="submit" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+							پرداخت
+							</button> *@
+						<a href="#" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+							پرداخت
+						</a>
+
+						<a onclick="print();" class="btn btn-success  mt-1 mb-1" style="width: min-content;">
+							چاپ
+						</a>
+						<a href="/admin/Enteghal/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+							بازگشت
+						</a>
+					</div>
+				</div>
+				<div class="table-responsive">
+					<div class="form-group justify-content-center ">
+						<p style="direction: ltr; display: none;" id="Violation">@ViewBag.result</p>
+						<table class="table table-hover">
+							<thead class="bg-primary">
+								<tr>
+									<th> ردیف: </th>
+									<th> جرئیات : </th>
+									<th> مبلغ جریمه :</th>
+									<th> شناسه قبض: </th>
+									<th> شهر: </th>
+									<th> تاریخ: </th>
+									<th> نوع جریمه :</th>
+									<th> محل جریمه : </th>
+									<th> شناسه پرداخت :</th>
+									<th> عملیات </th>
+								</tr>
+							</thead>
+							<tbody>
+								@if (ViewBag.Result != null)
+								{
+									int i = 1;
+									foreach (var item in ViewBag.Result)
+									{
+										<tr>
+											<th> @i </th>
+											<th> @item.Type </th>
+											<th> @item.Amount</th>
+											<th> @item.BillId </th>
+											<th> @item.City </th>
+											<th> @item.Date </th>
+											<th> @item.DeliveryType</th>
+											<th> @item.Location </th>
+											<th>@item.PayId</th>
+											<th>
+												@* <a
+													href="/admin/paygabz/payjarime?billid=@item.BillId&payid=@item.PayId&amount=@item.Amount"
+													class="btn btn-primary" >پرداخت </a> *@
+												<a href="#" class="btn btn-primary">پرداخت </a>
+											</th>
+										</tr>
+										i++;
+									}
+								}
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<br>
+		</div>
+	</form>
+</div>
+
+<script>
+	function print() {
+		var printContents = document.getElementById('myDiv').innerHTML;
+		var originalContents = document.body.innerHTML;
+		document.body.innerHTML = printContents;
+		window.print();
+		document.body.innerHTML = originalContents;
+	}
+
+</script>
+
+<script>
+	function test(a, b, c) {
+		$.ajax({
+			url: '/admin/gabz/pardakht1?bill_id2=' + a + '&&pay_id2=' + b + '&&amount=' + c,
+			type: 'POST',
+		});
+	}
+</script>

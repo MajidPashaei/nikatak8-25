@@ -1,0 +1,52 @@
+@{
+    var item = ViewBag.result ;
+}
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش گزارش اعتبار سنجی
+        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+		<P class="d-none">
+			@ViewBag.res
+		</P>
+        @if ( ViewBag.Msg != null )
+        {
+			<div>
+				<p class="alert alert-danger">
+					@ViewBag.Msg
+				</p>
+			</div>
+		}
+        <div class="table-responsive">
+            <div class="form-group justify-content-center ">
+                @if( ViewBag.result != null )
+                {
+                    <table class="table table-hover">
+                        <thead class="bg-primary ">
+                            <tr>
+                                <th>شرح</th>
+                                <th>امتیاز</th>
+                                <th>رتبه</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr>
+                                <th>@item.Description</th>
+                                <th>@item.Rate</th>
+                                <th>@item.Rank</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                <div class="text-right">
+                    <h1 class="ml-3 mr-3 mt-3">علت :</h1>
+                    <p class="ml-5 mr-5">@item.ReasonCodes</p>
+                </div>
+                }
+            </div>
+            <a href="/Admin/Tavanam/Step1" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                بازگشت
+            </a>
+        </div>
+    </div>
+</div>

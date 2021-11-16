@@ -1,0 +1,71 @@
+<div class="card shadow" id="myDiv">
+	<div class="card-header">
+		<h2 class="mb-0"> نمایش استعلام دسته ای بدهی قبض تلفن</h2>
+		<div class="card-body">
+			<div class="row">
+				<div class="table-responsive">
+					<div class="form-group justify-content-center ">
+						<p style="direction: ltr; display: none;" id="G_P">@ViewBag.result</p>
+						<table class="table table-hover">
+							<thead class="bg-primary ">
+								<tr>
+									<th>ردیف</th>
+									<th> شناسه قبض:</th>
+									<th> شناسه پرداخت: </th>
+									<th>مبلغ :</th>
+								</tr>
+							</thead>
+							<tbody class="bg-white">
+								<tr>
+									<th>1</th>
+									<th id="bill_id"> </th>
+									<th id="pay_id"> </th>
+									<th id="amount"> </th>
+								</tr>
+							</tbody>
+						</table> 
+					</div>
+				</div>
+			</div>
+			<div class="d-flex justify-content-end ">
+				<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> پرداخت
+				</button>
+				<a onclick="print();" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> چاپ
+				</a>
+				<a href="~/Admin/Gabz_Charge/Estelam" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+					بازگشت
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+
+	debugger
+	var str = document.getElementById('G_P').innerText.replace("{", "").replace(' \" ', '').replace("}", "").replace("}", "").replace("}", "").split('"').join('').replace("]", "");
+	var res = str.split(",");
+
+	var bill_id = res[2].split(":");
+	document.getElementById('bill_id').innerText = "" + bill_id[1];
+
+	var pay_id = res[3].split(":");
+	document.getElementById('pay_id').innerText = "" + pay_id[1];
+
+	var amount = res[4].split(":");
+	document.getElementById('amount').innerText = "" + amount[1];
+
+</script>
+
+<script>
+	function print() {
+		var printContents = document.getElementById('myDiv').innerHTML;
+		var originalContents = document.body.innerHTML;
+
+		document.body.innerHTML = printContents;
+
+		window.print();
+
+		document.body.innerHTML = originalContents;
+	}
+</script>

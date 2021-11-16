@@ -1,0 +1,55 @@
+.page {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 100%;
+    max-width: 1170px;
+    margin: 0px auto;
+    position: relative;
+    box-shadow: 0px 5px 0 0px rgba(0, 0, 0, 0.3), 0 5px 25px 0 rgba(0, 0, 0, 0.3);
+    background-color: #2d2a53;
+}
+
+body {
+    font-family: "iransans", 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: right;
+    color: #fff;
+    background-color: #44416b;
+}
+
+.fixed-header {
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+    max-width: 1170px;
+}
+
+.fixed-header.visible-title {
+    top: 0;
+}
+
+.fixed-header.visible-title.horizontal-main {
+    box-shadow: 0 8px 20px 0 rgba(40, 37, 89, .6) !important;
+}
+
+.page {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 100%;
+    max-width: 1170px;
+    margin: 0px auto;
+    position: relative;
+    box-shadow: 0px 5px 0 0px rgba(0, 0, 0, 0.3), 0 5px 25px 0 rgba(0, 0, 0, 0.3);
+    background-color: #2d2a53;
+}

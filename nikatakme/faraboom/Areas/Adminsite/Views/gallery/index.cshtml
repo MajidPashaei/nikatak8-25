@@ -1,0 +1,125 @@
+<!-- Basic Select2 start -->
+@model ViewModels.AdminViewModel.Gallery.Vm_Gallery
+
+
+
+
+<form action="/adminsite/gallery/add" method="POST" enctype="multipart/form-data">
+<section class="basic-select2">
+  <div class="row">
+    <div class="col-12">
+      @if (ViewBag.er != null)
+{
+<p class="alert alert-success">@ViewBag.er</p>
+}
+   
+      <div class="card">
+        <div class="card-content">
+          <div class="card-body">
+            <div class="row">
+                <h4 class="card-title"> ثبت تصاویر گالری </h4>
+              <div class="col-12 mb-2">
+              </div>
+         
+              <div class="col-sm-6 col-12">
+                <div class="form-group">
+                  <label for="basicInput">انتخاب زبان </label>
+                  <select class="select2 form-control" asp-for="Language">
+                    <option value="fa">فارسی</option>
+                    <option value="en">انگلیسی</option>
+                    <option value="tr">ترکی</option>
+                    <option value="ar">عربی</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput"> عنوان </label>
+                  <input required  type="text" class="form-control" asp-for="TitleGal" placeholder=" عنوان را وارد کنید">
+                </fieldset>
+              </div>
+
+              
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group">
+                  <div class="col-sm-6 col-12">
+                    <label for="file" class="btn btn-default">انتخاب تصویر اصلی</label>
+                    <input required asp-for="img" type="file" accept="image/*" onchange="preview_image(event)">
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group text-center ">
+                  <img id="output_image" src="~/app-assets/images/icons/default.jpg" height=150px width=150px>
+                </fieldset>
+              </div>
+            
+              
+            
+  <div class="col-sm-12 col-12">
+<div class="grid-x grid-padding-x">
+  <div class="small-10 small-offset-1 medium-8 medium-offset-2 cell">
+    <h1></h1>
+   
+      <p>
+        <label for="upload_imgs" class="btn btn-outline-primary">   انتخاب عکس ها اضافی</label>
+        <input required class="show-for-sr" type="file" asp-for="upload_imgs"  multiple/>
+      </p>
+      <div class="quote-imgs-thumbs quote-imgs-thumbs--hidden" id="img_preview" aria-live="polite"></div>
+      @* <p>
+        <input class="btn btn-primary  " type="submit" name="submit" value=" بارگزاری تصاویر"/>
+      </p> *@
+   
+  </div>
+</div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+              <div class="col-sm-12 col-12">
+                <fieldset style="text-align: left;"
+                  class="form-group position-relative has-icon-left input-divider-left">
+                  <button type="submit" class="btn btn-success mr-1 mb-1">ثبت</button>
+                  <button type="button" class="btn btn-danger mr-1 mb-1">لغو</button>
+                </fieldset>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Basic Select2 end -->
+</form>
+
+
+<script>
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output_image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.4-rc1/css/foundation.css'>
+      <link rel="stylesheet" href="~/adminsite/style.css">
+      <link rel="stylesheet" type="text/css" href="~/adminsite/Css-Js-UpMultiImg/style.css">
+
+      <!-- partial:index.partial.html -->
+
+
+      <script src="~/adminsite/Css-Js-UpMultiImg/script.js"></script>

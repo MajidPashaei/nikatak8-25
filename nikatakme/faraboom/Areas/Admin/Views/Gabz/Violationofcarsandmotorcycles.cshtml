@@ -1,0 +1,24 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> استعلام بدهی خلافی خودرو و موتورسیکلت </h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-12">
+				<form action="/Admin/Gabz/Showcarandmotorcycleinfringementdebtinquiries" method="POST">
+					<div class="form-group">
+						<h2 class="mb-0"> بارکد 8 یا 9 رقمی پشت کارت خوردرو :</h2>
+						<input type="text" class="form-control"
+							placeholder=" بارکد 8 یا 9 رقمی پشت کارت خوردرو " required asp-for="Violation">
+					</div>
+					<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+					</button>
+					<a href="~/admin/Gabz_Charge/Index_khalafi" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+						بازگشت
+					</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

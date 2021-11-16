@@ -1,0 +1,106 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+
+<style>
+    th
+    {
+        font-weight: normal;
+        font-size: 14px;
+    }
+</style>
+
+<br>
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <!-- Checkout Wrapper-->
+    <div class="checkout-wrapper-area py-3">
+      <!-- Billing Address-->
+      <div class="billing-information-card mb-3">
+        <div class="card billing-information-title-card bg-primary">
+          <div class="card-body">
+            <p class="text-center mb-0 text-white"> نمایش استعلام بدهی خلافی خودرو و موتورسیکلت </p>
+          </div>
+        </div>
+        <div class="card user-data-card">
+          <div class="card-body">  
+
+
+        @if (@ViewBag.msg != null)
+        {
+            <br>
+            <p class="alert alert-danger text-center">@ViewBag.msg</p>
+            <br>
+            <br>
+            <br>
+        }
+         else
+        { 
+
+            
+		    <table class="table table-hover">
+               <thead class="">
+                   <tr class="bg-info text-center">
+                       <th class="text-light"> شماره پلاک : </th>
+                       <th class="text-light"> مبلغ کل جریمه: </th>
+                   </tr>
+               </thead>
+               <tbody class="bg-white">
+                   <tr>
+                       <th class="text-dark">@ViewBag.Pelak</th>
+                       <th class="text-dark" id="curency">@ViewBag.AmountPay تومان</th>
+                            <script>
+				                document.getElementById("curency").innerText = document.getElementById("curency").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+				            </script>
+                   </tr>
+               </tbody>
+            </table> 
+
+<br>
+<div class="table-responsive">
+            <table class="table table-hover mt-3">
+                <thead class="bg-info">
+                    <tr>
+                        <th class="text-light">ردیف:</th>
+                        <th class="text-light">جرئیات:</th>
+                        <th class="text-light">مبلغ:</th>
+                        <th class="text-light">شناسه قبض:</th>
+                        <th class="text-light">شهر:</th>
+                        <th class="text-light">تاریخ:</th>
+                        <th class="text-light">نوع جریمه:</th>
+                        <th class="text-light">محل جریمه:</th>
+                        <th class="text-light">شناسه پرداخت:</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white">
+					@if (ViewBag.Result != null)
+					{
+						int i = 1;
+						foreach (var item in ViewBag.Result)
+						{
+                            <tr>
+                                <th class="text-primary"> @i </th>
+                                <th class="text-primary"> @item.Type </th>
+                                <th class="text-primary" id="@i"> @item.Amount</th>
+                                    <script>
+				                        document.getElementById("@i").innerText = document.getElementById("curency").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+				                    </script>
+                                <th class="text-primary"> @item.BillId </th>
+                                <th class="text-primary"> @item.City </th>
+                                <th class="text-primary"> @item.Date </th>
+                                <th class="text-primary"> @item.DeliveryType</th>
+                                <th class="text-primary"> @item.Location </th>
+                                <th class="text-primary"> @item.PayId</th>
+                            </tr>
+                            i++;
+                        }
+                    }
+                </tbody>
+            </table> 
+            </div>
+        }
+        </div>
+       </div>
+      </div>
+    </div>
+   </div>
+</div>

@@ -1,0 +1,35 @@
+<div class=" text-center">
+    <h3 class="text-center">
+        <p style="vertical-align: inherit;">
+        <p style="vertical-align: inherit;">تیزرها و ویدیوها</p>
+        </p>
+        </h1>
+        <br>
+</div>
+<section id="ecommerce-products" class="row">
+    @foreach (var item in ViewBag.Teaser)
+    {
+    <div class="card ecommerce-card col-lg-4 col-xl-4 col-md-4 col-sm-6 col-12"
+        style="background-image:url('../app-assets/images/icons/sidRight1.png')">
+        <div class="card-content alert alert-secondary ">
+            <div class="item-img text-center">
+                <a href="/teaser/details/@item.Id">
+                    <img class=" mt-1  img-fluid" src="~/img.jpg" alt="img-placeholder"
+                    style="border-radius: 50%; width: 150px; height: 150px;">
+                </a>
+            </div>
+            <div class="card-body">
+                <div class="item-wrapper text-center">
+                    <div class="item-rating">
+                        <div class="badge badge-primary badge-md ">
+                           @item.TitleTeaser
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-options text-center ">
+            </div>
+        </div>
+    </div>
+    }
+</section>

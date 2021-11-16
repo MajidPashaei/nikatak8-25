@@ -1,0 +1,231 @@
+@model ViewModels.AdminViewModel.Blog.Vm_Blog
+ @* /////////////////// Editor *@
+ @if (ViewBag.er != null)
+{
+    <p class="alert alert-success">@ViewBag.er</p>
+}
+    <link rel="stylesheet" type="text/css" href="~/adminsite/app-assets/vendors/css/editors/quill/katex.min.css">
+    <link rel="stylesheet" type="text/css" href="~/adminsite/app-assets/vendors/css/editors/quill/monokai-sublime.min.css">
+    <link rel="stylesheet" type="text/css" href="~/adminsite/app-assets/vendors/css/editors/quill/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="~/adminsite/app-assets/vendors/css/editors/quill/quill.bubble.css">
+    <!-- END: Vendor CSS-->
+
+<!-- Basic Select2 start -->
+<section class="basic-select2">
+  <form action="/adminsite/blog/update" method="POST" enctype="multipart/form-data">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> ثبت وبلاگ جدید </h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <div class="row">
+            	<div class="col-12 mb-2">
+            	</div>
+            
+      	<div class="col-sm-6 col-12">
+	        <div class="form-group">
+                      <label for="basicInput">انتخاب زبان  </label>
+				    	<select class="select2 form-control" asp-for="Language">
+						           <option value="fa">فارسی</option>
+	                     <option value="en">انگلیسی</option>
+	                     <option value="tr">ترکی</option>
+	                     <option value="ar">عربی</option>
+					  	</select>
+					</div>
+		    </div>
+     <div class="col-sm-6 col-12">
+	        <div class="form-group">
+                      <label for="basicInput">انتخاب دسته بندی  </label>
+				    	<select class="select2 form-control" asp-items="@ViewBag.list" asp-for="IdCtegoryBlo">
+						           
+					  	</select>
+					</div>
+          <input  value="@Model.Id"  style="display: none;" asp-for="Id">
+         
+		    </div>
+                <div class="col-sm-12 col-12">
+					  <fieldset class="form-group">
+                            <label for="basicInput">عنوان  </label>
+                            <input type="text" class="form-control" asp-for="TitleBLo" placeholder="عنوان  را وارد کنید" required>
+                      </fieldset>
+		        </div>
+
+
+	
+
+            
+                <div class="col-sm-6 col-12">
+					  <fieldset class="form-group">
+                            <label for="basicInput">خلاصه متن  </label>
+                            <textarea required style=" height: 173px;" type="text" class="form-control" asp-for="SummaryBlo" placeholder="خلاصه متن  را وارد کنید"></textarea>
+                      </fieldset>
+		        </div>
+            <div class="col-sm-6 col-12">
+				               <fieldset class="form-group text-center ">
+                             <img id="output_image" src="/fileupload/@Model.ImageMainBlo" height=330px width=355px>
+                       </fieldset>
+
+		        </div>
+
+             <div class="col-sm-6 col-12">
+				       <fieldset class="form-group">
+                     <div class="col-sm-6 col-12">
+                             <label for="file" class="btn btn-default">انتخاب تصویر اصلی</label>
+                             <input  asp-for="file" type="file" accept="image/*" onchange="preview_image(event)" >
+                      </div>
+                      <p class="alert alert-warning">سایز عکس مناسب  355*330 پیکسل است</p>
+                       </fieldset>
+		        </div>
+
+
+                
+
+
+                <div class="col-sm-12 col-12">
+				       
+                <section class="full-editor">
+     <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">توضیحات کامل</h4>
+        </div>
+        <div class="card-content collapse show">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <div id="full-wrapper">
+                  <div id="full-container">
+                    <input type="hidden" id="jdr" asp-for="FullTextBlo"/>
+                    <a onclick="show();"  class="btn btn-info mr-1 mb-1" style="color: white;"> نمایش متن قبلی  </a>
+                     <a onclick="noshow();"  class="btn btn-info mr-1 mb-1" style="color: white;"> مخفی کردن متن قبلی  </a>
+                      <div id="dec" class="display-field" style="display: none;" >
+                       @if (Model.FullTextBlo  == null)
+                       {
+                           <p class="alert alert-danger">متنی ثبت نشده است </p>
+                       }else{
+                          @Html.Raw(Model.FullTextBlo)
+                       }
+                        
+                      </div>
+                     
+                    <div class="editor"  id="description">
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   </form>
+</section>
+
+                <p id="mss" class="alert alert-success" style="display: none;">متن با موفقیت ارسال شد.</p>
+                <p id="mss_danger" class="alert alert-danger" style="display: none;">متنی برای ارسال وجو ندارد.</p>
+
+                            <a onclick="sabt()"  class="btn btn-info mr-1 mb-1" style="color: white;">ارسال  متن </a>
+
+
+
+
+
+
+
+
+
+		             </div>
+
+            <div class="col-sm-12 col-12" >
+				          	  <fieldset class="form-group">
+                            <label for="basicInput">کلمات کلیدی   </label>
+                            <input required type="text" class="form-control" asp-for="KeywordsBlo" placeholder="کلمات کلیدی را وارد کنید">
+                      </fieldset>
+		        </div>
+
+
+
+
+
+                <div class="col-sm-12 col-12">
+				       <fieldset style="text-align: center;" class="form-group mt-4">
+                            <button type="submit"   id="btn" class="btn btn-success mr-1 mb-1">بروزرسانی </button>
+                           
+                       </fieldset>
+		        </div>
+
+	        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Basic editor end -->
+
+    <script src="~/adminsite/app-assets/vendors/js/vendors.min.js"></script>
+   
+    <script src="~/adminsite/app-assets/vendors/js/editors/quill/quill.min.js"></script>
+
+    <script src="~/adminsite/app-assets/js/scripts/editors/editor-quill.min.js"></script>
+<script>
+     function  sabt()
+    
+     {
+     
+      if(document.getElementById("description").innerText != '')
+      {
+        document.getElementById('jdr').value = document.getElementById("description").innerHTML;
+        $('#mss').css("display", "block");
+         
+      }
+       else
+        $('#mss_danger').css("display", "block");
+          
+      
+     }
+
+
+
+
+     function  show()
+    
+     {
+      
+     
+         $('#dec').css("display", "block"); 
+      
+     }
+
+
+
+      function  noshow()
+    
+     {
+      
+     
+         $('#dec').css("display", "none"); 
+      
+     }
+</script>
+
+
+<!-- Basic Inputs end -->
+<script >
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var output = document.getElementById('output_image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>

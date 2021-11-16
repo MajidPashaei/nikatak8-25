@@ -1,0 +1,165 @@
+
+
+@model ViewModels.AdminViewModel.Logo.Vm_Logo
+@if (ViewBag.er != null)
+{
+    <p class="alert alert-success">@ViewBag.er</p>
+}
+<section class="basic-select2">
+  <form action="/adminsite/logo/add" method="POST" enctype="multipart/form-data">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> تنظیمات لوگو و عنوان سایت   </h4>
+        </div>
+            
+        <div class="card-content">
+          <div class="card-body">
+            <div class="row">
+            	<div class="col-12 mb-2">
+            	</div>
+            
+      	<div class="col-sm-6 col-12">
+	        <div class="form-group">
+                      <label for="basicInput">انتخاب زبان  </label>
+				    	<select class="select2 form-control" asp-for="Language">
+						           <option value="fa">فارسی</option>
+	                     <option value="en">انگلیسی</option>
+	                     <option value="tr">ترکی</option>
+	                     <option value="ar">عربی</option>
+					  	</select>
+					</div>
+		    </div>
+
+                <div class="col-sm-6 col-12">
+					  <fieldset class="form-group">
+                            <label for="basicInput">عنوان سایت </label>
+                            <input type="text" class="form-control" asp-for="TitleLogo" placeholder="عنوان سایت را وارد کنید" required>
+                      </fieldset>
+		        </div>
+
+               <div class="col-sm-6 col-12">
+				       <fieldset class="form-group">
+                             <label for="file" class="btn btn-default">انتخاب لوگو</label>
+                             <input asp-for="ImageLogo" type="file" accept="image/*" onchange="preview_image(event)" required >
+                             <img id="output_image" height=50px width=130px>
+                             <p class="alert alert-success">
+                               <strong>اندازه مناسب لوگو:</strong>
+                               حتما باید 
+                               <strong style="color: brown;">50*130</strong>
+                               پیکسل باشد.
+                             </p>
+                       </fieldset>
+		        </div>
+
+
+            <div class="col-sm-6 col-12">
+				       <fieldset class="form-group">
+                             <label for="file" class="btn btn-default">انتخاب فاوآیکون</label>
+                             <input asp-for="fav" type="file" accept="image/*"  required >
+                            
+                            
+                       </fieldset>
+		        </div>
+
+
+                <div class="col-sm-6 col-12">
+				       <fieldset style="text-align: left;" class="form-group mt-4">
+                            <button type="submit" class="btn btn-success mr-1 mb-1">ذخیره</button>
+                            <button type="button" class="btn btn-danger mr-1 mb-1">لغو</button>
+                       </fieldset>
+		        </div>
+
+	        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+</section>
+<!-- Basic Select2 end -->
+
+
+
+
+    <!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+  <!-- DataTable starts -->
+  <div class="table-responsive">
+    <table class="table data-list-view">
+      <thead>
+        <tr>
+          <th></th>
+          <th>ردیف</th>
+          <th> عنوان  </th>
+          <th> زبان </th>
+          <th> لوگو </th>
+          <th> عملیات</th>
+        </tr>
+      </thead>
+      <tbody>
+
+@if (ViewBag.list != null)
+{
+     @foreach (var item in ViewBag.list)
+  {
+      <tr>
+          <td></td>
+          <td class="product-category"> 1</td>
+          <td class="product-name">@item.TitleLogo</td>
+            <td class="product-category">@item.Language </td>
+
+           <td class="product-category">  <img style="width: 130px;height: 50px;" src="/fileupload/@item.ImageLogo" alt="@item.TitleLogo">  </td>
+
+           <td class="product-action">
+             <div class="col-lg-3 col-md-3 mb-1">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  @* <button type="button" class="btn btn-primary btn-sm">چپ</button> *@
+                  <a href="/adminsite/logo/del/@item.Id" class="btn btn-danger btn-sm">حذف</a>
+                  @* <button type="button" class="btn btn-success  btn-sm">ویرایش</button> *@
+                </div>
+              </div>
+          </td>
+        </tr>
+  }
+} 
+ 
+        
+
+
+       
+
+
+
+
+      </tbody>
+    </table>
+  </div>
+  <!-- DataTable ends -->
+
+  <!-- add new sidebar starts -->
+ 
+  <!-- add new sidebar ends -->
+</section>
+<!-- Data list view end -->
+
+
+
+<!-- Basic Inputs end -->
+<script >
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var output = document.getElementById('output_image');
+        output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+
+  }
+
+
+  
+
+</script>

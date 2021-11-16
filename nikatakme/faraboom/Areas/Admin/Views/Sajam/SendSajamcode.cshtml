@@ -1,0 +1,48 @@
+@model ViewModels.AdminViewModel.sajam.Vm_sajam;
+@{
+    Layout = "_Layout4" ;
+}
+
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> ارسال کد فعالسازی سجام سمت احراز هویت کننده </h2>
+	</div>
+	<form action="/Admin/Sajam/ShowSajamcode" method="POST">
+		<div class="card-body">
+			<div class="row">
+
+				<div class="col-md-6">
+					<div class="form-group">
+						<h2 class="mb-0"> شماره موبایل :</h2>
+						<input type="text" class="form-control" asp-for="mobile" placeholder=" شماره موبایل  ">
+					</div>
+					<div class="col-md-6">
+						@* <div class="form-group">
+	  	<h2 class="mb-0"> شناسه سجام :</h2>
+	  	<input type="text" class="form-control" asp-for="token" placeholder=" شناسه سجام ">
+	  	</div> *@
+						<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> دریافت کد
+						</button>
+						<a href="~/Admin/Sajam/Index" class="btn btn-success mt-1 mb-1"
+							style="width: min-content;">
+							بازگشت
+						</a>
+					</div>
+				</div>
+				<p id="tok" style="display:none;">@ViewBag.result</p>
+				<input style="display:none;" asp-for="token">
+			</div>
+		</div>
+	</form>
+</div>
+
+<script>
+
+	debugger
+	var str = document.getElementById('tok').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+	var res = str.split(",");
+
+	var bill_id = res[1].split(":");
+	document.getElementById('token').value = bill_id[1];
+
+</script>

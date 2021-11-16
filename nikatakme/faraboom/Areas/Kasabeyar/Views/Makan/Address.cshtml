@@ -1,0 +1,21 @@
+@{
+	Layout = "_Layout";
+}
+@model ViewModels.AdminViewModel.Makanmehvar.Vm_Makanmehvar;
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> دریافت آدرس براساس کدپستی
+        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <form action="/Kasabeyar/Makan/ShowAddress" method="POST">
+            <input type="text" class="form-control" asp-for="zip_code" placeholder="    کدپستی را وارد کنید  :   ">
+            <button type="submit" class="btn btn-success  mt-3 mb-1" style="width: min-content;">
+                استعلام
+            </button>
+            <a href="/Kasabeyar/Makan/Index" class="btn btn-success mt-3 mb-1" style="width: min-content;">
+                بازگشت
+            </a>
+        </form>
+    </div>
+</div>

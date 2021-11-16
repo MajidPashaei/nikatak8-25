@@ -1,0 +1,31 @@
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش تبدیل شماره شبا به سپرده
+        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <p class="d-none" id="S_RC">@ViewBag.result</p>
+        @if (ViewBag.Msg != null)
+        {
+            <div class="text-center">
+                <p class="alert alert-danger">@ViewBag.Msg</p>
+            </div>
+        }
+        <p class="" id="deposit_number"></p>
+    </div>
+    <div class="offset-6">
+        <a href="~/Admin/Sepordeh/Index" class="btn btn-success mt-1 mb-3" style="width: min-content;">
+            بازگشت
+        </a>
+    </div>
+</div>
+
+<script>
+    debugger
+    var str = document.getElementById('S_RC').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+    var res = str.split(",");
+
+    var deposit_number = res[1].split(":");
+    document.getElementById('deposit_number').innerText = "شماره سپرده :    " + deposit_number[1];
+
+</script>

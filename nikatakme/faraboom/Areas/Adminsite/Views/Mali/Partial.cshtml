@@ -1,0 +1,40 @@
+<section id="data-list-view" class="data-list-view-header">
+    <div class="table-responsive">
+        <table class="table data-list-view">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>ردیف</th>
+                    <th>نام و نام خانوادگی</th>
+                    <th>نام  کاربری</th>
+                    <th>رمز</th>
+                    <th>شماره تماس</th>
+                    <th>عملیات</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (ViewBag.list != null)
+                {
+                    int i=1;
+                    foreach (var item in ViewBag.list)
+                    {
+                        <tr>
+                            <td></td>
+                            <td class="product-category">@i</td>
+                            <td class="product-category">@item.NameFamily</td> 
+                            <td class="product-name">@item.UserNameUs</td>
+                            <td class="product-category">@item.PasswordUs</td>
+                            <td class="product-category">@item.PhoneUs</td>
+                            <td class="product-category">
+                                <a class="btn btn-sm btn-success" href="/adminsite/mali/Varizi?id=@item.Id&name=@item.UserNameUs&username=@item.NameFamily">واریزی کیف پول</a>
+                                <a class="btn btn-sm btn-warning" href="/adminsite/mali/Bardashti?id=@item.Id&name=@item.UserNameUs&username=@item.NameFamily">برداشتی کیف پول</a>
+                                <a class="btn btn-sm btn-danger" href="/adminsite/mali/HesabMan?id=@item.Id&name=@item.UserNameUs&username=@item.NameFamily">حساب من</a>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</section>

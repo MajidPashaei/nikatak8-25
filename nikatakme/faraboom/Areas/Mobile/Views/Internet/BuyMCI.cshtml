@@ -1,0 +1,66 @@
+<br>
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <!-- Checkout Wrapper-->
+    <div class="checkout-wrapper-area py-3">
+      <!-- Billing Address-->
+      <div class="billing-information-card mb-3">
+        <div class="card billing-information-title-card bg-primary">
+          <div class="card-body">
+            <h6 class="text-center mb-0 text-white"> نمایش وضعیت خرید بسته اینترنتی همراه اول </h6>
+          </div>
+        </div>
+        <div class="card user-data-card">
+          <div class="card-body">  
+        @if (ViewBag.mesagee != null)
+        {
+            <br>
+            <p class="alert alert-danger text-center">@ViewBag.mesagee</p>
+            <br>
+            <br>
+            <br>
+        }
+        @if( ViewBag.mesage != null )
+        {
+            <br>
+            <p class="alert alert-success text-center">@ViewBag.mesage</p>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>زمان درخواست :</span></div>
+              <div class="data-content">@ViewBag.LocalDateTime</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>اپراتور :</span></div>
+              <div class="data-content">@ViewBag.Operator</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>شماره مرجع :</span></div>
+              <div class="data-content">@ViewBag.ReferenceNumber</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>شماره سفارش :</span></div>
+              <div class="data-content">@ViewBag.ReserveNumber</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>پاسخ :</span></div>
+              <div class="data-content">@ViewBag.ReturnMsg</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>شماره موبایل :</span></div>
+              <div class="data-content">@ViewBag.CellNumber</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>مبلغ :</span></div>
+              <div class="data-content" id="curency">@ViewBag.TotalAmount &nbsp; ریال</div>
+                <script>
+				          document.getElementById("curency").innerText = document.getElementById("curency").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+				        </script>
+            </div>
+            <br>
+        }
+        </div>
+       </div>
+      </div>
+    </div>
+   </div>
+</div>

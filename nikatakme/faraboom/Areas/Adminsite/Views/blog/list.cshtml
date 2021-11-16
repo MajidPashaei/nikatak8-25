@@ -1,0 +1,66 @@
+
+
+    <!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+   @if (ViewBag.er != null)
+{
+    <p class="alert alert-success">@ViewBag.er</p>
+}
+  <!-- DataTable starts -->
+  <div class="table-responsive">
+    <table class="table data-list-view">
+      <thead>
+        <tr>
+          <th></th>
+          <th>ردیف</th>
+          <th> عنوان خبر  </th>
+          <th> زبان </th>
+          <th> تصویر اصلی </th>
+          <th> دسته بندی</th>
+          <th> عملیات</th>
+        </tr>
+      </thead>
+      <tbody>
+@if ( ViewBag.list != null)
+{
+int i=1;
+    foreach (var item in ViewBag.list)
+    {
+         <tr>
+          <td></td>
+          <td class="product-category">@i</td>
+          <td class="product-name">@item.TitleBLo</td>
+            <td class="product-category">@item.Language </td>
+
+           <td class="product-category">  <img style="width: 60px;border-radius: 50%;" src="/fileupload/@item.ImageMainBlo" alt="">  </td>
+            <td class="product-category"> @item.catname</td>
+                     
+           <td class="product-action">
+             <div class="col-lg-3 col-md-3 mb-1">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <a href="/adminsite/Blog/updateblog/@item.Id" class="btn btn-primary btn-sm">مشاهده</a>
+                  <a onclick="return confirm('آیا از حذف رکورد مورد نظر مطمئن هستید؟')" href="/adminsite/Blog/del/@item.Id" class="btn btn-danger btn-sm">حذف</a>
+                  <a href="/adminsite/Blog/updateblog/@item.Id" class="btn btn-success  btn-sm">ویرایش</a>
+                </div>
+              </div>
+          </td>
+        </tr>
+        i++;
+    }
+}
+       
+
+
+      
+
+
+      </tbody>
+    </table>
+  </div>
+  <!-- DataTable ends -->
+
+  <!-- add new sidebar starts -->
+ 
+  <!-- add new sidebar ends -->
+</section>
+<!-- Data list view end -->

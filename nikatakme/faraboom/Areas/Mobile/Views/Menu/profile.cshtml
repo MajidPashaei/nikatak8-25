@@ -1,0 +1,60 @@
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@model ViewModels.AdminViewModel.User.Vm_User
+
+@if ( ViewBag.pro != null )
+{
+  @foreach (var item in ViewBag.pro )
+  {
+    <br>
+      <div class="page-content-wrapper">
+        <div class="container">
+          <!-- Profile Wrapper-->
+          <div class="profile-wrapper-area py-3">
+            <!-- User Information-->
+            <div class="card user-info-card">
+              <div class="card-body p-4 d-flex align-items-center"> 
+                  @if ( ViewBag.img != null )
+                  {
+                      <div div class="user-profile mr-3">
+                          <img  src="~/fileupload/@ViewBag.img"/>  
+                      </div>                           
+                  }
+                <div class="user-info">
+                  <h5 class="mb-0 text-white">@HttpContextAccessor.HttpContext.Session.GetString("name")</h5>
+                  <h6 class="mb-0">@User.Identity.GetId()</h6>
+                </div>
+              </div>
+            </div>
+            <!-- User Meta Data-->
+                <div class="card user-data-card">
+                  <div class="card-body">
+                    <div class="single-profile-data d-flex align-items-center justify-content-between">
+                      <div class="title d-flex align-items-center"><i class="lni lni-user"></i><span>نام کاربری:</span></div>
+                      <div class="data-content">@item.Name</div>
+                    </div>
+                    <div class="single-profile-data d-flex align-items-center justify-content-between">
+                      <div class="title d-flex align-items-center"><i class="lni lni-user"></i><span>نام و نام خانوادگی:</span></div>
+                      <div class="data-content">@item.Family</div>
+                    </div>
+                    <div class="single-profile-data d-flex align-items-center justify-content-between">
+                      <div class="title d-flex align-items-center"><i class="lni lni-phone"></i><span>تلفن</span></div>
+                      <div class="data-content">@User.Identity.GetId()</div>
+                    </div>
+                    <div class="single-profile-data d-flex align-items-center justify-content-between">
+                      <div class="title d-flex align-items-center"><i class="lni lni-envelope"></i><span>پست الکترونیک :</span></div>
+                      <div class="data-content">@item.Gmail</div>
+                    </div>
+                    <div class="single-profile-data d-flex align-items-center justify-content-between">
+                      <div class="title d-flex align-items-center"><i class="lni lni-map-marker"></i><span>کد معرف:</span></div>
+                      <div class="data-content">@item.CodeInvite</div>
+                    </div>
+                  </div>
+                </div>  
+            <!-- Edit Profile-->
+            <div class="edit-profile-btn mt-3"><a class="btn btn-info w-100" href="/mobile/menu/editprofile"><i class="lni lni-pencil mr-2"></i>ویرایش نمایه</a></div>
+          </div>
+        </div>
+      </div>
+  }  
+}

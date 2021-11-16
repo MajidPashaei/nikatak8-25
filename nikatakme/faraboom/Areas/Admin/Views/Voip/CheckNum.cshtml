@@ -1,0 +1,107 @@
+@{
+    Layout = "_Layout4" ;
+}
+@model ViewModels.AdminViewModel.Voip.Vm_VoipNumber
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0">
+             ثبت شماره تلفن کاربر
+        </h2>
+	</div>
+    <div class="card-body">
+		<div class="row">
+			<div class="table-responsive">
+				<div class="form-group justify-content-center">
+                    <p class="alert alert-warning">
+                        قیمت خرید تلفن های اینترنتی 
+                        <span>
+                            @ViewBag.type
+                        </span>  
+                        ،
+                        <span id="price">
+                            @ViewBag.price
+                        </span>  
+                        تومان 
+                        می باشد . 
+                    </p>  
+                    <script>
+			            document.getElementById("price").innerText = document.getElementById("price").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			        </script> 
+                </div>
+            </div>
+        </div>
+        @if ( ViewBag.p != null )
+        {
+            <div class="container row">
+		        <div class="col-6">
+                    <table class="table table-hover">
+                        <thead class="bg-primary">
+                            <tr>
+                                <th colspan="2"> یکی از شماره های زیر را برای خرید انتخاب کنید . </th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            @foreach (var item in ViewBag.p)
+                            {
+                                <tr>
+                                    <td class="text-center">
+                                        <span class="mr-5  text-lg">
+                                            @item.Number
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="/Admin/Voip/PishFactor?numid=@item.Id&userid=@ViewBag.userid" class="btn btn-success ml-5">
+                                            انتحاب و خرید
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <div class="row justify-content-end">
+                        <a href="/Admin/Voip/Index" class="btn btn-success btn-lg mt-1 mb-1" style="width: min-content;">
+			            	بازگشت
+			            </a>
+                    </div>
+                </div>
+		    </div>
+        }
+        @if ( ViewBag.e != null )
+        {
+            if ( ViewBag.msg != null )
+            {
+                <p class="">
+                      شماره 
+                    
+                     رزرو شده است
+                </p>
+            }
+            <form action="/Admin/Voip/CheckNumSelect" method="POST">
+				<div>
+					<h2 class="mb-0">
+                        شماره اینترنتی
+                        <span>
+                            @ViewBag.type
+                        </span>  
+                        مورد نظر خود را بدون پیش شماره وارد کنید :
+                    </h2>
+                    <div class="form-group row">
+					    <input asp-for="Number" type="number" class="form-control col-4 text-lg" placeholder=" شماره مورد نظر : " required style="text-align: left;">
+                        <input value="@ViewBag.codeostan" style="width: 70px;" class="form-control text-lg" disabled>
+                        <input asp-for="CodeOstan" value="@ViewBag.codeostan" class="d-none">
+                        <input asp-for="Ostan" value="@ViewBag.ostan" class="d-none">
+                        <input asp-for="UserId" value="@ViewBag.userid" class="d-none">
+                    </div>
+				</div>
+				<div>
+					<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> 
+                         استعلام وضعیت شماره
+					</button>
+			        <a href="/Admin/Voip/Index" class="btn btn-success btn-lg  mt-1 mb-1" style="width: min-content;">
+			        	بازگشت
+			        </a>
+				</div>
+			</form>
+        }
+    </div>
+</div>

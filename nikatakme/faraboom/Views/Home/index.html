@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+function d()
+{  
+ var sta="2021/01/15 00:00:00 ";
+ var currentTime = new Date();
+ var startDate = new Date(sta)
+ 
+ var dif=startDate-currentTime;
+ var s=1000;
+ var m=1000*60;
+ var h=1000*60*60;
+ var d=1000*60*60*24;
+ 
+ var days=Math.floor(dif/d);
+ dif-=days*d;
+ if (dif<=0)dif=0;
+ 
+ var hours=Math.floor(dif/h);
+ dif-=hours*h;
+ if (dif<=0)dif=0;
+ 
+ var minutes=Math.floor(dif/m);
+ dif-=minutes*m;
+ if (dif<=0)dif=0;
+ 
+ var seconds=Math.floor(dif/s);
+ document.getElementById('d').innerHTML="    مانده روز:"+days+"  مانده  ساعت:"+hours+"   ماده دقیقه:"+minutes+"    مانده ثانیه:"+seconds+"تا تمام ثبت نام";
+}
+setInterval("d()",1000);
+</script> 
+
+</head>
+<body>
+    <div id="d"> </div> 
+</body>
+</html>

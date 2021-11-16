@@ -1,0 +1,50 @@
+@model Admin.Models.vm_Gardesh;
+
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-1">استعلام گردش حساب</h2>
+		<p class="mb-1">حداکثر بازه زمانی یک ماه میباشد</p>
+		
+
+		@if (ViewBag.Hesabs != null)
+				{
+					int a = 1;
+					foreach (var item in ViewBag.Hesabs)
+					{
+						<p class="alert alert-light text-dark text-center"> شماره حساب  @a = @item </p>
+						a++;
+					}
+				}
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-6">
+				<form action="/admin/Gardesh/result" method="POST">
+					<div class="form-group">
+						<h2 class="mb-0">بازه شروع :</h2>
+						<input type="text" class="form-control" placeholder="بصورت 000125" required
+							asp-for="From">
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0">بازه پایان :</h2>
+						<input type="text" class="form-control" placeholder="بصورت 000225" required
+							asp-for="To">
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0"> شماره حساب :</h2>
+						<input type="text" class="form-control" placeholder="بصورت 987***999" required
+							asp-for="Deposit">
+					</div>
+					
+					<div>
+						<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+						</button>
+						<a href="/admin/Enteghal/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+							بازگشت
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

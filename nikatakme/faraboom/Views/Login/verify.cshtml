@@ -1,0 +1,95 @@
+
+@model ViewModels.AdminViewModel.User.Vm_User;
+<!DOCTYPE html>
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>نیکاتک</title>
+    <!-- External CSS -->
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/bootstrap-rtl.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/fonts.css">
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="~/login/login-one/images/fev.png">
+
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="~/login/login-one/css/login-one.css">
+
+</head>
+
+<body>
+
+    <!-- Loader -->
+
+
+    <!-- Login page -->
+    <div class="login_wrapper">
+        <div class="container">
+            <div class="col-md-12 pad-0" style="opacity: 90%;">
+                <div class="row login-box-12">
+                    <div class="col-lg-5 col-md-12 col-sm-12 px-0">
+                        <div class="login_left">
+                            <a href="#" class="logo_text">
+                                @* <span>JL</span> جاست لاگ *@
+                                <img style="opacity: 100% !important;" src="~/login/login-one/images/Nikatek.png"
+                                    alt="Simply Easy Learning"> </a>
+                            @* <p>تکنولوژی هوشمند نیکاتک</p> *@
+                            <a href="~/login/RegisterAgency" class="btn-outline"> درخواست نمایندگی </a>
+                            <br>
+                            
+                            @* <ul class="social-list clearfix">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul> *@
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-sm-12">
+                        <div class="login-inner-form">
+                            <div class="details">
+                               
+                                
+                                    
+                               
+
+                            
+					
+					<p class="alert alert-success text-center">ایمیل شما  با موفقیت تایید شد </p>
+                    <a href="/login/login" class="btn btn-primary" >ورود به حساب کاربری</a>
+                    
+				
+                    
+					
+                                
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /. Login page -->
+
+
+    <!-- External JS libraries -->
+    <script src="~/login/assets/js/jquery-2.2.0.min.js"></script>
+    <script src="~/login/assets/js/popper.min.js"></script>
+    <script src="~/login/assets/js/bootstrap.min.js"></script>
+    <!-- Custom JS Script -->
+    <script type="text/javascript">
+        $(window).load(function () {
+            // Animate loader off screen
+            $(".loader").fadeOut("slow");;
+        });
+    </script>
+
+</body>
+
+</html>

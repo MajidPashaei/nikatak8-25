@@ -1,0 +1,58 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0">پرداخت قبض با سپرده</h2>
+	</div>
+	<div class="card-body">
+		<form method="POST" action="/Admin/Gabz/ShowPayBillByDeposit">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group d-none">
+						<h2 class="mb-0"> شماره مشتری :</h2>
+						<input type="text" class="form-control" asp-for="customer_number"
+							placeholder="  شماره مشتری خود را وارد کنید :">
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0"> شناسه قبض : </h2>
+						<input type="text" class="form-control" asp-for="bill_id"
+							placeholder="شناسه قبض خود را وارد کنید :" required>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group d-none">
+						<h2 class="mb-0"> شماره سپرده :</h2>
+						<input type="text" class="form-control" asp-for="deposit_number"
+							placeholder=" شماره سپرده خود را وارد کنید : ">
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0"> شناسه پرداخت :</h2>
+						<input type="text" class="form-control" asp-for="pay_id"
+							placeholder=" شناسه پرداخت خود را وارد کنید :" required>
+					</div>
+					<input asp-for="Token" class="d-none">
+					 </div>
+	 				<button type="submit" class="btn btn-success mt-1 mb-1" style="width: min-content;"> پرداخت قبض
+	 				</button>
+					<a href="~/Admin/Gabz/PardakhtError" class="btn btn-secondary mt-1 mb-1" style="width: min-content;">
+						پرداخت
+					</a>
+					<a href="~/admin/Gabz_Charge/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+						بازگشت
+					</a>
+				</div>
+		</form>
+		<p class="d-none" id="P_T">@ViewBag.response.Content</p>
+	</div>
+</div>
+
+
+<script>
+
+	debugger
+	var str = document.getElementById('P_T').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+	var res = str.split(",");
+
+	var access_token = res[0].split(":");
+	document.getElementById('Token').value = "" + access_token[1];
+
+</script>

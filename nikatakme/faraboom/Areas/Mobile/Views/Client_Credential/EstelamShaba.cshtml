@@ -1,0 +1,60 @@
+@model Admin.Models.vm_Gardesh;
+
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <div class="checkout-wrapper-area py-3">
+      <div class="credit-card-info-wrapper"><img class="d-block mb-4" src="~/mobile2/img/bg-img/credit-card.png" alt="">
+	  <p class="alert alert-warning">نکته مهم: در تمام شماره های حساب باید از / به جای هر گونه جداکننده ای استفاده کرد.</p>
+        <div class="pay-credit-card-form">
+            <form action="/mobile/Client_Credential/EstelamShabaResult" method="POST" autocomplete="off">
+            <div class="mb-3">
+              <label class="mb-2" for="Deposit"> شماره حساب را وارد کنید : </label>
+              <input class="form-control" type="text" placeholder="شماره حساب : " required asp-for="Deposit">
+            </div>
+            <div class="mb-3">
+						<label class=""> بانک مورد نظر را انتخاب کنید : </label>
+						<select asp-for="To" style="width: 100%;" class="form-control bg-darken-1" >
+                        	<option value="018"> بانک تجارت </option>
+							<option value="078"> بانک خاورمیانه </option>
+							<option value="056"> بانک سامان </option>
+							<option value="063"> بانک انصار </option>
+							<option value="052"> بانک قوامین </option>
+							<option value="055"> بانک اقتصادنوین </option>
+							<option value="054"> بانک پارسیان </option>
+							<option value="057"> بانک پاسارگاد </option>
+							<option value="021"> پست بانک ایرانیان  </option>
+							<option value="020"> بانک توسعه صادرات  </option>
+							<option value="013"> بانک رفاه </option>
+							<option value="015"> بانک سپه </option>
+							<option value="058"> بانک سرمایه </option>
+							<option value="019"> بانک صادرات ایران </option>
+							<option value="011"> بانک  صنعت و معدن </option>
+							<option value="053"> بانک کار آفرین </option>
+							<option value="014"> بانک مسکن </option>
+							<option value="012"> بانک ملت </option>
+							<option value="017"> بانک ملی ایران </option>
+							<option value="059"> بانک سینا </option>
+							<option value="051">موسسه مالي توسعه </option>
+							<option value="070"> بانک رسالت </option>
+							<option value="064"> بانک گردشگری </option>
+							<option value="062"> بانک آینده </option>
+							<option value="061"> بانک شهر </option>
+							<option value="060">  بانک قرض الحسنه مهر </option>
+							<option value="022"> بانک توسعه تعاون </option>
+							<option value="065"> بانک حکمت ایرانیان </option>
+							<option value="073"> موسسه کوثر  </option>
+							<option value="075"> موسسه اعتباری ملل  </option>
+							<option value="066"> بانک دی </option>
+							<option value="069"> بانک ایران زمین </option>
+							<option value="010"> بانک مرکزی </option>
+							<option value="016"> بانک کشاورزی </option>
+							<option value="080"> موسسه اعتباری نور </option>
+						</select>            </div>
+            <button class="btn btn-warning btn-lg w-100" type="submit">استعلام</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

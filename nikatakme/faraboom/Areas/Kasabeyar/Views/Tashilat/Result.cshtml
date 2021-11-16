@@ -1,0 +1,104 @@
+<div class="card shadow" id="myDiv">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش استعلام تسهیلات </h2>
+        <p>نام و نام خانوادگی :<span class="text-info"> @ViewBag.Name </span></p>
+        <p> کد ملی :<span class="text-info"> @ViewBag.User </span></p>
+        <p>  بدحسابی :<span class="text-info"> @ViewBag.Dishonored </span></p>
+        <p> مجموع تسهیلات مانده:<span class="text-info"> @ViewBag.FacilityDebtTotalAmount </span></p>
+        <p>  مانده معوق :<span class="text-info"> @ViewBag.FacilityDeferredTotalAmount </span></p>
+        <p>  مانده سررسیده گذشته :<span class="text-info"> @ViewBag.FacilityPastExpiredTotalAmount </span></p>
+        <p>  مانده مشکوک الوصول :<span class="text-info"> @ViewBag.FacilitySuspiciousTotalAmount </span></p>
+        <p>  مجموع مبلغ تسهیلات :<span class="text-info"> @ViewBag.FacilityTotalAmount</span></p>       
+    </div>
+    <div class="card-body">
+        <div class="card-body">
+            <div class="row">
+                <div class="table-responsive">
+                    <div class="form-group justify-content-center text-center">
+                        <table class="table table-hover">
+                            <thead class="bg-primary ">
+                                <tr>
+                                    <th>ردیف</th>
+                                    <th>مبلغ وجه التزام</th>
+                                    <th>اصل مبلغ تسهیلات</th>
+                                    <th>کد بانک</th>
+                                    <th>سود مبلغ تسهیلات</th>
+                                    <th>شعبه بانک</th>
+                                    <th>کد شعبه بانک</th>
+                                    <th>IRR</th>
+                                    <th>مانده کل بدهی</th>
+                                    <th>مانده معوقه</th>
+                                    <th>تاریخ سررسید نهایی</th>
+                                    <th>دسته بندی</th>
+                                    <th>تاریخ</th>
+                                    <th>مانده سررسید گذشته</th>
+                                    <th>شماره درخواست</th>
+                                    <th>نوع درخواست</th>
+                                    <th>تاریخ تنظیم قرارداد</th>
+                                    <th>وضعیت</th>
+                                    <th>مانده مشکوک الوصول</th>
+                                    <th>نوع قرارداد</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                @{
+                                    if (ViewBag.FacilityListResult != null)
+                                    {
+                                        int i=1;
+                                        foreach (var item in ViewBag.FacilityListResult)
+                                        {
+                                            <tr>
+                                                <td>@i</td>
+                                                <td>@item.FacilityAmountObligation</td>
+                                                <td>@item.FacilityAmountOrginal</td>
+                                                <td>@item.FacilityBankCode</td>
+                                                <td>@item.FacilityBenefitAmount</td>
+                                                <td>@item.FacilityBranch</td>
+                                                <td>@item.FacilityBranchCode</td>
+                                                <td>@item.FacilityCurrencyCode</td>
+                                                <td>@item.FacilityDebtorTotalAmount</td>
+                                                <td>@item.FacilityDeferredAmount</td>
+                                                <td>@item.FacilityEndDate</td>
+                                                <td>@item.FacilityGroup</td>
+                                                <td>@item.FacilityMoratoriumDate</td>
+                                                <td>@item.FacilityPastExpiredAmount</td>
+                                                <td>@item.FacilityRequestNo</td>
+                                                <td>@item.FacilityRequestType</td>
+                                                <td>@item.FacilitySetDate</td>
+                                                <td>@item.FacilityStatus</td>
+                                                <td>@item.FacilitySuspiciousAmount</td>
+                                                <td>@item.FacilityType</td>
+                                            </tr>
+                                            i++;
+                                        }
+                                    }
+                                }
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end ">
+                <a onclick="print();" class="btn btn-success mt-1 mb-1" style="width: min-content;"> چاپ
+                </a>
+				<a href="/Kasabeyar/Tashilat/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+					بازگشت
+				</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function print() {
+        var printContents = document.getElementById('myDiv').innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>

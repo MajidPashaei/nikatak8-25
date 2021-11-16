@@ -1,0 +1,130 @@
+@{
+    Layout = "_Layout4" ;
+}
+@model ViewModels.AdminViewModel.Voip.Vm_VoipUser
+<Form method="POST" action="/Admin/Voip/AddUser" enctype="multipart/form-data" autocomplete="off">
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> فرم ثبت نام تلفن های اینترتنتی (Voip) </h2>
+		<div class="card-body">
+			<div class="row">
+				<div class="table-responsive">
+					<div class=" justify-content-center ">
+            			@if ( ViewBag.msg != null )
+            			{ 
+            			    <div class="text-center">
+            			        <p class="col-12 alert alert-success"> اطلاعات با موفقیت ثبت شد .</p>
+            			    </div>
+            			} 
+            			<div class="container row">
+						<div class="form-group col-4">
+							<h3 class="mb-0 mt-3"> نام و نام خانوادگی را وارد کنید :</h4>
+							<center>
+								<input type="text" class="form-control" asp-for="NameFamily" 
+									placeholder=" نام و نام خانوادگی : " data-role="tagsinput" required>
+							</center>
+							<h3 class="mb-0 mt-3"> کدملی : </h4>
+							<center>
+								<input type="text" class="form-control" 
+									value="@ViewBag.CM_Code" data-role="tagsinput" required disabled>
+								<input type="text" class="form-control d-none" asp-for="CM_Code" 
+									value="@ViewBag.CM_Code" data-role="tagsinput" required >
+							</center>
+							<h3 class="mb-0 mt-3"> شماره تلفن همراه : </h4>
+							<center>
+								<input type="text" class="form-control" 
+									value="@ViewBag.Mobile" data-role="tagsinput" required disabled>
+								<input type="text" class="form-control d-none"  asp-for="Mobile" 
+									value="@ViewBag.Mobile" data-role="tagsinput" required >
+							</center>
+							<h3 class="mb-0 mt-3"> شماره تلفن ثابت را وارد کنید :</h4>
+							<center>
+								<input type="text" class="form-control" asp-for="Phone" 
+									placeholder=" شماره تلفن ثابت : " data-role="tagsinput" required>
+							</center>
+							<h3 class="mb-0 mt-3"> طول جغرافیایی آدرس را وارد کنید :</h4>
+							<center>
+								<input type="text" class="form-control" value="@ViewBag.lat"
+									 data-role="tagsinput" required disabled>
+								<input type="text" value="@ViewBag.lat" asp-for="Lat" class="d-none">
+							</center>
+							<h3 class="mb-0 mt-3"> عرض جغرافیایی آدرس را وارد کنید :</h4>
+							<center>
+								<input type="text" class="form-control" value="@ViewBag.lng"
+									 data-role="tagsinput" required disabled>
+								<input type="text" value="@ViewBag.lng" asp-for="Lng" class="d-none">
+							</center>						
+
+						</div>
+						<div class="form-group col-3">
+            			</div>
+						<div class="form-group col-4">
+							<h3 class="mb-0 mt-3"> کدپستی : </h4>
+							<center>
+								<input type="text" class="form-control" 
+									value="@ViewBag.Post" data-role="tagsinput" required disabled>
+								<input type="text" class="form-control d-none" asp-for="Post" 
+									value="@ViewBag.Post" data-role="tagsinput" required >
+							</center>
+							<h3 class="mb-0 mt-3"> آدرس : </h4>
+							<center>
+								<textarea type="text" class="form-control" style="height: 130px;"
+									value="@ViewBag.Address" data-role="tagsinput" required disabled>@ViewBag.Address</textarea>
+								<input type="text" class="form-control d-none" asp-for="Address" 
+									value="@ViewBag.Address" data-role="tagsinput" required >
+							</center>
+							<h3 class="mb-0 mt-3"> ایمیل را وارد کنید :</h4>
+							<center>
+								<input type="text" class="form-control" asp-for="Email" 
+									placeholder=" ایمیل : " data-role="tagsinput" required>
+							</center>
+							<h3 class="mb-0 mt-3"> عکس کارت ملی را آپلود کنید :</h4>
+							<center>
+								<input type="file" class="form-control" asp-for="CAImg" 
+									data-role="tagsinput" required accept="image/x-png,image/jpg" placeholder=" آپلود کارت ملی ">
+							</center>
+							<h3 class="mb-0 mt-3"> عکس پشت کارت ملی را آپلود کنید :</h4>
+							<center>
+								<input type="file" class="form-control" asp-for="CAImg2" 
+									data-role="tagsinput" required accept="image/x-png,image/jpg" placeholder=" آپلود کارت ملی ">
+							</center>
+            			</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+        <div class="row">
+            <button type="submit" class="btn btn-success btn-lg offset-4  mt-1 mb-1"> ثبت اطلاعات </button>
+			<a href="/Admin/Voip/Index" class="btn btn-success btn-lg mt-1 mb-1" style="width: min-content;">
+				بازگشت
+			</a>
+        </div>
+	</div>
+</div>
+</Form>
+
+<script src="~/login/assets/js/jquery-2.2.0.min.js"></script>
+<script src="~/login/assets/js/popper.min.js"></script>
+<script src="~/login/assets/js/bootstrap.min.js"></script>
+<script> 
+    function Func(Shahrestanha)
+    {
+        var vSkill = document.getElementById('state');
+        var vSkillText = vSkill.options[vSkill.selectedIndex].innerHTML;
+        document.getElementById('Ostan').value=vSkillText;
+
+       var _Shahrestan = document.getElementById("City");
+       _Shahrestan.options.length = 0;
+       if(Shahrestanha != "")
+       {
+            var arr = Shahrestanha.split(",");
+            for(i = 0; i < arr.length; i++)
+            {
+                if(arr[i] != "")
+                {
+                    _Shahrestan.options[_Shahrestan.options.length]=new Option(arr[i],arr[i]);
+                }
+            }
+        }
+    }
+</script>

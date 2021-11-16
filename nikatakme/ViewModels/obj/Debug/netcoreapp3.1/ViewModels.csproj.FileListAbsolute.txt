@@ -1,0 +1,498 @@
+d:\Web Programming\HampadGit\hampad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+d:\Web Programming\HampadGit\hampad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+d:\Web Programming\HampadGit\hampad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+d:\Web Programming\HampadGit\hampad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\Web Programming\HampadGit\hampad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\Web Programming\HampadGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+d:\Web Programming\HampadGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+d:\Web Programming\HampadGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+d:\Web Programming\HampadGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+d:\Web Programming\HampadGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+d:\Web Programming\HampadGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+d:\Web Programming\HampadGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+g:\.Net Core\hampadco\hampad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+g:\.Net Core\hampadco\hampad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+g:\.Net Core\hampadco\hampad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+g:\.Net Core\hampadco\hampad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+g:\.Net Core\hampadco\hampad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+g:\.Net Core\hampadco\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+g:\.Net Core\hampadco\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+g:\.Net Core\hampadco\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+g:\.Net Core\hampadco\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+g:\.Net Core\hampadco\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+g:\.Net Core\hampadco\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+g:\.Net Core\hampadco\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\7StarGit\hampad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\Neati\Desktop\7StarGit\hampad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\7StarGit\hampad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\7StarGit\hampad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\7StarGit\hampad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\7StarGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\7StarGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\7StarGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\Neati\Desktop\7StarGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\7StarGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\Neati\Desktop\7StarGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\7StarGit\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\7Star98.9.2\hampad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\SevenStar\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\Neati\Desktop\SevenStar\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\SevenStar\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\SevenStar\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\SevenStar\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\SevenStar\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\SevenStar\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\SevenStar\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\Neati\Desktop\SevenStar\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\SevenStar\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\Neati\Desktop\SevenStar\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\SevenStar\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\SevenStar9909\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\Neati\Desktop\SevenStar9909\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\SevenStar9909\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\SevenStar9909\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\SevenStar9909\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\SevenStar9909\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\SevenStar9909\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\SevenStar9909\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\Neati\Desktop\SevenStar9909\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\SevenStar9909\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\Neati\Desktop\SevenStar9909\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\SevenStar9909\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\123\Desktop\nika\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\123\Desktop\nika\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\123\Desktop\nika\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\123\Desktop\nika\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\123\Desktop\nika\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\123\Desktop\nika\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\123\Desktop\nika\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\123\Desktop\nika\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\123\Desktop\nika\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\123\Desktop\nika\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\123\Desktop\nika\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\123\Desktop\nika\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+<<<<<<< HEAD
+c:\Users\Neati\Desktop\nikatak\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\Neati\Desktop\nikatak\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\nikatak\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\nikatak\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\nikatak\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\Neati\Desktop\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\Neati\Desktop\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+=======
+c:\Users\123\Desktop\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\123\Desktop\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\123\Desktop\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\123\Desktop\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\123\Desktop\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\123\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\123\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\123\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\123\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\123\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\123\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\123\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+>>>>>>> 6647465521f956dd6405e1e76b1c62e85dc00306
+D:\project\nikatak\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+D:\project\nikatak\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+D:\project\nikatak\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+D:\project\nikatak\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+D:\project\nikatak\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+D:\project\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+D:\project\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+D:\project\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+D:\project\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+D:\project\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+D:\project\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+D:\project\nikatak\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+f:\Farabom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+f:\Farabom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+f:\Farabom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+f:\Farabom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+f:\Farabom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+f:\Farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+f:\Farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+f:\Farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+f:\Farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+f:\Farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+f:\Farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+f:\Farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\123\Desktop\farabom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\123\Desktop\farabom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\123\Desktop\farabom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\123\Desktop\farabom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\123\Desktop\farabom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\123\Desktop\farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\123\Desktop\farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\123\Desktop\farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\123\Desktop\farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\123\Desktop\farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\123\Desktop\farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\123\Desktop\farabom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+>>>>>>> 7c58a28aba78ba9f3df35aa71aac8611a26c0192
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\Nikatak2021\Faraboom\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+e:\Nikatak\nikatak\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+e:\Nikatak\nikatak\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+e:\Nikatak\nikatak\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+e:\Nikatak\nikatak\nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+e:\Nikatak\nikatak\nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+e:\Nikatak\nikatak\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+e:\Nikatak\nikatak\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+e:\Nikatak\nikatak\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+e:\Nikatak\nikatak\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+e:\Nikatak\nikatak\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+e:\Nikatak\nikatak\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+e:\Nikatak\nikatak\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+>>>>>>> 0cf8c55ac21cda1d6482c59043c4778119e62370
+d:\project\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+d:\project\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+d:\project\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+d:\project\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\project\Faraboom\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\project\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+d:\project\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+d:\project\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+d:\project\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+d:\project\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+d:\project\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+d:\project\Faraboom\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\123\nikatak-clon\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\123\nikatak-clon\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\123\nikatak-clon\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\123\nikatak-clon\nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\123\nikatak-clon\nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\123\nikatak-clon\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\123\nikatak-clon\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\123\nikatak-clon\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\123\nikatak-clon\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\123\nikatak-clon\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\123\nikatak-clon\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\123\nikatak-clon\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+>>>>>>> 56d156c24d01a76f73b5391aa0a6f29701afb934
+>>>>>>> 1e84fb3caaca56501139f3590fcd52a70b26fa26
+d:\project\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+d:\project\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+d:\project\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+d:\project\nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\project\nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\project\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+d:\project\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+d:\project\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+d:\project\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+d:\project\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+d:\project\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+d:\project\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\Neati\Desktop\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\Neati\Desktop\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\Neati\Desktop\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\Archive new\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+d:\project\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+d:\project\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+d:\project\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+d:\project\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\project\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\project\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+d:\project\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+d:\project\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+d:\project\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+d:\project\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+d:\project\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+d:\project\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\Neati\Desktop\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\Neati\Desktop\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\Neati\Desktop\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Neati\Desktop\Projects\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01\Nikatak 2021 V01\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Hampadcp\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\Hampadco\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\my pc\Desktop\nika\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\YAGOUT\Desktop\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\YAGOUT\Desktop\project\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+e:\NikaTak_New\NikaTak_New\Nikatak 2021 V01mohammad\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\ms\Desktop\Nikatak 2021\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\ms\Desktop\Nikatak 2021\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\ms\Desktop\Nikatak 2021\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\ms\Desktop\Nikatak 2021\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\ms\Desktop\Nikatak 2021\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\ms\Desktop\Nikatak 2021\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\ms\Desktop\Nikatak 2021\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\ms\Desktop\Nikatak 2021\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\ms\Desktop\Nikatak 2021\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\ms\Desktop\Nikatak 2021\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\ms\Desktop\Nikatak 2021\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\ms\Desktop\Nikatak 2021\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+e:\nikatak0220\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+e:\nikatak0220\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+e:\nikatak0220\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+e:\nikatak0220\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+e:\nikatak0220\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+e:\nikatak0220\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+e:\nikatak0220\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+e:\nikatak0220\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+e:\nikatak0220\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+e:\nikatak0220\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+e:\nikatak0220\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+e:\nikatak0220\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\ms\Desktop\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\ms\Desktop\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\ms\Desktop\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\ms\Desktop\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\ms\Desktop\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\ms\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\ms\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\ms\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\ms\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\ms\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\ms\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\ms\Desktop\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+d:\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+d:\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+d:\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+d:\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+d:\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+d:\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+d:\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+d:\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+d:\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+d:\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\ms\Desktop\nikatak_git\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\ms\Desktop\nikatak_git\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\ms\Desktop\nikatak_git\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\ms\Desktop\nikatak_git\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\ms\Desktop\nikatak_git\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\ms\Desktop\nikatak_git\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\ms\Desktop\nikatak_git\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\ms\Desktop\nikatak_git\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\ms\Desktop\nikatak_git\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\ms\Desktop\nikatak_git\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\ms\Desktop\nikatak_git\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\ms\Desktop\nikatak_git\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\MS\Desktop\nika4-15\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\MS\Desktop\nika4-15\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\MS\Desktop\nika4-15\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\MS\Desktop\nika4-15\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\MS\Desktop\nika4-15\Nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\MS\Desktop\nika4-15\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\MS\Desktop\nika4-15\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\MS\Desktop\nika4-15\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\MS\Desktop\nika4-15\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\MS\Desktop\nika4-15\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\MS\Desktop\nika4-15\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\MS\Desktop\nika4-15\Nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+c:\Users\MS\Downloads\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+E:\dwn\Nikatak-master\Nikatak-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+E:\dwn\Nikatak-master\Nikatak-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+E:\dwn\Nikatak-master\Nikatak-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+E:\dwn\Nikatak-master\Nikatak-master\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+E:\dwn\Nikatak-master\Nikatak-master\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+E:\dwn\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+E:\dwn\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+E:\dwn\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+E:\dwn\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+E:\dwn\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+E:\dwn\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+E:\dwn\Nikatak-master\Nikatak-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+d:\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+d:\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+d:\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+d:\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+d:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+d:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+d:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+d:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+d:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+d:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+H:\pr\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+H:\pr\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+H:\pr\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+H:\pr\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+H:\pr\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+H:\pr\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+H:\pr\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+H:\pr\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+H:\pr\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+H:\pr\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+H:\pr\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+H:\pr\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+f:\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+f:\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+f:\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+f:\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+f:\nikatakme\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+f:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+f:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+f:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+f:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+f:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+f:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+f:\nikatakme\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+e:\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+e:\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+e:\nikatak\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+e:\nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+e:\nikatak\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+e:\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+e:\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+e:\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+e:\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+e:\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+e:\nikatak\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb

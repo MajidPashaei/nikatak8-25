@@ -1,0 +1,27 @@
+
+@model Admin.Models.vm_Gardesh;
+
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-1">سرویس تبدیل شماره کارت به شبا</h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-6">
+				<form action="/admin/Client_Credential/CartToShabaResult" method="POST">
+					<div class="form-group">
+						<h2 class="mb-0">شماره کارت  :</h2>
+						<input asp-for="Deposit" type="number" class="input-ui pr-2" placeholder="6273*******6752"  required>
+					</div>
+					<div>
+						<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+						</button>
+						<a href="/admin/Enteghal/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+							بازگشت
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

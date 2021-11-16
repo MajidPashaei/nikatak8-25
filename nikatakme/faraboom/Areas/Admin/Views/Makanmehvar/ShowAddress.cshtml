@@ -1,0 +1,32 @@
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش آدرس براساس کدپستی
+        </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <p id="S_A" class="d-none">@ViewBag.result</p>
+        @if (ViewBag.Msg != null)
+        {
+            <div class="text-center">
+                <p class="alert alert-danger">@ViewBag.Msg</p>
+            </div>
+        }
+        <p id="address" class="alert alert-light" style="color: black;"></p>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <a href="/admin/Makanmehvar/Address" class="btn btn-success mt-2 mb-1" style="width: min-content;">
+            بازگشت
+        </a>
+    </div>
+</div>
+
+<script>
+    debugger
+
+    var str = document.getElementById('S_A').innerText.replace("{", "").replace(' \" ', '').replace("}", "").replace("}", "").replace("}", "").split('"').join('').replace("]", "");
+    var res = str.split(",");
+
+    var address = res[1].split(":");
+    document.getElementById('address').innerText = "" + address[1];
+
+</script>

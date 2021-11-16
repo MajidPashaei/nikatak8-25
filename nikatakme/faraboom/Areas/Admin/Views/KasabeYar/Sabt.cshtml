@@ -1,0 +1,123 @@
+@{ Layout = null ; }
+@model ViewModels.AdminViewModel.KasabeYar.Vm_KasabeYarUser
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>نیکاتک</title>
+    <!-- External CSS -->
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/bootstrap-rtl.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/fonts.css">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="~/login/login-one/images/fev.png">
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="~/login/login-one/css/login-one.css">
+</head>
+<body>
+<!-- Loader -->
+<Form method="POST" action="/admin/KasabeYar/Add"  enctype="multipart/form-data" autocomplete="off">
+<!-- Login page -->
+<div class="login_wrapper">
+    <div class="container">
+        <div class="col-md-12 pad-0" style="opacity: 90%;">
+            <di class="row login-box-12">
+                <div class="col-lg-2 col-md-12 col-sm-12 px-0">
+                    <div class="login_left">
+                        <a href="#" class="logo_text">
+                            <img src="~/login/login-one/images/Nikatek.png" alt="Simply Easy Learning"> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-12 ">
+                    <div class="login-inner-form">
+                        <div class="details">
+                            <div class="form-group">
+                                <input type="text" asp-for="Name" class="input-text" placeholder="نام : " required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" asp-for="Family" class="input-text" placeholder=" نام خانوادگی :" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" asp-for="CodeMeli" class="input-text" placeholder=" کدملی : " required>
+                            </div>
+                             <div class="form-group">
+                                <input type="text" asp-for="Phone" class="input-text" placeholder="شماره تلفن همراه : " required minlength="11" maxlength="11"  >
+                            </div>
+                            <div class="form-group">
+                                <input type="text" asp-for="Address" class="input-text" placeholder="  آدرس : " required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" asp-for="CodePosti" class="input-text" placeholder="  کدپستی : " required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-12 ">
+                    <div class="login-inner-form">
+                        <div class="details">
+                            <div class="form-group">
+                                <input type="email" asp-for="Email" class="input-text" placeholder="ایمیل :" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" asp-for="UserName" class="input-text" placeholder="  یوزرنیم : " required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" asp-for="Password" class="input-text" placeholder=" پسوورد :" required>
+                            </div>
+                            <div class="form-group">
+                                <p> آپلود کارت ملی  </p>
+                                <input type="file" asp-for="img" accept="image/x-png,image/jpg" placeholder=" آپلود کارت ملی " required>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn-md btn-theme btn-block">ثبت نام</button>
+                            </div>
+                            <div class="form-group">
+                                <a href="/admin/KasabeYar/index" class="btn btn-md btn-primary btn-block">بازگشت</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</Form>
+<!-- External JS libraries -->
+<script src="~/login/assets/js/jquery-2.2.0.min.js"></script>
+<script src="~/login/assets/js/popper.min.js"></script>
+<script src="~/login/assets/js/bootstrap.min.js"></script>
+<!-- Custom JS Script -->
+
+<script> 
+    function Func(Shahrestanha) 
+    {
+        var vSkill = document.getElementById('os');
+        var vSkillText = vSkill.options[vSkill.selectedIndex].innerHTML;
+        document.getElementById('Ostan').value=vSkillText;
+        var _Shahrestan = document.getElementById("City");
+        _Shahrestan.options.length = 0;
+        if(Shahrestanha != "")
+        {
+            var arr = Shahrestanha.split(",");
+            for(i = 0; i < arr.length; i++)
+            {
+                if(arr[i] != "")
+                {
+                    _Shahrestan.options[_Shahrestan.options.length]=new Option(arr[i],arr[i]);
+                }
+            }
+        }
+    }
+</script>
+<!-- Custom JS Script -->
+<script type="text/javascript">
+    $(window).load(function() {
+        // Animate loader off screen
+        $(".loader").fadeOut("slow");;
+    });
+</script>
+</body>
+</html>

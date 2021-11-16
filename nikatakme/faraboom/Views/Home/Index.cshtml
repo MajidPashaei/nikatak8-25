@@ -1,0 +1,156 @@
+﻿<section class="container mt-2">
+    <div class="row">
+        <div class="col-lg-3 pt-1 order-lg-1 order-2 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-6 mb-3">
+                        <a href="/blog/index"><img src="~/site/Images/banner1-min-1.png" class="img-fluid rad12"></a>
+                    </div>
+                    <div class="col-lg-12 col-6 mb-3">
+                        <a href="/home/khadamat"><img src="~/site/Images/banner1-min-3.png" class="img-fluid rad12"></a>
+                    </div>
+                    <div class="col-lg-12 col-6 mb-3">
+                        <a href="/home/info"><img src="~/site/Images/banner1-min-2.png" class="img-fluid rad12"></a>
+                    </div>
+                    <div class="col-lg-12 col-6 mb-2">
+                        <a href="/Contact/"><img src="~/site/Images/banner1-min-4.png" class="img-fluid rad12"></a>
+                    </div>
+                    <img src="~/site/Images/foot.png" class="mx-auto text-center">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-9 mb-lg-0 mb-3 order-lg-2  order-1">
+
+            <div id="owl-slider" class="owl-carousel">
+@if(ViewBag.slider != null){
+
+                @foreach (var item in ViewBag.slider)
+                {
+                    <div class="item">
+                    <a href="/blog/details/@item.CategoryProductIdSlid">
+                        <img src="~/fileupload/@item.ImageMainSlid" alt="نیکاتک" class="img-fluid">
+                        <div class="caption">
+                            @* <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</p> *@
+                        </div>
+                    </a>
+                   </div>
+                }
+
+                
+}
+
+
+
+               
+              </div>
+
+
+        </div>
+
+
+
+    </div>
+    <p style="text-align: center;" class="alert alert-info">برای دیدن متن کامل اطلاعیه ها روی بنر کلیک کنید</p>
+
+</section>
+
+<section class="container mt-4 text-center">
+    <h5 class="IRANSansWeb_Medium  bt-color">  <a href="~/home/services">  خدمات ما</a></h5>
+    <p> <a href="~/home/services">  کلیه خدمات قابل ارائه</a></p>
+    <div id="owl-Service" class="owl-carousel">
+        @if(ViewBag.khadamat != null){
+        @foreach (var item in ViewBag.khadamat)
+        {
+            
+               <div class="card mx-1">
+            <div class="card-body">
+                <a href="/blog/details/@item.Id">
+                    <img class="rounded-circle" src="~/fileupload/@item.ImageMainBlo" alt="">
+                </a>
+                <h6> </h6>
+                <p>@item.TitleBLo</p>
+                <a href="/blog/details/@item.Id" class="btn btn-grad px-5 text-white mt-3 rad25">مشاهده</a>
+            </div>
+        </div>
+        }
+        }
+
+
+      
+
+</section>
+
+
+<section class="container mt-5">
+    <h5 class="IRANSansWeb_Medium text-center bt-color">آخرین اخبـارها و رویدادها</h5>
+    <div id="owl-topnews" class="owl-carousel">
+@if(ViewBag.blog != null){
+@foreach (var item in ViewBag.blog)
+{
+    <div class="card ">
+            <a href="/#" class="relative">
+                <img src="~/fileupload/@item.ImageMainBlo" class="mb-3 img-fluid rad12">
+                <div class="d-flex flex-column covernews">
+                    <div class="d-flex flex-row justify-content-between px-3 text-white IRANSansWeb_Medium ">
+                        <span class="bottom_p"><i class="fas fa-clock ml-1"></i>@item.TitleBLo</span>
+                        <span><i class="fas fa-eye ml-1"></i></span>
+                        <span><i class="fas fa-comment ml-1"></i></span>
+                    </div>
+                </div>
+            </a>
+          
+            <a href="/blog/details/@item.Id" class="text-danger IRANSansWeb_Medium text-center mb-3">مشاهده  خبر</a>
+        </div>
+}
+
+        
+}
+      
+      
+    </div>
+
+</section>
+
+
+<section class="container mt-4 mb-5">
+    <div id="foottop" class="row p-3 mx-2 mt-2 grad-bg text-center text-white rad25">
+        <div class="col-lg-4">
+            <a href="/#"><img src="~/site/Images/logo2.png"></a>
+        </div>
+        <div class="col-lg-8">
+            <h6 class="mb-2 IRANSansWeb_Medium">شماره های تماس :</h6>
+            <a href="/#" class="rounded-btn text-white text-center support-phone IRANSansWeb_Bold">02191316789 __
+                09220648677</a>
+        </div>
+    </div>
+    <img src="~/site/Images/foot.png" class="float-left ml-5">
+</section>
+
+
+<section class="container text-center pt-4 mt-5">
+    <h5 class="IRANSansWeb_Medium bt-color">  سازمانها و مراکز طرف قرارداد  </h5>
+    <p> سازمانها و مراکز طرف قرارداد نیکا تک</p>
+    <div id="owl-province" class="owl-carousel">
+        @if(ViewBag.sazeman != null)
+        {
+            @foreach (var item in ViewBag.sazeman)
+            {
+                 <div class="card mx-2">
+                <a >
+                    <img src="~/fileupload/@item.ImageMainBlo" class="rad25">
+
+                </a>
+            </div>
+            }
+        }
+       
+        
+
+
+
+
+    </div>
+
+</section>

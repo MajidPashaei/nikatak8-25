@@ -1,0 +1,129 @@
+@{
+    Layout = "_Layout4" ;
+}
+@model ViewModels.AdminViewModel.Voip.Vm_VoipUser
+<Form method="POST" action="/Admin/Voip/CheckAddress" enctype="multipart/form-data" autocomplete="off">
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> فرم ثبت نام تلفن های اینترتنتی (Voip) </h2>
+		<p class="d-none">@ViewBag.resultok</p>
+        <p class="d-none">@ViewBag.resulter</p>
+        <p class="d-none">@ViewBag.result</p>
+        <p class="d-none">@ViewBag.msguser</p>
+        <p class="d-none">@ViewBag.Msg</p>
+	    @if ( ViewBag.resultok != null )
+        {
+			<div class="card-body">
+				<div class="row">
+					<div class="table-responsive">
+						<div class="form-group justify-content-center ">
+							<div>
+								<p class="text-center alert alert-success">
+									   @ViewBag.resultok 
+								</p>
+							</div>
+        	    			<div class="container row">
+							    <div class="form-group col-4">
+						    		<h3 class="mb-0 mt-3"> کدپستی را وارد کنید :</h3>
+						    		<center>
+						    			<input type="text" class="form-control" asp-for="Post" 
+						    				placeholder=" کدپستی : " data-role="tagsinput" required>
+										<input type="text" class="d-none" asp-for="CM_Code" value="@ViewBag.CM_Code">
+										<input type="text" class="d-none" asp-for="Mobile" value="@ViewBag.Mobile">
+						    		</center>
+							    </div>
+        	                </div>
+						</div>
+					</div>
+				</div>	
+			</div>
+        	<div class="row">
+        	    <button type="submit" class="btn btn-success btn-lg offset-1  mt-1 mb-1">  مرحله بعد </button>
+				<a href="/Admin/Voip/Index" class="btn btn-success btn-lg mt-1 mb-1" style="width: min-content;">
+					بازگشت
+				</a>
+        	</div>
+		}
+        @if ( ViewBag.resulter != null )
+        {
+			<div class="card-body">
+				<div class="row">
+					<div class="table-responsive">
+						<div class="form-group justify-content-center ">
+							<div>
+								<p class="text-center alert alert-danger">
+									   @ViewBag.resulter 
+								</p>
+							</div>
+        	    			<div class="container row">
+							    <div class="form-group col-4">
+							    </div>
+        	                </div>
+						</div>
+					</div>
+				</div>	
+			</div>
+         	<div class="row justify-content-center">
+				<a href="/Admin/Voip/AddNumCode" class="btn btn-success btn-lg mt-1 mb-1" style="width: min-content;">
+					بازگشت
+				</a>
+        	</div>
+		}
+        @if ( ViewBag.msguser != null )
+        {
+			<div class="card-body">
+				<div class="row">
+					<div class="table-responsive">
+						<div class="form-group justify-content-center ">
+							<div>
+								<h2 class="text-center alert alert-warning">
+              						   کاربر با کدملی   
+										<span class="text-dark">
+				  						@ViewBag.msguser  
+										</span>
+									   قبلا ثبت شده است .   
+								</h2>
+							</div>
+        	    			<div class="container row">
+							    <div class="form-group col-4">
+							    </div>
+        	                </div>
+						</div>
+					</div>
+				</div>	
+			</div>
+         	<div class="row justify-content-center">
+				<a href="/Admin/Voip/AddNumCode" class="btn btn-success btn-lg mt-1 mb-1" style="width: min-content;">
+					بازگشت
+				</a>
+        	</div>
+		}
+        @if ( ViewBag.Msg != null )
+        {
+			<div class="card-body">
+				<div class="row">
+					<div class="table-responsive">
+						<div class="form-group justify-content-center ">
+							<div>
+								<p class="text-center alert alert-danger">
+									   @ViewBag.Msg 
+								</p>
+							</div>
+        	    			<div class="container row">
+							    <div class="form-group col-4">
+							    </div>
+        	                </div>
+						</div>
+					</div>
+				</div>	
+			</div>
+         	<div class="row justify-content-center">
+				<a href="/Admin/Voip/AddNumCode" class="btn btn-success btn-lg mt-1 mb-1" style="width: min-content;">
+					بازگشت
+				</a>
+        	</div>
+		}
+	</div>
+</div>
+</Form>
+

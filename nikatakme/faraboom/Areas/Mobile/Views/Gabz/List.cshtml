@@ -1,0 +1,72 @@
+<div class="card shadow" id="myDiv">
+	<div class="card-header">
+		<h2 class="mb-0"> نمایش  دسته ای پرداخت قبوض </h2>
+		<div class="card-body">
+			<div class="row">
+				<div class="table-responsive">
+					<div class="form-group justify-content-center ">
+						<table class="table table-hover">
+							<thead class="bg-primary ">
+								<tr>
+									<th>ردیف</th>
+									<th>نوع قبض</th>
+									<th> شناسه قبض</th>
+									<th> شناسه پرداخت </th>
+									<th>پرداخت کنده </th>
+                                    <th>قیمت (ریال)</th>
+									<th> تاریخ </th>
+									<th> زمان  </th>
+									<th>شناسه مرجع</th>
+                                    <th>شناسه پیگیری </th>
+								</tr>
+                                
+							</thead>
+							<tbody class="bg-white">
+                                @if (ViewBag.List != null)
+                                {
+                                    int i = 1;
+                                    foreach (var item in ViewBag.List)
+                                    {
+										<tr>
+											<th>@i</th>
+								        	<th>@item.Type</th>
+                                        	<th>@item.BillId</th>
+                                        	<th>@item.PayId</th>
+                                        	<th>@item.User</th>
+                                        	<th>@item.Amount</th>
+                                        	<th>@item.Date</th>
+                                        	<th>@item.Time</th>
+                                        	<th>@item.ShenaseMarja</th>
+                                        	<th>@item.PeygiriId</th>
+										</tr>
+                                        i++;
+                                    }   
+                                }
+							</tbody>
+						</table> 
+					</div>
+				</div>
+			</div>
+			<div class="d-flex justify-content-end ">
+				<a onclick="print();" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> چاپ
+				</a>
+				<a href="~/Admin/Gabz_Charge/Estelam" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+					بازگشت
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	function print() {
+		var printContents = document.getElementById('myDiv').innerHTML;
+		var originalContents = document.body.innerHTML;
+
+		document.body.innerHTML = printContents;
+
+		window.print();
+
+		document.body.innerHTML = originalContents;
+	}
+</script>

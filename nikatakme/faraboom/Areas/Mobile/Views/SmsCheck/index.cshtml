@@ -1,0 +1,29 @@
+@model Admin.Models.vm_Sms;
+
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <div class="checkout-wrapper-area py-3">
+      <div class="credit-card-info-wrapper"><img class="d-block mb-4" src="~/mobile2/img/bg-img/credit-card.png" alt="">
+		<p class="alert alert-warning text-center">شماره موبایل باید به اسم صاحب شماره کارت ملی باشد.</p>
+		@if (ViewBag.msg != null)
+		{
+			<p class="alert alert-danger">@ViewBag.msg</p>
+		}
+        <div class="pay-credit-card-form">
+            <form action="/mobile/SmsCheck/SendSms" method="POST" autocomplete="off">
+            <div class="mb-3">
+              <label class="mb-2" for="NationalCode"> کدملی را وارد کنید :  </label>
+              <input class="form-control" type="number" placeholder="کد ملی : " required asp-for="NationalCode">
+            </div>
+            <div class="mb-3">
+              <label class="mb-2" for="Phone"> شماره موبایل را وارد کنید :  </label>
+              <input class="form-control" type="number" placeholder="شماره موبایل : " required asp-for="Phone">
+            </div>
+            <button class="btn btn-warning btn-lg w-100" type="submit">استعلام</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

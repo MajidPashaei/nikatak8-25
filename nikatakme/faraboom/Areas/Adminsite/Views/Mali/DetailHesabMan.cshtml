@@ -1,0 +1,39 @@
+<section id="data-list-view" class="data-list-view-header">
+    <div class="table-responsive">
+        <table class="table data-list-view">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th> نام کاربری : </th>
+                    <th> عنوان : </th>
+                    <th> نوع : </th>
+                    <th> شناسه ق : </th>
+                    <th> شناسه پ : </th>
+                    <th> مبلغ : </th>
+                    <th> تاریخ : </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    if ( ViewBag.list != null )
+                    {   
+                        var item = ViewBag.list ;
+                        <tr>
+                            <td></td>
+                            <td class="product-name"> @item.UserName </td>
+                            <td class="product-category"> @item.Type_Request </td>
+                            <td class="product-category"> @item.Titel_Request </td>
+                            <td class="product-category"> @item.Bill_Id </td>
+                            <td class="product-category"> @item.Pay_Id </td>
+                            <td class="product-category" id="@item.Id"> @item.Amount  تومان </td>
+                                <script>
+                                    document.getElementById("@item.Id").innerText=document.getElementById("@item.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                            <td class="product-category"> @item.Date1 </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</section>

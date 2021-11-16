@@ -1,0 +1,21 @@
+@model ViewModels.AdminViewModel.Omomi.Vm_Omomi;
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> دریافت لیست شعب بانک
+        </h2>
+    </div>
+    <form method="POST" action="/Admin/Omomi/ShowShobe">
+        <div class="card-body col-md-12 text-center">
+            <input type="text" class="form-control" placeholder="   نام بانک را وارد کنید  " asp-for="shobe">
+            <button type="submit" class="btn btn-success  mt-3 mb-1" style="width: min-content;">
+                مشاهده شعب
+            </button>
+            <a href="~/Admin/Omomi/Index" class="btn btn-success mt-3 mb-1" style="width: min-content;">
+                بازگشت
+            </a>
+        </div>
+    </form>
+</div>
+<script>
+    debugger
+</script>

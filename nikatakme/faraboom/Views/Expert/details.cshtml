@@ -1,0 +1,127 @@
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+   
+    <style>
+        #map { height:300px; width:100%; }
+       
+
+    </style>
+    @model DataLayer.AdminEntities.Experts.Tb_Experts
+    <section class="container-fluid mt-3 pb-4 pb-lg-0">
+     
+            <div class="container mb-5 p-5 box">
+                <h5 class="mb-4 bt-color">درباره</h5>
+                <div class="row">
+                     
+                    <div class="col-md-7 pr-md-4">
+
+                        
+
+                        <p><span class="IRANSansWeb_Medium  text-lightgreen"><i class="fas fa-2x fa-map-marker-alt ml-2"></i>
+                         نام و نام خانوادگی : @Model.NameEx </p>
+                        </p>
+                                                          
+                        <p><span class="IRANSansWeb_Medium  text-lightgreen"><i class="fas fa-2x fa-phone pl-2"></i> 
+                         آدرس:@Model.address
+                         </p>
+                       
+                                                        
+                        <p><span class="IRANSansWeb_Medium  text-lightgreen"><i class="fas fa-2x fa-phone pl-2"></i> 
+                        شماره تلفن ثابت:@Model.OfficeTelEx
+                         </p>
+
+                          <p><span class="IRANSansWeb_Medium  text-lightgreen"><i class="fas fa-2x fa-phone pl-2"></i> 
+                        شماره تماس همراه:@Model.TelEx
+                         </p>
+                       
+                        <input type="text" value="@Model.LocationEx" id="location" style="display:none;">
+
+                        <div class="col-sm-12 col-12">
+                               <div id="map"></div>
+                            </div>
+                    </div>
+                   
+                             
+                             
+
+                    <div class="col-md-5 mb-4 p-4 brr">
+                         <div class="col-lg-6 col-sm-12">
+            <div class="card" >
+
+                <div class="card-content">
+                    <div class="card-body">
+                        <ul class="activity-timeline timeline-left list-unstyled" style="margin-right: 0px !important;">
+                            <li>
+                                <div class="timeline-icon bg-primary">
+                                    <i class="feather icon-check font-medium-2"></i>
+                                </div>
+                                <div class="timeline-info">
+                                    <p class="font-weight-bold" style="text-align: right;"> عکس 
+                                      </p>
+                                    <br>
+
+                                    <div class="footer-btn alert alert-primary text-center ">
+
+                                        <img src="~/fileupload/@Model.ImageEx" alt=""   >
+                                    </div>
+
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    </div>
+                </div>
+
+            </div>
+   
+        <!--<object class="d-none d-xl-block" type="image/svg+xml" data="Images/Svg/desktop-wave.svg"></object>-->
+    
+     </section>
+
+       <script>
+                                  var locationToStringed=document.getElementById('location').value;
+                                 
+var input = locationToStringed.replace('(', '');
+var latlngStr = input.split(",", 2);
+var lat = parseFloat(latlngStr[0]);
+var lng = parseFloat(latlngStr[1]);
+
+                                 debugger
+         // Creating map options
+         var mapOptions = {
+            center: [lat,lng],
+            zoom: 12
+         }
+         // Creating a map object
+         var map = new L.map('map', mapOptions);
+
+         // Creating a Layer object
+         var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+         // Adding layer to the map
+         map.addLayer(layer);
+
+         // Creating a Marker
+         var markerOptions = {
+            title: "MyLocation",
+            clickable: true,
+            draggable: false
+         }
+         // Creating a marker
+         var marker = L.marker([lat,lng], markerOptions);
+
+         // Adding marker to the map
+         marker.addTo(map);
+
+
+        
+
+
+
+      </script>

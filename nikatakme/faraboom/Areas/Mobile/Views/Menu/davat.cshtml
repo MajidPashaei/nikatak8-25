@@ -1,0 +1,249 @@
+<style>
+    @@font-face {
+        font-family: 'font';
+        src: url('./css/Fonts/IRANSansWeb(FaNum) Medium.ttf')
+    }
+        
+    label
+    {
+        font-family: 'yekan';
+        text-align: right;
+    }   
+
+    h6
+    {
+        font-family: 'font';
+        font-weight: 900;
+    }
+
+    .font {
+        font-family: 'font';
+    }
+    .btn-file {
+    	position: relative;
+    	overflow: hidden;
+	}
+	.btn-file input[type=file] {
+   		position: absolute;
+   		top: 0;
+   		right: 0;
+   		min-width: 100%;
+   		min-height: 100%;
+   		font-size: 100px;
+   		text-align: right;
+   		filter: alpha(opacity=0);
+   		opacity: 0;
+   		outline: none;
+   		background: white;
+   		cursor: inherit;
+   		display: block;
+	}
+
+	#img-upload{
+    	width: 100%;
+	}
+    @@font-face {
+        font-family: "yekan";
+        src: url(./Fonts/Yekan.woff)format('woff');
+    }
+
+    h5 , h6
+    {
+        font-family: "yekan" !important;
+    }
+</style>
+<!-- page content start -->
+<div class="container text-center text-white">
+    <div class="row">
+        <div class="text-center col col-sm-8 col-md-6 col-lg-5 mx-auto">
+            <img  href="~/mobile/img/davat.png" alt="" class="mw-100 ">
+            <h5>
+                از مخاطبین یا دوستان خود دعوت کرده و پاداش کسب کنید
+            </h5>
+        </div>
+    </div>
+</div>
+<div class="main-container">
+    <div class="container mb-4">
+        <div class="card border-0 mb-3">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-auto pr-0">
+                        <div class="avatar avatar-50 border-0 bg-danger-light rounded-circle text-danger">
+                            <i class="material-icons vm text-template"> card_giftcard</i>
+                        </div>
+                    </div>
+                    <div class="col-auto align-self-center">
+                        <h6 class="mb-1">دعوت کنید و پاداش بگیرید</h6>
+                        <p class="small text-secondary">پیوند مراجعه خود را به اشتراک بگذارید و شروع به کسب درآمد کنید</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-4">
+        <div class="alert alert-success d-none" id="successmessage">پیوند ارجاع کپی شد</div>
+        <div class="input-group mb-3">
+                <input style="text-align: left;" type="text" class="form-control col-8" placeholder="refferal Link" disabled value="nikatak.com/@ViewBag.id" id="myInput"> 
+                <script>
+                    function myFunction()
+                    {
+                      /* Get the text field */
+                        var copyText = document.getElementById("myInput");
+
+                          /* Select the text field */
+                        copyText.select();
+                        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                          /* Copy the text inside the text field */
+                         document.execCommand("copy");
+
+                          /* Alert the copied text */
+                        alert("Copied the text: " + copyText.value);
+                    }
+                </script>
+           
+            <div class="input-group-append">
+                <button class="btn btn-info rounded" onclick="myFunction()" type="button" id="coplink">پیوند را کپی کنید</button>
+            </div>
+        </div>
+        @* <p class="text-center text-secondary">اشتراک لینک به اجتماعی</p>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <div class="avatar avatar-40 rounded mx-2">
+                    <div class="background">
+                        <img href="~/mobile/img/whatsapp.png" alt="">
+                    </div>
+                </div>
+                <div class="avatar avatar-40 rounded mx-2">
+                    <div class="background">
+                        <img href="~/mobile/img/facebook.png" alt="">
+                    </div>
+                </div>
+                <div class="avatar avatar-40 rounded mx-2">
+                    <div class="background">
+                        <img href="~/mobile/img/instagram.png" alt="">
+                    </div>
+                </div>
+                <div class="avatar avatar-40 rounded mx-2">
+                    <div class="background">
+                        <img href="~/mobile/img/twitter.png" alt="">
+                    </div>
+                </div>
+            </div> 
+        </div>*@
+    </div>
+    @* <div class="container mb-4">
+        <h6 class="subtitle mb-3">دوستان اخیراً دعوت شده</h6>
+       <div class="swiper-container swiper-users text-center mb-4">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <div class="avatar avatar-60 rounded mb-1">
+                                <div class="background"><img href="~/mobile/img/user1.png" alt=""></div>
+                            </div>
+                            <p class="text-secondary"><small> اریکا</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <div class="avatar avatar-60 rounded mb-1">
+                                <div class="background"><img href="~/mobile/img/user2.png" alt=""></div>
+                            </div>
+                            <p class="text-secondary"><small> آلیسیا</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <div class="avatar avatar-60 rounded mb-1">
+                                <div class="background"><img href="~/mobile/img/user3.png" alt=""></div>
+                            </div>
+                            <p class="text-secondary"><small> ماکس اسمیت</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <div class="avatar avatar-60 rounded mb-1">
+                                <div class="background"><img href="~/mobile/img/user4.png" alt=""></div>
+                            </div>
+                            <p class="text-secondary"><small> جنلیا</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <div class="avatar avatar-60 rounded mb-1">
+                                <div class="background"><img href="~/mobile/img/user1.png" alt=""></div>
+                            </div>
+                            <p class="text-secondary"><small> اریکا</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <div class="avatar avatar-60 rounded mb-1">
+                                <div class="background"><img href="~/mobile/img/user1.png" alt=""></div>
+                            </div>
+                            <p class="text-secondary"><small> اریکا</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <div class="avatar avatar-60 rounded mb-1">
+                                <div class="background"><img href="~/mobile/img/user2.png" alt=""></div>
+                            </div>
+                            <p class="text-secondary"><small> آلیسیا</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <div class="avatar avatar-60 rounded mb-1">
+                                <div class="background"><img href="~/mobile/img/user3.png" alt=""></div>
+                            </div>
+                            <p class="text-secondary"><small> ماکس اسمیت</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <div class="avatar avatar-60 rounded mb-1">
+                                <div class="background"><img href="~/mobile/img/user4.png" alt=""></div>
+                            </div>
+                            <p class="text-secondary"><small> جنلیا</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <div class="avatar avatar-60 rounded mb-1">
+                                <div class="background"><img href="~/mobile/img/user1.png" alt=""></div>
+                            </div>
+                            <p class="text-secondary"><small> اریکا</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> *@
+        @* <div class="input-group">
+            <input type="text" class="form-control" placeholder="آدرس ایمیل">
+            <div class="input-group-append">
+                <button class="btn btn-default rounded" type="button" id="button-addon2">دعوت</button>
+            </div>
+        </div> *@
+    </div> 
+</div>

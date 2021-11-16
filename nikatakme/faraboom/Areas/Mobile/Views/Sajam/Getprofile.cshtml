@@ -1,0 +1,48 @@
+@model ViewModels.AdminViewModel.sajam.Vm_Getprofile
+@{
+    Layout = "_Layout4" ;
+}
+<form action="/Admin/sajam/ShowGetprofile">
+	<div class="card shadow">
+		<div class="card-header">
+			<h2 class="mb-0"> دریافت وضعیت پروفایل در سجام </h2>
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<h2 class="mb-0">کدملی</h2>
+						<input type="text" class="form-control" asp-for="identifier"
+							placeholder="کدملی را را وارد کنید">
+					</div>
+					<div class="col-md-6">
+						@* <div class="form-group">
+	  	<h2 class="mb-0"> شناسه سجام :</h2>
+	  	<input type="text" class="form-control" name="input" placeholder=" شناسه سجام " >
+	  	</div> *@
+						<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> دریافت
+							وضعیت
+						</button>
+						<a href="~/Admin/Sajam/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+							بازگشت
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p id="tok" style="display:none;">@ViewBag.result</p>
+		<input style="display:none;" asp-for="token">
+</form>
+
+<script>
+
+	debugger
+	var str = document.getElementById('tok').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+	var res = str.split(",");
+
+	var bill_id = res[1].split(":");
+	document.getElementById('token').value = bill_id[1];
+
+
+
+</script>

@@ -1,0 +1,62 @@
+
+<div class="card shadow" id="myDiv">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش  استعلام کارت </h2>
+    </div>
+    <div class="card-body">
+        <div class="card-body">
+            <div class="row">
+                <div class="table-responsive">
+                    <div class="form-group justify-content-center text-center">
+                        <table class="table table-hover">
+                            <thead class="bg-primary ">
+                                <tr>
+                                    <th>وضعیت حساب</th>
+                                    <th> بانک</th>
+                                    <th> شماره حساب</th>
+                                    <th>نام و نام خانوادگی</th>
+									 <th> شبا  </th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+            
+
+                                            <tr>
+                                                <td>@ViewBag.AccountStatus</td>
+            									<td>@ViewBag.BankName</td>
+            									<td>@ViewBag.Deposit</td>
+            									<td>@ViewBag.DepositOwners</td>
+            									<td>@ViewBag.Iban</td>
+                                            </tr>
+                                       
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end ">
+                <a onclick="print();" class="btn btn-success mt-1 mb-1" style="width: min-content;"> چاپ
+                </a>
+                <a href="/admin/Enteghal/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                    بازگشت
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function print() {
+        var printContents = document.getElementById('myDiv').innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>

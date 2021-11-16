@@ -1,0 +1,78 @@
+﻿
+							<div class="page-header mt-0 shadow p-3">
+								<ol class="breadcrumb mb-sm-0">
+									<li class="breadcrumb-item"><a href="#">جداول</a></li>
+									<li class="breadcrumb-item active" aria-current="page">جدول داده</li>
+								</ol>
+								<div class="btn-group mb-0">
+									<button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">اقدامات</button>
+									<div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(-65px, 27px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href="#"><i class="fas fa-plus mr-2"></i>افزودن صفحه
+											جدید</a>
+										<a class="dropdown-item" href="#"><i class="fas fa-eye mr-2"></i>مشاهده جزئیات
+											صفحه</a>
+										<a class="dropdown-item" href="#"><i class="fas fa-edit mr-2"></i>ویرایش
+											صفحه</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i> تنظیمات</a>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="card shadow">
+										<div class="card-header">
+											<h2 class="mb-0">جدول داده</h2>
+										</div>
+										<div class="card-body">
+											<div class="table-responsive">
+												<div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="example_length"><label>نمایش <select name="example_length" aria-controls="example" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> مورد</label></div></div><div class="col-sm-12 col-md-6"><div id="example_filter" class="dataTables_filter"><label>جستجو : <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="example" class="table table-striped table-bordered w-100 text-nowrap dataTable no-footer" role="grid" aria-describedby="example_info">
+													<thead>
+														<tr role="row"><th class="wd-15p sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 71px;">نام و نام خانوادگی</th><th class="wd-15p sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="نام خانوادگی: activate to sort column ascending" style="width: 121px;">کد ملی</th><th class="wd-20p sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="شغل: activate to sort column ascending" style="width: 244px;">شماره تلفن</th><th class="wd-20p sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="تاریخ شروع: activate to sort column ascending" style="width: 115px;">پسورد</th><th class="wd-20p sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="حقوق: activate to sort column ascending" style="width: 148px;">ایمیل</th>
+                                                        
+                                                        <th class="wd-20p sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="ایمیل: activate to sort column ascending" style="width: 287px;">آرس</th>
+                                                                                                                <th class="wd-20p sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="ایمیل: activate to sort column ascending" style="width: 287px;">کارت ملی</th>
+
+                                                        
+                                                        </tr>
+													</thead>
+													<tbody>
+														
+														
+																						
+														
+														@foreach (var item in ViewBag.list)
+                                                        {
+                                                            <tr role="row" class="odd">
+															<td class="sorting_1">@item.NameFamily</td>
+															<td>@item.CodeMeli</td>
+															<td>@item.NumberPhone</td>
+															<td>@item.Password</td>
+															<td>@item.Email</td>
+															<td>@item.Address</td>
+                                                            <td>
+                                                                <a target="blank" href="/fileupload/@item.UploadFile">کارت ملی</a>
+                                                            </td>
+														</tr>
+
+                                                        }
+														
+													 <tr role="row" class="odd">
+															<td class="sorting_1">آتنا</td>
+															<td>رسایی</td>
+															<td>مدیر مالی</td>
+															<td>20017/10/15</td>
+															<td>3,660,000 تومان</td>
+															<td>a.ramos@datatables.net</td>
+														</tr>
+
+
+                                                        </tbody>
+												</table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="example_info" role="status" aria-live="polite">نمایش 1 تا 10 از 50 مورد</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="example_previous"><a href="#" aria-controls="example" data-dt-idx="0" tabindex="0" class="page-link">قبلی</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="example" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item next" id="example_next"><a href="#" aria-controls="example" data-dt-idx="6" tabindex="0" class="page-link">بعدی</a></li></ul></div></div></div></div>
+											</div>
+										</div>
+									</div>
+								>
+								
+							<!-- Footer -->
+							

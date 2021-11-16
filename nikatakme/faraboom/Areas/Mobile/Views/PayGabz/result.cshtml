@@ -1,0 +1,73 @@
+
+<br>
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <!-- Checkout Wrapper-->
+    <div class="checkout-wrapper-area py-3">
+      <!-- Billing Address-->
+      <div class="billing-information-card mb-3">
+        <div class="card billing-information-title-card bg-primary">
+          <div class="card-body">
+            <h6 class="text-center mb-0 text-white"> نمایش پرداخت قبض </h6>
+          </div>
+        </div>
+        <div class="card user-data-card">
+          <div class="card-body">  
+
+
+        @if (ViewBag.Msg != null)
+        {
+            <br>
+            <p class="alert alert-danger text-center">@ViewBag.Msg</p>
+            <br>
+            <br>
+            <br>
+        }
+        else
+        {
+            <br>
+            <p class="alert alert-success text-center">@ViewBag.Message</p>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>تاریخ پرداخت :</span></div>
+              <div class="data-content">@ViewBag.TransactionDate</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>زمان پرداخت :</span></div>
+              <div class="data-content">@ViewBag.TransactionTime</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>کد پیگیری :</span></div>
+              <div class="data-content">@ViewBag.TraceNumber</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>مبلغ قبض :</span></div>
+              <div class="data-content" id="curency">@ViewBag.ActualAmount</div>
+                <script>
+				            document.getElementById("curency").innerText = document.getElementById("curency").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+				        </script>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>نوع قبض :</span></div>
+              <div class="data-content">@ViewBag.BillType</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>شناسه مرجع قبض :</span></div>
+              <div class="data-content">@ViewBag.RRN</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>شناسه قبض :</span></div>
+              <div class="data-content">@ViewBag.Bill</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>شناسه پرداخت قبض :</span></div>
+              <div class="data-content">@ViewBag.Pay</div>
+            </div>
+            <br>
+        }
+        </div>
+       </div>
+      </div>
+    </div>
+   </div>
+</div>

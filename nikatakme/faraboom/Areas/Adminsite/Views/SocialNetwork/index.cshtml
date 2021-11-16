@@ -1,0 +1,65 @@
+@model ViewModels.AdminViewModel.SocialNetwork.Vm_SocialNetwork
+@if (ViewBag.er != null)
+{
+    <p class="alert alert-success">@ViewBag.er</p>
+}
+<!-- Basic Inputs start -->
+<section id="basic-input">
+    <form action="/adminsite/socialnetwork/add" method="POST">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title"> لینک صفحات اجتماعی خود را وارد نمایید </h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-xl-4 col-md-6 col-12 mb-1">
+                                <fieldset class="form-group">
+                                    <label for="basicInput"> اینیستاگرام </label>
+                                    <input type="text" class="form-control" asp-for="Instagram" placeholder="لینک صفحه اینیستاگرام خود را وارد کنید" required>
+                                </fieldset>
+                            </div>
+                 
+                      <div class="col-xl-4 col-md-6 col-12 mb-1">
+                                <fieldset class="form-group">
+                                    <label for="basicInput"> تلگرام </label>
+                                    <input type="text" class="form-control"asp-for="Telegram" placeholder="لینک صفحه تلگرام خود را وارد کنید" >
+                                </fieldset>
+                            </div>
+                      <div class="col-xl-4 col-md-6 col-12 mb-1">
+                                <fieldset class="form-group">
+                                    <label for="basicInput"> فیسبوک </label>
+                                    <input type="text" class="form-control" asp-for="Facebook" placeholder="لینک صفحه فیسبوک خود را وارد کنید">
+                                </fieldset>
+                            </div>
+                      <div class="col-xl-4 col-md-6 col-12 mb-1">
+                                <fieldset class="form-group">
+                                    <label for="basicInput"> واتساپ </label>
+                                    <input type="text" class="form-control" asp-for="Whatsapp" placeholder="لینک صفحه واتساپ خود را وارد کنید">
+                                </fieldset>
+                            </div>
+                      <div class="col-xl-4 col-md-6 col-12 mb-1">
+                                <fieldset class="form-group">
+                                    <label for="basicInput"> لینکدین </label>
+                                    <input type="text" class="form-control" asp-for="Aparat" placeholder="لینک صفحه لینکدین خود را وارد کنید">
+                                </fieldset>
+                            </div>
+                            
+                            <div class="col-xl-4 col-md-6 col-12 mb-1">   
+                                <fieldset style="text-align: left;" class="form-group mt-4">
+                                   <button type="submit" class="btn btn-success mr-1 mb-1">ذخیره</button>
+                                   <button type="button" class="btn btn-danger mr-1 mb-1">لغو</button>
+                                </fieldset>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</section>
+<!-- Basic Inputs end -->

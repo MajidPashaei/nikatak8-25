@@ -1,0 +1,29 @@
+
+@{
+    Layout = "_Layout4" ;
+}
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش وضعیت پروفایل در سجام </h2>
+    </div>
+    <div class="card-body col-md-12 text-center">
+        <p id="S_GP" class="d-none">@ViewBag.result</p>
+
+        <p id="status"></p>
+
+        <a href="~/Admin/Sajam/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+            بازگشت
+        </a>
+    </div>
+</div>
+
+<script>
+    debugger
+
+    var str = document.getElementById('S_GP').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');
+	var res = str.split(",");
+
+	var status = res[1].split(":");
+	document.getElementById('status').innerText = "وضعیت : " + status[7]+ status[8]+ status[9]+ status[10];
+
+</script>

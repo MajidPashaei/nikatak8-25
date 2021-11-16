@@ -1,0 +1,60 @@
+<div class="card shadow" id="myDiv">
+    <div class="card-header">
+        @if (ViewBag.msg !=null)
+        {
+            <p class="alert alert-primary text-center text-dark">@ViewBag.msg</p>
+        }
+        
+    </div>
+    <div class="card-body">
+        <div class="card-body">
+            <div class="row">
+                @if (ViewBag.msg == null)
+                {
+                    <p class="alert alert-primary text-center col-12">@ViewBag.msgfull</p>
+
+                    <p class="alert alert-primary text-center col-12">نام  وارد شده : <span class="text-dark">
+                        @ViewBag.FirstName </span> میزان شباهت : <span class="text-dark">@ViewBag.FirstNameSimilarity </span>%</p>
+
+                    <p class="alert alert-primary text-center col-12">نام خانوادگی وارد شده : <span class="text-dark">
+                        @ViewBag.LastName </span> میزان شباهت : <span class="text-dark">@ViewBag.LastNameSimilarity </span>%</p>
+
+                    <p class="alert alert-primary text-center col-12">نام و نام خانوادگی وارد شده : <span class="text-dark">
+                        @ViewBag.FullName </span> میزان شباهت : <span class="text-dark">@ViewBag.FullNameSimilarity </span>%</p>
+
+                    <p class="alert alert-primary text-center col-12">نام پدر وارد شده : <span class="text-dark">
+                        @ViewBag.FatherName </span> میزان شباهت : <span class="text-dark">@ViewBag.FatherNameSimilarity </span>%</p>
+
+                    <p class="alert alert-primary text-center col-12">جنسیت  وارد شده : <span class="text-dark">
+                        @ViewBag.Gender </span> میزان شباهت : <span class="text-dark">@ViewBag.GenderSimilarity </span>%</p>
+
+                    <p class="alert alert-primary text-center col-12"> تاریخ تولد :  @ViewBag.BirthDate</p>
+                    <p class="alert alert-primary text-center col-12"> کد ملی :  @ViewBag.NationalCode</p>
+                    <p class="alert alert-primary text-center col-12"> وضعیت :  @ViewBag.DeathStatus</p>
+                }
+            </div>
+            <div class="d-flex justify-content-end ">
+                <a onclick="print();" class="btn btn-success mt-1 mb-1" style="width: min-content;"> چاپ
+                </a>
+                <a href="/admin/Enteghal/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                    بازگشت
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function print() {
+        var printContents = document.getElementById('myDiv').innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>

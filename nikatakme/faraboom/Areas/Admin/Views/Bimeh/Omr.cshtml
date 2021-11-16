@@ -1,0 +1,45 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> خدمات بیمه عمر  </h2>
+    </div>
+    <div class="card-body">
+        <form action="" method="POST">
+            <div class="row ">
+                <div class="col-12 col-xl-6 col-lg-6">
+                    <div class="form-group col-12">
+                        <h2 class="mb-0"> مدت قرارداد : </h2>
+                        <input type="text" class="form-control" placeholder="مدت قرارداد را وارد کنید:">
+                    </div>
+
+                    <div class="form-group col-12">
+                        <h2 class="mb-0">  توان پرداخت: </h2>
+                        <input type="text" class="form-control" placeholder="توان پرداخت خود را وارد کنید:">
+                    </div>
+
+                </div>
+                <div class="col-12 col-xl-6 col-lg-6">
+
+                    <div class="form-group col-12">
+                        <h2 class="mb-0"> روش پرداهت : </h2>
+                        <select type="number" class="form-control mt-1">
+                            <option value=""> </option>
+                            <option value="1">3 ماهه</option>
+                            <option value="2"> 6 ماهه</option>
+                            <option value="3">1 ساله</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="">
+                <button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+                </button>
+                <a href="~/Admin/Bimeh/index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                    بازگشت
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

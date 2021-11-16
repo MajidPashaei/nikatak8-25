@@ -1,0 +1,23 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <div class="checkout-wrapper-area py-3">
+      <div class="credit-card-info-wrapper"><img class="d-block mb-4" src="~/mobile2/img/bg-img/credit-card.png" alt="">
+        <div class="pay-credit-card-form">
+          <form action="/mobile/Gabz/EstelamGabz" method="POST" autocomplete="off">
+            <div class="mb-3">
+              <label class="mb-2" for="parameter">شناسه قبض برق را وارد کنید : </label>
+              <input class="form-control" type="number" placeholder="شناسه قبض : " required asp-for="parameter">
+            </div>
+            <div class="mb-3">
+                <input asp-for="type" value="Electricity" class="d-none">
+            </div>
+            <button class="btn btn-warning btn-lg w-100" type="submit">استعلام</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

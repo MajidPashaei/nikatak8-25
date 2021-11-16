@@ -1,0 +1,65 @@
+@{  Layout = null ; }
+@model ViewModels.AdminViewModel.KasabeYar.Vm_LogKasabeYar ;
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>کسبه یار نیکاتک</title>
+    <!-- External CSS -->
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/bootstrap-rtl.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="~/login/assets/css/fonts.css">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="~/login/login-one/images/fev.png">
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="~/login/login-one/css/login-one.css">
+</head>
+<body>
+    <!-- Login page -->
+    <div class="login_wrapper">
+        <div class="container">
+            <div class="col-md-12 pad-0" style="opacity: 90%;">
+                <div class="row login-box-12">
+                    <div class="col-lg-5 col-md-12 col-sm-12 px-0">
+                        <div class="login_left">
+                            <a href="#" class="logo_text">
+                                <img style="opacity: 100% !important;" src="~/login/login-one/images/Nikatek.png"
+                                    alt="Simply Easy Learning"> 
+                            </a>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-sm-12">
+                        <div class="login-inner-form">
+                            <div class="details">
+                                <p> ورود <span>به حساب کاربری کسبه یار</span></p>
+                                @if (ViewBag.eror!=null)
+                                {
+                                    <p class="alert alert-danger text-center">@ViewBag.eror</p>
+                                }
+                                @if (ViewBag.msg  != null)
+					            {
+					                <p class="alert alert-success text-center">@ViewBag.msg</p>
+					            }
+                                <form action="~/Kasabeyar/Log/login_check" method="POST" >
+                                    <div class="form-group">
+                                        <input type="text" placeholder="نام کاربری" class="input-text" required asp-for="User">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" placeholder="رمزعبور" class="input-text" required asp-for="Pass">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn-md btn-theme btn-block">ورود</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

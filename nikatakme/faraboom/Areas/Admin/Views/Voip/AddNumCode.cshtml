@@ -1,0 +1,44 @@
+@{
+    Layout = "_Layout4" ;
+}
+@model ViewModels.AdminViewModel.Voip.Vm_VoipUser
+<Form method="POST" action="/Admin/Voip/CheckShahkar" enctype="multipart/form-data" autocomplete="off">
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> فرم ثبت نام تلفن های اینترتنتی (Voip) </h2>
+		<div class="card-body">
+			<div class="row">
+				<div class="table-responsive">
+					<div class="form-group justify-content-center ">
+						<div>
+							<h4 class="text-center alert alert-warning">
+								  شماره همراه وارد شده باید با کد ملی ورودی مطابقت داشته باشد .   
+							</h4>
+						</div>
+            			<div class="container row">
+						    <div class="form-group col-4">
+						    	<h3 class="mb-0 mt-3"> کدملی را وارد کنید :</h4>
+						    	<center>
+						    		<input type="number" class="form-control" asp-for="CM_Code" 
+						    			placeholder=" کدملی : " data-role="tagsinput" required>
+						    	</center>
+						    	<h3 class="mb-0 mt-3"> شماره تلفن همراه را وارد کنید :</h4>
+						    	<center>
+						    		<input type="number" class="form-control" asp-for="Mobile" 
+						    			placeholder=" شماره تلفن همراه : " data-role="tagsinput" required>
+						    	</center>
+						    </div>
+                        </div>
+					</div>
+				</div>
+			</div>	
+		</div>
+        <div class="row">
+            <button type="submit" class="btn btn-success btn-lg offset-1  mt-1 mb-1">  مرحله بعد </button>
+			<a href="/Admin/Voip/Index" class="btn btn-success btn-lg mt-1 mb-1" style="width: min-content;">
+				بازگشت
+			</a>
+        </div>
+	</div>
+</div>
+</Form>

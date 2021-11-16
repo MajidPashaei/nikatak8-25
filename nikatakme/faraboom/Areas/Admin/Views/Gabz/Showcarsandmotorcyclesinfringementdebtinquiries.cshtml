@@ -1,0 +1,64 @@
+<div class="card shadow" id="myDiv">
+	<div class="card-header">
+		<h2 class="mb-0"> نمایش استعلام دسته ای بدهی خلافی خودرو و موتورسیکلت </h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="table-responsive">
+				<div class="">
+					<p style="direction: rtl; display:none ;" id="Violation">@ViewBag.result</p>
+					<table class="table table-hover">
+						<thead class="bg-info">
+							<tr>
+								<th>ردیف </th>
+								<th> مبلغ کل جریمه: </th>
+								<th> شماره پلاک : </th>
+							</tr>
+						</thead>
+						<tbody class="bg-white">
+							<tr>
+								<th>1</th>
+								<th id="amount"> </th>
+								<th id="plate_number"> </th>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="d-flex justify-content-end ">
+					<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;">
+						پرداخت
+					</button>
+					<a onclick="print();" class="btn btn-success  mt-1 mb-1" style="width: min-content;">
+						چاپ
+					</a>
+					<a href="~/Admin/Gabz_Charge/Estelam" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+						بازگشت
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+
+	var str = document.getElementById('Violation').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');;
+	var res = str.split(",");
+	var amount = res[1].split(":");
+	document.getElementById('amount').innerText = "" + amount[2];
+	var plate_number = res[2].split(":");
+	document.getElementById('plate_number').innerText = " " + plate_number[1];
+
+</script>
+
+<script>
+	function print() {
+		var printContents = document.getElementById('myDiv').innerHTML;
+		var originalContents = document.body.innerHTML;
+
+		document.body.innerHTML = printContents;
+
+		window.print();
+
+		document.body.innerHTML = originalContents;
+	}
+</script>

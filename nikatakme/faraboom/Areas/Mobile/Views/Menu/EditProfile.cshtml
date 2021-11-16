@@ -1,0 +1,66 @@
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@model ViewModels.AdminViewModel.User.Vm_User
+
+
+<form method="POST" enctype="multipart/form-data" action="/mobile/Menu/Edit_Profile" autocomplete="off">
+    <div class="page-content-wrapper">
+      <div class="container">
+        <!-- Profile Wrapper-->
+        <div class="profile-wrapper-area py-3">
+          <!-- User Information-->
+          <div class="card user-info-card">
+            <div class="card-body p-4 d-flex align-items-center">
+              <div class="user-profile mr-3"><img src="~/fileupload/@ViewBag.img" id="output_image" alt="">
+                <script>
+                    function preview_image(event) {
+                        var reader = new FileReader();
+                        reader.onload = function () {
+                            var output = document.getElementById('output_image');
+                            output.src = reader.result;
+                        }
+                        reader.readAsDataURL(event.target.files[0]);
+                    }
+                </script>
+                <div class="change-user-thumb">
+                    <input class="form-control-file" onchange="preview_image(event)" type="file" asp-for="img">
+                    <button><i class="lni lni-pencil"></i></button>
+                </div>
+              </div>
+              <div class="user-info">
+                    <h5 class="mb-0 text-white">@HttpContextAccessor.HttpContext.Session.GetString("name")</h5>
+                    <h6 class="mb-0">@User.Identity.GetId()</h6>
+              </div>
+            </div>
+          </div>
+          <!-- User Meta Data-->
+          <div class="card user-data-card">
+            <div class="card-body">
+                <div class="mb-3">
+                  <div class="title mb-2"><i class="lni lni-user"></i><span>نام :</span></div>
+                  <input required class="form-control" asp-for="Name" type="text">
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><i class="lni lni-user"></i><span>نام و نام خانوادگی :</span></div>
+                  <input required class="form-control" type="text" asp-for="Family">
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><i class="lni lni-phone"></i><span>شماره تلفن :</span></div>
+                  <input required class="form-control" type="number" value="@User.Identity.GetId()" disabled>
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><i class="lni lni-envelope"></i><span>آدرس پست الکترونیک :</span></div>
+                  <input required class="form-control" type="email" asp-for="Gmail">
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><i class="lni lni-map-marker"></i><span>کد معرف :</span></div>
+                  <input required class="form-control" type="text" asp-for="CodeInvite" disabled>
+                </div>
+                <button class="btn btn-success w-100" type="submit">ذخیره همه تغییرات</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</form>

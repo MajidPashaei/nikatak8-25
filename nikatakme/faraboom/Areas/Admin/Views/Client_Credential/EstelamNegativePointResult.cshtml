@@ -1,0 +1,35 @@
+<div class="card shadow" id="myDiv">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش استعلام نمره منفی گواهینامه </h2>
+        <p>  شماره گواهینامه  :<span class="text-info"> @ViewBag.LicenseNumber </span></p>
+        <p>  امتیاز منفی :<span class="text-info"> @ViewBag.NegativeScore </span></p>
+        <p>  تعداد خلافی :<span class="text-info"> @ViewBag.OffenseCount </span></p>  
+    </div>
+    
+
+
+                
+    <div class="card-body">
+        <div class="card-body">
+            <div class="d-flex justify-content-end ">
+                <a onclick="print();" class="btn btn-success mt-1 mb-1" style="width: min-content;"> چاپ
+                </a>
+                <a href="/admin/Enteghal/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                    بازگشت
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function print() {
+        var printContents = document.getElementById('myDiv').innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>

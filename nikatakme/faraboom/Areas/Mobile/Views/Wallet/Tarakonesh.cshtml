@@ -1,0 +1,82 @@
+<style>
+    th , a , span
+    {
+        font-size: 12px;
+        font-weight: lighter;
+    }
+</style>
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <!-- Checkout Wrapper-->
+    <div class="checkout-wrapper-area py-3">
+      <!-- Billing Address-->
+      <div class="billing-information-card mb-3">
+        <div class="card billing-information-title-card bg-primary">
+          <div class="card-body">
+            <h6 class="text-center mb-0 text-white"> برداشتی های کیف پول </h6>
+          </div>
+        </div>
+        <div class="card user-data-card">
+          <div class="card-body">  
+            <p class="alert alert-dark" style="font-weight: normal;"> جمع کل مبلغ برداشتی ها :
+                <span id="pay" style="font-size: large;" class="text-info"> @ViewBag.Sum </span> 
+                    تومان
+            </p>
+                <script>
+                 document.getElementById("pay").innerText = document.getElementById("pay").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                </script>
+            <div class="row">
+                <div class="table-responsive">
+                    <div class="form-group justify-content-center text-center">
+                        <table class="table table-hover table-responsive mt-3">
+                            <thead class="bg-info">
+                                <tr>
+                                    <th class="text-light">ردیف:</th>
+                                    <th class="text-light">نوع:</th>
+                                    <th class="text-light">عنوان:</th>
+                                    <th class="text-light">مبلغ:</th>
+                                    <th class="text-light">تاریخ:</th>
+                                    <th class="text-light">جزییات:</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                @if (ViewBag.Tarakonesh != null)
+                                {
+                                    int i = 1;
+                                    @foreach (var item in ViewBag.Tarakonesh)
+                                    {
+                                        <tr>
+                                            <th class="text-primary">@i</th>
+                                            <th class="text-primary">
+                                                @item.Type_Request
+                                            </th>
+                                            <th class="text-primary">
+                                                @item.Titel_Request
+                                            </th>
+                                            <th class="text-primary">
+                                                @item.Amountst  تومان
+                                            </th>
+                                            <th class="text-primary">
+                                                @item.Date1
+                                            </th>
+                                            <th class="text-primary">
+                                                <a class="btn btn-danger btn-sm" href="~/mobile/Wallet/Detail/@item.Id" role="button">
+                                                   <span>جزئیات</span> 
+                                                </a>
+                                            </th>
+                                        </tr>
+                                        i++;
+                                    }
+                                }
+                            </tbody>
+                        </table> 
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	</div>
+  </div>
+</div>

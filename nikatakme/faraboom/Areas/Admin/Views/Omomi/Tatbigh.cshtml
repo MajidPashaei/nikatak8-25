@@ -1,0 +1,28 @@
+@model ViewModels.AdminViewModel.Omomi.Vm_Omomi;
+
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> تطبیق کدملی و شماره تلفن همراه</h2>
+    </div>
+    <div class="card-body">
+        <form action="/Admin/Omomi/ShowTatbigh" method="POST">
+            <div class="form-group">
+                <div class="col-lg-12 col-sm-6 mt-3">
+                    <h2 class="mb-0">کد ملی را وارد کنید : </h2>
+                    <input type="text" class="form-control" placeholder="کد ملی :  " required asp-for="national_code">
+                </div>
+                <div class="col-lg-12 col-sm-6  mt-3">
+                    <h2 class="mb-0">شماره موبایل را وارد کنید: </h2>
+                    <input type="text" class="form-control" placeholder="شماره موبایل :" required asp-for="mobile">
+                </div>
+            </div>
+            <div class="-justify-content-end">
+                <button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+                </button>
+                <a href="~/Admin/Omomi/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                    بازگشت
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

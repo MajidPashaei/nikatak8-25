@@ -1,0 +1,120 @@
+<!-- Basic Select2 start -->
+@model ViewModels.AdminViewModel.User.Vm_User
+
+
+<!-- Input Style start -->
+@if ( ViewBag.err != null)
+{
+<p class="alert alert-success">@ViewBag.err</p>
+}
+
+<form action="/adminsite/profile/add" method="POST" enctype="multipart/form-data">
+<section class="basic-select2">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> پروفایل مدیر </h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 mb-2">
+              </div>
+
+                 <div class="col-sm-6 col-12">
+                <fieldset class="form-group">
+                  <div class="col-sm-6 col-12">
+                    <label for="file" class="btn btn-default">انتخاب تصویر </label>
+                    <input  asp-for="img" type="file" accept="image/*" onchange="preview_image(event)">
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group ">
+                  @if (Model.ProfileImageUs== null)
+                  {
+                      <img id="output_image" src="/app-assets/images/icons/user.png" height=100px width=100px style="border-radius: 50px;">
+                  }else
+                  {
+                      <img id="output_image" src="/fileupload/@Model.ProfileImageUs" height=100px width=100px style="border-radius: 50px;">
+                  }
+                  
+                </fieldset>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput">نام و نام خانوادگی </label>
+                  <input required type="text" class="form-control" asp-for="UserNameUs"
+                    placeholder="نام و نام خانوادگی خودتان را وارد کنید" disabled>
+                </fieldset>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <fieldset class="form-group">
+                  <label for="basicInput">شماره تماس </label>
+                  <input  required type="text" class="form-control" asp-for="PhoneUs"
+                    placeholder="شماره تماس خود را وارد کنید">
+                </fieldset>
+              </div>
+
+           
+
+             
+                  <div class="col-lg-6 col-sm-6 col-12">
+                <label for="squareText"> رمز عبور  </label>
+                <fieldset class="form-group position-relative has-icon-left input-divider-left">
+                  <input required asp-for="PasswordUs" type="text" class="form-control" 
+                    placeholder=" رمز عبور را وارد کنید">
+                  <div class="form-control-position">
+                  
+                  </div>
+                </fieldset>
+              </div>
+
+             
+
+              <div class="col-lg-6 col-sm-6 col-12">
+                <label for="squareText"> آدرس  </label>
+                <fieldset class="form-group position-relative has-icon-left input-divider-left">
+                  <input  asp-for="AddressUs" type="text" class="form-control" 
+                    placeholder=" آدرس خودتان را وارد کنید">
+                  <div class="form-control-position">
+                  
+                  </div>
+                </fieldset>
+              </div>
+
+             
+
+              <div class="col-sm-12 col-12">
+                <fieldset style="text-align: center;" class="form-group mt-4">
+                  <button type="submit" class="btn btn-success mr-1 mb-1">ذخیره</button>
+                  <button type="button" class="btn btn-danger mr-1 mb-1">لغو</button>
+                </fieldset>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Basic Select2 end -->
+</form>
+<!-- Basic Inputs end -->
+<script>
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output_image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+

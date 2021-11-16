@@ -1,0 +1,64 @@
+@{
+    Layout = "_Layout4" ;
+}
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0">
+            ثبت شماره تلفن کاربر
+        </h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="table-responsive">
+				<div class="form-group justify-content-center">
+					<table class="table table-hover">
+						<thead class="bg-primary">
+							<tr>
+								<th> ردیف : </th>
+								<th> نام و نام خانوادگی : </th>
+								<th> شماره همراه : </th>
+								@* <th> آدرس : </th> *@
+								<th> شماره اینترنتی سفارشی :</th>
+								<th> استان :</th>
+								<th> نوع شماره : </th>
+								<th> تاریخ خرید :</th>
+								<th> جزییات :</th>
+							</tr>
+						</thead>
+						<tbody class="bg-white">
+                                @if (  ViewBag.result != null )
+                                {
+                                    int i = 1 ;
+                                    foreach ( var item in  ViewBag.result )
+                                    {
+										<tr>
+								    	    <th> @i </th>
+								    	    <th> @item.NameFamily </th>
+								    	    <th> @item.Mobile </th>
+								    	    @* <th> @item.Address </th> *@
+								    	    <th> @item.Number_Tel </th>
+								    	    <th> @item.Ostan_Tel </th>
+								    	    <th> @item.Type_Tel </th>
+								    	    <th> @item.Date_Tel </th>
+								    	    <th> 
+												<a href="/Admin/Voip/SelectCD/@item.Id"
+													class="btn btn-danger btn-sm">
+													افزودن کانال و داخلی
+												</a>
+											</th>
+										</tr>
+										i++;
+                                    }
+                                }
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex justify-content-end ">
+			<a href="/Admin/Voip/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+				بازگشت
+			</a>
+		</div>
+	</div>
+</div>

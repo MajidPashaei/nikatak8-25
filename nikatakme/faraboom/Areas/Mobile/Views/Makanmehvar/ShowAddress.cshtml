@@ -1,0 +1,50 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <!-- Checkout Wrapper-->
+    <div class="checkout-wrapper-area py-3">
+      <!-- Billing Address-->
+      <div class="billing-information-card mb-3">
+        <div class="card billing-information-title-card bg-primary">
+          <div class="card-body">
+            <h6 class="text-center mb-0 text-white">  نمایش آدرس براساس کدپستی </h6>
+          </div>
+        </div>        
+        <p id="S_A" class="d-none">@ViewBag.result</p>
+        <div class="card user-data-card">
+          <div class="card-body">
+            @if (ViewBag.Msg != null)
+            { 
+              <div class="text-center">
+                  <p class="alert alert-danger">@ViewBag.Msg</p>
+              </div>
+              <br>
+              <br>
+              <br>
+            }
+            else
+            {
+              <br>
+              <p class="alert alert-dark text-center" id="address">@ViewBag.Msg</p>
+              <br>
+            }
+          </div>
+        </div>
+      </div>
+	</div>
+  </div>
+</div>
+
+<script>
+    
+    var str = document.getElementById('S_A').innerText.replace("{", "").replace(' \" ', '').replace("}", "").replace("}", "").replace("}", "").split('"').join('').replace("]", "");
+    var res = str.split(",");
+
+    var address = res[1].split(":");
+    document.getElementById('address').innerText = "" + address[1];
+
+</script>

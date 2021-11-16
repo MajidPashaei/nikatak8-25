@@ -1,0 +1,173 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<div class="card shadow" id="myDiv">
+	<div class="card-header">
+		<h2 class="mb-0"> نمایش استعلام بدهی خلافی خودرو و موتورسیکلت </h2>
+	</div>
+	@* <form method="POST" action="/Admin/Gabz/Pardakht"> *@
+	<form method="POST" action="/Admin/Gabz/PardakhtTe">
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<p style="direction: rtl; display: none;" id="Violation">@ViewBag.result</p>
+						@if (ViewBag.Msg != null)
+						{
+							<div class="text-center">
+								<p class="alert alert-danger">@ViewBag.Msg</p>
+							</div>
+						}
+						<table class="table table-hover">
+							<thead class="bg-info">
+								<tr>
+									<th> شماره پلاک : </th>
+									<th> مبلغ کل جریمه: </th>
+								</tr>
+							</thead>
+							<tbody class="bg-white">
+								<tr>
+									<th id="plate_number"> </th>
+									<th id="amount"> </th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div>
+					<div class="d-flex justify-content-end ">
+
+						@* <button type="submit" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+							پرداخت
+							</button> *@
+	<a href="~/Admin/Gabz_Charge/pardakht" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+	 پرداخت
+	</a>
+	
+						<a onclick="print();" class="btn btn-success  mt-1 mb-1" style="width: min-content;">
+							چاپ
+						</a>
+						<a href="~/admin/Gabz/Violationofcarsandmotorcycles" class="btn btn-success mt-1 mb-1"
+							style="width: min-content;">
+							بازگشت
+						</a>
+					</div>
+				</div>
+				<div class="table-responsive">
+					<div class="form-group justify-content-center ">
+						<p style="direction: ltr; display: none;" id="Violation">@ViewBag.result</p>
+						<table class="table table-hover">
+							<thead class="bg-primary">
+								<tr>
+									<th> ردیف: </th>
+									<th> جرئیات : </th>
+									<th> مبلغ جریمه :</th>
+									<th> شناسه قبض: </th>
+									<th> شهر: </th>
+									<th> تاریخ: </th>
+									<th> نوع جریمه :</th>
+									<th> محل جریمه : </th>
+									<th> شناسه پرداخت :</th>
+									<th> عنوان خلافی: </th>
+								</tr>
+							</thead>
+							<tbody class="bg-white" id="demo">
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<br>
+		</div>
+	</form>
+</div>
+
+<script>
+	debugger
+	var str = document.getElementById('Violation').innerText.replace("{", "").replace(' \" ', '').replace("}", "").split('"').join('');;
+	var res = str.split(",");
+	var amount = res[1].split(":");
+	document.getElementById('amount').innerText = "" + amount[1];
+	var plate_number = res[2].split(":");
+	document.getElementById('plate_number').innerText = " " + plate_number[1];
+	var l = res.length;
+	var jarime = [];
+	var i;
+	var j;
+	var b = res[3].split(":");
+	jarime.push(b[2]);
+
+	for (i = 4; i < l; i++) {
+		var b = res[i].split(":");
+		if (b[0] == "date") {
+			var timestamp = parseInt(b[1]);
+			let mydate = new Date(timestamp);
+			let mypersiandate = mydate.toLocaleDateString('fa-IR');
+			jarime.push(mypersiandate);
+		} else {
+			jarime.push(b[1].replace("}", ")").replace("]}", ""));
+		}
+	}
+	var g = (l - 3) / 8
+	for (i = 0; i < g; i++) {
+		text = "<tr>";
+		text = "<th>" + (i + 1) + "</th>";
+		text += "<th> <a class='btn btn-success btn-sm' style='width: min-content;' href='/Admin/Gabz/Pardakht1' onclick = 'test(jarime[" + (i * 8 + 1) + "],jarime[" + (i * 8 + 6) + "],jarime[" + (i * 8) + "])' > پرداخت</a > </th > ";
+		for (j = i * 8; j < (i + 1) * 8; j++) {
+			text += "<th>" + jarime[j] + "</th>";
+		}
+		text += "</tr>";
+		document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + text;
+	}
+
+	var fine_list = res[3].split(":");
+	document.getElementById('fine_list').innerText = "" + fine_list[2];
+
+	var bill_id = res[4].split(":");
+	document.getElementById('bill_id2').value = "" + bill_id[1];
+	var bill_id = res[4].split(":");
+	document.getElementById('bill_id').innerText = "" + bill_id[1];
+
+	var city = res[5].split(":");
+	document.getElementById('city').innerText = "" + city[1];
+
+	var previous_date = res[6].split(":");
+	var timestamp = parseInt(previous_date[1]);
+
+	let mydate = new Date(timestamp);
+	let mypersiandate = mydate.toLocaleDateString('fa-IR');
+	document.getElementById('previous_date').innerText = "" + mypersiandate;
+
+	var delivery_type = res[7].split(":");
+	document.getElementById('delivery_type').innerText = "" + delivery_type[1];
+
+	var locationn = res[8].split(":");
+	document.getElementById('locationn').innerText = "" + locationn[1];
+
+	var pay_id = res[9].split(":");
+	document.getElementById('pay_id2').value = "" + pay_id[1];
+	var pay_id = res[9].split(":");
+	document.getElementById('pay_id').innerText = "" + pay_id[1];
+
+	var type = res[10].split(":");
+	document.getElementById('type').innerText = "" + type[1];
+
+</script>
+
+<script>
+	function print() {
+		var printContents = document.getElementById('myDiv').innerHTML;
+		var originalContents = document.body.innerHTML;
+		document.body.innerHTML = printContents;
+		window.print();
+		document.body.innerHTML = originalContents;
+	}
+
+</script>
+
+<script>
+	function test(a, b, c) {
+		$.ajax({
+			url: '/admin/gabz/pardakht1?bill_id2=' + a + '&&pay_id2=' + b + '&&amount=' + c,
+			type: 'POST',
+		});
+	}
+</script>

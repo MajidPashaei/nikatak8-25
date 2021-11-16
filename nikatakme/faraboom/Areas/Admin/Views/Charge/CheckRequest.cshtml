@@ -1,0 +1,28 @@
+@model ViewModels.AdminViewModel.Charge.Vm_Charge;
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0"> درخواست خرید شارژ </h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-12">
+        <form action="/Admin/Charge/CheckRequestResult" method="POST">
+					<div class="form-group col-3">
+						<h2 class="mb-1">   شماره مرجع :</h2>
+						<input type="number" class="form-control" placeholder="شماره مرجع" required asp-for="Reference">
+					</div>
+          <div class="form-group col-3">
+						<h2 class="mb-1">   شماره سفارش :</h2>
+						<input type="number" class="form-control" placeholder="شماره سفارش" required asp-for="Reserve">
+					</div>
+						<button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;">
+							استعلام
+						</button>
+						<a href="#" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+							بازگشت
+						</a>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>

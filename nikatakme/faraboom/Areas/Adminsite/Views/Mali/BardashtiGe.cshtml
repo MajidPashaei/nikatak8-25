@@ -1,0 +1,52 @@
+<section id="data-list-view" class="data-list-view-header">
+    <div class="col-6 text-center"> 
+        <p class="alert alert-primary col-8 m-1">
+            مجموع کل برداشتی ها :
+            <span class="m-2" id="sum">
+                @ViewBag.total  تومان
+            </span>
+            <script>
+                document.getElementById("sum").innerText=document.getElementById("sum").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            </script>
+        </p> 
+    </div>
+    <div class="table-responsive">
+        <table class="table data-list-view">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th> ردیف : </th>
+                    <th> نام  کاربری : </th>
+                    <th> عنوان و نوع : </th>
+                    <th> مبلغ : </th>
+                    <th> تاریخ : </th>
+                    <th> وضعیت : </th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (ViewBag.list != null)
+                {
+                    int i=1;
+                    foreach (var item in ViewBag.list)
+                    {
+                        <tr>
+                            <td></td>
+                            <td class="product-category">@i</td>
+                            <td class="product-name">@item.UserName</td>
+                            <td class="product-category col-2">@item.Type_Request   @item.Titel_Request</td>
+                            <td class="product-category" id="@item.Id">@item.Harvest  تومان  </td>
+                                <script>
+                                    document.getElementById("@item.Id").innerText=document.getElementById("@item.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                            <td class="product-category">@item.DateTime</td>
+                            <td class="product-category">
+                                <a class="btn btn-danger" href="/adminsite/mali/DetailBardashti/@item.RequestId"> جزییات </a>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+ </section>

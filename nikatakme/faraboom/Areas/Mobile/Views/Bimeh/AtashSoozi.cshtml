@@ -1,0 +1,54 @@
+@model ViewModels.AdminViewModel.Gabz.Vm_Gabz;
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> خدمات بیمه آتش سوزی </h2>
+    </div>
+    <div class="card-body">
+        <form action="" method="POST">
+            <div class="row ">
+                <div class="col-12 col-xl-6 col-lg-6">
+                    <div class="form-group col-12">
+                        <h2 class="mb-0"> نوع ملک : </h2>
+                        <select type="number" class="form-control mt-1">
+                            <option value=""> </option>
+                            <option value=" آپارتمانی"> آپارتمانی</option>
+                            <option value="ویلایی">ویلایی</option>
+                            <option value="مجتمع"> مجتمع </option>
+                        </select>
+                    </div>
+                    <div class="form-group col-12">
+                        <h2 class="mb-0"> تعداد واحد : </h2>
+                        <input type="text" class="form-control" placeholder="تعداد واحد ملک را وارد کنید:">
+                    </div>
+                    <div class="form-group col-12">
+                        <h2 class="mb-0">نوع سازه: </h2>
+                        <select type="number" class="form-control mt-1">
+                            <option value=""></option>
+                            <option value="بتنی">بتنی </option>
+                            <option value="آجری">آجری</option>
+                            <option value="فلزی"> فلزی</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6 col-lg-6">
+                    <div class="form-group col-12">
+                        <h2 class="mb-0"> عمر بنا : </h2>
+                        <input type="text" class="form-control"
+                            placeholder=" عمر بنا ملک خود را وارد کنید:">
+                    </div>
+                    <div class="form-group col-12">
+                        <h2 class="mb-0">متراژ : </h2>
+                        <input type="text" class="form-control" placeholder="متراژ بنا  خود را وارد کنید:">
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <button type="submit" class="btn btn-success  mt-1 mb-1" style="width: min-content;"> استعلام
+                </button>
+                <a href="~/Admin/Bimeh/index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                    بازگشت
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<br>
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <!-- Checkout Wrapper-->
+    <div class="checkout-wrapper-area py-3">
+      <!-- Billing Address-->
+      <div class="billing-information-card mb-3">
+        <div class="card billing-information-title-card bg-primary">
+          <div class="card-body">
+            <h6 class="text-center mb-0 text-white"> نمایش استعلام نمره منفی گواهینامه </h6>
+          </div>
+        </div>
+        <div class="card user-data-card">
+          <div class="card-body">  
+
+
+        @if (ViewBag.msg != null)
+        {
+            <br>
+            <p class="alert alert-danger text-center">@ViewBag.msg</p>
+            <br>
+            <br>
+            <br>
+        }
+        else
+        {
+            <br>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>شماره گواهینامه :</span></div>
+              <div class="data-content">@ViewBag.LicenseNumber</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>امتیاز منفی :</span></div>
+              <div class="data-content">@ViewBag.NegativeScore</div>
+            </div>
+            <div class="single-profile-data d-flex align-items-center justify-content-between">
+              <div class="title d-flex align-items-center"><span>تعداد خلافی :</span></div>
+              <div class="data-content">@ViewBag.OffenseCount</div>
+            </div>
+            <br>
+        }
+        </div>
+       </div>
+      </div>
+    </div>
+   </div>
+</div>

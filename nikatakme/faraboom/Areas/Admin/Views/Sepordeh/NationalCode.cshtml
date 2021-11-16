@@ -1,0 +1,30 @@
+@model ViewModels.AdminViewModel.Sepordeh.Vm_Sepordeh;
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-2"> افتتاح سپرده</h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<form action="/Admin/Sepordeh/ShowNationalCode" method="POST">
+				<div class="">
+					<div class="form-group">
+						<h2 class="mb-0">کدملی : </h2>
+						<input type="text" asp-for="national_code" class="form-control"
+							placeholder=" کدملی خود را وارد کنید :">
+					</div>
+					<div class="form-group">
+						<h2 class="mb-0"> شماره حساب : </h2>
+						<input type="text" asp-for="account" class="form-control"
+							placeholder=" شماره حساب خود را وارد کنید :">
+					</div>
+					<button type="submit" class="btn btn-success  mt-3 mb-1" style="width: min-content;">
+						انطباق
+					</button>
+					<a href="~/Admin/Sepordeh/Index" class="btn btn-success mt-3 mb-1" style="width: min-content;">
+						بازگشت
+					</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

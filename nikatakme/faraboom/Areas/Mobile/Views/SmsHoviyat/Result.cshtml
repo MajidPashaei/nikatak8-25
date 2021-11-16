@@ -1,0 +1,99 @@
+<br>
+<br>
+	<div class="page-content-wrapper">
+	  <div class="container">
+	    <!-- Checkout Wrapper-->
+	    <div class="checkout-wrapper-area py-3">
+	      <!-- Billing Address-->
+	      <div class="billing-information-card mb-3">
+	        <div class="card billing-information-title-card bg-primary">
+	          <div class="card-body">
+	            <h6 class="text-center mb-0 text-white"> نمایش استعلام احراز هویت </h6>
+	          </div>
+	        </div>
+	        <div class="card user-data-card">
+	          <div class="card-body">
+	            @if (ViewBag.msg != null)
+	            {
+	            	<div class="text-center">
+	            		<h5 class="alert alert-danger">@ViewBag.msg</h5>
+	            	</div>
+	            }  
+                else
+                {    
+                    @* <p class="alert alert-primary text-center col-12">@ViewBag.msgfull</p>    *@
+                    <br>
+	                <div class="single-profile-data d-flex align-items-center justify-content-between">
+	                  <div class="title d-flex align-items-center"><span>نام  وارد شده : </span></div>
+	                  <div class="data-content">@ViewBag.FirstName</div>
+	                </div>
+	                <div class="single-profile-data d-flex align-items-center justify-content-between">
+	                  <div class="title d-flex align-items-center"><span>میزان شباهت :</span></div>
+	                  <div class="data-content">@ViewBag.FirstNameSimilarity %</div>
+	                </div>
+                    <hr>
+
+	                <div class="single-profile-data d-flex align-items-center justify-content-between">
+	                  <div class="title d-flex align-items-center"><span>نام خانوادگی وارد شده : </span></div>
+	                  <div class="data-content">@ViewBag.LastName</div>
+	                </div>
+	                <div class="single-profile-data d-flex align-items-center justify-content-between">
+	                  <div class="title d-flex align-items-center"><span>میزان شباهت : </span></div>
+	                  <div class="data-content">@ViewBag.LastNameSimilarity %</div>
+	                </div>
+                    <hr>
+
+	                <div class="single-profile-data d-flex align-items-center justify-content-between">
+	                  <div class="title d-flex align-items-center"><span>نام نام خانوادگی واردشده :</span></div>
+	                  <div class="data-content">@ViewBag.FullName</div>
+	                </div>
+	                <div class="single-profile-data d-flex align-items-center justify-content-between">
+	                  <div class="title d-flex align-items-center"><span>میزان شباهت : </span></div>
+	                  <div class="data-content">@ViewBag.FullNameSimilarity %</div>
+	                </div>
+                    <hr>
+
+	                <div class="single-profile-data d-flex align-items-center justify-content-between">
+	                  <div class="title d-flex align-items-center"><span>نام پدر وارد شده : </span></div>
+	                  <div class="data-content">@ViewBag.FatherName</div>
+	                </div>
+	                <div class="single-profile-data d-flex align-items-center justify-content-between">
+	                  <div class="title d-flex align-items-center"><span>میزان شباهت : </span></div>
+	                  <div class="data-content">@ViewBag.FatherNameSimilarity %</div>
+	                </div>
+                    <hr>
+
+	                <div class="single-profile-data d-flex align-items-center justify-content-between">
+	                  <div class="title d-flex align-items-center"><span>جنسیت وارد شده : </span></div>
+	                  <div class="data-content">@ViewBag.Gender</div>
+	                </div>
+	                <div class="single-profile-data d-flex align-items-center justify-content-between">
+	                  <div class="title d-flex align-items-center"><span>میزان شباهت : </span></div>
+	                  <div class="data-content">@ViewBag.GenderSimilarity %</div>
+	                </div>
+                    <hr>
+
+	                <div class="single-profile-data d-flex align-items-center justify-content-between">
+	                  <div class="title d-flex align-items-center"><span>تاریخ تولد : </span></div>
+	                  <div class="data-content">@ViewBag.BirthDate</div>
+	                </div>
+                    <hr>
+
+	                <div class="single-profile-data d-flex align-items-center justify-content-between">
+	                  <div class="title d-flex align-items-center"><span>کد ملی : </span></div>
+	                  <div class="data-content">@ViewBag.NationalCode</div>
+	                </div>
+                    <hr>
+
+	                <div class="single-profile-data d-flex align-items-center justify-content-between">
+	                  <div class="title d-flex align-items-center"><span>وضعیت : </span></div>
+	                  <div class="data-content">@ViewBag.DeathStatus</div>
+	                </div>
+                    <br>
+                }
+	          </div>
+	        </div>
+	      </div>
+		</div>
+	  </div>
+	</div>

@@ -1,0 +1,77 @@
+<div class="card shadow" id="myDiv">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش پرداخت قبض </h2>
+    </div>
+    <div class="card-body">
+        @if (ViewBag.Msg != null)
+        {
+            <p class="alert alert-danger">@ViewBag.Msg</p>
+        }
+        @if (ViewBag.Msgs != null)
+        {
+            <p class="alert alert-success text-center">@ViewBag.Msgs</p>
+        }
+        @if (ViewBag.Msgn != null)
+        {
+            <p class="alert alert-danger">@ViewBag.Msgn</p>
+        }
+        @if (ViewBag.er != null)
+        {
+            <p class="alert alert-danger d-none">@ViewBag.er</p>
+        }
+        <div class="card-body">
+            <div class="row">
+                <div class="table-responsive">
+                    <div class="form-group justify-content-center text-center">
+
+                        <span class="text-info">  تاریخ پرداخت :</span> @ViewBag.TransactionDate
+                        <br>
+                        <hr>
+
+                        <span class="text-info" >کد پیگیری  :</span> @ViewBag.TraceNumber
+                        <br>
+                        <hr>
+
+                        <span class="text-info"> مبلغ قبض :</span> @ViewBag.ActualAmount 
+                        <br>
+                        <hr>
+
+                        <span class="text-info"> نوع قبض :</span> @ViewBag.BillType 
+                        <br>
+                        <hr>
+
+                        <span class="text-info">  شناسه قبض :</span> @ViewBag.Bill 
+                        <br>
+                        <hr>
+
+                        <span class="text-info"> شناسه پرداخت قبض :</span> @ViewBag.Pay 
+                        <br>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end ">
+                <a onclick="print();" class="btn btn-success mt-1 mb-1" style="width: min-content;"> چاپ
+                </a>
+                <a href="/admin/Enteghal/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                    بازگشت
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+
+    function print() {
+        var printContents = document.getElementById('myDiv').innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>

@@ -1,0 +1,86 @@
+
+
+    <!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+  @if (ViewBag.suc != null)
+  {
+      <span class="alert alert-success">@ViewBag.suc</span>
+  }
+  
+  <!-- DataTable starts -->
+  <div class="table-responsive">
+    <table class="table data-list-view">
+      <thead>
+        <tr>
+          <th></th>
+          <th>ردیف</th>
+          <th>  نام کاربر </th>
+           <th>  زبان</th>
+            <th>  تاریخ ثبت نظر</th>
+          <th> عملیات</th>
+        </tr>
+      </thead>
+      <tbody>
+@if (ViewBag.comments != null)
+{
+  int i=0;
+    @foreach (var item in ViewBag.comments)
+{
+
+    <tr>
+          <td>
+          
+          </td>
+
+          <td class="product-category">@i</td>
+         
+          <td class="product-name">@item.username   <input style="display: none;"  id="comment" type="text" value="@item.Comment"></td>
+
+                        <td class="product-category">@item.Language </td>
+                        <td class="product-category">@item.dateshamsi </td>
+           <td class="product-action">
+             <div class=" mb-1">
+                <div class="btn-group"  aria-label="Basic example">
+                  <a  class="btn btn-primary btn-sm" onclick="a();" style="color: white;">مشاهده نظر</a>
+                  @if (item.product_id != 0)
+                  {
+                       <a href="/product/details/@item.product_id" class="btn btn-primary btn-sm" style="color: white;">مشاهده آیتم</a>
+                  }else
+                  {
+                       <a href="/blog/details/@item.blog_id" class="btn btn-primary btn-sm" style="color: white;">مشاهده آیتم</a>
+                  }
+                   
+                  <a href="/adminsite/comment/delaccept/@item.Id" class="btn btn-danger btn-sm" onclick="return confirm('آیا از حذف رکورد مورد نظر مطمئن هستید')">حذف</a>
+                 
+                </div>
+              </div>
+          </td>
+        </tr>
+        i++;
+}
+   
+}
+
+     
+<script>
+  function a()
+  {
+    debugger
+    var msg=document.getElementById("comment").value;
+   alert(msg);
+  }
+</script>
+
+
+
+
+      </tbody>
+    </table>
+  </div>
+  <!-- DataTable ends -->
+
+  <!-- add new sidebar starts -->
+ 
+  <!-- add new sidebar ends -->
+</section>
+<!-- Data list view end -->

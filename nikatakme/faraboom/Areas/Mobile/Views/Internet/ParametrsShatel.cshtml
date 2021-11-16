@@ -1,0 +1,30 @@
+@model ViewModels.AdminViewModel.Charge.Vm_Charge;
+        
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <div class="checkout-wrapper-area py-3">
+      <div class="credit-card-info-wrapper"><img class="d-block mb-4" src="~/mobile2/img/bg-img/credit-card.png" alt="">
+        <div class="pay-credit-card-form">
+            <form action="/mobile/internet/Shatel" method="POST" autocomplete="off">
+            <div class="mb-3">
+              <label class="mb-2" for="parameter"> شماره تلفن همراه را وارد کنید : </label>
+              <input class="form-control" type="number" placeholder="شماره تلفن همراه :" required asp-for="CellNumber">
+            </div>
+            <div class="mb-3 ">
+				<label class=""> نوع سیم کارت را انتخاب نمایید : </label>
+				<select required class="form-control bg-darken-1" asp-for="ChargeType">
+                  <option value="1">سیم کارت اعتباری </option>
+                  <option value="0"> سیم کارت دائمی  </option>
+                  <option value="2"> TD-LTE اعتباری</option>
+                  <option value="3"> سیم کارت دیتا </option>
+                  <option value="4"> TD-LTE دائمی </option>
+				</select>
+            </div>
+            <button class="btn btn-warning btn-lg w-100 mt-3" type="submit">خرید</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

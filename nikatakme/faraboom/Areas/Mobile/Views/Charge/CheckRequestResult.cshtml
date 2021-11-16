@@ -1,0 +1,37 @@
+<div class="card shadow" id="myDiv">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش استعلام درخواست شارژ موبایل </h2>
+    </div>
+    <div class="card-body">
+            <div class="card-body">
+              
+                @if (ViewBag.Description != null)
+                {
+                    <p class="alert alert-danger text-center">@ViewBag.Description</p>
+                }
+                <div class="d-flex justify-content-end ">
+                    <a onclick="print();" class="btn btn-success mt-1 mb-1" style="width: min-content;"> چاپ
+                    </a>
+                    <a href="#" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                        بازگشت
+                    </a>
+                </div>
+            </div>
+        
+        
+    </div>
+</div>
+<script>
+
+
+    function print() {
+        var printContents = document.getElementById('myDiv').innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>

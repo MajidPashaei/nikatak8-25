@@ -1,0 +1,264 @@
+  @model ViewModels.AdminViewModel.Address.Vm_Address
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+   
+    <style>
+        #map { height:300px; width:100%; }
+       
+
+    </style>
+<!-- Input Style start -->
+@if (ViewBag.er != null)
+{
+    <p class="alert alert-success">@ViewBag.er</p>
+}
+<section id="input-style">
+    <form action="/adminsite/address/add" method="POST">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="col-sm-6 col-12">
+                                <div class="form-group">
+                                    <h4 class="card-title"> تنظیم راه های ارتباطی </h4>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="basicInput">انتخاب زبان </label>
+                                    <select class="select2 form-control" asp-for="Language">
+                                        <option value="fa">فارسی</option>
+                                        <option value="en">انگلیسی</option>
+                                        <option value="tr">ترکی</option>
+                                        <option value="ar">عربی</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12">
+                                <fieldset class="form-group">
+                                    <label for="squareText"> آدرس اول </label>
+                                    <input asp-for="FirstAddress" type="text" id="squareText" class="form-control square"
+                                        placeholder=" آدرس اول را وارد نمایید " required>
+                                </fieldset>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <fieldset class="form-group">
+                                    <label for="squareText"> آدرس دوم </label>
+                                    <input asp-for="SecondAddress" type="text" id="squareText" class="form-control square"
+                                        placeholder=" آدرس دوم را وارد نمایید " >
+                                </fieldset>
+                            </div>
+                            <div class="col-sm-12 col-12">
+                               <div id="map"></div>
+                            </div>
+                            
+
+                            
+
+                             
+                            <div class="col-sm-6 col-12">
+                                <fieldset class="form-group">
+                                    <button type="button"
+                                        class="btn mb-1 btn-outline-primary btn-icon btn-md btn-block mt-1 " > 
+                                        برای ثبت آدرس بعد از انتخاب موقعیت روی لوکیشن کلیک کنید
+                                        </button>
+                                </fieldset>
+                            </div>
+
+                              <div class="col-lg-6 col-sm-6 col-12">
+                                <label for="squareText"> طول و عرض جغرافیایی </label>
+                                <fieldset class="form-group position-relative has-icon-left input-divider-left">
+                                    <input asp-for="LocationAd" type="text" class="form-control"  placeholder="طول و عرض جغرافیایی   " required>
+                                    <div class="form-control-position">
+                                        <i class="feather icon-smartphone"></i>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+
+                            <div class="col-lg-3 col-sm-6 col-12">
+                                <label for="squareText"> شماره تلفن همراه اول </label>
+                                <fieldset class="form-group position-relative has-icon-left input-divider-left">
+                                    <input asp-for="Tel1Ad" type="text" class="form-control" 
+                                        placeholder="  شماره تلفن همراه اول را وارد نمایید   " required>
+                                    <div class="form-control-position">
+                                        <i class="feather icon-smartphone"></i>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6 col-12">
+                                <label for="squareText"> شماره تلفن همراه دوم </label>
+                                <fieldset class="form-group position-relative has-icon-left input-divider-left">
+                                    <input asp-for="Tel2Ad" type="text" class="form-control" 
+                                        placeholder=" شماره تلفن همراه دوم را وارد نمایید" >
+                                    <div class="form-control-position">
+                                        <i class="feather icon-smartphone"></i>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6 col-12">
+                                <label for="squareText"> شماره تلفن ثابت اول </label>
+                                <fieldset class="form-group position-relative has-icon-left input-divider-left">
+                                    <input asp-for="Officetel1Ad" type="text" class="form-control" 
+                                        placeholder=" شماره تلفن ثابت اول را وارد نمایید" required>
+                                    <div class="form-control-position">
+                                        <i class="feather icon-phone"></i>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6 col-12">
+                                <label for="squareText"> شماره تلفن ثابت دوم </label>
+                                <fieldset class="form-group position-relative has-icon-left input-divider-left">
+                                    <input asp-for="Officetel2Ad" type="text" class="form-control" 
+                                        placeholder=" شماره تلفن ثابت دوم را وارد نمایی">
+                                    <div class="form-control-position">
+                                        <i class="feather icon-phone"></i>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-sm-12 col-12">
+                                <fieldset style="text-align: left;"
+                                    class="form-group position-relative has-icon-left input-divider-left">
+                                    <button type="submit" class="btn btn-success mr-1 mb-1">ذخیره</button>
+                                    <button type="button" class="btn btn-danger mr-1 mb-1">لغو</button>
+                                </fieldset>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</section>
+    <!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+  <!-- DataTable starts -->
+  <div class="table-responsive">
+    <table class="table data-list-view">
+      <thead>
+        <tr>
+          <th></th>
+          <th>ردیف</th>
+          <th> آدرس اول  </th>
+          <th> زبان </th>
+          <th> تلفن همراه </th>
+          <th> عملیات</th>
+        </tr>
+      </thead>
+      <tbody>
+
+@if (ViewBag.list != null)
+{
+     @foreach (var item in ViewBag.list)
+  {
+      <tr>
+          <td></td>
+          <td class="product-category"> 1</td>
+          <td class="product-name">@item.FirstAddress</td>
+            <td class="product-category">@item.Language </td>
+             <td class="product-category">@item.Tel1Ad </td>
+
+
+           <td class="product-action">
+             <div class="col-lg-3 col-md-3 mb-1">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  @* <button type="button" class="btn btn-primary btn-sm">چپ</button> *@
+                  <a href="/adminsite/address/del/@item.Id" class="btn btn-danger btn-lg">حذف</a>
+                  @* <button type="button" class="btn btn-success  btn-sm">ویرایش</button> *@
+                </div>
+              </div>
+          </td>
+        </tr>
+  }
+} 
+ 
+        
+
+
+       
+
+
+
+
+      </tbody>
+    </table>
+  </div>
+  <!-- DataTable ends -->
+
+  <!-- add new sidebar starts -->
+ 
+  <!-- add new sidebar ends -->
+</section>
+<!-- Data list view end -->
+<!-- Input Style end -->
+  <script>
+         // Creating map options
+         var mapOptions = {
+            center: [38.5484252,44.9866539],
+            zoom: 12
+         }
+         // Creating a map object
+         var map = new L.map('map', mapOptions);
+
+         // Creating a Layer object
+         var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+         // Adding layer to the map
+         map.addLayer(layer);
+
+         // Creating a Marker
+         var markerOptions = {
+            title: "MyLocation",
+            clickable: true,
+            draggable: true
+         }
+         // Creating a marker
+         var marker = L.marker([38.551278,44.970346], markerOptions);
+
+         // Adding marker to the map
+         marker.addTo(map);
+
+
+         map.on('click', function(marker){
+    // Place marker
+    
+
+    // Ajax query to save the values:
+    var data = {
+        lat: marker.latlng.lat,
+        lng: marker.latlng.lng
+    }
+    document.getElementById('LocationAd').value=data.lat+","+data.lng
+ 
+    
+});
+
+
+function loc(marker)
+{
+     var data = {
+        lat: marker.latlng.lat,
+        lng: marker.latlng.lng
+    }
+ alert("hjgghjgh");
+}
+      </script>
+      
+    <script>
+     
+
+
+    </script>

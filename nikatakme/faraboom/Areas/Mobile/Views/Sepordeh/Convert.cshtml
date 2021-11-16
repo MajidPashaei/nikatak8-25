@@ -1,0 +1,21 @@
+@model ViewModels.AdminViewModel.Sepordeh.Vm_Sepordeh;
+
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> تبدیل شماره سپرده به شبا
+        </h2>
+    </div>
+    <div class="card-body col-md-12">
+        <form action="/Admin/Sepordeh/ShowConvert" method="GET">
+            <h2 class="mb-0">شماره سپرده : </h2>
+            <input type="text" class="form-control" asp-for="deposit_number"
+                placeholder=" شماره حساب سپرده را وارد کنید" required>
+            <button type="submit" class="btn btn-success  mt-3 mb-1" style="width: min-content;">دریافت
+                اطلاعات حساب
+            </button>
+            <a href="~/Admin/Sepordeh/Index" class="btn btn-success mt-3 mb-1" style="width: min-content;">
+                بازگشت
+            </a>
+        </form>
+    </div>
+</div>

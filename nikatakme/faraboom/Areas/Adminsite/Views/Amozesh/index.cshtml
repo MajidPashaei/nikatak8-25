@@ -1,0 +1,113 @@
+@model ViewModels.AdminViewModel.Teaser.Vm_Teaser
+
+@if (ViewBag.er != null)
+{
+  <p class="alert alert-success">@ViewBag.er</p>
+}
+<form action="/adminsite/teaser/add" method="POST" enctype="multipart/form-data">
+  <section class="basic-select2">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 mb-2">
+                </div>
+
+                <div class="col-sm-6 col-12">
+                  <div class="form-group">
+                    <h4 class="card-title"> ثبت آموزش </h4>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="basicInput">انتخاب زبان </label>
+                    <select class="select2 form-control">
+                      <option value="fa">فارسی</option>
+                      <option value="en">انگلیسی</option>
+                      <option value="tr">ترکی</option>
+                      <option value="ar">عربی</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput"> عنوان </label>
+                    <input type="text" class="form-control" asp-for="TitleTeaser" required
+                      placeholder=" عنوان را وارد کنید">
+                  </fieldset>
+                </div>
+                <div class="col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="basicInput">انتخاب آموزش </label>
+                    <select class="select2 form-control" asp-for="Language">
+                      <option value="gabz">خدمات بانکی و قبوض</option>
+                      <option value="bime">خدمات بیمه</option>
+                      <option value="post">خدمات پستی</option>
+                      <option value="omomi">خدمات عمومی</option>
+                      <option value="voip">خدمات تلفن اینترنتی (voip)</option>
+                      <option value="charge">خدمات شارژ و اینترنتی</option>
+                      <option value="crm">خدمات CRM</option>
+                      <option value="sms">خدمات پنل SMS</option>
+                      <option value="sajam">خدمات سجام</option>
+                      <option value="pos">سرویس فروش دستگاه POS (کارتخوان)</option>
+                      <option value="gps">سرویس فروش دستگاه GPS (ردیاب)</option>
+                      <option value="emdad">خدمات امدادخودرو</option>
+
+                    </select>
+                  </div>
+                </div>
+
+
+
+
+                <div class="col-sm-6 col-12">
+                  <fieldset class="form-group">
+                    <div class="col-sm-6 col-12">
+                      <label for="file" class="btn btn-default">انتخاب تصویر اسلایدر</label>
+                      <input required asp-for="img" type="file" accept="video/*" onchange="preview_image(event)">
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="col-sm-12 col-12">
+                  <video width="320" height="240" controls id="output_image">
+                    <source src="movie.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+
+                  </video>
+                </div>
+
+
+                <div class="col-sm-12 col-12">
+                  <fieldset style="text-align: left;"
+                    class="form-group position-relative has-icon-left input-divider-left">
+                    <button type="submit" class="btn btn-success mr-1 mb-1">ثبت</button>
+                    <button type="button" class="btn btn-danger mr-1 mb-1">لغو</button>
+                  </fieldset>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Basic Select2 end -->
+</form>
+
+
+<script>
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output_image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>

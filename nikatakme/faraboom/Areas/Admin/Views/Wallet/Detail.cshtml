@@ -1,0 +1,49 @@
+<div class="card shadow">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش جزییات تراکنش </h2>
+        <div class="card-body">
+            <div class="row">
+                <div class="table-responsive">
+                    <div class="form-group justify-content-center ">
+                        <table class="table table-hover">
+                            <thead class="bg-primary ">
+                                <tr>
+                                    <th> شناسه تراکنش : </th>
+                                    <th> نوع تراکنش :</th>
+                                    <th> عنوان تراکنش : </th>
+                                    <th> شناسه قبض :</th>
+                                    <th> شناسه پرداخت : </th>
+                                    <th>مبلغ :</th>
+                                    <th> تاریخ : </th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                @if (ViewBag.id != null)
+                                {
+                                    @foreach (var item in ViewBag.id)
+                                    {
+                                        <tr>
+                                            <th>@item.Id</th>
+                                            <th>@item.Type_Request</th>
+                                            <th>@item.Titel_Request</th>
+                                            <th>@item.Bill_Id</th>
+                                            <th>@item.Pay_Id</th>
+                                            <th>@item.Amount</th>
+                                            <th>@item.Date_Request</th>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                        <div class="offset-6 mt-2">
+                            <a href="~/Admin/Wallet/index" class="btn btn-success mt-3 mb-1"
+                                style="width: min-content;">
+                                بازگشت
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

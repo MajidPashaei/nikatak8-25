@@ -1,0 +1,87 @@
+<div class="card shadow" id="myDiv">
+    <div class="card-header">
+        <h2 class="mb-0"> نمایش استعلام لیست اشتراک  </h2>
+        <p class="alert alert-danger">قیمت تمامی اشتراک ها 95 هزار تومان میباشد</p>
+    </div>
+    <div class="card-body">
+        @if (ViewBag.msg != null)
+        {
+            <p class="alert alert-danger">@ViewBag.msg</p>
+                <div class="d-flex justify-content-end ">
+                    <a href="/admin/emdad/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                        بازگشت
+                    </a>
+                </div>
+        }
+            <div class="card-body">
+                @if (ViewBag.list != null)
+                {
+                <div class="row">
+                    <div class="table-responsive">
+                        <div class="form-group justify-content-center text-center">
+                            <table class="table table-hover">
+                                <thead class="bg-primary ">
+                                <tr>
+                                    <th>ردیف</th>
+                                    <th>توضیحات</th>
+                                    <th>عنوان</th>
+                                    <th>خرید</th>
+                                </tr>
+                                </thead>
+                                <tbody class="bg-white">
+                                @{
+                                    if (ViewBag.list != null)
+                                    {
+                                        int i=1;
+                                        foreach (var item in ViewBag.list)
+                                        {
+                                            <tr>
+                                                <td>@i</td>
+                                                <td>@item.Description</td>
+                                                <td>@item.Title</td>
+                                                <td>
+                                                    <a href="/admin/emdad/ostan/@item.Id" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                                                        خرید
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            i++;
+                                        }
+                                    }
+                                }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                        
+                    <div class="d-flex justify-content-end ">
+                        <a onclick="print();" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                            چاپ
+                        </a>
+                        <a href="/admin/emdad/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+                            بازگشت
+                        </a>
+                    </div>
+                }
+            </div>
+    </div>
+</div>
+
+
+
+
+<script>
+
+
+    function print() {
+        var printContents = document.getElementById('myDiv').innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>

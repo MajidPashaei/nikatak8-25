@@ -1,0 +1,857 @@
+@using Microsoft.AspNetCore.Http
+
+<div class="app-sidebar__overlay " data-toggle="sidebar"></div>
+@* <aside class="app-sidebar ">
+	<div class="sidebar-img">
+	<a href="#" class="navbar-brand"><img alt="..." class="navbar-brand-img main-logo"
+	src="~/admin/assets/img/brand/logolight1.png"> <img alt="..." class="navbar-brand-img logo"
+	src="~/admin/assets/img/brand/logo.png"></a>
+
+	<ul class="side-menu">
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> قبوض </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Gabz_Charge/Index" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> چک صیادی </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/check" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> سامانه املاک ملی
+	</span><i class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/amlak" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> بورس و فرابورس </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/bors" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> یارانه </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/yarane" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> اظهارنامه مالیاتی
+	</span><i class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/malyat" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> سامانه ثنا </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/sana" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> ثبت احوال </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/sabteahval" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> موجودی حساب </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/mojodibank" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> وام ازدواج </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/vam" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> بنیاد شهدا و ایثارگران
+	</span><i class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/shahid" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> نظام وظیفه </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/vazife" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> آموزش و پرورش </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/parvaresh" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> بازنشستگان </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/bazneshaste" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> نسخه الکترونیک </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/electronic" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> برگه تردد بین شهری
+	</span><i class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/taradod" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> خدمات برق </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/bargi" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> پست </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/posti" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> راه داری و حمل و نقل
+	</span><i class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/hamlonagl" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> بیمه درمانی </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/salamati" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> آب و فاضلاب </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/sazeman/abi" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+
+
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-bar-chart-2"></i><span class="side-menu__label">سامانه
+	شاهکار</span><i class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Omomi/Index" href="chart-flot.html" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#">
+
+	<i style='font-size:18px' class='side-menu__icon fas'>&#xf508;</i>
+	<span class="side-menu__label">اعتبار سنجی</span><i class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Tavanam/Index" href="shop.html" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#">
+
+	<i style='font-size:18px' class='side-menu__icon fas'>&#xf508;</i>
+	<span class="side-menu__label">خدمات بیمه </span><i class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Bimeh/Index" href="shop.html" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-user"></i><span class="side-menu__label"> خدمات پستی
+	</span><i class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Makanmehvar/Index" href="login.html" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-user"></i><span class="side-menu__label">عوارض آزاد راه</span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Avarez/index" href="/admin/Avarez/index" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-shopping-cart"></i><span class="side-menu__label">سجام</span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Sajam/Index" href="shop.html" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-grid"></i><span class="side-menu__label">خدمات بانکی</span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Enteghal/Index" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-grid"></i><span class="side-menu__label">اطلاعات حساب</span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Hesab/Index" class="slide-item">ثبت اطلاعات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item active" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-home"></i><span class="side-menu__label">کیف پول</span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/Admin/Wallet/index" class=" slide-item" href="index-ldf-2.html">جزئیات</a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item active" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-home"></i><span class="side-menu__label"> گزارش عملیات </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/Admin/Wallet/Tarakonesh" class=" slide-item" href="index-ldf-2.html">جزئیات</a>
+	</li>
+	</ul>
+	</li>
+
+
+	<li class="slide">
+	<a href="#" class="side-menu__item active" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-home"></i><span class="side-menu__label">خدمات سازمانی </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="" class=" slide-item">در حال بروزرسانی</a>
+	</li>
+
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item active" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-home"></i><span class="side-menu__label">سایر خدمات</span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="" class=" slide-item">در حال بروزرسانی</a>
+	</li>
+
+	</ul>
+	</li>
+
+	</ul>
+
+
+	else
+	{
+
+	<ul class="side-menu d-none">
+	<li class="slide">
+	<a href="#" class="side-menu__item active" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-home"></i><span class="side-menu__label">داشبور</span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/menu/index" class=" slide-item">خدمات</a>
+	</li>
+	<li>
+	<a href="/admin/home/form" class=" slide-item">ثبت نام</a>
+	</li>
+	<li>
+	<a href="#" class=" slide-item">استعلام هویتی</a>
+	</li>
+	</ul>
+	</li>
+	<li>
+
+
+	</li>
+	<li>
+	<li class="slide">
+	<a href="#" class="side-menu__item active" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-home"></i><span class="side-menu__label">تراکنش ها </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/Admin/Wallet/Tarakonesh" class=" slide-item" href="index-ldf-2.html">لیست تراکنش ها</a>
+	</li>
+	</ul>
+	</li>
+
+
+
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-edit"></i><span class="side-menu__label">قبض و شارژ</span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Gabz_Charge/Index" class="slide-item">مشاهده خدمات </a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="" class="side-menu__item" data-toggle="slide"><i class="side-menu__icon fe fe-map"></i><span
+	class="side-menu__label">چک</span><i class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/chek/index" href="maps.html" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-file-text"></i><span class="side-menu__label">تسهیلات</span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Tashilat/Index" href="tables.html" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-bar-chart-2"></i><span class="side-menu__label">عمومی</span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Omomi/Index" href="chart-flot.html" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-user"></i><span class="side-menu__label">عوارض آزاد راه</span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Avarez/index" href="/admin/Avarez/index" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-underline"></i><span class="side-menu__label">کارپوشه </span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/folderwork/index" href="accordion.html" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-user"></i><span class="side-menu__label">عوارض آزاد راه</span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/Admin/Avarez/Index" href="login.html" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-shopping-cart"></i><span class="side-menu__label">سجام</span><i
+	class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Sajam/Index" href="shop.html" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#">
+	<i style='font-size:18px' class='side-menu__icon fas'>&#xf508;</i>
+	<span class="side-menu__label">توانم</span><i class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Tavanam/Index" href="shop.html" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-user"></i><span class="side-menu__label">سرویس های مکان
+	محور</span><i class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Makanmehvar/Index" href="login.html" class="slide-item">مشاهده خدمات</a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+	class="side-menu__icon fe fe-user"></i><span class="side-menu__label"> پیام ها
+	</span><i class="angle fa fa fa-angle-down"></i></a>
+	<ul class="slide-menu">
+	<li>
+	<a href="/admin/Ticket/Index" href="login.html" class="slide-item"> مشاهده پیام ها</a>
+	</li>
+	</ul>
+	</li>
+
+	<li class="slide">
+	<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i class="#"></i><span
+	class="side-menu__label"> در حال بروزرسانی...
+	</a>
+	</li>
+
+	</ul>
+	}
+	</div>
+	</aside> *@
+<aside class="app-sidebar">
+	<div class="sidebar-img">
+		<a href="#" class="navbar-brand">
+			<img alt="..." class="navbar-brand-img main-logo" src="~/admin/assets/img/brand/logolight1.png">
+			<img alt="..." class="navbar-brand-img logo" src="~/admin/assets/img/brand/logo.png">
+		</a>
+
+		<ul class="side-menu">
+			<li class="slide">
+
+				<a href="/admin/menu/index" class="side-menu__item"><i class="side-menu__icon fe fe-home"></i><span
+						class="side-menu__label"> صفحه اصلی
+					</span></a>
+
+				<a href="/admin/sazeman/check" class="side-menu__item"><i class="side-menu__icon fe fe-home"></i><span
+						class="side-menu__label">سامانه چک صیادی </span>
+				</a>
+
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+						class="side-menu__icon fe fe-edit"></i><span class="side-menu__label"> قبوض
+					</span><i class="angle fa fa fa-angle-down"></i></a>
+				<ul class="slide-menu">
+					<li>
+						<a href="/admin/Gabz/Waterbilldebtinquiry" class="slide-item">استعلام بدهی
+							قبض
+							آب </a>
+						<a href="/admin/Gabz/Inquiryofelectricitybilldebt" class="slide-item">استعلام
+							بدهی قبض برق </a>
+						<a href="/admin/Gabz/Inquiryofgasbilldebt" class="slide-item">استعلام بدهی
+							قبض
+							گاز </a>
+						<a href="/admin/Gabz/Inquiryoftelephonebilldebt" class="slide-item">استعلام
+							بدهی
+							قبض تلفن ثابت </a>
+						<a href="/admin/Gabz/Inquiryofmobilephonebilldebt" class="slide-item">استعلام
+							بدهی قبض تلفن همراه </a>
+						<a href="/admin/Client_Credential/EstelamCarBill" class="slide-item">استعلام
+							بدهی خلافی خودرو </a>
+						<a href="/admin/Client_Credential/EstelamNegativePoint" class="slide-item">استعلام
+							 نمره منفی گواهینامه  </a>
+						<a href="/admin/Avarez/detailsWay" class="slide-item">جزئیات بدهی عوارض
+							آزادراه
+						</a>
+						<a href="/admin/Avarez/Way" class="slide-item"> بدهی کلی عوارض آزادراه </a>
+						<a href="/admin/Avarez/Pardakht" class="slide-item"> پرداخت عوارض آزادراه
+						</a>
+						<a href="/admin/Gabz/list" class="slide-item">استعلام
+							جزئیات فیش های واریزی </a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+						class="side-menu__icon fe fe-edit"></i><span class="side-menu__label">خدمات
+						عمومی بانکی
+					</span><i class="angle fa fa fa-angle-down"></i></a>
+				<ul class="slide-menu">
+					<li>
+					<li>
+						<a href="/admin/Omomi/Tatbigh" class="slide-item">سامانه شاهکار</a>
+						<a href="/admin/Tavanam/Index" class="slide-item">اعتبار سنجی</a>
+						<a href="/admin/Makanmehvar/Index" class="slide-item">خدمات مکان
+							محور</a>
+						<a href="/Admin/SmsHoviyat/index" class="slide-item">احراز هویت 
+							</a>
+						@* <a href="/Admin/Sepordeh/ReConvert" class="slide-item">تبدیل شماره
+							شبا به سپرده </a>
+						<a href="/Admin/Sepordeh/Convert" class="slide-item">تبدیل شماره
+							سپرده به شبا</a>
+						<a href="/admin/Omomi/Shaba" class="slide-item">استعلام شماره
+							شبا</a>
+						<a href="/Admin/Sepordeh/NationalCode" class="slide-item">انطباق کد
+							ملی و حساب/شبا</a> *@
+					</li>
+				</ul>
+			</li>
+			@* /////////////////////////////////       بانک کشاورزی      //////////////////////////////////// *@
+			<li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#">
+					<i class="side-menu__icon fe fe-edit"></i>
+					<span class="side-menu__label"> بانک کشاورزی </span>
+					<i class="angle fa fa fa-angle-down"></i>
+				</a>
+				<ul class="slide-menu">
+					<li>
+						<a href="/admin/gardesh/Access?bankid=016" class="slide-item">صورتحساب</a>
+						<a href="/admin/MandeHesab/Access?bankid=016" class="slide-item">موجودی </a>
+						<a href="/admin/Client_Credential/InputCardNumber" class="slide-item">استعلام شماره کارت </a>
+						<a href="/admin/Client_Credential/CartToShaba" class="slide-item">  تبدیل شماره کارت به شبا </a>
+						<a href="/admin/Client_Credential/EstelamShaba" class="slide-item">استعلام شبا</a>
+						<a href="/admin/SmsCheck/index" class="slide-item">استعلام چک برگشتی</a>
+						<a href="/admin/SmsTashilat/index" class="slide-item">استعلام تسهیلات</a>
+					</li>
+				</ul>
+			</li>
+			@* ////////////////////////////////////////////////////////////////////////////////////// *@
+			@* /////////////////////////////////       بانک آینده      //////////////////////////////////// *@
+			<li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#">
+					<i class="side-menu__icon fe fe-edit"></i>
+					<span class="side-menu__label"> بانک آینده </span>
+					<i class="angle fa fa fa-angle-down"></i>
+				</a>
+				<ul class="slide-menu">
+					<li>
+						<a href="/admin/gardesh/Access?bankid=062" class="slide-item">صورتحساب</a>
+						<a href="/admin/MandeHesab/Access?bankid=062" class="slide-item">موجودی </a>
+						<a href="/admin/Client_Credential/InputCardNumber" class="slide-item">استعلام شماره کارت </a>
+						<a href="/admin/Client_Credential/CartToShaba" class="slide-item">  تبدیل شماره کارت به شبا </a>
+						<a href="/admin/Client_Credential/EstelamShaba" class="slide-item">استعلام شبا</a>
+						<a href="/admin/SmsCheck/index" class="slide-item">استعلام چک برگشتی</a>
+						<a href="/admin/SmsTashilat/index" class="slide-item">استعلام تسهیلات</a>
+					</li>
+				</ul>
+			</li>
+			@* ////////////////////////////////////////////////////////////////////////////////////// *@
+			@* /////////////////////////////////       بانک ایران زمین      //////////////////////////////////// *@
+			<li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#">
+					<i class="side-menu__icon fe fe-edit"></i>
+					<span class="side-menu__label"> بانک ایران زمین </span>
+					<i class="angle fa fa fa-angle-down"></i>
+				</a>
+				<ul class="slide-menu">
+					<li>
+						<a href="/admin/gardesh/Access?bankid=069" class="slide-item">صورتحساب</a>
+						<a href="/admin/MandeHesab/Access?bankid=069" class="slide-item">موجودی </a>
+						<a href="/admin/Client_Credential/InputCardNumber" class="slide-item">استعلام شماره کارت </a>
+						<a href="/admin/Client_Credential/CartToShaba" class="slide-item">  تبدیل شماره کارت به شبا </a>
+						<a href="/admin/Client_Credential/EstelamShaba" class="slide-item">استعلام شبا</a>
+						<a href="/admin/SmsCheck/index" class="slide-item">استعلام چک برگشتی</a>
+						<a href="/admin/SmsTashilat/index" class="slide-item">استعلام تسهیلات</a>
+					</li>
+				</ul>
+			</li>
+			@* ////////////////////////////////////////////////////////////////////////////////////// *@
+			@* /////////////////////////////////       بانک پارسیان      //////////////////////////////////// *@
+			<li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#">
+					<i class="side-menu__icon fe fe-edit"></i>
+					<span class="side-menu__label"> بانک پارسیان </span>
+					<i class="angle fa fa fa-angle-down"></i>
+				</a>
+				<ul class="slide-menu">
+					<li>
+						<a href="/admin/gardesh/Access?bankid=054" class="slide-item">صورتحساب</a>
+						<a href="/admin/MandeHesab/Access?bankid=054" class="slide-item">موجودی </a>
+						<a href="/admin/Client_Credential/InputCardNumber" class="slide-item">استعلام شماره کارت </a>
+						<a href="/admin/Client_Credential/CartToShaba" class="slide-item">  تبدیل شماره کارت به شبا </a>
+						<a href="/admin/Client_Credential/EstelamShaba" class="slide-item">استعلام شبا</a>
+						<a href="/admin/SmsCheck/index" class="slide-item">استعلام چک برگشتی</a>
+						<a href="/admin/SmsTashilat/index" class="slide-item">استعلام تسهیلات</a>
+					</li>
+				</ul>
+			</li>
+			@* ////////////////////////////////////////////////////////////////////////////////////// *@
+			@* /////////////////////////////////       بانک سپه      //////////////////////////////////// *@
+			<li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#">
+					<i class="side-menu__icon fe fe-edit"></i>
+					<span class="side-menu__label"> بانک سپه </span>
+					<i class="angle fa fa fa-angle-down"></i>
+				</a>
+				<ul class="slide-menu">
+					<li>
+						<a href="/admin/gardesh/Access?bankid=015" class="slide-item">صورتحساب</a>
+						<a href="/admin/MandeHesab/Access?bankid=015" class="slide-item">موجودی </a>
+						<a href="/admin/Client_Credential/InputCardNumber" class="slide-item">استعلام شماره کارت </a>
+						<a href="/admin/Client_Credential/CartToShaba" class="slide-item">  تبدیل شماره کارت به شبا </a>
+						<a href="/admin/Client_Credential/EstelamShaba" class="slide-item">استعلام شبا</a>
+						<a href="/admin/SmsCheck/index" class="slide-item">استعلام چک برگشتی</a>
+						<a href="/admin/SmsTashilat/index" class="slide-item">استعلام تسهیلات</a>
+					</li>
+				</ul>
+			</li>
+			          
+			@* ////////////////////////////////////////////////////////////////////////////////////// *@
+			@* /////////////////////////////////       بانک کارآفرین      //////////////////////////////////// *@
+			<li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#">
+					<i class="side-menu__icon fe fe-edit"></i>
+					<span class="side-menu__label"> بانک کارآفرین </span>
+					<i class="angle fa fa fa-angle-down"></i>
+				</a>
+				<ul class="slide-menu">
+					<li>
+						<a href="/admin/Client_Credential/InputCardNumber" class="slide-item">استعلام شماره کارت </a>
+						<a href="/admin/Client_Credential/CartToShaba" class="slide-item">  تبدیل شماره کارت به شبا </a>
+						<a href="/admin/Client_Credential/EstelamShaba" class="slide-item">استعلام شبا</a>
+						<a href="/admin/SmsCheck/index" class="slide-item">استعلام چک برگشتی</a>
+						<a href="/admin/SmsTashilat/index" class="slide-item">استعلام تسهیلات</a>
+					</li>
+				</ul>
+			</li>
+			@* ////////////////////////////////////////////////////////////////////////////////////// *@
+			@* /////////////////////////////////       بانک خاورمیانه      //////////////////////////////////// *@
+			<li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#">
+					<i class="side-menu__icon fe fe-edit"></i>
+					<span class="side-menu__label"> بانک خاورمیانه </span>
+					<i class="angle fa fa fa-angle-down"></i>
+				</a>
+				<ul class="slide-menu">
+					<li>
+						<a href="/admin/Client_Credential/InputCardNumber" class="slide-item">استعلام شماره کارت </a>
+						<a href="/admin/Client_Credential/CartToShaba" class="slide-item">  تبدیل شماره کارت به شبا </a>
+						<a href="/admin/Client_Credential/EstelamShaba" class="slide-item">استعلام شبا</a>
+						<a href="/admin/SmsCheck/index" class="slide-item">استعلام چک برگشتی</a>
+						<a href="/admin/SmsTashilat/index" class="slide-item">استعلام تسهیلات</a>
+					</li>
+				</ul>
+			</li>
+			@* ////////////////////////////////////////////////////////////////////////////////////// *@
+			@* /////////////////////////////////       بانک صادرات      //////////////////////////////////// *@
+			<li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#">
+					<i class="side-menu__icon fe fe-edit"></i>
+					<span class="side-menu__label"> بانک صادرات </span>
+					<i class="angle fa fa fa-angle-down"></i>
+				</a>
+				<ul class="slide-menu">
+					<li>
+						<a href="/admin/Client_Credential/InputCardNumber" class="slide-item">استعلام شماره کارت </a>
+						<a href="/admin/Client_Credential/CartToShaba" class="slide-item">  تبدیل شماره کارت به شبا </a>
+						<a href="/admin/Client_Credential/EstelamShaba" class="slide-item">استعلام شبا</a>
+						<a href="/admin/SmsCheck/index" class="slide-item">استعلام چک برگشتی</a>
+						<a href="/admin/SmsTashilat/index" class="slide-item">استعلام تسهیلات</a>
+					</li>
+				</ul>
+			</li>  
+			@* ////////////////////////////////////////////////////////////////////////////////////// *@
+			@* /////////////////////////////////       بانک اقتصاد نوین       //////////////////////////////////// *@
+			<li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#">
+					<i class="side-menu__icon fe fe-edit"></i>
+					<span class="side-menu__label"> بانک اقتصاد نوین  </span>
+					<i class="angle fa fa fa-angle-down"></i>
+				</a>
+				<ul class="slide-menu">
+					<li>
+						<a href="/admin/Client_Credential/InputCardNumber" class="slide-item">استعلام شماره کارت </a>
+						<a href="/admin/Client_Credential/CartToShaba" class="slide-item">  تبدیل شماره کارت به شبا </a>
+						<a href="/admin/Client_Credential/EstelamShaba" class="slide-item">استعلام شبا</a>
+						<a href="/admin/SmsCheck/index" class="slide-item">استعلام چک برگشتی</a>
+						<a href="/admin/SmsTashilat/index" class="slide-item">استعلام تسهیلات</a>
+					</li>
+				</ul>
+			</li>
+			@* ////////////////////////////////////////////////////////////////////////////////////// *@
+			@* /////////////////////////////////       بانک شهر        //////////////////////////////////// *@
+			<li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#">
+					<i class="side-menu__icon fe fe-edit"></i>
+					<span class="side-menu__label"> بانک شهر   </span>
+					<i class="angle fa fa fa-angle-down"></i>
+				</a>
+				<ul class="slide-menu">
+					<li>
+						<a href="/admin/Client_Credential/InputCardNumber" class="slide-item">استعلام شماره کارت </a>
+						<a href="/admin/Client_Credential/CartToShaba" class="slide-item">  تبدیل شماره کارت به شبا </a>
+						<a href="/admin/Client_Credential/EstelamShaba" class="slide-item">استعلام شبا</a>
+						<a href="/admin/SmsCheck/index" class="slide-item">استعلام چک برگشتی</a>
+						<a href="/admin/SmsTashilat/index" class="slide-item">استعلام تسهیلات</a>
+					</li>
+				</ul>
+			</li>
+			@* ////////////////////////////////////////////////////////////////////////////////////// *@
+			<li class="slide">
+				<a href="#" class="side-menu__item active" data-toggle="slide" href="#"><i
+						class="side-menu__icon fe fe-home"></i><span class="side-menu__label">کیف پول</span><i
+						class="angle fa fa fa-angle-down"></i></a>
+				<ul class="slide-menu">
+					<li>
+						<a href="/Admin/Wallet/index" class=" slide-item" href="index-ldf-2.html">واریزی های کیف پول </a>
+					</li>
+					<li>
+						<a href="/Admin/Wallet/Tarakonesh" class=" slide-item" href="index-ldf-2.html">برداشتی های کیف پول </a>
+					</li>
+					<li>
+						<a href="/Admin/Wallet/Tarakoneshs" class=" slide-item" href="index-ldf-2.html">واریزی های حساب من</a>
+					</li>
+				</ul>
+			</li>
+
+			@* <li class="slide">
+				<a href="#" class="side-menu__item active" data-toggle="slide" href="#"><i
+						class="side-menu__icon fe fe-home"></i><span class="side-menu__label"> گزارش عملیات </span><i
+						class="angle fa fa fa-angle-down"></i></a>
+				<ul class="slide-menu">
+					<li>
+						<a href="/Admin/Wallet/Taraonesh" class=" slide-item" href="index-ldf-2.html">جزئیات</a>
+					</li>
+				</ul>
+			</li> *@
+
+			@* <li class="slide">
+				<a href="#" class="side-menu__item" data-toggle="slide" href="#"><i
+				class="side-menu__icon fe fe-edit"></i><span class="side-menu__label">خدمات
+				عمومی سازمانی
+				</span><i class="angle fa fa fa-angle-down"></i></a>
+				<ul class="slide-menu">
+				<li>
+				<li>
+				<a href="/admin/sazeman/yarane" class="slide-item"> یارانه</a>
+				<a href="/admin/Tavanam/Index" class="slide-item">اعتبار سنجی</a>
+				<a href="/admin/sazeman/malyat" class="slide-item"> اظهارنامه مالیاتی</a>
+				<a href="/admin/sazeman/sana" class="slide-item">سامانه ثنا</a>
+				<a href="/admin/sazeman/sabteahval" class="slide-item">ثبت احوال</a>
+				<a href="/admin/sazeman/vam" class="slide-item">وام ازدواج</a>
+				<a href="/admin/sazeman/shahid" class="slide-item"> بنیاد شهید</a>
+				<a href="/admin/sazeman/vazife" class="slide-item">نظام وظیفه</a>
+				<a href="/admin/sazeman/parvaresh" class="slide-item">آموزش و پرورش</a>
+				<a href="/admin/sazeman/bazneshaste" class="slide-item">امور بازنشستگان</a>
+				<a href="/admin/sazeman/electronic" class="slide-item">نسخه الکترونیک</a>
+				<a href="/admin/sazeman/taradod" class="slide-item">برگه تردد بین شهری</a>
+				<a href="/admin/sazeman/bargi" class="slide-item"> اداره برق</a>
+				<a href="/admin/sazeman/abi" class="slide-item"> اداره آب و فاضلاب </a>
+				</li>
+				</ul>
+				</li> *@
+
+		</ul>
+	</div>
+</aside>

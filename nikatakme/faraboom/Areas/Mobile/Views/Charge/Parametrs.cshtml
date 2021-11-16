@@ -1,0 +1,51 @@
+@model ViewModels.AdminViewModel.Charge.Vm_Charge;
+        
+<br>
+<div class="page-content-wrapper">
+  <div class="container">
+    <div class="checkout-wrapper-area py-3">
+      <div class="credit-card-info-wrapper"><img class="d-block mb-4" src="~/mobile2/img/bg-img/credit-card.png" alt="">
+        <div class="pay-credit-card-form">
+          <form action="/mobile/Charge/DoSharge" method="POST" autocomplete="off">
+            <div class="mb-3">
+              <label class="mb-2" for="parameter"> شماره تلفن همراه را وارد کنید : </label>
+              <input class="form-control" type="number" placeholder="شماره تلفن همراه :" required asp-for="CellNumber">
+            </div>
+            <div class="mb-3 ">
+				      <label class=""> نوع اپراتور را انتخاب کنید : </label>
+				      <select required class="form-control bg-darken-1" asp-for="OperatorId">
+                <option value="3">رایتل</option>
+                <option value="2">ایرانسل</option>
+                <option value="1">همراه اول</option>
+                <option value="5">شاتل</option>
+				      </select>
+            </div>
+            <div class="mb-3 ">
+				      <label class=""> مبلغ شارژ را انتخاب کنید : </label>
+				      <select required class="form-control bg-darken-1" asp-for="TotalAmount">
+                <option value="20000"> 2 هزار تومان </option>
+                <option value="50000"> 5 هزار تومان </option>
+                <option value="100000"> 10 هزار تومان </option>
+                <option value="200000"> 20 هزار تومان </option>
+                <option value="300000"> 30 هزار تومان </option>
+                <option value="400000"> 40 هزار تومان </option>
+                <option value="500000"> 50 هزار تومان </option>
+                <option value="1000000"> 100 هزار تومان </option>
+				      </select>
+            </div>
+            <div class="mb-3 ">
+				      <label class="">  انتخاب نوع شارژ : </label>
+				      <select required class="form-control bg-darken-1" asp-for="ChargeType">
+                <option value="0"> شارژ معمولی </option>
+                <option value="1"> شارژ شگفت انگیز ایرانسل </option>
+                <option value="2"> شارژ جوانان همراه اول یا شورانگیز رایتل</option>
+                <option value="3"> شارژ بانوان همراه اول </option>
+				      </select>
+            </div>
+            <button class="btn btn-warning btn-lg w-100 mt-3" type="submit">خرید</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

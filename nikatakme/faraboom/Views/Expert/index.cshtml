@@ -1,0 +1,49 @@
+
+
+
+
+
+
+
+
+
+
+    <section class="container-fluid mt-3">
+        <div class="container p-md-5 box p-4">
+            <h5 class="mb-4 bt-color IRANSansWeb_Medium">   معرفی مدیران  </h5>
+            
+            
+<p style="text-align: center;display:none" >در حال بروزرسانی ...</p>
+            <div class="row" >
+          @if (ViewBag.expert != null)
+    {
+        foreach (var item in ViewBag.expert)
+        {
+          <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <img src="~/fileupload/@item.ImageEx" alt="">
+                        <div class="data">
+                            <h6 class="IRANSansWeb_Medium"> @item.NameEx</h6>
+                            <span>نیکاتک</span>
+                            <hr>
+                            @* <p class="text-center">راه های ارتباطی با مدیر کل</p> *@
+                            <a href="/expert/details/@item.Id"><i class="fab fa-2x fa-whatsapp rounded text-success"></i>مشاهده اطلاعات کامل </a>
+                            <a href="/expert/details/@item.Id"><i class="fab fa-2x fa-telegram rounded text-info"></i></a>
+                        </div>
+                    </div>
+                </div>
+              
+        }
+    }
+               
+              
+             
+
+
+
+            </div>
+       
+         </div>
+    </section>
+
+

@@ -1,0 +1,62 @@
+
+
+    <!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+  @if (ViewBag.suc != null)
+  {
+      <span class="alert alert-success">@ViewBag.suc</span>
+  }
+  
+  <!-- DataTable starts -->
+  <div class="table-responsive">
+    <table class="table data-list-view">
+      <thead>
+      
+      </thead>
+      <tbody>
+
+    <tr>
+          <td>
+          
+          </td>
+
+         
+         
+          @* <td class="product-name">@item.Email <input style="display: none;"  id="comment" type="text" value="@item.Comment"></td> *@
+
+                        
+                        
+                         <td class="product-category" style="text-align: center;line-height: 40px;">@Model.Text </td>
+           <td class="product-action">
+             <div class=" mb-1">
+                    
+              </div>
+          </td>
+        </tr>
+
+
+     
+<script>
+  function a()
+  {
+    debugger
+    var msg=document.getElementById("comment").value;
+   alert(msg);
+  }
+</script>
+
+
+
+ <a href="/Adminsite/Comment/index">بازگشت---></a>
+      </tbody>
+    </table>
+   
+  </div>
+  
+  <!-- DataTable ends -->
+
+  <!-- add new sidebar starts -->
+ 
+  <!-- add new sidebar ends -->
+</section>
+<!-- Data list view end -->

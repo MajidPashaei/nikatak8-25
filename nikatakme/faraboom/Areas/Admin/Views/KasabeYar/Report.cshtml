@@ -1,0 +1,77 @@
+<div class="card shadow">
+	<div class="card-header">
+		<h2 class="mb-0">
+            گزارش کاربران
+        </h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="table-responsive">
+				<div class="form-group justify-content-center">
+					<table class="table table-hover">
+						<thead class="bg-primary">
+							<tr>
+								<th> ردیف : </th>
+								<th> نام و نام خانوادگی : </th>
+								<th> شماره همراه : </th>
+								<th> نام کاربری : </th>
+								<th> رمزعبور : </th>
+								<th> ایمیل : </th>
+								<th> آدرس : </th>
+								<th> کدپستی : </th>
+								<th> عکس : </th>
+								<th> وضعیت : </th>
+							</tr>
+						</thead>
+						<tbody class="bg-white">
+                                @if (  ViewBag.quser != null )
+                                {
+                                    int i = 1 ;
+                                    foreach ( var item in  ViewBag.quser )
+                                    {
+										<tr>
+								    	    <th> @i </th>
+								    	    <th> @item.Name @item.Family </th>
+								    	    <th> @item.Phone </th>
+								    	    <th> @item.UserName </th>
+								    	    <th> @item.Password </th>
+								    	    <th> @item.Email </th>
+								    	    <th> @item.Address </th>
+								    	    <th> @item.CodePosti </th>
+								    	    <th> 
+                                                <a href="~/fileupload/@item.Image">
+                                                   مشاهده
+                                                </a>
+                                            </th>
+                                            @if( item.state == true)
+                                            {
+								    	        <th> 
+                                                    <a class="btn btn-success btn-sm" href="/admin/KasabeYar/Detail/@item.Id">
+                                                        فعال
+                                                    </a>
+											    </th>
+                                            }
+                                            @if( item.state == false)
+                                            {
+								    	        <th> 
+                                                    <a class="btn btn-danger btn-sm" href="/admin/KasabeYar/Detail/@item.Id">
+                                                        غیرفعال
+                                                    </a>
+											    </th>
+                                            }
+										</tr>
+										i++;
+                                    }
+                                }
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex justify-content-end ">
+			<a href="/Admin/KasabeYar/Index" class="btn btn-success mt-1 mb-1" style="width: min-content;">
+				بازگشت
+			</a>
+		</div>
+	</div>
+</div>
