@@ -171,11 +171,15 @@
             },
             "System.ServiceModel.Http": {
               "target": "Package",
-              "version": "[4.7.*, )"
+              "version": "[4.9.0, )"
             },
             "System.ServiceModel.NetTcp": {
               "target": "Package",
               "version": "[4.7.*, )"
+            },
+            "System.ServiceModel.Primitives": {
+              "target": "Package",
+              "version": "[4.9.0, )"
             },
             "System.ServiceModel.Security": {
               "target": "Package",
